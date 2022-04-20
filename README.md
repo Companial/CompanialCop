@@ -4,7 +4,9 @@ This code analyzer is meant to check AL code for all sorts of problems, the anal
 
 ## Contribution
 
-If you have any rule on mind that would be nice to be covered, **please start a new [discussion](https://github.com/StefanMaron/BusinessCentral.LinterCop/discussions)!** then we can maybe sharpen the rule a bit if necessary. This way we can build value for all of us. If you want to write the rule yourself you can of course also submit a pull request ;)
+If you have any rule on mind that would be nice to be covered or you found a bug in existing rule, **please create new Backlog Item or Bug in the [Backlog](https://dev.azure.com/1cfnav/INTERNAL-BC%20tools/_backlogs/backlog/INTERNAL-BC%20tools%20Team/Features/)** and link it with BC CodeCop Analyzer feature.
+
+Of course you want to create the rule yourself you can also submit a pull request ;)
 
 ## How to use
 

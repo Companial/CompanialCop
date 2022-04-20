@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<LangVersion>latest</LangVersion>
+	<SignAssembly>True</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>..\..\Users\evilcinskis\.vscode\extensions\ms-dynamics-smb.al-9.0.605172\bin\Analyzers\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Nav.Analyzers.Common">
+      <HintPath>..\..\..\Users\evilcinskis\.vscode\extensions\ms-dynamics-smb.al-9.0.605172\bin\Analyzers\Microsoft.Dynamics.Nav.Analyzers.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis">
+      <HintPath>..\..\..\Users\evilcinskis\.vscode\extensions\ms-dynamics-smb.al-9.0.605172\bin\Microsoft.Dynamics.Nav.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\..\Users\evilcinskis\.vscode\extensions\ms-dynamics-smb.al-9.0.605172\bin\Analyzers\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="BCCodeCopAnalyzer.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BCCodeCopAnalyzer.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="BCCodeCopAnalyzer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BCCodeCopAnalyzer.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

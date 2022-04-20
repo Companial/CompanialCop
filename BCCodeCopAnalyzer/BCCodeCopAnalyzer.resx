@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnalyzerPrefix" xml:space="preserve">
+    <value>BC</value>
+  </data>
+  <data name="Rule0001VariableNameShouldNotContainWhiteSpaceDescription" xml:space="preserve">
+    <value>Variable name should not contain whitespace</value>
+  </data>
+  <data name="Rule0001VariableNameShouldNotContainWhiteSpaceFormat" xml:space="preserve">
+    <value>'{0}' cannot be used as a variable name. Names may not contain whitespace.</value>
+  </data>
+  <data name="Rule0001VariableNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
+    <value>Variable name should not contain whitespace</value>
+  </data>
+  <data name="Rule0002VariableShouldNotContainWildcardSymbolsDescription" xml:space="preserve">
+    <value>Variable name should not contain wildcard symbols such as % or &amp;</value>
+  </data>
+  <data name="Rule0002VariableShouldNotContainWildcardSymbolsFormat" xml:space="preserve">
+    <value>'{0}' cannot be used as a variable name. Names should not contain wildcard symbols such as % or &amp;.</value>
+  </data>
+  <data name="Rule0002VariableShouldNotContainWildcardSymbolsTitle" xml:space="preserve">
+    <value>Variable name should not contain wildcard symbols such as % or &amp;</value>
+  </data>
+  <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceDescription" xml:space="preserve">
+    <value>Procedure name should not contain whitespace</value>
+  </data>
+  <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceFormat" xml:space="preserve">
+    <value>'{0}' cannot be used as a procedure name. Procedure name should not contain whitespace.</value>
+  </data>
+  <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
+    <value>Procedure name should not contain whitespace</value>
+  </data>
+  <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresDescription" xml:space="preserve">
+    <value>Global variables section should be above triggers and procedures</value>
+  </data>
+  <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresFormat" xml:space="preserve">
+    <value>Move global variables section, it may be above triggers and procedures.</value>
+  </data>
+  <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle" xml:space="preserve">
+    <value>Global variables section should be above triggers and procedures</value>
+  </data>
+  <data name="Rule0005ObjectsMustHaveCaptionPropertyDescription" xml:space="preserve">
+    <value>Objects which type is: Table, Page, XmlPort, Report, Query must have caption property</value>
+  </data>
+  <data name="Rule0005ObjectsMustHaveCaptionPropertyFormat" xml:space="preserve">
+    <value>'{0}', must have caption property. Objects which type is: Table, Page, XmlPort, Report, Query must have captions.</value>
+  </data>
+  <data name="Rule0005ObjectsMustHaveCaptionPropertyTitle" xml:space="preserve">
+    <value>Objects which type is: Table, Page, XmlPort, Report, Query must have caption property</value>
+  </data>
+  <data name="Rule0006TableFieldsMustHaveCaptionPropertyDescription" xml:space="preserve">
+    <value>Table Fields must have caption property</value>
+  </data>
+  <data name="Rule0006TableFieldsMustHaveCaptionPropertyFormat" xml:space="preserve">
+    <value>'{0}', may have caption property. Table Fields must have caption property.</value>
+  </data>
+  <data name="Rule0006TableFieldsMustHaveCaptionPropertyTitle" xml:space="preserve">
+    <value>Table Fields must have caption property</value>
+  </data>
+  <data name="Rule0007EnumValuesMustHaveCaptionPropertyDescription" xml:space="preserve">
+    <value>Enum Value must have caption property</value>
+  </data>
+  <data name="Rule0007EnumValuesMustHaveCaptionPropertyFormat" xml:space="preserve">
+    <value>'{0}', may have caption property. Enum Value must have caption property.</value>
+  </data>
+  <data name="Rule0007EnumValuesMustHaveCaptionPropertyTitle" xml:space="preserve">
+    <value>Enum Value must have caption property</value>
+  </data>
+  <data name="Rule0008PagePartsMustHaveCaptionPropertyDescription" xml:space="preserve">
+    <value>Page parts: Request Page, Page Group, Page Part, Page Action, Page Action Group must have caption property</value>
+  </data>
+  <data name="Rule0008PagePartsMustHaveCaptionPropertyFormat" xml:space="preserve">
+    <value>'{0}', must have caption property. Page parts: Page Group, Page Part, Page Action, Page Action Group must have caption property.</value>
+  </data>
+  <data name="Rule0008PagePartsMustHaveCaptionPropertyTitle" xml:space="preserve">
+    <value>Page parts: Request Page, Page Group, Page Part, Page Action, Page Action Group must have caption property</value>
+  </data>
+  <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyDescription" xml:space="preserve">
+    <value>First 19 Field IDs are reserved to primary key fields</value>
+  </data>
+  <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyFormat" xml:space="preserve">
+    <value>Renumber '{0}' field. First 19 Field IDs are reserved to primary key fields.</value>
+  </data>
+  <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyTitle" xml:space="preserve">
+    <value>First 19 Field IDs are reserved to primary key fields</value>
+  </data>
+  <data name="Rule0010TableExtensionFieldsNumberedInDedicatedRangeDescription" xml:space="preserve">
+    <value>All fields in table extensions should be numbered in the dedicated extension or PTE range</value>
+  </data>
+  <data name="Rule0010TableExtensionFieldsNumberedInDedicatedRangeFormat" xml:space="preserve">
+    <value>Renumber '{0}' field. All fields in table extensions should be numbered in the dedicated extension or PTE range.</value>
+  </data>
+  <data name="Rule0010TableExtensionFieldsNumberedInDedicatedRangeTitle" xml:space="preserve">
+    <value>All fields in table extensions should be numbered in the dedicated extension or PTE range</value>
+  </data>
+  <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeDescription" xml:space="preserve">
+    <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
+  </data>
+  <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeFormat" xml:space="preserve">
+    <value>Renumber '{0}' value. All values in enum extensions should be numbered in the dedicated extension or PTE range.</value>
+  </data>
+  <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeTitle" xml:space="preserve">
+    <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
+  </data>
+  <data name="Rule0012EmptyActionsSectionDescription" xml:space="preserve">
+    <value>Empty Actions sections should be removed</value>
+  </data>
+  <data name="Rule0012EmptyActionsSectionFormat" xml:space="preserve">
+    <value>Remove empty Actions section.</value>
+  </data>
+  <data name="Rule0012EmptyActionsSectionTitle" xml:space="preserve">
+    <value>Empty Actions sections should be removed</value>
+  </data>
+  <data name="Rule0013EmptyOnRunTriggerDescription" xml:space="preserve">
+    <value>Empty OnRun triggers should be removed</value>
+  </data>
+  <data name="Rule0013EmptyOnRunTriggerFormat" xml:space="preserve">
+    <value>Remove empty OnRun trigger.</value>
+  </data>
+  <data name="Rule0013EmptyOnRunTriggerTitle" xml:space="preserve">
+    <value>Empty OnRun triggers should be removed</value>
+  </data>
+  <data name="Rule0014HardcodedIpAddressDescription" xml:space="preserve">
+    <value>Hardcoding IP addresses is security-sensitive</value>
+  </data>
+  <data name="Rule0014HardcodedIpAddressFormat" xml:space="preserve">
+    <value>Make sure using hardcoded IP address '{0}' is safe.</value>
+  </data>
+  <data name="Rule0014HardcodedIpAddressTitle" xml:space="preserve">
+    <value>Hardcoding IP addresses is security-sensitive</value>
+  </data>
+  <data name="Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceDescription" xml:space="preserve">
+    <value>Email and Phone No must not be present in any part of the source code</value>
+  </data>
+  <data name="Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceFormat" xml:space="preserve">
+    <value>The {0} '{1}' must not contain Email or Phone No.</value>
+  </data>
+  <data name="Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceTitle" xml:space="preserve">
+    <value>Email and Phone No must not be present in any part of the source code</value>
+  </data>
+</root>

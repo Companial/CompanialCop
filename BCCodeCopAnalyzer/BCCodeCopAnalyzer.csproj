@@ -21,13 +21,13 @@
       <HintPath>..\..\Users\evilcinskis\.vscode\extensions\ms-dynamics-smb.al-9.0.605172\bin\Analyzers\Microsoft.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Dynamics.Nav.Analyzers.Common">
-      <HintPath>..\..\..\Users\evilcinskis\.vscode\extensions\ms-dynamics-smb.al-9.0.605172\bin\Analyzers\Microsoft.Dynamics.Nav.Analyzers.Common.dll</HintPath>
+      <HintPath>..\..\..\..\.vscode\extensions\ms-dynamics-smb.al-9.4.663067\bin\Analyzers\Microsoft.Dynamics.Nav.Analyzers.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis">
-      <HintPath>..\..\..\Users\evilcinskis\.vscode\extensions\ms-dynamics-smb.al-9.0.605172\bin\Microsoft.Dynamics.Nav.CodeAnalysis.dll</HintPath>
+      <HintPath>..\..\..\..\.vscode\extensions\ms-dynamics-smb.al-9.4.663067\bin\Analyzers\Microsoft.Dynamics.Nav.CodeAnalysis.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable">
-      <HintPath>..\..\..\Users\evilcinskis\.vscode\extensions\ms-dynamics-smb.al-9.0.605172\bin\Analyzers\System.Collections.Immutable.dll</HintPath>
+      <HintPath>..\..\..\..\.vscode\extensions\ms-dynamics-smb.al-9.4.663067\bin\Analyzers\System.Collections.Immutable.dll</HintPath>
     </Reference>
   </ItemGroup>
 

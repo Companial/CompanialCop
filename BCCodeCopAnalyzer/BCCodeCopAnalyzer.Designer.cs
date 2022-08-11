@@ -310,35 +310,8 @@ namespace BCCodeCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0009First19TableFieldsIDReservedToPrimaryKeyTitle", resourceCulture);
             }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to All fields in table extensions should be numbered in the dedicated extension or PTE range.
-        /// </summary>
-        internal static string Rule0010TableExtensionFieldsNumberedInDedicatedRangeDescription {
-            get {
-                return ResourceManager.GetString("Rule0010TableExtensionFieldsNumberedInDedicatedRangeDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Renumber &apos;{0}&apos; field. All fields in table extensions should be numbered in the dedicated extension or PTE range..
-        /// </summary>
-        internal static string Rule0010TableExtensionFieldsNumberedInDedicatedRangeFormat {
-            get {
-                return ResourceManager.GetString("Rule0010TableExtensionFieldsNumberedInDedicatedRangeFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to All fields in table extensions should be numbered in the dedicated extension or PTE range.
-        /// </summary>
-        internal static string Rule0010TableExtensionFieldsNumberedInDedicatedRangeTitle {
-            get {
-                return ResourceManager.GetString("Rule0010TableExtensionFieldsNumberedInDedicatedRangeTitle", resourceCulture);
-            }
-        }
-        
+        }      
+       
         /// <summary>
         ///   Looks up a localized string similar to All values in enum extensions should be numbered in the dedicated extension or PTE range.
         /// </summary>
@@ -444,33 +417,6 @@ namespace BCCodeCopAnalyzer {
         internal static string Rule0014HardcodedIpAddressTitle {
             get {
                 return ResourceManager.GetString("Rule0014HardcodedIpAddressTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Email and Phone No must not be present in any part of the source code.
-        /// </summary>
-        internal static string Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceDescription {
-            get {
-                return ResourceManager.GetString("Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The {0} &apos;{1}&apos; must not contain Email or Phone No..
-        /// </summary>
-        internal static string Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceFormat {
-            get {
-                return ResourceManager.GetString("Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Email and Phone No must not be present in any part of the source code.
-        /// </summary>
-        internal static string Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceTitle {
-            get {
-                return ResourceManager.GetString("Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceTitle", resourceCulture);
             }
         }
     }

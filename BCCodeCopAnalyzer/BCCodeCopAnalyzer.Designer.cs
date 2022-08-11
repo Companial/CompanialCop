@@ -310,8 +310,8 @@ namespace BCCodeCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0009First19TableFieldsIDReservedToPrimaryKeyTitle", resourceCulture);
             }
-        }      
-       
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to All values in enum extensions should be numbered in the dedicated extension or PTE range.
         /// </summary>

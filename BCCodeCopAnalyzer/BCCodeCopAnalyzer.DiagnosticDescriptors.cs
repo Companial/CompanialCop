@@ -129,18 +129,6 @@ namespace BCCodeCopAnalyzer
             Array.Empty<string>()
         );
 
-        public static readonly DiagnosticDescriptor Rule0012EmptyActionsSection = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0012",
-            BCCodeCopAnalyzer.Rule0012EmptyActionsSectionTitle,
-            BCCodeCopAnalyzer.Rule0012EmptyActionsSectionFormat,
-            "Readability",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0012EmptyActionsSectionDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
-
         public static readonly DiagnosticDescriptor Rule0013EmptyOnRunTrigger = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0013",
             BCCodeCopAnalyzer.Rule0013EmptyOnRunTriggerTitle,

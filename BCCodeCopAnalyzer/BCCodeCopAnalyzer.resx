@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AnalyzerPrefix" xml:space="preserve">
-    <value>BC</value>
+    <value>CM</value>
   </data>
   <data name="Rule0001VariableNameShouldNotContainWhiteSpaceDescription" xml:space="preserve">
     <value>Variable name should not contain whitespace</value>
   </data>
   <data name="Rule0001VariableNameShouldNotContainWhiteSpaceFormat" xml:space="preserve">
-    <value>'{0}' cannot be used as a variable name. Names may not contain whitespace.</value>
+    <value>Variable with name '{0}' must not contain whitespaces.</value>
   </data>
   <data name="Rule0001VariableNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
     <value>Variable name should not contain whitespace</value>
@@ -133,7 +133,7 @@
     <value>Variable name should not contain wildcard symbols such as % or &amp;</value>
   </data>
   <data name="Rule0002VariableShouldNotContainWildcardSymbolsFormat" xml:space="preserve">
-    <value>'{0}' cannot be used as a variable name. Names should not contain wildcard symbols such as % or &amp;.</value>
+    <value>Variable with name '{0}' must not contain wildcard symbols.</value>
   </data>
   <data name="Rule0002VariableShouldNotContainWildcardSymbolsTitle" xml:space="preserve">
     <value>Variable name should not contain wildcard symbols such as % or &amp;</value>
@@ -142,7 +142,7 @@
     <value>Procedure name should not contain whitespace</value>
   </data>
   <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceFormat" xml:space="preserve">
-    <value>'{0}' cannot be used as a procedure name. Procedure name should not contain whitespace.</value>
+    <value>Procedure with name '{0}' must not contain whitespaces.</value>
   </data>
   <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
     <value>Procedure name should not contain whitespace</value>
@@ -160,7 +160,7 @@
     <value>Objects which type is: Table, Page, XmlPort, Report, Query must have caption property</value>
   </data>
   <data name="Rule0005ObjectsMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>'{0}', must have caption property. Objects which type is: Table, Page, XmlPort, Report, Query must have captions.</value>
+    <value>Object with name {0} must use the Caption property.</value>
   </data>
   <data name="Rule0005ObjectsMustHaveCaptionPropertyTitle" xml:space="preserve">
     <value>Objects which type is: Table, Page, XmlPort, Report, Query must have caption property</value>
@@ -169,7 +169,7 @@
     <value>Table Fields must have caption property</value>
   </data>
   <data name="Rule0006TableFieldsMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>'{0}', may have caption property. Table Fields must have caption property.</value>
+    <value>Field with name '{0}' must use the Caption property.</value>
   </data>
   <data name="Rule0006TableFieldsMustHaveCaptionPropertyTitle" xml:space="preserve">
     <value>Table Fields must have caption property</value>
@@ -178,7 +178,7 @@
     <value>Enum Value must have caption property</value>
   </data>
   <data name="Rule0007EnumValuesMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>'{0}', may have caption property. Enum Value must have caption property.</value>
+    <value>Enum with name '{0}' must have caption property.</value>
   </data>
   <data name="Rule0007EnumValuesMustHaveCaptionPropertyTitle" xml:space="preserve">
     <value>Enum Value must have caption property</value>
@@ -196,7 +196,7 @@
     <value>First 19 Field IDs are reserved to primary key fields</value>
   </data>
   <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyFormat" xml:space="preserve">
-    <value>Renumber '{0}' field. First 19 Field IDs are reserved to primary key fields.</value>
+    <value>The field identifier '{0}' is not valid. First 19 Field IDs are reserved to primary key fields.</value>
   </data>
   <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyTitle" xml:space="preserve">
     <value>First 19 Field IDs are reserved to primary key fields</value>
@@ -205,25 +205,16 @@
     <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
   </data>
   <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeFormat" xml:space="preserve">
-    <value>Renumber '{0}' value. All values in enum extensions should be numbered in the dedicated extension or PTE range.</value>
+    <value>Then enum identifier '{0}' is not valid. It must be withing the range '{1}.</value>
   </data>
   <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeTitle" xml:space="preserve">
     <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
-  </data>
-  <data name="Rule0012EmptyActionsSectionDescription" xml:space="preserve">
-    <value>Empty Actions sections should be removed</value>
-  </data>
-  <data name="Rule0012EmptyActionsSectionFormat" xml:space="preserve">
-    <value>Remove empty Actions section.</value>
-  </data>
-  <data name="Rule0012EmptyActionsSectionTitle" xml:space="preserve">
-    <value>Empty Actions sections should be removed</value>
   </data>
   <data name="Rule0013EmptyOnRunTriggerDescription" xml:space="preserve">
     <value>Empty OnRun triggers should be removed</value>
   </data>
   <data name="Rule0013EmptyOnRunTriggerFormat" xml:space="preserve">
-    <value>Remove empty OnRun trigger.</value>
+    <value>Remember to specify either the 'OnRun' trigger or remove it.</value>
   </data>
   <data name="Rule0013EmptyOnRunTriggerTitle" xml:space="preserve">
     <value>Empty OnRun triggers should be removed</value>
@@ -232,7 +223,7 @@
     <value>Hardcoding IP addresses is security-sensitive</value>
   </data>
   <data name="Rule0014HardcodedIpAddressFormat" xml:space="preserve">
-    <value>Make sure using hardcoded IP address '{0}' is safe.</value>
+    <value>The Label '{0}' must not contain IP addresses.</value>
   </data>
   <data name="Rule0014HardcodedIpAddressTitle" xml:space="preserve">
     <value>Hardcoding IP addresses is security-sensitive</value>

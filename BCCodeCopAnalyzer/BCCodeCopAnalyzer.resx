@@ -201,15 +201,6 @@
   <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyTitle" xml:space="preserve">
     <value>First 19 Field IDs are reserved to primary key fields</value>
   </data>
-  <data name="Rule0010TableExtensionFieldsNumberedInDedicatedRangeDescription" xml:space="preserve">
-    <value>All fields in table extensions should be numbered in the dedicated extension or PTE range</value>
-  </data>
-  <data name="Rule0010TableExtensionFieldsNumberedInDedicatedRangeFormat" xml:space="preserve">
-    <value>Renumber '{0}' field. All fields in table extensions should be numbered in the dedicated extension or PTE range.</value>
-  </data>
-  <data name="Rule0010TableExtensionFieldsNumberedInDedicatedRangeTitle" xml:space="preserve">
-    <value>All fields in table extensions should be numbered in the dedicated extension or PTE range</value>
-  </data>
   <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeDescription" xml:space="preserve">
     <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
   </data>
@@ -245,14 +236,5 @@
   </data>
   <data name="Rule0014HardcodedIpAddressTitle" xml:space="preserve">
     <value>Hardcoding IP addresses is security-sensitive</value>
-  </data>
-  <data name="Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceDescription" xml:space="preserve">
-    <value>Email and Phone No must not be present in any part of the source code</value>
-  </data>
-  <data name="Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceFormat" xml:space="preserve">
-    <value>The {0} '{1}' must not contain Email or Phone No.</value>
-  </data>
-  <data name="Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceTitle" xml:space="preserve">
-    <value>Email and Phone No must not be present in any part of the source code</value>
   </data>
 </root>

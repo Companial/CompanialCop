@@ -117,18 +117,6 @@ namespace BCCodeCopAnalyzer
             Array.Empty<string>()
         );
 
-        public static readonly DiagnosticDescriptor Rule0010TableExtensionFieldsNumberedInDedicatedRange = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0010",
-            BCCodeCopAnalyzer.Rule0010TableExtensionFieldsNumberedInDedicatedRangeTitle,
-            BCCodeCopAnalyzer.Rule0010TableExtensionFieldsNumberedInDedicatedRangeFormat,
-            "Numbering",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0010TableExtensionFieldsNumberedInDedicatedRangeDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
-
         public static readonly DiagnosticDescriptor Rule0011EnumExtensionsValuesNumberedInDedicatedRange = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0011",
             BCCodeCopAnalyzer.Rule0011EnumExtensionsValuesNumberedInDedicatedRangeTitle,
@@ -173,18 +161,6 @@ namespace BCCodeCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             BCCodeCopAnalyzer.Rule0014HardcodedIpAddressDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
-
-        public static readonly DiagnosticDescriptor Rule0015EmailAndPhoneNoMustNotBePresentInTheSource = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0015",
-            BCCodeCopAnalyzer.Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceTitle,
-            BCCodeCopAnalyzer.Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceFormat,
-            "Design",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0015EmailAndPhoneNoMustNotBePresentInTheSourceDescription,
             (string)null,
             Array.Empty<string>()
         );

@@ -178,6 +178,114 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Objects which type is: Table, Page, XmlPort, Report, Query must have caption property.
+        /// </summary>
+        internal static string Rule0005ObjectsMustHaveCaptionPropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0005ObjectsMustHaveCaptionPropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos;, must have caption property. Objects which type is: Table, Page, XmlPort, Report, Query must have captions..
+        /// </summary>
+        internal static string Rule0005ObjectsMustHaveCaptionPropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0005ObjectsMustHaveCaptionPropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects which type is: Table, Page, XmlPort, Report, Query must have caption property.
+        /// </summary>
+        internal static string Rule0005ObjectsMustHaveCaptionPropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0005ObjectsMustHaveCaptionPropertyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table Fields must have caption property.
+        /// </summary>
+        internal static string Rule0006TableFieldsMustHaveCaptionPropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0006TableFieldsMustHaveCaptionPropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos;, may have caption property. Table Fields must have caption property..
+        /// </summary>
+        internal static string Rule0006TableFieldsMustHaveCaptionPropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0006TableFieldsMustHaveCaptionPropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table Fields must have caption property.
+        /// </summary>
+        internal static string Rule0006TableFieldsMustHaveCaptionPropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0006TableFieldsMustHaveCaptionPropertyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enum Value must have caption property.
+        /// </summary>
+        internal static string Rule0007EnumValuesMustHaveCaptionPropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0007EnumValuesMustHaveCaptionPropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos;, may have caption property. Enum Value must have caption property..
+        /// </summary>
+        internal static string Rule0007EnumValuesMustHaveCaptionPropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0007EnumValuesMustHaveCaptionPropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enum Value must have caption property.
+        /// </summary>
+        internal static string Rule0007EnumValuesMustHaveCaptionPropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0007EnumValuesMustHaveCaptionPropertyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Page parts: Request Page, Page Group, Page Part, Page Action, Page Action Group must have caption property.
+        /// </summary>
+        internal static string Rule0008PagePartsMustHaveCaptionPropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0008PagePartsMustHaveCaptionPropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos;, must have caption property. Page parts: Page Group, Page Part, Page Action, Page Action Group must have caption property..
+        /// </summary>
+        internal static string Rule0008PagePartsMustHaveCaptionPropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0008PagePartsMustHaveCaptionPropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Page parts: Request Page, Page Group, Page Part, Page Action, Page Action Group must have caption property.
+        /// </summary>
+        internal static string Rule0008PagePartsMustHaveCaptionPropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0008PagePartsMustHaveCaptionPropertyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to First 19 Field IDs are reserved to primary key fields.
         /// </summary>
         internal static string Rule0009First19TableFieldsIDReservedToPrimaryKeyDescription {
@@ -187,7 +295,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Renumber &apos;{0}&apos; field. First 19 Field IDs are reserved to primary key fields..
+        ///   Looks up a localized string similar to The field identifier &apos;{0}&apos; is not valid. First 19 Field IDs are reserved to primary key fields..
         /// </summary>
         internal static string Rule0009First19TableFieldsIDReservedToPrimaryKeyFormat {
             get {
@@ -214,7 +322,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Renumber &apos;{0}&apos; value. All values in enum extensions should be numbered in the dedicated extension or PTE range..
+        ///   Looks up a localized string similar to Then enum identifier &apos;{0}&apos; is not valid. It must be withing the range &apos;{1}..
         /// </summary>
         internal static string Rule0011EnumExtensionsValuesNumberedInDedicatedRangeFormat {
             get {
@@ -232,56 +340,29 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Empty Actions sections should be removed.
+        ///   Looks up a localized string similar to Empty OnRun triggers should be removed.
         /// </summary>
-        internal static string Rule0012EmptyActionsSectionDescription {
+        internal static string Rule0013CheckEmptyOnRunTriggersDescription {
             get {
-                return ResourceManager.GetString("Rule0012EmptyActionsSectionDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remove empty Actions section..
+        ///   Looks up a localized string similar to Remember to specify either the &apos;OnRun&apos; trigger or remove it..
         /// </summary>
-        internal static string Rule0012EmptyActionsSectionFormat {
+        internal static string Rule0013CheckEmptyOnRunTriggersFormat {
             get {
-                return ResourceManager.GetString("Rule0012EmptyActionsSectionFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Empty Actions sections should be removed.
-        /// </summary>
-        internal static string Rule0012EmptyActionsSectionTitle {
-            get {
-                return ResourceManager.GetString("Rule0012EmptyActionsSectionTitle", resourceCulture);
+                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersFormat", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Empty OnRun triggers should be removed.
         /// </summary>
-        internal static string Rule0013EmptyOnRunTriggerDescription {
+        internal static string Rule0013CheckEmptyOnRunTriggersTitle {
             get {
-                return ResourceManager.GetString("Rule0013EmptyOnRunTriggerDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Remove empty OnRun trigger..
-        /// </summary>
-        internal static string Rule0013EmptyOnRunTriggerFormat {
-            get {
-                return ResourceManager.GetString("Rule0013EmptyOnRunTriggerFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Empty OnRun triggers should be removed.
-        /// </summary>
-        internal static string Rule0013EmptyOnRunTriggerTitle {
-            get {
-                return ResourceManager.GetString("Rule0013EmptyOnRunTriggerTitle", resourceCulture);
+                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersTitle", resourceCulture);
             }
         }
         
@@ -295,7 +376,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Make sure using hardcoded IP address &apos;{0}&apos; is safe..
+        ///   Looks up a localized string similar to The Label {0} must not contain IP addresses..
         /// </summary>
         internal static string Rule0014HardcodedIpAddressFormat {
             get {

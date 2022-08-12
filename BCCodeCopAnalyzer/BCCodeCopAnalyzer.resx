@@ -237,4 +237,13 @@
   <data name="Rule0014HardcodedIpAddressTitle" xml:space="preserve">
     <value>Hardcoding IP addresses is security-sensitive</value>
   </data>
+  <data name="Rule0015FlowFieldsShouldNotBeEditableDescription" xml:space="preserve">
+    <value>FlowFields should not be editable.</value>
+  </data>
+  <data name="Rule0015FlowFieldsShouldNotBeEditableFormat" xml:space="preserve">
+    <value>Field with name '{0}' must have the Editable property equals false.</value>
+  </data>
+  <data name="Rule0015FlowFieldsShouldNotBeEditableTitle" xml:space="preserve">
+    <value>FlowFields should not be editable.</value>
+  </data>
 </root>

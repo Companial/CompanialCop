@@ -164,5 +164,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0015FlowFieldsShouldNotBeEditable = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0015",
+            BCCodeCopAnalyzer.Rule0015FlowFieldsShouldNotBeEditableTitle,
+            BCCodeCopAnalyzer.Rule0015FlowFieldsShouldNotBeEditableFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0015FlowFieldsShouldNotBeEditableDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

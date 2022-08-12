@@ -419,5 +419,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0014HardcodedIpAddressTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FlowFields should not be editable..
+        /// </summary>
+        internal static string Rule0015FlowFieldsShouldNotBeEditableDescription {
+            get {
+                return ResourceManager.GetString("Rule0015FlowFieldsShouldNotBeEditableDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field with name &apos;{0}&apos; must have the Editable property equals false..
+        /// </summary>
+        internal static string Rule0015FlowFieldsShouldNotBeEditableFormat {
+            get {
+                return ResourceManager.GetString("Rule0015FlowFieldsShouldNotBeEditableFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FlowFields should not be editable..
+        /// </summary>
+        internal static string Rule0015FlowFieldsShouldNotBeEditableTitle {
+            get {
+                return ResourceManager.GetString("Rule0015FlowFieldsShouldNotBeEditableTitle", resourceCulture);
+            }
+        }
     }
 }

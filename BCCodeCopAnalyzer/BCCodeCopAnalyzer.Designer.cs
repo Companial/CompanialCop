@@ -61,7 +61,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BC.
+        ///   Looks up a localized string similar to CM.
         /// </summary>
         internal static string AnalyzerPrefix {
             get {
@@ -79,7 +79,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; cannot be used as a variable name. Names may not contain whitespace..
+        ///   Looks up a localized string similar to Variable with name &apos;{0}&apos; must not contain whitespaces..
         /// </summary>
         internal static string Rule0001VariableNameShouldNotContainWhiteSpaceFormat {
             get {
@@ -106,7 +106,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; cannot be used as a variable name. Names should not contain wildcard symbols such as % or &amp;..
+        ///   Looks up a localized string similar to Variable with name &apos;{0}&apos; must not contain wildcard symbols..
         /// </summary>
         internal static string Rule0002VariableShouldNotContainWildcardSymbolsFormat {
             get {
@@ -133,7 +133,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; cannot be used as a procedure name. Procedure name should not contain whitespace..
+        ///   Looks up a localized string similar to Procedure with name &apos;{0}&apos; must not contain whitespaces..
         /// </summary>
         internal static string Rule0003MethodsNameShouldNotContainWhiteSpaceFormat {
             get {

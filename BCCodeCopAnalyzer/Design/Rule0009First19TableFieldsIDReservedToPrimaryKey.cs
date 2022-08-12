@@ -36,7 +36,7 @@ namespace BCCodeCopAnalyzer.Design
                 SyntaxToken FieldNo = fieldSyntax.No;
                 if (FieldNo.Value as int? < 20 && !keysList.Contains(fieldName.Identifier.Value.ToString()))
                 {
-                    ReportFieldsReservedForPrimaryKeyFields(context, FieldNo.GetLocation(), fieldName.Identifier.Value.ToString(), fieldName);
+                    ReportFieldsReservedForPrimaryKeyFields(context, FieldNo.GetLocation(), FieldNo.ValueText, fieldName);
                 }
             }
         }

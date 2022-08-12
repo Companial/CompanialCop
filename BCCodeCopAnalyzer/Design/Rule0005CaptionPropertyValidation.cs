@@ -38,13 +38,14 @@ namespace BCCodeCopAnalyzer.Design
         {
             if (syntax == null)
                 return;
-            PropertyListSyntax propertyListSyntax = syntax.PropertyList;
 
+            PropertyListSyntax propertyListSyntax = syntax.PropertyList;
+            IdentifierNameSyntax identifierNameSyntax = syntax.Name;
             PropertySyntax propertySyntax = GetProperty(propertyListSyntax.Properties, "Caption");
 
             if (propertySyntax == null)
             {
-                ReportObjectsMustHaveCaptionProperty(context, propertyListSyntax.GetLocation(), syntax.Name.ToString(), syntax.Kind, syntax.Name);
+                ReportObjectsMustHaveCaptionProperty(context, identifierNameSyntax.GetLocation(), syntax.Name.ToString(), syntax.Kind, syntax.Name);
             }
         }
 
@@ -58,12 +59,14 @@ namespace BCCodeCopAnalyzer.Design
         {
             if (syntax == null)
                 return;
+
             PropertyListSyntax propertyListSyntax = syntax.PropertyList;
+            IdentifierNameSyntax identifierNameSyntax = syntax.Name;
             PropertySyntax propertySyntax = GetProperty(propertyListSyntax.Properties, "Caption");
 
             if (propertySyntax == null)
             {
-                ReportTableFieldsMustHaveCaptionProperty(context, propertyListSyntax.GetLocation(), syntax.Name.ToString(), syntax.Kind, syntax.Name);
+                ReportTableFieldsMustHaveCaptionProperty(context, identifierNameSyntax.GetLocation(), syntax.Name.ToString(), syntax.Kind, syntax.Name);
             }
         }
 
@@ -77,12 +80,14 @@ namespace BCCodeCopAnalyzer.Design
         {
             if (syntax == null)
                 return;
+
             PropertyListSyntax propertyListSyntax = syntax.PropertyList;
+            IdentifierNameSyntax identifierNameSyntax = syntax.Name;
             PropertySyntax propertySyntax = GetProperty(propertyListSyntax.Properties, "Caption");
 
             if (propertySyntax == null)
             {
-                ReportEnumValueMustHaveCaptionProperty(context, propertyListSyntax.GetLocation(), syntax.Name.ToString(), syntax.Kind, syntax.Name);
+                ReportEnumValueMustHaveCaptionProperty(context, identifierNameSyntax.GetLocation(), syntax.Name.ToString(), syntax.Kind, syntax.Name);
             }
         }
         public static void AnalyzePagePartsCaption(SyntaxNodeAnalysisContext context)

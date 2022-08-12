@@ -45,7 +45,7 @@ namespace BCCodeCopAnalyzer.Design
         private void CheckForHardcodedIpAddresses(SyntaxNodeAnalysisContext context)
         {
             StringLiteralValueSyntax? stringLiteralValue = context.Node as StringLiteralValueSyntax;
-
+            
             string literalValue = null;
             if (stringLiteralValue != null)
             {
@@ -69,7 +69,7 @@ namespace BCCodeCopAnalyzer.Design
                     return;
                 }
             if (stringLiteralValue != null)
-                ReportHardcodedIpAddress(context, stringLiteralValue.GetLocation(), literalValue);
+                ReportHardcodedIpAddress(context, stringLiteralValue.GetLocation(), GetAssignedVariableName(stringLiteralValue));
         }
 
         private static void ReportHardcodedIpAddress(SyntaxNodeAnalysisContext syntaxNodeAnalysisContext, Location location, string valueText)

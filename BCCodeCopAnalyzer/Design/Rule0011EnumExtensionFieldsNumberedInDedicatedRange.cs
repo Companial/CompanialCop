@@ -42,8 +42,7 @@ namespace BCCodeCopAnalyzer.Design
                 {
                     SyntaxToken fieldNo = enumValueSyntax.Id;
                     if (!CheckNoInAllowedRange(int.Parse(fieldNo.Value.ToString()), appAllowedRanges))
-                        ReportEnumValuesInAllowedRange(context, fieldNo.GetLocation(), enumValueSyntax.Name.Identifier.Value.ToString(), enumValueSyntax.Name);
-
+                        ReportEnumValuesInAllowedRange(context, fieldNo.GetLocation(), fieldNo.Value.ToString(), appAllowedRanges, enumValueSyntax.Name);
                 }
             }
         }
@@ -70,10 +69,10 @@ namespace BCCodeCopAnalyzer.Design
             return false;
         }
 
-        private static void ReportEnumValuesInAllowedRange(SyntaxNodeAnalysisContext syntaxNodeAnalysisContext, Location location, string valueText, IdentifierNameSyntax syntaxName)
+        private static void ReportEnumValuesInAllowedRange(SyntaxNodeAnalysisContext syntaxNodeAnalysisContext, Location location, string valueText, string allowedRange, IdentifierNameSyntax syntaxName)
         {
             if (syntaxNodeAnalysisContext.Node != null)
-                syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0011EnumExtensionsValuesNumberedInDedicatedRange, location, (object)valueText, (object)syntaxName));
+                syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0011EnumExtensionsValuesNumberedInDedicatedRange, location, (object)valueText, (object)allowedRange, (object)syntaxName));
         }
     }
 }

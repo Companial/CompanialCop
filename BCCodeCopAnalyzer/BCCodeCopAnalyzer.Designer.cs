@@ -376,7 +376,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Label &apos;{0}&apos; must not contain IP addresses..
+        ///   Looks up a localized string similar to The Label {0} must not contain IP addresses..
         /// </summary>
         internal static string Rule0014HardcodedIpAddressFormat {
             get {

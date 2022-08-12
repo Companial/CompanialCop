@@ -223,7 +223,7 @@
     <value>Hardcoding IP addresses is security-sensitive</value>
   </data>
   <data name="Rule0014HardcodedIpAddressFormat" xml:space="preserve">
-    <value>The Label '{0}' must not contain IP addresses.</value>
+    <value>The Label {0} must not contain IP addresses.</value>
   </data>
   <data name="Rule0014HardcodedIpAddressTitle" xml:space="preserve">
     <value>Hardcoding IP addresses is security-sensitive</value>

@@ -147,15 +147,6 @@
   <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
     <value>Procedure name should not contain whitespace</value>
   </data>
-  <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresDescription" xml:space="preserve">
-    <value>Global variables section should be above triggers and procedures</value>
-  </data>
-  <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresFormat" xml:space="preserve">
-    <value>Move global variables section, it may be above triggers and procedures.</value>
-  </data>
-  <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle" xml:space="preserve">
-    <value>Global variables section should be above triggers and procedures</value>
-  </data>
   <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyDescription" xml:space="preserve">
     <value>First 19 Field IDs are reserved to primary key fields</value>
   </data>

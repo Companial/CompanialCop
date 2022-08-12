@@ -151,33 +151,6 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Global variables section should be above triggers and procedures.
-        /// </summary>
-        internal static string Rule0004GlobalVariablesMayBeAboveTriggersProceduresDescription {
-            get {
-                return ResourceManager.GetString("Rule0004GlobalVariablesMayBeAboveTriggersProceduresDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Move global variables section, it may be above triggers and procedures..
-        /// </summary>
-        internal static string Rule0004GlobalVariablesMayBeAboveTriggersProceduresFormat {
-            get {
-                return ResourceManager.GetString("Rule0004GlobalVariablesMayBeAboveTriggersProceduresFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Global variables section should be above triggers and procedures.
-        /// </summary>
-        internal static string Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle {
-            get {
-                return ResourceManager.GetString("Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to First 19 Field IDs are reserved to primary key fields.
         /// </summary>
         internal static string Rule0009First19TableFieldsIDReservedToPrimaryKeyDescription {

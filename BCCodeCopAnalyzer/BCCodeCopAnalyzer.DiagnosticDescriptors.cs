@@ -45,18 +45,6 @@ namespace BCCodeCopAnalyzer
             Array.Empty<string>()
         );
 
-        public static readonly DiagnosticDescriptor Rule0004GlobalVariablesMayBeAboveTriggersProcedures = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0004",
-            BCCodeCopAnalyzer.Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle,
-            BCCodeCopAnalyzer.Rule0004GlobalVariablesMayBeAboveTriggersProceduresFormat,
-            "Readability",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0004GlobalVariablesMayBeAboveTriggersProceduresDescription,
-            null,
-            Array.Empty<string>()
-        );
-
         public static readonly DiagnosticDescriptor Rule0009First19TableFieldsIDReservedToPrimaryKey = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0009",
             BCCodeCopAnalyzer.Rule0009First19TableFieldsIDReservedToPrimaryKeyTitle,

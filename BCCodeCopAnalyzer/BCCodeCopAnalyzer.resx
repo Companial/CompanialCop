@@ -229,21 +229,30 @@
     <value>Caption is missing</value>
   </data>
   <data name="Rule0019SemicolonAfterProcedureDeclarationDescription" xml:space="preserve">
-    <value>Procedure must not end with ";"</value>
+    <value>Procedure must not end with semicolon.</value>
   </data>
   <data name="Rule0019SemicolonAfterProcedureDeclarationFormat" xml:space="preserve">
-    <value>Procedure must not end with ";"</value>
+    <value>Procedure must not end with semicolon.</value>
   </data>
   <data name="Rule0019SemicolonAfterProcedureDeclarationTitle" xml:space="preserve">
-    <value>Procedure must not end with ";"</value>
+    <value>Procedure must not end with semicolon.</value>
   </data>
   <data name="Rule0020InternalProceduresDescription" xml:space="preserve">
-    <value>Procedures must be either local or internal</value>
+    <value>Procedures must be either local or internal.</value>
   </data>
   <data name="Rule0020InternalProceduresFormat" xml:space="preserve">
-    <value>Procedures must be either local or internal</value>
+    <value>Procedures must be either local or internal.</value>
   </data>
   <data name="Rule0020InternalProceduresTitle" xml:space="preserve">
-    <value>Procedures must be either local or internal</value>
+    <value>Procedures must be either local or internal.</value>
+  </data>
+  <data name="Rule0021ToolTipPunctuationDescription" xml:space="preserve">
+    <value>ToolTips must end with a dot.</value>
+  </data>
+  <data name="Rule0021ToolTipPunctuationFormat" xml:space="preserve">
+    <value>ToolTips must end with a dot.</value>
+  </data>
+  <data name="Rule0021ToolTipPunctuationTitle" xml:space="preserve">
+    <value>ToolTips must end with a dot.</value>
   </data>
 </root>

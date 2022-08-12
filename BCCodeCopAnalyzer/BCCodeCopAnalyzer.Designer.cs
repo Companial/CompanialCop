@@ -394,7 +394,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure must not end with &quot;;&quot;.
+        ///   Looks up a localized string similar to Procedure must not end with semicolon..
         /// </summary>
         internal static string Rule0019SemicolonAfterProcedureDeclarationDescription {
             get {
@@ -403,7 +403,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure must not end with &quot;;&quot;.
+        ///   Looks up a localized string similar to Procedure must not end with semicolon..
         /// </summary>
         internal static string Rule0019SemicolonAfterProcedureDeclarationFormat {
             get {
@@ -412,7 +412,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure must not end with &quot;;&quot;.
+        ///   Looks up a localized string similar to Procedure must not end with semicolon..
         /// </summary>
         internal static string Rule0019SemicolonAfterProcedureDeclarationTitle {
             get {
@@ -421,7 +421,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedures must be either local or internal.
+        ///   Looks up a localized string similar to Procedures must be either local or internal..
         /// </summary>
         internal static string Rule0020InternalProceduresDescription {
             get {
@@ -430,7 +430,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedures must be either local or internal.
+        ///   Looks up a localized string similar to Procedures must be either local or internal..
         /// </summary>
         internal static string Rule0020InternalProceduresFormat {
             get {
@@ -439,11 +439,38 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedures must be either local or internal.
+        ///   Looks up a localized string similar to Procedures must be either local or internal..
         /// </summary>
         internal static string Rule0020InternalProceduresTitle {
             get {
                 return ResourceManager.GetString("Rule0020InternalProceduresTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ToolTips must end with a dot..
+        /// </summary>
+        internal static string Rule0021ToolTipPunctuationDescription {
+            get {
+                return ResourceManager.GetString("Rule0021ToolTipPunctuationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ToolTips must end with a dot..
+        /// </summary>
+        internal static string Rule0021ToolTipPunctuationFormat {
+            get {
+                return ResourceManager.GetString("Rule0021ToolTipPunctuationFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ToolTips must end with a dot..
+        /// </summary>
+        internal static string Rule0021ToolTipPunctuationTitle {
+            get {
+                return ResourceManager.GetString("Rule0021ToolTipPunctuationTitle", resourceCulture);
             }
         }
     }

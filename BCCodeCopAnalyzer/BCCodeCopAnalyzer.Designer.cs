@@ -527,5 +527,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0025EmptyObjectSectionsTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects need to have the Access and/or Extensible properties defined..
+        /// </summary>
+        internal static string Rule0026bjectAccessAndExtensiblePropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0026bjectAccessAndExtensiblePropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects need to have the Access and/or Extensible properties defined..
+        /// </summary>
+        internal static string Rule0026bjectAccessAndExtensiblePropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0026bjectAccessAndExtensiblePropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects need to have the Access and/or Extensible properties defined..
+        /// </summary>
+        internal static string Rule0026bjectAccessAndExtensiblePropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0026bjectAccessAndExtensiblePropertyTitle", resourceCulture);
+            }
+        }
     }
 }

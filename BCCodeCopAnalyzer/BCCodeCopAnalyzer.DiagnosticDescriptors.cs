@@ -200,5 +200,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0026bjectAccessAndExtensibleProperty = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0026",
+            BCCodeCopAnalyzer.Rule0026bjectAccessAndExtensiblePropertyTitle,
+            BCCodeCopAnalyzer.Rule0026bjectAccessAndExtensiblePropertyFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0026bjectAccessAndExtensiblePropertyDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

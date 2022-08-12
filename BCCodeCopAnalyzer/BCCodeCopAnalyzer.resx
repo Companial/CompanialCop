@@ -273,4 +273,13 @@
   <data name="Rule0025EmptyObjectSectionsTitle" xml:space="preserve">
     <value>Object should not have empty sections.</value>
   </data>
+  <data name="Rule0026bjectAccessAndExtensiblePropertyDescription" xml:space="preserve">
+    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  </data>
+  <data name="Rule0026bjectAccessAndExtensiblePropertyFormat" xml:space="preserve">
+    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  </data>
+  <data name="Rule0026bjectAccessAndExtensiblePropertyTitle" xml:space="preserve">
+    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  </data>
 </root>

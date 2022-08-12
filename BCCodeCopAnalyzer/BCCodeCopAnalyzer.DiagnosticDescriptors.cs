@@ -57,54 +57,6 @@ namespace BCCodeCopAnalyzer
             Array.Empty<string>()
         );
 
-        public static readonly DiagnosticDescriptor Rule0005ObjectsMustHaveCaptionProperty = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0005",
-            BCCodeCopAnalyzer.Rule0005ObjectsMustHaveCaptionPropertyTitle,
-            BCCodeCopAnalyzer.Rule0005ObjectsMustHaveCaptionPropertyFormat,
-            "Property",
-            DiagnosticSeverity.Warning, 
-            true,
-            BCCodeCopAnalyzer.Rule0005ObjectsMustHaveCaptionPropertyDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
-
-        public static readonly DiagnosticDescriptor Rule0006TableFieldsMustHaveCaptionProperty = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0006",
-            BCCodeCopAnalyzer.Rule0006TableFieldsMustHaveCaptionPropertyTitle,
-            BCCodeCopAnalyzer.Rule0006TableFieldsMustHaveCaptionPropertyFormat,
-            "Property",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0006TableFieldsMustHaveCaptionPropertyDescription,
-            (string)null, 
-            Array.Empty<string>()
-        );
-
-        public static readonly DiagnosticDescriptor Rule0007EnumValuesMustHaveCaptionProperty = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0007",
-            BCCodeCopAnalyzer.Rule0007EnumValuesMustHaveCaptionPropertyTitle,
-            BCCodeCopAnalyzer.Rule0007EnumValuesMustHaveCaptionPropertyFormat,
-            "Property",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0007EnumValuesMustHaveCaptionPropertyDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
-
-        public static readonly DiagnosticDescriptor Rule0008PagePartsMustHaveCaptionProperty = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0008",
-            BCCodeCopAnalyzer.Rule0008PagePartsMustHaveCaptionPropertyTitle,
-            BCCodeCopAnalyzer.Rule0008PagePartsMustHaveCaptionPropertyFormat,
-            "Property",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0008PagePartsMustHaveCaptionPropertyDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
-
         public static readonly DiagnosticDescriptor Rule0009First19TableFieldsIDReservedToPrimaryKey = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0009",
             BCCodeCopAnalyzer.Rule0009First19TableFieldsIDReservedToPrimaryKeyTitle,
@@ -149,6 +101,50 @@ namespace BCCodeCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             BCCodeCopAnalyzer.Rule0014HardcodedIpAddressDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0015FlowFieldsShouldNotBeEditable = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0015",
+            BCCodeCopAnalyzer.Rule0015FlowFieldsShouldNotBeEditableTitle,
+            BCCodeCopAnalyzer.Rule0015FlowFieldsShouldNotBeEditableFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0015FlowFieldsShouldNotBeEditableDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0016CommitMustBeExplainedByComment = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0016",
+            BCCodeCopAnalyzer.Rule0016CommitMustBeExplainedByCommentTitle,
+            BCCodeCopAnalyzer.Rule0016CommitMustBeExplainedByCommentFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0016CommitMustBeExplainedByCommentDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0017DoNotUseObjectIdInSystemFunctions = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0017",
+            BCCodeCopAnalyzer.Rule0017DoNotUseObjectIdInSystemFunctionsTitle,
+            BCCodeCopAnalyzer.Rule0017DoNotUseObjectIdInSystemFunctionsFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0017DoNotUseObjectIdInSystemFunctionsDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0018CheckForMissingCaptions = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0018",
+            BCCodeCopAnalyzer.Rule0018CheckForMissingCaptionsTitle,
+            BCCodeCopAnalyzer.Rule0018CheckForMissingCaptionsFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0018CheckForMissingCaptionsDescription,
             (string)null,
             Array.Empty<string>()
         );

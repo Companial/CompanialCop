@@ -156,42 +156,6 @@
   <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle" xml:space="preserve">
     <value>Global variables section should be above triggers and procedures</value>
   </data>
-  <data name="Rule0005ObjectsMustHaveCaptionPropertyDescription" xml:space="preserve">
-    <value>Objects which type is: Table, Page, XmlPort, Report, Query must have caption property</value>
-  </data>
-  <data name="Rule0005ObjectsMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>Object with name {0} must use the Caption property.</value>
-  </data>
-  <data name="Rule0005ObjectsMustHaveCaptionPropertyTitle" xml:space="preserve">
-    <value>Objects which type is: Table, Page, XmlPort, Report, Query must have caption property</value>
-  </data>
-  <data name="Rule0006TableFieldsMustHaveCaptionPropertyDescription" xml:space="preserve">
-    <value>Table Fields must have caption property</value>
-  </data>
-  <data name="Rule0006TableFieldsMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>Field with name '{0}' must use the Caption property.</value>
-  </data>
-  <data name="Rule0006TableFieldsMustHaveCaptionPropertyTitle" xml:space="preserve">
-    <value>Table Fields must have caption property</value>
-  </data>
-  <data name="Rule0007EnumValuesMustHaveCaptionPropertyDescription" xml:space="preserve">
-    <value>Enum Value must have caption property</value>
-  </data>
-  <data name="Rule0007EnumValuesMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>Enum with name '{0}' must have caption property.</value>
-  </data>
-  <data name="Rule0007EnumValuesMustHaveCaptionPropertyTitle" xml:space="preserve">
-    <value>Enum Value must have caption property</value>
-  </data>
-  <data name="Rule0008PagePartsMustHaveCaptionPropertyDescription" xml:space="preserve">
-    <value>Page parts: Request Page, Page Group, Page Part, Page Action, Page Action Group must have caption property</value>
-  </data>
-  <data name="Rule0008PagePartsMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>'{0}', must have caption property. Page parts: Page Group, Page Part, Page Action, Page Action Group must have caption property.</value>
-  </data>
-  <data name="Rule0008PagePartsMustHaveCaptionPropertyTitle" xml:space="preserve">
-    <value>Page parts: Request Page, Page Group, Page Part, Page Action, Page Action Group must have caption property</value>
-  </data>
   <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyDescription" xml:space="preserve">
     <value>First 19 Field IDs are reserved to primary key fields</value>
   </data>
@@ -227,5 +191,41 @@
   </data>
   <data name="Rule0014HardcodedIpAddressTitle" xml:space="preserve">
     <value>Hardcoding IP addresses is security-sensitive</value>
+  </data>
+  <data name="Rule0015FlowFieldsShouldNotBeEditableDescription" xml:space="preserve">
+    <value>FlowFields should not be editable.</value>
+  </data>
+  <data name="Rule0015FlowFieldsShouldNotBeEditableFormat" xml:space="preserve">
+    <value>Field with name '{0}' must have the Editable property equals false.</value>
+  </data>
+  <data name="Rule0015FlowFieldsShouldNotBeEditableTitle" xml:space="preserve">
+    <value>FlowFields should not be editable.</value>
+  </data>
+  <data name="Rule0016CommitMustBeExplainedByCommentDescription" xml:space="preserve">
+    <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
+  </data>
+  <data name="Rule0016CommitMustBeExplainedByCommentFormat" xml:space="preserve">
+    <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
+  </data>
+  <data name="Rule0016CommitMustBeExplainedByCommentTitle" xml:space="preserve">
+    <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
+  </data>
+  <data name="Rule0017DoNotUseObjectIdInSystemFunctionsDescription" xml:space="preserve">
+    <value>Using hardcoded IDs in functions is not allowed.</value>
+  </data>
+  <data name="Rule0017DoNotUseObjectIdInSystemFunctionsFormat" xml:space="preserve">
+    <value>Using hardcoded IDs in functions is not allowed.</value>
+  </data>
+  <data name="Rule0017DoNotUseObjectIdInSystemFunctionsTitle" xml:space="preserve">
+    <value>Using hardcoded IDs in functions is not allowed.</value>
+  </data>
+  <data name="Rule0018CheckForMissingCaptionsDescription" xml:space="preserve">
+    <value>Caption is missing</value>
+  </data>
+  <data name="Rule0018CheckForMissingCaptionsFormat" xml:space="preserve">
+    <value>'{0}' must have caption property.</value>
+  </data>
+  <data name="Rule0018CheckForMissingCaptionsTitle" xml:space="preserve">
+    <value>Caption is missing</value>
   </data>
 </root>

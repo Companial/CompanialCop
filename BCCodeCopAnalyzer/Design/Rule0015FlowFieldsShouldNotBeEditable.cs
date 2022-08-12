@@ -1,27 +1,44 @@
-﻿
-using BCCodeCopAnalyzer;
+﻿using BCCodeCopAnalyzer;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
+using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
 using System;
 using System.Collections.Immutable;
 
 namespace BusinessCentral.LinterCop.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0001FlowFieldsShouldNotBeEditable : DiagnosticAnalyzer
+    public class Rule0002CommitMustBeExplainedByComment : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0015FlowFieldsShouldNotBeEditable);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0016CommitMustBeExplainedByComment);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterSymbolAction(new Action<SymbolAnalysisContext>(this.AnalyzeFlowFieldEditable), SymbolKind.Field);
+        public override void Initialize(AnalysisContext context) => context.RegisterOperationAction(new Action<OperationAnalysisContext>(this.CheckCommitForExplainingComment), OperationKind.InvocationExpression);
 
-        private void AnalyzeFlowFieldEditable(SymbolAnalysisContext ctx)
+        private void CheckCommitForExplainingComment(OperationAnalysisContext ctx)
         {
-            if (ctx.Symbol.IsObsoletePending || ctx.Symbol.IsObsoleteRemoved) return;
-            if (ctx.Symbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.Symbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+            if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+            if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
 
-            IFieldSymbol field = (IFieldSymbol)ctx.Symbol;
-            if (field.FieldClass == FieldClassKind.FlowField && field.GetBooleanPropertyValue(PropertyKind.Editable).Value)
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0015FlowFieldsShouldNotBeEditable, field.Location, field.Name));
+            IInvocationExpression operation = (IInvocationExpression)ctx.Operation;
+            if (operation.TargetMethod.Name.ToUpper() == "COMMIT")
+            {
+                foreach (SyntaxTrivia trivia in operation.Syntax.Parent.GetLeadingTrivia())
+                {
+                    if (trivia.IsKind(SyntaxKind.LineCommentTrivia))
+                    {
+                        return;
+                    }
+                }
+                foreach (SyntaxTrivia trivia in operation.Syntax.Parent.GetTrailingTrivia())
+                {
+                    if (trivia.IsKind(SyntaxKind.LineCommentTrivia))
+                    {
+                        return;
+                    }
+                }
+
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0016CommitMustBeExplainedByComment, ctx.Operation.Syntax.GetLocation()));
+            }
         }
     }
 }

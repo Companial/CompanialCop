@@ -246,4 +246,13 @@
   <data name="Rule0015FlowFieldsShouldNotBeEditableTitle" xml:space="preserve">
     <value>FlowFields should not be editable.</value>
   </data>
+  <data name="Rule0016CommitMustBeExplainedByCommentDescription" xml:space="preserve">
+    <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
+  </data>
+  <data name="Rule0016CommitMustBeExplainedByCommentFormat" xml:space="preserve">
+    <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
+  </data>
+  <data name="Rule0016CommitMustBeExplainedByCommentTitle" xml:space="preserve">
+    <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
+  </data>
 </root>

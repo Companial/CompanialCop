@@ -446,5 +446,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0015FlowFieldsShouldNotBeEditableTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commit() must have a comment to justify its existance. Either a leading or a trailing comment..
+        /// </summary>
+        internal static string Rule0016CommitMustBeExplainedByCommentDescription {
+            get {
+                return ResourceManager.GetString("Rule0016CommitMustBeExplainedByCommentDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commit() must have a comment to justify its existance. Either a leading or a trailing comment..
+        /// </summary>
+        internal static string Rule0016CommitMustBeExplainedByCommentFormat {
+            get {
+                return ResourceManager.GetString("Rule0016CommitMustBeExplainedByCommentFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commit() must have a comment to justify its existance. Either a leading or a trailing comment..
+        /// </summary>
+        internal static string Rule0016CommitMustBeExplainedByCommentTitle {
+            get {
+                return ResourceManager.GetString("Rule0016CommitMustBeExplainedByCommentTitle", resourceCulture);
+            }
+        }
     }
 }

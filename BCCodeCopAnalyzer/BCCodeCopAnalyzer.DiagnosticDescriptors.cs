@@ -175,5 +175,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0016CommitMustBeExplainedByComment = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0016",
+            BCCodeCopAnalyzer.Rule0016CommitMustBeExplainedByCommentTitle,
+            BCCodeCopAnalyzer.Rule0016CommitMustBeExplainedByCommentFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0016CommitMustBeExplainedByCommentDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

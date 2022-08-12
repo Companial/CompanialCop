@@ -264,4 +264,13 @@
   <data name="Rule0017DoNotUseObjectIdInSystemFunctionsTitle" xml:space="preserve">
     <value>Using hardcoded IDs in functions is not allowed.</value>
   </data>
+  <data name="Rule0018CheckForMissingCaptionsDescription" xml:space="preserve">
+    <value>Caption is missing</value>
+  </data>
+  <data name="Rule0018CheckForMissingCaptionsFormat" xml:space="preserve">
+    <value>'{0}' must have caption property.</value>
+  </data>
+  <data name="Rule0018CheckForMissingCaptionsTitle" xml:space="preserve">
+    <value>Caption is missing</value>
+  </data>
 </root>

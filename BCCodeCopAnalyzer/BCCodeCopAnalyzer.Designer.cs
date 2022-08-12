@@ -500,5 +500,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0017DoNotUseObjectIdInSystemFunctionsTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caption is missing.
+        /// </summary>
+        internal static string Rule0018CheckForMissingCaptionsDescription {
+            get {
+                return ResourceManager.GetString("Rule0018CheckForMissingCaptionsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; must have caption property..
+        /// </summary>
+        internal static string Rule0018CheckForMissingCaptionsFormat {
+            get {
+                return ResourceManager.GetString("Rule0018CheckForMissingCaptionsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caption is missing.
+        /// </summary>
+        internal static string Rule0018CheckForMissingCaptionsTitle {
+            get {
+                return ResourceManager.GetString("Rule0018CheckForMissingCaptionsTitle", resourceCulture);
+            }
+        }
     }
 }

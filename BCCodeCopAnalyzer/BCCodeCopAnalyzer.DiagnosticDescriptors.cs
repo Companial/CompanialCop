@@ -187,13 +187,24 @@ namespace BCCodeCopAnalyzer
             Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0017DoNotUseObjectIdInSystemFunctions = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0016",
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0017",
             BCCodeCopAnalyzer.Rule0017DoNotUseObjectIdInSystemFunctionsTitle,
             BCCodeCopAnalyzer.Rule0017DoNotUseObjectIdInSystemFunctionsFormat,
             "Readability",
             DiagnosticSeverity.Warning,
             true,
             BCCodeCopAnalyzer.Rule0017DoNotUseObjectIdInSystemFunctionsDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0018CheckForMissingCaptions = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0018",
+            BCCodeCopAnalyzer.Rule0018CheckForMissingCaptionsTitle,
+            BCCodeCopAnalyzer.Rule0018CheckForMissingCaptionsFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0018CheckForMissingCaptionsDescription,
             (string)null,
             Array.Empty<string>()
         );

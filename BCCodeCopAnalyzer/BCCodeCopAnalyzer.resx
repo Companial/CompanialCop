@@ -264,4 +264,13 @@
   <data name="Rule0023LabelPunctuationTitle" xml:space="preserve">
     <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
   </data>
+  <data name="Rule0024InternalMethodsMustHaveExplicitParametersDescription" xml:space="preserve">
+    <value>Internal Methods must be invoked with explicit parameters.</value>
+  </data>
+  <data name="Rule0024InternalMethodsMustHaveExplicitParametersFormat" xml:space="preserve">
+    <value>Internal Methods must be invoked with explicit parameters.</value>
+  </data>
+  <data name="Rule0024InternalMethodsMustHaveExplicitParametersTitle" xml:space="preserve">
+    <value>Internal Methods must be invoked with explicit parameters.</value>
+  </data>
 </root>

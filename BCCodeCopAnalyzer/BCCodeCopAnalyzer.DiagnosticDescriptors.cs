@@ -191,5 +191,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0024InternalMethodsMustHaveExplicitParameters = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0024",
+            BCCodeCopAnalyzer.Rule0024InternalMethodsMustHaveExplicitParametersTitle,
+            BCCodeCopAnalyzer.Rule0024InternalMethodsMustHaveExplicitParametersFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0024InternalMethodsMustHaveExplicitParametersDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

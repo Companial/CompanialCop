@@ -500,5 +500,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0023LabelPunctuationTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal Methods must be invoked with explicit parameters..
+        /// </summary>
+        internal static string Rule0024InternalMethodsMustHaveExplicitParametersDescription {
+            get {
+                return ResourceManager.GetString("Rule0024InternalMethodsMustHaveExplicitParametersDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal Methods must be invoked with explicit parameters..
+        /// </summary>
+        internal static string Rule0024InternalMethodsMustHaveExplicitParametersFormat {
+            get {
+                return ResourceManager.GetString("Rule0024InternalMethodsMustHaveExplicitParametersFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal Methods must be invoked with explicit parameters..
+        /// </summary>
+        internal static string Rule0024InternalMethodsMustHaveExplicitParametersTitle {
+            get {
+                return ResourceManager.GetString("Rule0024InternalMethodsMustHaveExplicitParametersTitle", resourceCulture);
+            }
+        }
     }
 }

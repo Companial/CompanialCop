@@ -148,5 +148,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0019SemicolonAfterProcedureDeclaration = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0019",
+            BCCodeCopAnalyzer.Rule0019SemicolonAfterProcedureDeclarationTitle,
+            BCCodeCopAnalyzer.Rule0019SemicolonAfterProcedureDeclarationFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0019SemicolonAfterProcedureDeclarationDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

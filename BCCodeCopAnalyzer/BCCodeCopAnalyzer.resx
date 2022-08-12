@@ -228,4 +228,13 @@
   <data name="Rule0018CheckForMissingCaptionsTitle" xml:space="preserve">
     <value>Caption is missing</value>
   </data>
+  <data name="Rule0019SemicolonAfterProcedureDeclarationDescription" xml:space="preserve">
+    <value>Procedure must not end with ";"</value>
+  </data>
+  <data name="Rule0019SemicolonAfterProcedureDeclarationFormat" xml:space="preserve">
+    <value>Procedure must not end with ";"</value>
+  </data>
+  <data name="Rule0019SemicolonAfterProcedureDeclarationTitle" xml:space="preserve">
+    <value>Procedure must not end with ";"</value>
+  </data>
 </root>

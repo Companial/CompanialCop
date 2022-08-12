@@ -392,5 +392,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0018CheckForMissingCaptionsTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedure must not end with &quot;;&quot;.
+        /// </summary>
+        internal static string Rule0019SemicolonAfterProcedureDeclarationDescription {
+            get {
+                return ResourceManager.GetString("Rule0019SemicolonAfterProcedureDeclarationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedure must not end with &quot;;&quot;.
+        /// </summary>
+        internal static string Rule0019SemicolonAfterProcedureDeclarationFormat {
+            get {
+                return ResourceManager.GetString("Rule0019SemicolonAfterProcedureDeclarationFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedure must not end with &quot;;&quot;.
+        /// </summary>
+        internal static string Rule0019SemicolonAfterProcedureDeclarationTitle {
+            get {
+                return ResourceManager.GetString("Rule0019SemicolonAfterProcedureDeclarationTitle", resourceCulture);
+            }
+        }
     }
 }

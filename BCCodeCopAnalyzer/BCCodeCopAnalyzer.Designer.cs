@@ -473,5 +473,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0016CommitMustBeExplainedByCommentTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
+        /// </summary>
+        internal static string Rule0017DoNotUseObjectIdInSystemFunctionsDescription {
+            get {
+                return ResourceManager.GetString("Rule0017DoNotUseObjectIdInSystemFunctionsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
+        /// </summary>
+        internal static string Rule0017DoNotUseObjectIdInSystemFunctionsFormat {
+            get {
+                return ResourceManager.GetString("Rule0017DoNotUseObjectIdInSystemFunctionsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
+        /// </summary>
+        internal static string Rule0017DoNotUseObjectIdInSystemFunctionsTitle {
+            get {
+                return ResourceManager.GetString("Rule0017DoNotUseObjectIdInSystemFunctionsTitle", resourceCulture);
+            }
+        }
     }
 }

@@ -186,5 +186,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0017DoNotUseObjectIdInSystemFunctions = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0016",
+            BCCodeCopAnalyzer.Rule0017DoNotUseObjectIdInSystemFunctionsTitle,
+            BCCodeCopAnalyzer.Rule0017DoNotUseObjectIdInSystemFunctionsFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0017DoNotUseObjectIdInSystemFunctionsDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

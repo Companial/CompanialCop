@@ -255,4 +255,13 @@
   <data name="Rule0016CommitMustBeExplainedByCommentTitle" xml:space="preserve">
     <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
   </data>
+  <data name="Rule0017DoNotUseObjectIdInSystemFunctionsDescription" xml:space="preserve">
+    <value>Using hardcoded IDs in functions is not allowed.</value>
+  </data>
+  <data name="Rule0017DoNotUseObjectIdInSystemFunctionsFormat" xml:space="preserve">
+    <value>Using hardcoded IDs in functions is not allowed.</value>
+  </data>
+  <data name="Rule0017DoNotUseObjectIdInSystemFunctionsTitle" xml:space="preserve">
+    <value>Using hardcoded IDs in functions is not allowed.</value>
+  </data>
 </root>

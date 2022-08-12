@@ -156,42 +156,6 @@
   <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle" xml:space="preserve">
     <value>Global variables section should be above triggers and procedures</value>
   </data>
-  <data name="Rule0005ObjectsMustHaveCaptionPropertyDescription" xml:space="preserve">
-    <value>Objects which type is: Table, Page, XmlPort, Report, Query must have caption property</value>
-  </data>
-  <data name="Rule0005ObjectsMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>'{0}', must have caption property. Objects which type is: Table, Page, XmlPort, Report, Query must have captions.</value>
-  </data>
-  <data name="Rule0005ObjectsMustHaveCaptionPropertyTitle" xml:space="preserve">
-    <value>Objects which type is: Table, Page, XmlPort, Report, Query must have caption property</value>
-  </data>
-  <data name="Rule0006TableFieldsMustHaveCaptionPropertyDescription" xml:space="preserve">
-    <value>Table Fields must have caption property</value>
-  </data>
-  <data name="Rule0006TableFieldsMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>'{0}', may have caption property. Table Fields must have caption property.</value>
-  </data>
-  <data name="Rule0006TableFieldsMustHaveCaptionPropertyTitle" xml:space="preserve">
-    <value>Table Fields must have caption property</value>
-  </data>
-  <data name="Rule0007EnumValuesMustHaveCaptionPropertyDescription" xml:space="preserve">
-    <value>Enum Value must have caption property</value>
-  </data>
-  <data name="Rule0007EnumValuesMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>'{0}', may have caption property. Enum Value must have caption property.</value>
-  </data>
-  <data name="Rule0007EnumValuesMustHaveCaptionPropertyTitle" xml:space="preserve">
-    <value>Enum Value must have caption property</value>
-  </data>
-  <data name="Rule0008PagePartsMustHaveCaptionPropertyDescription" xml:space="preserve">
-    <value>Page parts: Request Page, Page Group, Page Part, Page Action, Page Action Group must have caption property</value>
-  </data>
-  <data name="Rule0008PagePartsMustHaveCaptionPropertyFormat" xml:space="preserve">
-    <value>'{0}', must have caption property. Page parts: Page Group, Page Part, Page Action, Page Action Group must have caption property.</value>
-  </data>
-  <data name="Rule0008PagePartsMustHaveCaptionPropertyTitle" xml:space="preserve">
-    <value>Page parts: Request Page, Page Group, Page Part, Page Action, Page Action Group must have caption property</value>
-  </data>
   <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyDescription" xml:space="preserve">
     <value>First 19 Field IDs are reserved to primary key fields</value>
   </data>

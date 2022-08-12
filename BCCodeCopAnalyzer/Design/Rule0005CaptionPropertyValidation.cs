@@ -122,7 +122,6 @@ namespace BCCodeCopAnalyzer.Design
             if (syntax != null)
             {
                 PropertyListSyntax propertyListSyntax = syntax.PropertyList;
-                IdentifierNameSyntax identifierNameSyntax = syntax.Name;
                 PropertySyntax propertySyntax = GetProperty(propertyListSyntax.Properties, "Caption");
                 PropertySyntax showCaptionPropertySyntax = GetProperty(propertyListSyntax.Properties, "ShowCaption");
 

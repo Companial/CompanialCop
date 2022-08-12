@@ -342,27 +342,27 @@ namespace BCCodeCopAnalyzer {
         /// <summary>
         ///   Looks up a localized string similar to Empty OnRun triggers should be removed.
         /// </summary>
-        internal static string Rule0013EmptyOnRunTriggerDescription {
+        internal static string Rule0013CheckEmptyOnRunTriggersDescription {
             get {
-                return ResourceManager.GetString("Rule0013EmptyOnRunTriggerDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersDescription", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Remember to specify either the &apos;OnRun&apos; trigger or remove it..
         /// </summary>
-        internal static string Rule0013EmptyOnRunTriggerFormat {
+        internal static string Rule0013CheckEmptyOnRunTriggersFormat {
             get {
-                return ResourceManager.GetString("Rule0013EmptyOnRunTriggerFormat", resourceCulture);
+                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersFormat", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Empty OnRun triggers should be removed.
         /// </summary>
-        internal static string Rule0013EmptyOnRunTriggerTitle {
+        internal static string Rule0013CheckEmptyOnRunTriggersTitle {
             get {
-                return ResourceManager.GetString("Rule0013EmptyOnRunTriggerTitle", resourceCulture);
+                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersTitle", resourceCulture);
             }
         }
         

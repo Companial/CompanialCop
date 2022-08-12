@@ -129,14 +129,14 @@ namespace BCCodeCopAnalyzer
             Array.Empty<string>()
         );
 
-        public static readonly DiagnosticDescriptor Rule0013EmptyOnRunTrigger = new DiagnosticDescriptor(
+        public static readonly DiagnosticDescriptor Rule0013CheckEmptyOnRunTriggers = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0013",
-            BCCodeCopAnalyzer.Rule0013EmptyOnRunTriggerTitle,
-            BCCodeCopAnalyzer.Rule0013EmptyOnRunTriggerFormat,
+            BCCodeCopAnalyzer.Rule0013CheckEmptyOnRunTriggersTitle,
+            BCCodeCopAnalyzer.Rule0013CheckEmptyOnRunTriggersFormat,
             "Readability",
             DiagnosticSeverity.Warning,
             true,
-            BCCodeCopAnalyzer.Rule0013EmptyOnRunTriggerDescription,
+            BCCodeCopAnalyzer.Rule0013CheckEmptyOnRunTriggersDescription,
             (string)null,
             Array.Empty<string>()
         );

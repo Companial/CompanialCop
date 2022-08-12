@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    internal class Rule0013ValidateEmptyParts : DiagnosticAnalyzer
+    internal class Rule0013CheckEmptyOnRunTriggers : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0013EmptyOnRunTrigger);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0013CheckEmptyOnRunTriggers);
 
         public override void Initialize(AnalysisContext context)
         {
@@ -36,7 +36,7 @@ namespace BCCodeCopAnalyzer.Design
 
         private static void ReportEmptyOnRunTrigger(SyntaxNodeAnalysisContext syntaxNodeAnalysisContext, Location location)
         {
-            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0013EmptyOnRunTrigger, location));
+            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0013CheckEmptyOnRunTriggers, location));
         }
     }
 }

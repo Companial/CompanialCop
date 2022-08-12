@@ -419,5 +419,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0019SemicolonAfterProcedureDeclarationTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedures must be either local or internal.
+        /// </summary>
+        internal static string Rule0020InternalProceduresDescription {
+            get {
+                return ResourceManager.GetString("Rule0020InternalProceduresDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedures must be either local or internal.
+        /// </summary>
+        internal static string Rule0020InternalProceduresFormat {
+            get {
+                return ResourceManager.GetString("Rule0020InternalProceduresFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedures must be either local or internal.
+        /// </summary>
+        internal static string Rule0020InternalProceduresTitle {
+            get {
+                return ResourceManager.GetString("Rule0020InternalProceduresTitle", resourceCulture);
+            }
+        }
     }
 }

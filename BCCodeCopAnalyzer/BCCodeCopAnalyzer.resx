@@ -237,4 +237,13 @@
   <data name="Rule0019SemicolonAfterProcedureDeclarationTitle" xml:space="preserve">
     <value>Procedure must not end with ";"</value>
   </data>
+  <data name="Rule0020InternalProceduresDescription" xml:space="preserve">
+    <value>Procedures must be either local or internal</value>
+  </data>
+  <data name="Rule0020InternalProceduresFormat" xml:space="preserve">
+    <value>Procedures must be either local or internal</value>
+  </data>
+  <data name="Rule0020InternalProceduresTitle" xml:space="preserve">
+    <value>Procedures must be either local or internal</value>
+  </data>
 </root>

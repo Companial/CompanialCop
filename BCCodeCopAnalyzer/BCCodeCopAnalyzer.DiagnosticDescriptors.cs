@@ -159,5 +159,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0020InternalProcedures = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0019",
+            BCCodeCopAnalyzer.Rule0020InternalProceduresTitle,
+            BCCodeCopAnalyzer.Rule0020InternalProceduresFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0020InternalProceduresDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

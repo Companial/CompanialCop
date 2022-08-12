@@ -45,18 +45,6 @@ namespace BCCodeCopAnalyzer
             Array.Empty<string>()
         );
 
-        public static readonly DiagnosticDescriptor Rule0004GlobalVariablesMayBeAboveTriggersProcedures = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0004",
-            BCCodeCopAnalyzer.Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle,
-            BCCodeCopAnalyzer.Rule0004GlobalVariablesMayBeAboveTriggersProceduresFormat,
-            "Readability",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0004GlobalVariablesMayBeAboveTriggersProceduresDescription,
-            null,
-            Array.Empty<string>()
-        );
-
         public static readonly DiagnosticDescriptor Rule0009First19TableFieldsIDReservedToPrimaryKey = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0009",
             BCCodeCopAnalyzer.Rule0009First19TableFieldsIDReservedToPrimaryKeyTitle,
@@ -80,19 +68,6 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
-
-        public static readonly DiagnosticDescriptor Rule0013CheckEmptyOnRunTriggers = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0013",
-            BCCodeCopAnalyzer.Rule0013CheckEmptyOnRunTriggersTitle,
-            BCCodeCopAnalyzer.Rule0013CheckEmptyOnRunTriggersFormat,
-            "Readability",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0013CheckEmptyOnRunTriggersDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
-
         public static readonly DiagnosticDescriptor Rule0014HardcodedIpAddress = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0014",
             BCCodeCopAnalyzer.Rule0014HardcodedIpAddressTitle,
@@ -145,6 +120,94 @@ namespace BCCodeCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             BCCodeCopAnalyzer.Rule0018CheckForMissingCaptionsDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0019SemicolonAfterProcedureDeclaration = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0019",
+            BCCodeCopAnalyzer.Rule0019SemicolonAfterProcedureDeclarationTitle,
+            BCCodeCopAnalyzer.Rule0019SemicolonAfterProcedureDeclarationFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0019SemicolonAfterProcedureDeclarationDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0020InternalProcedures = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0020",
+            BCCodeCopAnalyzer.Rule0020InternalProceduresTitle,
+            BCCodeCopAnalyzer.Rule0020InternalProceduresFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0020InternalProceduresDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0021ToolTipPunctuation = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0021",
+            BCCodeCopAnalyzer.Rule0021ToolTipPunctuationTitle,
+            BCCodeCopAnalyzer.Rule0021ToolTipPunctuationFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0021ToolTipPunctuationDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0022GlobalVarTriggerAndMethodPosition = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0022",
+            BCCodeCopAnalyzer.Rule0022GlobalVarTriggerAndMethodPositionTitle,
+            BCCodeCopAnalyzer.Rule0022GlobalVarTriggerAndMethodPositionFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0022GlobalVarTriggerAndMethodPositionDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0023LabelPunctuation = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0023",
+            BCCodeCopAnalyzer.Rule0023LabelPunctuationTitle,
+            BCCodeCopAnalyzer.Rule0023LabelPunctuationFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0023LabelPunctuationDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0024InternalMethodsMustHaveExplicitParameters = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0024",
+            BCCodeCopAnalyzer.Rule0024InternalMethodsMustHaveExplicitParametersTitle,
+            BCCodeCopAnalyzer.Rule0024InternalMethodsMustHaveExplicitParametersFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0024InternalMethodsMustHaveExplicitParametersDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0025EmptyObjectSections = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0025",
+            BCCodeCopAnalyzer.Rule0025EmptyObjectSectionsTitle,
+            BCCodeCopAnalyzer.Rule0025EmptyObjectSectionsFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0025EmptyObjectSectionsDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0026bjectAccessAndExtensibleProperty = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0026",
+            BCCodeCopAnalyzer.Rule0026bjectAccessAndExtensiblePropertyTitle,
+            BCCodeCopAnalyzer.Rule0026bjectAccessAndExtensiblePropertyFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0026bjectAccessAndExtensiblePropertyDescription,
             (string)null,
             Array.Empty<string>()
         );

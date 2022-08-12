@@ -151,33 +151,6 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Global variables section should be above triggers and procedures.
-        /// </summary>
-        internal static string Rule0004GlobalVariablesMayBeAboveTriggersProceduresDescription {
-            get {
-                return ResourceManager.GetString("Rule0004GlobalVariablesMayBeAboveTriggersProceduresDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Move global variables section, it may be above triggers and procedures..
-        /// </summary>
-        internal static string Rule0004GlobalVariablesMayBeAboveTriggersProceduresFormat {
-            get {
-                return ResourceManager.GetString("Rule0004GlobalVariablesMayBeAboveTriggersProceduresFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Global variables section should be above triggers and procedures.
-        /// </summary>
-        internal static string Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle {
-            get {
-                return ResourceManager.GetString("Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to First 19 Field IDs are reserved to primary key fields.
         /// </summary>
         internal static string Rule0009First19TableFieldsIDReservedToPrimaryKeyDescription {
@@ -228,33 +201,6 @@ namespace BCCodeCopAnalyzer {
         internal static string Rule0011EnumExtensionsValuesNumberedInDedicatedRangeTitle {
             get {
                 return ResourceManager.GetString("Rule0011EnumExtensionsValuesNumberedInDedicatedRangeTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Empty OnRun triggers should be removed.
-        /// </summary>
-        internal static string Rule0013CheckEmptyOnRunTriggersDescription {
-            get {
-                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Remember to specify either the &apos;OnRun&apos; trigger or remove it..
-        /// </summary>
-        internal static string Rule0013CheckEmptyOnRunTriggersFormat {
-            get {
-                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Empty OnRun triggers should be removed.
-        /// </summary>
-        internal static string Rule0013CheckEmptyOnRunTriggersTitle {
-            get {
-                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersTitle", resourceCulture);
             }
         }
         
@@ -390,6 +336,222 @@ namespace BCCodeCopAnalyzer {
         internal static string Rule0018CheckForMissingCaptionsTitle {
             get {
                 return ResourceManager.GetString("Rule0018CheckForMissingCaptionsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedure must not end with semicolon..
+        /// </summary>
+        internal static string Rule0019SemicolonAfterProcedureDeclarationDescription {
+            get {
+                return ResourceManager.GetString("Rule0019SemicolonAfterProcedureDeclarationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedure must not end with semicolon..
+        /// </summary>
+        internal static string Rule0019SemicolonAfterProcedureDeclarationFormat {
+            get {
+                return ResourceManager.GetString("Rule0019SemicolonAfterProcedureDeclarationFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedure must not end with semicolon..
+        /// </summary>
+        internal static string Rule0019SemicolonAfterProcedureDeclarationTitle {
+            get {
+                return ResourceManager.GetString("Rule0019SemicolonAfterProcedureDeclarationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedures must be either local or internal..
+        /// </summary>
+        internal static string Rule0020InternalProceduresDescription {
+            get {
+                return ResourceManager.GetString("Rule0020InternalProceduresDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedures must be either local or internal..
+        /// </summary>
+        internal static string Rule0020InternalProceduresFormat {
+            get {
+                return ResourceManager.GetString("Rule0020InternalProceduresFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Procedures must be either local or internal..
+        /// </summary>
+        internal static string Rule0020InternalProceduresTitle {
+            get {
+                return ResourceManager.GetString("Rule0020InternalProceduresTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ToolTips must end with a dot..
+        /// </summary>
+        internal static string Rule0021ToolTipPunctuationDescription {
+            get {
+                return ResourceManager.GetString("Rule0021ToolTipPunctuationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ToolTips must end with a dot..
+        /// </summary>
+        internal static string Rule0021ToolTipPunctuationFormat {
+            get {
+                return ResourceManager.GetString("Rule0021ToolTipPunctuationFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ToolTips must end with a dot..
+        /// </summary>
+        internal static string Rule0021ToolTipPunctuationTitle {
+            get {
+                return ResourceManager.GetString("Rule0021ToolTipPunctuationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods..
+        /// </summary>
+        internal static string Rule0022GlobalVarTriggerAndMethodPositionDescription {
+            get {
+                return ResourceManager.GetString("Rule0022GlobalVarTriggerAndMethodPositionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods..
+        /// </summary>
+        internal static string Rule0022GlobalVarTriggerAndMethodPositionFormat {
+            get {
+                return ResourceManager.GetString("Rule0022GlobalVarTriggerAndMethodPositionFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods..
+        /// </summary>
+        internal static string Rule0022GlobalVarTriggerAndMethodPositionTitle {
+            get {
+                return ResourceManager.GetString("Rule0022GlobalVarTriggerAndMethodPositionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Msg and Err Labels should end with a dot, Qst should end with a question mark..
+        /// </summary>
+        internal static string Rule0023LabelPunctuationDescription {
+            get {
+                return ResourceManager.GetString("Rule0023LabelPunctuationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Msg and Err Labels should end with a dot, Qst should end with a question mark..
+        /// </summary>
+        internal static string Rule0023LabelPunctuationFormat {
+            get {
+                return ResourceManager.GetString("Rule0023LabelPunctuationFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Msg and Err Labels should end with a dot, Qst should end with a question mark..
+        /// </summary>
+        internal static string Rule0023LabelPunctuationTitle {
+            get {
+                return ResourceManager.GetString("Rule0023LabelPunctuationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal Methods must be invoked with explicit parameters..
+        /// </summary>
+        internal static string Rule0024InternalMethodsMustHaveExplicitParametersDescription {
+            get {
+                return ResourceManager.GetString("Rule0024InternalMethodsMustHaveExplicitParametersDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal Methods must be invoked with explicit parameters..
+        /// </summary>
+        internal static string Rule0024InternalMethodsMustHaveExplicitParametersFormat {
+            get {
+                return ResourceManager.GetString("Rule0024InternalMethodsMustHaveExplicitParametersFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal Methods must be invoked with explicit parameters..
+        /// </summary>
+        internal static string Rule0024InternalMethodsMustHaveExplicitParametersTitle {
+            get {
+                return ResourceManager.GetString("Rule0024InternalMethodsMustHaveExplicitParametersTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object should not have empty sections..
+        /// </summary>
+        internal static string Rule0025EmptyObjectSectionsDescription {
+            get {
+                return ResourceManager.GetString("Rule0025EmptyObjectSectionsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object should not have empty sections..
+        /// </summary>
+        internal static string Rule0025EmptyObjectSectionsFormat {
+            get {
+                return ResourceManager.GetString("Rule0025EmptyObjectSectionsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object should not have empty sections..
+        /// </summary>
+        internal static string Rule0025EmptyObjectSectionsTitle {
+            get {
+                return ResourceManager.GetString("Rule0025EmptyObjectSectionsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects need to have the Access and/or Extensible properties defined..
+        /// </summary>
+        internal static string Rule0026bjectAccessAndExtensiblePropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0026bjectAccessAndExtensiblePropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects need to have the Access and/or Extensible properties defined..
+        /// </summary>
+        internal static string Rule0026bjectAccessAndExtensiblePropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0026bjectAccessAndExtensiblePropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects need to have the Access and/or Extensible properties defined..
+        /// </summary>
+        internal static string Rule0026bjectAccessAndExtensiblePropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0026bjectAccessAndExtensiblePropertyTitle", resourceCulture);
             }
         }
     }

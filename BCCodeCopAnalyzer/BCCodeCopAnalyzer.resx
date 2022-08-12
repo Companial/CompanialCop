@@ -147,15 +147,6 @@
   <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
     <value>Procedure name should not contain whitespace</value>
   </data>
-  <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresDescription" xml:space="preserve">
-    <value>Global variables section should be above triggers and procedures</value>
-  </data>
-  <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresFormat" xml:space="preserve">
-    <value>Move global variables section, it may be above triggers and procedures.</value>
-  </data>
-  <data name="Rule0004GlobalVariablesMayBeAboveTriggersProceduresTitle" xml:space="preserve">
-    <value>Global variables section should be above triggers and procedures</value>
-  </data>
   <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyDescription" xml:space="preserve">
     <value>First 19 Field IDs are reserved to primary key fields</value>
   </data>
@@ -173,15 +164,6 @@
   </data>
   <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeTitle" xml:space="preserve">
     <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
-  </data>
-  <data name="Rule0013CheckEmptyOnRunTriggersDescription" xml:space="preserve">
-    <value>Empty OnRun triggers should be removed</value>
-  </data>
-  <data name="Rule0013CheckEmptyOnRunTriggersFormat" xml:space="preserve">
-    <value>Remember to specify either the 'OnRun' trigger or remove it.</value>
-  </data>
-  <data name="Rule0013CheckEmptyOnRunTriggersTitle" xml:space="preserve">
-    <value>Empty OnRun triggers should be removed</value>
   </data>
   <data name="Rule0014HardcodedIpAddressDescription" xml:space="preserve">
     <value>Hardcoding IP addresses is security-sensitive</value>
@@ -227,5 +209,77 @@
   </data>
   <data name="Rule0018CheckForMissingCaptionsTitle" xml:space="preserve">
     <value>Caption is missing</value>
+  </data>
+  <data name="Rule0019SemicolonAfterProcedureDeclarationDescription" xml:space="preserve">
+    <value>Procedure must not end with semicolon.</value>
+  </data>
+  <data name="Rule0019SemicolonAfterProcedureDeclarationFormat" xml:space="preserve">
+    <value>Procedure must not end with semicolon.</value>
+  </data>
+  <data name="Rule0019SemicolonAfterProcedureDeclarationTitle" xml:space="preserve">
+    <value>Procedure must not end with semicolon.</value>
+  </data>
+  <data name="Rule0020InternalProceduresDescription" xml:space="preserve">
+    <value>Procedures must be either local or internal.</value>
+  </data>
+  <data name="Rule0020InternalProceduresFormat" xml:space="preserve">
+    <value>Procedures must be either local or internal.</value>
+  </data>
+  <data name="Rule0020InternalProceduresTitle" xml:space="preserve">
+    <value>Procedures must be either local or internal.</value>
+  </data>
+  <data name="Rule0021ToolTipPunctuationDescription" xml:space="preserve">
+    <value>ToolTips must end with a dot.</value>
+  </data>
+  <data name="Rule0021ToolTipPunctuationFormat" xml:space="preserve">
+    <value>ToolTips must end with a dot.</value>
+  </data>
+  <data name="Rule0021ToolTipPunctuationTitle" xml:space="preserve">
+    <value>ToolTips must end with a dot.</value>
+  </data>
+  <data name="Rule0022GlobalVarTriggerAndMethodPositionDescription" xml:space="preserve">
+    <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
+  </data>
+  <data name="Rule0022GlobalVarTriggerAndMethodPositionFormat" xml:space="preserve">
+    <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
+  </data>
+  <data name="Rule0022GlobalVarTriggerAndMethodPositionTitle" xml:space="preserve">
+    <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
+  </data>
+  <data name="Rule0023LabelPunctuationDescription" xml:space="preserve">
+    <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
+  </data>
+  <data name="Rule0023LabelPunctuationFormat" xml:space="preserve">
+    <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
+  </data>
+  <data name="Rule0023LabelPunctuationTitle" xml:space="preserve">
+    <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
+  </data>
+  <data name="Rule0024InternalMethodsMustHaveExplicitParametersDescription" xml:space="preserve">
+    <value>Internal Methods must be invoked with explicit parameters.</value>
+  </data>
+  <data name="Rule0024InternalMethodsMustHaveExplicitParametersFormat" xml:space="preserve">
+    <value>Internal Methods must be invoked with explicit parameters.</value>
+  </data>
+  <data name="Rule0024InternalMethodsMustHaveExplicitParametersTitle" xml:space="preserve">
+    <value>Internal Methods must be invoked with explicit parameters.</value>
+  </data>
+  <data name="Rule0025EmptyObjectSectionsDescription" xml:space="preserve">
+    <value>Object should not have empty sections.</value>
+  </data>
+  <data name="Rule0025EmptyObjectSectionsFormat" xml:space="preserve">
+    <value>Object should not have empty sections.</value>
+  </data>
+  <data name="Rule0025EmptyObjectSectionsTitle" xml:space="preserve">
+    <value>Object should not have empty sections.</value>
+  </data>
+  <data name="Rule0026bjectAccessAndExtensiblePropertyDescription" xml:space="preserve">
+    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  </data>
+  <data name="Rule0026bjectAccessAndExtensiblePropertyFormat" xml:space="preserve">
+    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  </data>
+  <data name="Rule0026bjectAccessAndExtensiblePropertyTitle" xml:space="preserve">
+    <value>Objects need to have the Access and/or Extensible properties defined.</value>
   </data>
 </root>

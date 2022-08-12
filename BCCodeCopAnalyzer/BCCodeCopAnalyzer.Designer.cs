@@ -446,5 +446,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0021ToolTipPunctuationTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods..
+        /// </summary>
+        internal static string Rule0022GlobalVarTriggerAndMethodPositionDescription {
+            get {
+                return ResourceManager.GetString("Rule0022GlobalVarTriggerAndMethodPositionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods..
+        /// </summary>
+        internal static string Rule0022GlobalVarTriggerAndMethodPositionFormat {
+            get {
+                return ResourceManager.GetString("Rule0022GlobalVarTriggerAndMethodPositionFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods..
+        /// </summary>
+        internal static string Rule0022GlobalVarTriggerAndMethodPositionTitle {
+            get {
+                return ResourceManager.GetString("Rule0022GlobalVarTriggerAndMethodPositionTitle", resourceCulture);
+            }
+        }
     }
 }

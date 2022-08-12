@@ -169,5 +169,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0022GlobalVarTriggerAndMethodPosition = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0022",
+            BCCodeCopAnalyzer.Rule0022GlobalVarTriggerAndMethodPositionTitle,
+            BCCodeCopAnalyzer.Rule0022GlobalVarTriggerAndMethodPositionFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0022GlobalVarTriggerAndMethodPositionDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

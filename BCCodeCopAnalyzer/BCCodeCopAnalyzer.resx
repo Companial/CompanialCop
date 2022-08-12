@@ -246,4 +246,13 @@
   <data name="Rule0021ToolTipPunctuationTitle" xml:space="preserve">
     <value>ToolTips must end with a dot.</value>
   </data>
+  <data name="Rule0022GlobalVarTriggerAndMethodPositionDescription" xml:space="preserve">
+    <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
+  </data>
+  <data name="Rule0022GlobalVarTriggerAndMethodPositionFormat" xml:space="preserve">
+    <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
+  </data>
+  <data name="Rule0022GlobalVarTriggerAndMethodPositionTitle" xml:space="preserve">
+    <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
+  </data>
 </root>

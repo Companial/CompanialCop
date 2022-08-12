@@ -189,5 +189,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0025EmptyObjectSections = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0025",
+            BCCodeCopAnalyzer.Rule0025EmptyObjectSectionsTitle,
+            BCCodeCopAnalyzer.Rule0025EmptyObjectSectionsFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0025EmptyObjectSectionsDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

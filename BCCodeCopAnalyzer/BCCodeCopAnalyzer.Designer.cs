@@ -500,5 +500,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0024InternalMethodsMustHaveExplicitParametersTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object should not have empty sections..
+        /// </summary>
+        internal static string Rule0025EmptyObjectSectionsDescription {
+            get {
+                return ResourceManager.GetString("Rule0025EmptyObjectSectionsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object should not have empty sections..
+        /// </summary>
+        internal static string Rule0025EmptyObjectSectionsFormat {
+            get {
+                return ResourceManager.GetString("Rule0025EmptyObjectSectionsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object should not have empty sections..
+        /// </summary>
+        internal static string Rule0025EmptyObjectSectionsTitle {
+            get {
+                return ResourceManager.GetString("Rule0025EmptyObjectSectionsTitle", resourceCulture);
+            }
+        }
     }
 }

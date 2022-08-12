@@ -264,4 +264,13 @@
   <data name="Rule0024InternalMethodsMustHaveExplicitParametersTitle" xml:space="preserve">
     <value>Internal Methods must be invoked with explicit parameters.</value>
   </data>
+  <data name="Rule0025EmptyObjectSectionsDescription" xml:space="preserve">
+    <value>Object should not have empty sections.</value>
+  </data>
+  <data name="Rule0025EmptyObjectSectionsFormat" xml:space="preserve">
+    <value>Object should not have empty sections.</value>
+  </data>
+  <data name="Rule0025EmptyObjectSectionsTitle" xml:space="preserve">
+    <value>Object should not have empty sections.</value>
+  </data>
 </root>

@@ -5,10 +5,10 @@ using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
 using System;
 using System.Collections.Immutable;
 
-namespace BusinessCentral.LinterCop.Design
+namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0002CommitMustBeExplainedByComment : DiagnosticAnalyzer
+    public class Rule0015FlowFieldsShouldNotBeEditable : DiagnosticAnalyzer
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0016CommitMustBeExplainedByComment);
 

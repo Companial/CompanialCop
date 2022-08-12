@@ -4,10 +4,10 @@ using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using System;
 using System.Collections.Immutable;
 
-namespace BusinessCentral.LinterCop.Design
+namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    class Rule0016CheckForMissingCaptions : DiagnosticAnalyzer
+    class Rule0018CheckForMissingCaptions : DiagnosticAnalyzer
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0018CheckForMissingCaptions);
 

@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 
-namespace BusinessCentral.LinterCop.Design
+namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0012DoNotUseObjectIdInSystemFunctions : DiagnosticAnalyzer
+    public class Rule0017DoNotUseObjectIdInSystemFunctions : DiagnosticAnalyzer
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0017DoNotUseObjectIdInSystemFunctions);
 

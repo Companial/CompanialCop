@@ -255,4 +255,13 @@
   <data name="Rule0022GlobalVarTriggerAndMethodPositionTitle" xml:space="preserve">
     <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
   </data>
+  <data name="Rule0023LabelPunctuationDescription" xml:space="preserve">
+    <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
+  </data>
+  <data name="Rule0023LabelPunctuationFormat" xml:space="preserve">
+    <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
+  </data>
+  <data name="Rule0023LabelPunctuationTitle" xml:space="preserve">
+    <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
+  </data>
 </root>

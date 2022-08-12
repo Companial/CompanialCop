@@ -180,5 +180,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0023LabelPunctuation = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0023",
+            BCCodeCopAnalyzer.Rule0023LabelPunctuationTitle,
+            BCCodeCopAnalyzer.Rule0023LabelPunctuationFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0023LabelPunctuationDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

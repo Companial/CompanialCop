@@ -473,5 +473,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0022GlobalVarTriggerAndMethodPositionTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Msg and Err Labels should end with a dot, Qst should end with a question mark..
+        /// </summary>
+        internal static string Rule0023LabelPunctuationDescription {
+            get {
+                return ResourceManager.GetString("Rule0023LabelPunctuationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Msg and Err Labels should end with a dot, Qst should end with a question mark..
+        /// </summary>
+        internal static string Rule0023LabelPunctuationFormat {
+            get {
+                return ResourceManager.GetString("Rule0023LabelPunctuationFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Msg and Err Labels should end with a dot, Qst should end with a question mark..
+        /// </summary>
+        internal static string Rule0023LabelPunctuationTitle {
+            get {
+                return ResourceManager.GetString("Rule0023LabelPunctuationTitle", resourceCulture);
+            }
+        }
     }
 }

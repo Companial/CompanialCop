@@ -68,19 +68,6 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
-
-        public static readonly DiagnosticDescriptor Rule0013CheckEmptyOnRunTriggers = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0013",
-            BCCodeCopAnalyzer.Rule0013CheckEmptyOnRunTriggersTitle,
-            BCCodeCopAnalyzer.Rule0013CheckEmptyOnRunTriggersFormat,
-            "Readability",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0013CheckEmptyOnRunTriggersDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
-
         public static readonly DiagnosticDescriptor Rule0014HardcodedIpAddress = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0014",
             BCCodeCopAnalyzer.Rule0014HardcodedIpAddressTitle,

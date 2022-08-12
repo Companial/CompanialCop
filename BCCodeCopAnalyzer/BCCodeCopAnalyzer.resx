@@ -165,15 +165,6 @@
   <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeTitle" xml:space="preserve">
     <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
   </data>
-  <data name="Rule0013CheckEmptyOnRunTriggersDescription" xml:space="preserve">
-    <value>Empty OnRun triggers should be removed</value>
-  </data>
-  <data name="Rule0013CheckEmptyOnRunTriggersFormat" xml:space="preserve">
-    <value>Remember to specify either the 'OnRun' trigger or remove it.</value>
-  </data>
-  <data name="Rule0013CheckEmptyOnRunTriggersTitle" xml:space="preserve">
-    <value>Empty OnRun triggers should be removed</value>
-  </data>
   <data name="Rule0014HardcodedIpAddressDescription" xml:space="preserve">
     <value>Hardcoding IP addresses is security-sensitive</value>
   </data>

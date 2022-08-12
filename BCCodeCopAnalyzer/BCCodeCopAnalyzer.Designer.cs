@@ -205,33 +205,6 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Empty OnRun triggers should be removed.
-        /// </summary>
-        internal static string Rule0013CheckEmptyOnRunTriggersDescription {
-            get {
-                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Remember to specify either the &apos;OnRun&apos; trigger or remove it..
-        /// </summary>
-        internal static string Rule0013CheckEmptyOnRunTriggersFormat {
-            get {
-                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Empty OnRun triggers should be removed.
-        /// </summary>
-        internal static string Rule0013CheckEmptyOnRunTriggersTitle {
-            get {
-                return ResourceManager.GetString("Rule0013CheckEmptyOnRunTriggersTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Hardcoding IP addresses is security-sensitive.
         /// </summary>
         internal static string Rule0014HardcodedIpAddressDescription {

@@ -9,9 +9,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0022GlobalVarTriggerAndMethodPosition : DiagnosticAnalyzer
+    public class Rule0014GlobalVarTriggerAndMethodPosition : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0022GlobalVarTriggerAndMethodPosition);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0014GlobalVarTriggerAndMethodPosition);
 
         public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(AnalyzeGlobalVariablesPlacement), SyntaxKind.TableObject, SyntaxKind.PageObject,
                                                                                                                                                                              SyntaxKind.CodeunitObject, SyntaxKind.ReportObject, SyntaxKind.QueryObject);
@@ -51,10 +51,10 @@ namespace BCCodeCopAnalyzer.Design
                 }
 
             if ((globalVarSectionPosition > triggersSectionPosition && triggersSectionPosition != 0) || (globalVarSectionPosition > methodSectionPosition && methodSectionPosition != 0))
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0022GlobalVarTriggerAndMethodPosition, globalVarLocation));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0014GlobalVarTriggerAndMethodPosition, globalVarLocation));
 
             if (triggersSectionPosition > methodSectionPosition && methodSectionPosition != 0)
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0022GlobalVarTriggerAndMethodPosition, triggerLocation));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0014GlobalVarTriggerAndMethodPosition, triggerLocation));
         }
     }
 }

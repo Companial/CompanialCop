@@ -147,139 +147,139 @@
   <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
     <value>Procedure name should not contain whitespace</value>
   </data>
-  <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyDescription" xml:space="preserve">
+  <data name="Rule0004First19TableFieldsIDReservedToPrimaryKeyDescription" xml:space="preserve">
     <value>First 19 Field IDs are reserved to primary key fields</value>
   </data>
-  <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyFormat" xml:space="preserve">
+  <data name="Rule0004First19TableFieldsIDReservedToPrimaryKeyFormat" xml:space="preserve">
     <value>The field identifier '{0}' is not valid. First 19 Field IDs are reserved to primary key fields.</value>
   </data>
-  <data name="Rule0009First19TableFieldsIDReservedToPrimaryKeyTitle" xml:space="preserve">
+  <data name="Rule0004First19TableFieldsIDReservedToPrimaryKeyTitle" xml:space="preserve">
     <value>First 19 Field IDs are reserved to primary key fields</value>
   </data>
-  <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeDescription" xml:space="preserve">
+  <data name="Rule0005EnumExtensionsValuesNumberedInDedicatedRangeDescription" xml:space="preserve">
     <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
   </data>
-  <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeFormat" xml:space="preserve">
+  <data name="Rule0005EnumExtensionsValuesNumberedInDedicatedRangeFormat" xml:space="preserve">
     <value>Then enum identifier '{0}' is not valid. It must be withing the range '{1}.</value>
   </data>
-  <data name="Rule0011EnumExtensionsValuesNumberedInDedicatedRangeTitle" xml:space="preserve">
+  <data name="Rule0005EnumExtensionsValuesNumberedInDedicatedRangeTitle" xml:space="preserve">
     <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
   </data>
-  <data name="Rule0014HardcodedIpAddressDescription" xml:space="preserve">
+  <data name="Rule0006HardcodedIpAddressDescription" xml:space="preserve">
     <value>Hardcoding IP addresses is security-sensitive</value>
   </data>
-  <data name="Rule0014HardcodedIpAddressFormat" xml:space="preserve">
+  <data name="Rule0006HardcodedIpAddressFormat" xml:space="preserve">
     <value>The Label {0} must not contain IP addresses.</value>
   </data>
-  <data name="Rule0014HardcodedIpAddressTitle" xml:space="preserve">
+  <data name="Rule0006HardcodedIpAddressTitle" xml:space="preserve">
     <value>Hardcoding IP addresses is security-sensitive</value>
   </data>
-  <data name="Rule0015FlowFieldsShouldNotBeEditableDescription" xml:space="preserve">
+  <data name="Rule0007FlowFieldsShouldNotBeEditableDescription" xml:space="preserve">
     <value>FlowFields should not be editable.</value>
   </data>
-  <data name="Rule0015FlowFieldsShouldNotBeEditableFormat" xml:space="preserve">
+  <data name="Rule0007FlowFieldsShouldNotBeEditableFormat" xml:space="preserve">
     <value>Field with name '{0}' must have the Editable property equals false.</value>
   </data>
-  <data name="Rule0015FlowFieldsShouldNotBeEditableTitle" xml:space="preserve">
+  <data name="Rule0007FlowFieldsShouldNotBeEditableTitle" xml:space="preserve">
     <value>FlowFields should not be editable.</value>
   </data>
-  <data name="Rule0016CommitMustBeExplainedByCommentDescription" xml:space="preserve">
+  <data name="Rule0008CommitMustBeExplainedByCommentDescription" xml:space="preserve">
     <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
   </data>
-  <data name="Rule0016CommitMustBeExplainedByCommentFormat" xml:space="preserve">
+  <data name="Rule0008CommitMustBeExplainedByCommentFormat" xml:space="preserve">
     <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
   </data>
-  <data name="Rule0016CommitMustBeExplainedByCommentTitle" xml:space="preserve">
+  <data name="Rule0008CommitMustBeExplainedByCommentTitle" xml:space="preserve">
     <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
   </data>
-  <data name="Rule0017DoNotUseObjectIdInSystemFunctionsDescription" xml:space="preserve">
+  <data name="Rule0009DoNotUseObjectIdInSystemFunctionsDescription" xml:space="preserve">
     <value>Using hardcoded IDs in functions is not allowed.</value>
   </data>
-  <data name="Rule0017DoNotUseObjectIdInSystemFunctionsFormat" xml:space="preserve">
+  <data name="Rule0009DoNotUseObjectIdInSystemFunctionsFormat" xml:space="preserve">
     <value>Using hardcoded IDs in functions is not allowed.</value>
   </data>
-  <data name="Rule0017DoNotUseObjectIdInSystemFunctionsTitle" xml:space="preserve">
+  <data name="Rule0009DoNotUseObjectIdInSystemFunctionsTitle" xml:space="preserve">
     <value>Using hardcoded IDs in functions is not allowed.</value>
   </data>
-  <data name="Rule0018CheckForMissingCaptionsDescription" xml:space="preserve">
+  <data name="Rule0010CheckForMissingCaptionsDescription" xml:space="preserve">
     <value>Caption is missing</value>
   </data>
-  <data name="Rule0018CheckForMissingCaptionsFormat" xml:space="preserve">
+  <data name="Rule0010CheckForMissingCaptionsFormat" xml:space="preserve">
     <value>'{0}' must have caption property.</value>
   </data>
-  <data name="Rule0018CheckForMissingCaptionsTitle" xml:space="preserve">
+  <data name="Rule0010CheckForMissingCaptionsTitle" xml:space="preserve">
     <value>Caption is missing</value>
   </data>
-  <data name="Rule0019SemicolonAfterProcedureDeclarationDescription" xml:space="preserve">
+  <data name="Rule0011SemicolonAfterProcedureDeclarationDescription" xml:space="preserve">
     <value>Procedure must not end with semicolon.</value>
   </data>
-  <data name="Rule0019SemicolonAfterProcedureDeclarationFormat" xml:space="preserve">
+  <data name="Rule0011SemicolonAfterProcedureDeclarationFormat" xml:space="preserve">
     <value>Procedure must not end with semicolon.</value>
   </data>
-  <data name="Rule0019SemicolonAfterProcedureDeclarationTitle" xml:space="preserve">
+  <data name="Rule0011SemicolonAfterProcedureDeclarationTitle" xml:space="preserve">
     <value>Procedure must not end with semicolon.</value>
   </data>
-  <data name="Rule0020InternalProceduresDescription" xml:space="preserve">
+  <data name="Rule0012InternalProceduresDescription" xml:space="preserve">
     <value>Procedures must be either local or internal.</value>
   </data>
-  <data name="Rule0020InternalProceduresFormat" xml:space="preserve">
+  <data name="Rule0012InternalProceduresFormat" xml:space="preserve">
     <value>Procedures must be either local or internal.</value>
   </data>
-  <data name="Rule0020InternalProceduresTitle" xml:space="preserve">
+  <data name="Rule0012InternalProceduresTitle" xml:space="preserve">
     <value>Procedures must be either local or internal.</value>
   </data>
-  <data name="Rule0021ToolTipPunctuationDescription" xml:space="preserve">
+  <data name="Rule0013ToolTipPunctuationDescription" xml:space="preserve">
     <value>ToolTips must end with a dot.</value>
   </data>
-  <data name="Rule0021ToolTipPunctuationFormat" xml:space="preserve">
+  <data name="Rule0013ToolTipPunctuationFormat" xml:space="preserve">
     <value>ToolTips must end with a dot.</value>
   </data>
-  <data name="Rule0021ToolTipPunctuationTitle" xml:space="preserve">
+  <data name="Rule0013ToolTipPunctuationTitle" xml:space="preserve">
     <value>ToolTips must end with a dot.</value>
   </data>
-  <data name="Rule0022GlobalVarTriggerAndMethodPositionDescription" xml:space="preserve">
+  <data name="Rule0014GlobalVarTriggerAndMethodPositionDescription" xml:space="preserve">
     <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
   </data>
-  <data name="Rule0022GlobalVarTriggerAndMethodPositionFormat" xml:space="preserve">
+  <data name="Rule0014GlobalVarTriggerAndMethodPositionFormat" xml:space="preserve">
     <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
   </data>
-  <data name="Rule0022GlobalVarTriggerAndMethodPositionTitle" xml:space="preserve">
+  <data name="Rule0014GlobalVarTriggerAndMethodPositionTitle" xml:space="preserve">
     <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
   </data>
-  <data name="Rule0023LabelPunctuationDescription" xml:space="preserve">
+  <data name="Rule0015LabelPunctuationDescription" xml:space="preserve">
     <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
   </data>
-  <data name="Rule0023LabelPunctuationFormat" xml:space="preserve">
+  <data name="Rule0015LabelPunctuationFormat" xml:space="preserve">
     <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
   </data>
-  <data name="Rule0023LabelPunctuationTitle" xml:space="preserve">
+  <data name="Rule0015LabelPunctuationTitle" xml:space="preserve">
     <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
   </data>
-  <data name="Rule0024InternalMethodsMustHaveExplicitParametersDescription" xml:space="preserve">
+  <data name="Rule0016InternalMethodsMustHaveExplicitParametersDescription" xml:space="preserve">
     <value>Internal Methods must be invoked with explicit parameters.</value>
   </data>
-  <data name="Rule0024InternalMethodsMustHaveExplicitParametersFormat" xml:space="preserve">
+  <data name="Rule0016InternalMethodsMustHaveExplicitParametersFormat" xml:space="preserve">
     <value>Internal Methods must be invoked with explicit parameters.</value>
   </data>
-  <data name="Rule0024InternalMethodsMustHaveExplicitParametersTitle" xml:space="preserve">
+  <data name="Rule0016InternalMethodsMustHaveExplicitParametersTitle" xml:space="preserve">
     <value>Internal Methods must be invoked with explicit parameters.</value>
   </data>
-  <data name="Rule0025EmptyObjectSectionsDescription" xml:space="preserve">
+  <data name="Rule0017EmptyObjectSectionsDescription" xml:space="preserve">
     <value>Object should not have empty sections.</value>
   </data>
-  <data name="Rule0025EmptyObjectSectionsFormat" xml:space="preserve">
+  <data name="Rule0017EmptyObjectSectionsFormat" xml:space="preserve">
     <value>Object should not have empty sections.</value>
   </data>
-  <data name="Rule0025EmptyObjectSectionsTitle" xml:space="preserve">
+  <data name="Rule0017EmptyObjectSectionsTitle" xml:space="preserve">
     <value>Object should not have empty sections.</value>
   </data>
-  <data name="Rule0026bjectAccessAndExtensiblePropertyDescription" xml:space="preserve">
+  <data name="Rule0018ObjectAccessAndExtensiblePropertyDescription" xml:space="preserve">
     <value>Objects need to have the Access and/or Extensible properties defined.</value>
   </data>
-  <data name="Rule0026bjectAccessAndExtensiblePropertyFormat" xml:space="preserve">
+  <data name="Rule0018ObjectAccessAndExtensiblePropertyFormat" xml:space="preserve">
     <value>Objects need to have the Access and/or Extensible properties defined.</value>
   </data>
-  <data name="Rule0026bjectAccessAndExtensiblePropertyTitle" xml:space="preserve">
+  <data name="Rule0018ObjectAccessAndExtensiblePropertyTitle" xml:space="preserve">
     <value>Objects need to have the Access and/or Extensible properties defined.</value>
   </data>
 </root>

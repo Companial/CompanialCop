@@ -8,9 +8,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0015FlowFieldsShouldNotBeEditable : DiagnosticAnalyzer
+    public class Rule0007FlowFieldsShouldNotBeEditable : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0015FlowFieldsShouldNotBeEditable);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0007FlowFieldsShouldNotBeEditable);
 
         public override void Initialize(AnalysisContext context) => context.RegisterSymbolAction(new Action<SymbolAnalysisContext>(this.AnalyzeFlowFieldEditable), SymbolKind.Field);
 
@@ -21,7 +21,7 @@ namespace BCCodeCopAnalyzer.Design
 
             IFieldSymbol field = (IFieldSymbol)ctx.Symbol;
             if (field.FieldClass == FieldClassKind.FlowField && field.GetBooleanPropertyValue(PropertyKind.Editable).Value)
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0015FlowFieldsShouldNotBeEditable, field.Location, field.Name));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0007FlowFieldsShouldNotBeEditable, field.Location, field.Name));
         }
     }
 }

@@ -13,9 +13,9 @@ using System.Threading.Tasks;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    internal class Rule0011EnumExtensionFieldsNumberedInDedicatedRange : DiagnosticAnalyzer
+    internal class Rule0005EnumExtensionFieldsNumberedInDedicatedRange : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0011EnumExtensionsValuesNumberedInDedicatedRange);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0005EnumExtensionsValuesNumberedInDedicatedRange);
 
         public override void Initialize(AnalysisContext context)
         {           
@@ -72,7 +72,7 @@ namespace BCCodeCopAnalyzer.Design
         private static void ReportEnumValuesInAllowedRange(SyntaxNodeAnalysisContext syntaxNodeAnalysisContext, Location location, string valueText, string allowedRange, IdentifierNameSyntax syntaxName)
         {
             if (syntaxNodeAnalysisContext.Node != null)
-                syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0011EnumExtensionsValuesNumberedInDedicatedRange, location, (object)valueText, (object)allowedRange, (object)syntaxName));
+                syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0005EnumExtensionsValuesNumberedInDedicatedRange, location, (object)valueText, (object)allowedRange, (object)syntaxName));
         }
     }
 }

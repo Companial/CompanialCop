@@ -8,9 +8,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0020InternalProcedures : DiagnosticAnalyzer
+    public class Rule0012InternalProcedures : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0020InternalProcedures);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0012InternalProcedures);
 
         public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeInternalProcedures), SyntaxKind.MethodDeclaration);
 
@@ -23,7 +23,7 @@ namespace BCCodeCopAnalyzer.Design
             SyntaxNodeOrToken firstToken = syntax.ProcedureKeyword.GetPreviousToken();
 
             if (firstToken.Kind != SyntaxKind.LocalKeyword && firstToken.Kind != SyntaxKind.InternalKeyword)
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0020InternalProcedures, syntax.ProcedureKeyword.GetLocation()));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0012InternalProcedures, syntax.ProcedureKeyword.GetLocation()));
 
         }
     }

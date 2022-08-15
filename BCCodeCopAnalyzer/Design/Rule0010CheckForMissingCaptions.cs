@@ -7,9 +7,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    class Rule0018CheckForMissingCaptions : DiagnosticAnalyzer
+    class Rule0010CheckForMissingCaptions : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0018CheckForMissingCaptions);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0010CheckForMissingCaptions);
 
         public override void Initialize(AnalysisContext context)
             => context.RegisterSymbolAction(new Action<SymbolAnalysisContext>(this.CheckForMissingCaptions),
@@ -121,7 +121,7 @@ namespace BCCodeCopAnalyzer.Design
         }
         private void RaiseCaptionWarning(SymbolAnalysisContext context, string valueText)
         {
-            context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0018CheckForMissingCaptions, context.Symbol.GetLocation(), valueText));
+            context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0010CheckForMissingCaptions, context.Symbol.GetLocation(), valueText));
         }
     }
 }

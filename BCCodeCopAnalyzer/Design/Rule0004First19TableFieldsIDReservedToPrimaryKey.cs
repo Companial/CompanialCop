@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    internal class Rule0009First19TableFieldsIDReservedToPrimaryKey : DiagnosticAnalyzer
+    internal class Rule0004First19TableFieldsIDReservedToPrimaryKey : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0009First19TableFieldsIDReservedToPrimaryKey);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0004First19TableFieldsIDReservedToPrimaryKey);
 
         public override void Initialize(AnalysisContext context)
         {
@@ -66,7 +66,7 @@ namespace BCCodeCopAnalyzer.Design
 
         private static void ReportFieldsReservedForPrimaryKeyFields(SyntaxNodeAnalysisContext syntaxNodeAnalysisContext, Location location, string valueText, IdentifierNameSyntax syntaxName)
         {
-            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0009First19TableFieldsIDReservedToPrimaryKey, location, (object)valueText, (object)syntaxName));
+            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0004First19TableFieldsIDReservedToPrimaryKey, location, (object)valueText, (object)syntaxName));
         }
     }
 }

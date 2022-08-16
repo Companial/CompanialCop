@@ -8,9 +8,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0024InternalMethodsMustHaveExplicitParameters : DiagnosticAnalyzer
+    public class Rule0016InternalMethodsMustHaveExplicitParameters : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0024InternalMethodsMustHaveExplicitParameters);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0016InternalMethodsMustHaveExplicitParameters);
 
         public override void Initialize(AnalysisContext context) => context.RegisterOperationAction(new Action<OperationAnalysisContext>(this.CheckCommitForExplainingComment), OperationKind.InvocationExpression);
 
@@ -28,7 +28,7 @@ namespace BCCodeCopAnalyzer.Design
 
             if (methodsToCheck.Contains(targetMethod.Name.ToUpper()))
                 if (operation.Arguments.Length == 0)
-                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0024InternalMethodsMustHaveExplicitParameters, ctx.Operation.Syntax.GetLocation()));
+                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0016InternalMethodsMustHaveExplicitParameters, ctx.Operation.Syntax.GetLocation()));
         }
     }
 }

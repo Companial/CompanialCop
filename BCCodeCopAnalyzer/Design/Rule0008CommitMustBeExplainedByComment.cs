@@ -8,9 +8,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0016CommitMustBeExplainedByComment : DiagnosticAnalyzer
+    public class Rule0008CommitMustBeExplainedByComment : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0016CommitMustBeExplainedByComment);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0008CommitMustBeExplainedByComment);
 
         public override void Initialize(AnalysisContext context) => context.RegisterOperationAction(new Action<OperationAnalysisContext>(this.CheckCommitForExplainingComment), OperationKind.InvocationExpression);
 
@@ -37,7 +37,7 @@ namespace BCCodeCopAnalyzer.Design
                     }
                 }
 
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0016CommitMustBeExplainedByComment, ctx.Operation.Syntax.GetLocation()));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0008CommitMustBeExplainedByComment, ctx.Operation.Syntax.GetLocation()));
             }
         }
     }

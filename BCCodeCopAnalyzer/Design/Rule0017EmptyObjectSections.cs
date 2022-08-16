@@ -9,9 +9,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    internal class Rule0014EmptyObjectSections : DiagnosticAnalyzer
+    internal class Rule0017EmptyObjectSections : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0025EmptyObjectSections);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0017EmptyObjectSections);
 
         public override void Initialize(AnalysisContext context)
         {
@@ -66,7 +66,7 @@ namespace BCCodeCopAnalyzer.Design
 
         private static void ReportEmptyObjectSection(SyntaxNodeAnalysisContext syntaxNodeAnalysisContext, Location location)
         {
-            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0025EmptyObjectSections, location));
+            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0017EmptyObjectSections, location));
         }
     }
 }

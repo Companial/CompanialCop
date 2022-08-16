@@ -8,9 +8,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0021ToolTipPunctuation : DiagnosticAnalyzer
+    public class Rule0013ToolTipPunctuation : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0021ToolTipPunctuation);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0013ToolTipPunctuation);
 
         public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeToolTipPunctuation), SyntaxKind.PageField, SyntaxKind.PageAction);
 
@@ -25,7 +25,7 @@ namespace BCCodeCopAnalyzer.Design
             {
                 string tooltipValue = tooltipProperty.Value.GetText().ToString();
                 if (!tooltipValue.EndsWith(".'") && !tooltipValue.EndsWith(".)'"))
-                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0021ToolTipPunctuation, tooltipProperty.GetLocation()));
+                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0013ToolTipPunctuation, tooltipProperty.GetLocation()));
             }
 
         }

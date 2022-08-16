@@ -9,9 +9,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0015ObjectAccessAndExtensibleProperty : DiagnosticAnalyzer
+    public class Rule0018ObjectAccessAndExtensibleProperty : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0026bjectAccessAndExtensibleProperty);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0018ObjectAccessAndExtensibleProperty);
 
         public override void Initialize(AnalysisContext context)
         {
@@ -29,7 +29,7 @@ namespace BCCodeCopAnalyzer.Design
 
             if (tooltipProperty == null)
             {
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0026bjectAccessAndExtensibleProperty, currObject.Name.GetLocation()));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0018ObjectAccessAndExtensibleProperty, currObject.Name.GetLocation()));
             }
 
         }
@@ -44,7 +44,7 @@ namespace BCCodeCopAnalyzer.Design
 
             if (tooltipProperty == null)
             {
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0026bjectAccessAndExtensibleProperty, currObject.Name.GetLocation()));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0018ObjectAccessAndExtensibleProperty, currObject.Name.GetLocation()));
             }
 
         }

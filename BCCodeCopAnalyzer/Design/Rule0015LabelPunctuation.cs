@@ -8,9 +8,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0023LabelPunctuation : DiagnosticAnalyzer
+    public class Rule0015LabelPunctuation : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0023LabelPunctuation);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0015LabelPunctuation);
 
         public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeLabelPunctuation), SyntaxKind.VariableDeclaration);
 
@@ -30,11 +30,11 @@ namespace BCCodeCopAnalyzer.Design
 
                 if (variableName.EndsWith("Msg") || variableName.EndsWith("Err"))
                     if (!labelText.EndsWith(".'"))
-                        ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0023LabelPunctuation, syntax.Name.GetLocation()));
+                        ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0015LabelPunctuation, syntax.Name.GetLocation()));
 
                 if (variableName.EndsWith("Qst"))
                     if (!labelText.Contains("?"))
-                        ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0023LabelPunctuation, syntax.Name.GetLocation()));
+                        ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0015LabelPunctuation, syntax.Name.GetLocation()));
             }
         }
     }

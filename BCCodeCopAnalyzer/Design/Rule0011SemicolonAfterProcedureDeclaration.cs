@@ -8,9 +8,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0019SemicolonAfterProcedureDeclaration : DiagnosticAnalyzer
+    public class Rule0011SemicolonAfterProcedureDeclaration : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0019SemicolonAfterProcedureDeclaration);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0011SemicolonAfterProcedureDeclaration);
 
         public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeSemicolonAfterProcedureDeclaration), SyntaxKind.MethodDeclaration);
 
@@ -23,7 +23,7 @@ namespace BCCodeCopAnalyzer.Design
 
             if (syntax.SemicolonToken.Kind != SyntaxKind.None)
             {
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0019SemicolonAfterProcedureDeclaration, syntax.SemicolonToken.GetLocation()));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0011SemicolonAfterProcedureDeclaration, syntax.SemicolonToken.GetLocation()));
             }
         }
     }

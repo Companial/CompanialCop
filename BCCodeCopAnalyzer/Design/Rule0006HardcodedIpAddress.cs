@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    internal class Rule0014HardcodedIpAddress : DiagnosticAnalyzer
+    internal class Rule0006HardcodedIpAddress : DiagnosticAnalyzer
     {
         private readonly string[] ignoredVariableNames =
             {
@@ -34,7 +34,7 @@ namespace BCCodeCopAnalyzer.Design
             || syntaxNode is LabelSyntax
             || syntaxNode is ParameterSyntax;
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0014HardcodedIpAddress);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0006HardcodedIpAddress);
 
         public override void Initialize(AnalysisContext context)
         {
@@ -74,7 +74,7 @@ namespace BCCodeCopAnalyzer.Design
 
         private static void ReportHardcodedIpAddress(SyntaxNodeAnalysisContext syntaxNodeAnalysisContext, Location location, string valueText)
         {
-            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0014HardcodedIpAddress, location, (object)valueText));
+            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0006HardcodedIpAddress, location, (object)valueText));
         }
     }
 }

@@ -9,9 +9,9 @@ using System.Linq;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0017DoNotUseObjectIdInSystemFunctions : DiagnosticAnalyzer
+    public class Rule0009DoNotUseObjectIdInSystemFunctions : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0017DoNotUseObjectIdInSystemFunctions);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0009DoNotUseObjectIdInSystemFunctions);
 
         public override void Initialize(AnalysisContext context)
         {
@@ -35,7 +35,7 @@ namespace BCCodeCopAnalyzer.Design
             var wrongSyntaxLiteral = method.Attributes[0].DeclaringSyntaxReference.GetSyntax().DescendantNodes(o => true).FirstOrDefault(n => n.IsKind(SyntaxKind.Int32SignedLiteralValue));
 
             if (wrongSyntaxLiteral != null)
-                context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0017DoNotUseObjectIdInSystemFunctions, wrongSyntaxLiteral.GetLocation(), new object[] { ObjectAccessToUseText, "" }));
+                context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0009DoNotUseObjectIdInSystemFunctions, wrongSyntaxLiteral.GetLocation(), new object[] { ObjectAccessToUseText, "" }));
         }
 
         private void CheckForObjectIdsInFunctionInvocations(OperationAnalysisContext context)
@@ -59,10 +59,10 @@ namespace BCCodeCopAnalyzer.Design
                 {
                     int tempint = 0;
                     if (int.TryParse(operation.Arguments[0].Syntax.ToString(), out tempint))
-                        context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0017DoNotUseObjectIdInSystemFunctions, context.Operation.Syntax.GetLocation(), new object[] { CurrentFunction.CorrectAccessSymbol, "" }));
+                        context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0009DoNotUseObjectIdInSystemFunctions, context.Operation.Syntax.GetLocation(), new object[] { CurrentFunction.CorrectAccessSymbol, "" }));
                     else
                         if (!operation.Arguments[0].Syntax.ToString().ToUpper().StartsWith(CurrentFunction.CorrectAccessSymbol.ToUpper()))
-                        context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0017DoNotUseObjectIdInSystemFunctions, context.Operation.Syntax.GetLocation(), new object[] { CurrentFunction.CorrectAccessSymbol, "" }));
+                        context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0009DoNotUseObjectIdInSystemFunctions, context.Operation.Syntax.GetLocation(), new object[] { CurrentFunction.CorrectAccessSymbol, "" }));
                 }
             }
 

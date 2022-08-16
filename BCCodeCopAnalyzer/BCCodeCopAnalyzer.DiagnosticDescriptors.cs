@@ -21,15 +21,38 @@ namespace BCCodeCopAnalyzer
             Array.Empty<string>()
         );
 
-        public static readonly DiagnosticDescriptor Rule0002VariableShouldNotContainWildcardSymbols = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0002",
-            BCCodeCopAnalyzer.Rule0002VariableShouldNotContainWildcardSymbolsTitle,
-            BCCodeCopAnalyzer.Rule0002VariableShouldNotContainWildcardSymbolsFormat,
+        public static readonly DiagnosticDescriptor Rule0001VariableShouldNotContainWildcardSymbols = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0001",
+            BCCodeCopAnalyzer.Rule0001VariableShouldNotContainWildcardSymbolsTitle,
+            BCCodeCopAnalyzer.Rule0001VariableShouldNotContainWildcardSymbolsFormat,
             "Naming",
             DiagnosticSeverity.Warning,
             true,
-            BCCodeCopAnalyzer.Rule0002VariableShouldNotContainWildcardSymbolsDescription,
+            BCCodeCopAnalyzer.Rule0001VariableShouldNotContainWildcardSymbolsDescription,
             null,
+            Array.Empty<string>()
+        );
+
+        public static readonly DiagnosticDescriptor Rule0002LockedVariableLables = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0002",
+            BCCodeCopAnalyzer.Rule0002LockedVariableLablesTitle,
+            BCCodeCopAnalyzer.Rule0002LockedVariableLablesFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0002LockedVariableLablesDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0002LockedVariableTokLables = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0002",
+            BCCodeCopAnalyzer.Rule0002LockedVariableTokLablesTitle,
+            BCCodeCopAnalyzer.Rule0002LockedVariableTokLablesFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0002LockedVariableTokLablesDescription,
+            (string)null,
             Array.Empty<string>()
         );
 

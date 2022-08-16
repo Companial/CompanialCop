@@ -8,6 +8,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,65 +17,42 @@ namespace BCCodeCopAnalyzer.Design
     [DiagnosticAnalyzer]
     internal class Rule0006HardcodedIpAddress : DiagnosticAnalyzer
     {
-        private readonly string[] ignoredVariableNames =
-            {
-                "VERSION",
-                "ASSEMBLY",
-            };
         private const string IPv4Broadcast = "255.255.255.255";
         private const int IPv4AddressParts = 4;
 
-        protected string GetValueText(LiteralExpressionSyntax literalExpression) => literalExpression.Literal.GetLiteralValue().ToString();
-        protected string GetValueText(StringLiteralValueSyntax literalExpression) => literalExpression.Value.Value.ToString();
-        protected string? GetAssignedVariableName(LiteralExpressionSyntax stringLiteral) => stringLiteral.FirstAncestorOrSelf<SyntaxNode>(IsVariableIdentifier)?.ToString();
-        protected string? GetAssignedVariableName(StringLiteralValueSyntax stringLiteral) => stringLiteral.FirstAncestorOrSelf<SyntaxNode>(IsVariableIdentifier)?.ToString();
-        private static bool IsVariableIdentifier(SyntaxNode syntaxNode) =>
-            syntaxNode is StatementSyntax
-            || syntaxNode is VariableDeclarationSyntax
-            || syntaxNode is LabelSyntax
-            || syntaxNode is ParameterSyntax;
-
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0006HardcodedIpAddress);
 
-        public override void Initialize(AnalysisContext context)
-        {
-            context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.CheckForHardcodedIpAddresses), SyntaxKind.StringLiteralValue);
-        }
+        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.CheckForHardcodedIpAddresses), SyntaxKind.VariableDeclaration);
 
-
-        private void CheckForHardcodedIpAddresses(SyntaxNodeAnalysisContext context)
+        private void CheckForHardcodedIpAddresses(SyntaxNodeAnalysisContext ctx)
         {
-            StringLiteralValueSyntax? stringLiteralValue = context.Node as StringLiteralValueSyntax;
-            
-            string literalValue = null;
-            if (stringLiteralValue != null)
+            if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
+            if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+
+            VariableDeclarationSyntax syntax = ctx.Node as VariableDeclarationSyntax;
+            if (syntax != null)
             {
-                var variableName = GetAssignedVariableName(stringLiteralValue);
-                if (variableName != null && ignoredVariableNames.Any(x => variableName.IndexOf(x, StringComparison.InvariantCultureIgnoreCase) >= 0))
-                {
-                    return;
-                }
-                literalValue = GetValueText(stringLiteralValue);
+                if (syntax.Type.DataType.Kind != SyntaxKind.LabelDataType) return;
+
+                dynamic labelDataType = syntax.Type.DataType;
+                string labelText = labelDataType.Label.LabelText.Value.Value;
+                StringLiteralValueSyntax xlabelText = labelDataType.Label.LabelText;
+
+                if (labelText != null)
+                    if (!IPAddress.TryParse(labelText, out var address)
+                        || IPAddress.IsLoopback(address)
+                        || address.GetAddressBytes().All(x => x == 0)                       // Nonroutable 0.0.0.0 or 0::0
+                        || labelText == IPv4Broadcast
+                        || labelText.StartsWith("2.5.")                                  // Looks like OID
+                        || (address.AddressFamily == AddressFamily.InterNetwork
+                            && labelText.Count(x => x == '.') != IPv4AddressParts - 1))
+                    {
+                        return;
+                    }
+
+                if (labelText != null)
+                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0006HardcodedIpAddress, xlabelText.GetLocation(), syntax.Name));
             }
-
-            if (literalValue != null)
-                if (!IPAddress.TryParse(literalValue, out var address)
-                    || IPAddress.IsLoopback(address)
-                    || address.GetAddressBytes().All(x => x == 0)                       // Nonroutable 0.0.0.0 or 0::0
-                    || literalValue == IPv4Broadcast
-                    || literalValue.StartsWith("2.5.")                                  // Looks like OID
-                    || (address.AddressFamily == AddressFamily.InterNetwork
-                        && literalValue.Count(x => x == '.') != IPv4AddressParts - 1))
-                {
-                    return;
-                }
-            if (stringLiteralValue != null)
-                ReportHardcodedIpAddress(context, stringLiteralValue.GetLocation(), GetAssignedVariableName(stringLiteralValue));
-        }
-
-        private static void ReportHardcodedIpAddress(SyntaxNodeAnalysisContext syntaxNodeAnalysisContext, Location location, string valueText)
-        {
-            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0006HardcodedIpAddress, location, (object)valueText));
         }
     }
 }

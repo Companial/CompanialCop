@@ -282,4 +282,22 @@
   <data name="Rule0018ObjectAccessAndExtensiblePropertyTitle" xml:space="preserve">
     <value>Objects need to have the Access and/or Extensible properties defined.</value>
   </data>
+  <data name="Rule0019LockedVariableLablesDescription" xml:space="preserve">
+    <value>Variable must be locked.</value>
+  </data>
+  <data name="Rule0019LockedVariableLablesFormat" xml:space="preserve">
+    <value>Variable with suffix Tok must be locked.</value>
+  </data>
+  <data name="Rule0019LockedVariableLablesTitle" xml:space="preserve">
+    <value>Variable must be locked.</value>
+  </data>
+  <data name="Rule0019LockedVariableTokLablesDescription" xml:space="preserve">
+    <value>Variable must have a suffix Tok.</value>
+  </data>
+  <data name="Rule0019LockedVariableTokLablesFormat" xml:space="preserve">
+    <value>Locked variable with name '{0}' must have a suffix Tok.</value>
+  </data>
+  <data name="Rule0019LockedVariableTokLablesTitle" xml:space="preserve">
+    <value>Variable must have a suffix Tok.</value>
+  </data>
 </root>

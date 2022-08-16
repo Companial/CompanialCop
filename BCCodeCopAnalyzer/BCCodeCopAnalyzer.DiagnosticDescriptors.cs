@@ -211,5 +211,27 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0019LockedVariableLables = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0019",
+            BCCodeCopAnalyzer.Rule0019LockedVariableLablesTitle,
+            BCCodeCopAnalyzer.Rule0019LockedVariableLablesFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0019LockedVariableLablesDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0019LockedVariableTokLables = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0019",
+            BCCodeCopAnalyzer.Rule0019LockedVariableTokLablesTitle,
+            BCCodeCopAnalyzer.Rule0019LockedVariableTokLablesFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0019LockedVariableTokLablesDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

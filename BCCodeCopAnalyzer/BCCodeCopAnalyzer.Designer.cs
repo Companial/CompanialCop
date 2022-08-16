@@ -554,5 +554,59 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0018ObjectAccessAndExtensiblePropertyTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Variable must be locked..
+        /// </summary>
+        internal static string Rule0019LockedVariableLablesDescription {
+            get {
+                return ResourceManager.GetString("Rule0019LockedVariableLablesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Variable with suffix Tok must be locked..
+        /// </summary>
+        internal static string Rule0019LockedVariableLablesFormat {
+            get {
+                return ResourceManager.GetString("Rule0019LockedVariableLablesFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Variable must be locked..
+        /// </summary>
+        internal static string Rule0019LockedVariableLablesTitle {
+            get {
+                return ResourceManager.GetString("Rule0019LockedVariableLablesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Variable must have a suffix Tok..
+        /// </summary>
+        internal static string Rule0019LockedVariableTokLablesDescription {
+            get {
+                return ResourceManager.GetString("Rule0019LockedVariableTokLablesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Locked variable with name &apos;{0}&apos; must have a suffix Tok..
+        /// </summary>
+        internal static string Rule0019LockedVariableTokLablesFormat {
+            get {
+                return ResourceManager.GetString("Rule0019LockedVariableTokLablesFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Variable must have a suffix Tok..
+        /// </summary>
+        internal static string Rule0019LockedVariableTokLablesTitle {
+            get {
+                return ResourceManager.GetString("Rule0019LockedVariableTokLablesTitle", resourceCulture);
+            }
+        }
     }
 }

@@ -8,9 +8,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0019LockedLables : DiagnosticAnalyzer
+    public class Rule0002LockedLables : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0019LockedVariableLables, DiagnosticDescriptors.Rule0019LockedVariableTokLables);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0002LockedVariableLables, DiagnosticDescriptors.Rule0002LockedVariableTokLables);
         public override void Initialize(AnalysisContext context) => context.RegisterSymbolAction(new Action<SymbolAnalysisContext>(this.AnalyzeLockedLabel), SymbolKind.GlobalVariable, SymbolKind.LocalVariable);
 
         private void AnalyzeLockedLabel(SymbolAnalysisContext ctx)
@@ -24,11 +24,11 @@ namespace BCCodeCopAnalyzer.Design
             ILabelTypeSymbol type = symbol.Type as ILabelTypeSymbol;
             if (type.Locked)
                 if (!type.Name.EndsWith("Tok"))
-                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0019LockedVariableTokLables, symbol.GetLocation(), symbol.Name));
+                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0002LockedVariableTokLables, symbol.GetLocation(), symbol.Name));
 
             if (type.Name.EndsWith("Tok"))
                 if (!type.Locked)
-                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0019LockedVariableLables, symbol.GetLocation(), symbol.Name));
+                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0002LockedVariableLables, symbol.GetLocation()));
 
         }
     }

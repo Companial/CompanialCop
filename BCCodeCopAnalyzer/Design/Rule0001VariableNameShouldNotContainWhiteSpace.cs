@@ -19,7 +19,7 @@ namespace BCCodeCopAnalyzer.Design
         {
             get
             {
-                return ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule001VariableNameShouldNotContainWhiteSpace, DiagnosticDescriptors.Rule0002VariableShouldNotContainWildcardSymbols);
+                return ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule001VariableNameShouldNotContainWhiteSpace, DiagnosticDescriptors.Rule0001VariableShouldNotContainWildcardSymbols);
             }
         }
 
@@ -79,7 +79,7 @@ namespace BCCodeCopAnalyzer.Design
             SyntaxKind syntaxKind,
             IdentifierNameSyntax syntaxName)
         {
-            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0002VariableShouldNotContainWildcardSymbols, location, (object)valueText, (object)syntaxKind, (object)syntaxName));
+            syntaxNodeAnalysisContext.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0001VariableShouldNotContainWildcardSymbols, location, (object)valueText, (object)syntaxKind, (object)syntaxName));
         }
     }
 }

@@ -129,14 +129,32 @@
   <data name="Rule0001VariableNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
     <value>Variable name should not contain whitespace</value>
   </data>
-  <data name="Rule0002VariableShouldNotContainWildcardSymbolsDescription" xml:space="preserve">
+  <data name="Rule0001VariableShouldNotContainWildcardSymbolsDescription" xml:space="preserve">
     <value>Variable name should not contain wildcard symbols such as % or &amp;</value>
   </data>
-  <data name="Rule0002VariableShouldNotContainWildcardSymbolsFormat" xml:space="preserve">
+  <data name="Rule0001VariableShouldNotContainWildcardSymbolsFormat" xml:space="preserve">
     <value>Variable with name '{0}' must not contain wildcard symbols.</value>
   </data>
-  <data name="Rule0002VariableShouldNotContainWildcardSymbolsTitle" xml:space="preserve">
+  <data name="Rule0001VariableShouldNotContainWildcardSymbolsTitle" xml:space="preserve">
     <value>Variable name should not contain wildcard symbols such as % or &amp;</value>
+  </data>
+  <data name="Rule0002LockedVariableLablesDescription" xml:space="preserve">
+    <value>Variable must be locked.</value>
+  </data>
+  <data name="Rule0002LockedVariableLablesFormat" xml:space="preserve">
+    <value>Variable with suffix Tok must be locked.</value>
+  </data>
+  <data name="Rule0002LockedVariableLablesTitle" xml:space="preserve">
+    <value>Variable must be locked.</value>
+  </data>
+  <data name="Rule0002LockedVariableTokLablesDescription" xml:space="preserve">
+    <value>Variable must have a suffix Tok.</value>
+  </data>
+  <data name="Rule0002LockedVariableTokLablesFormat" xml:space="preserve">
+    <value>Locked variable with name '{0}' must have a suffix Tok.</value>
+  </data>
+  <data name="Rule0002LockedVariableTokLablesTitle" xml:space="preserve">
+    <value>Variable must have a suffix Tok.</value>
   </data>
   <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceDescription" xml:space="preserve">
     <value>Procedure name should not contain whitespace</value>
@@ -281,23 +299,5 @@
   </data>
   <data name="Rule0018ObjectAccessAndExtensiblePropertyTitle" xml:space="preserve">
     <value>Objects need to have the Access and/or Extensible properties defined.</value>
-  </data>
-  <data name="Rule0019LockedVariableLablesDescription" xml:space="preserve">
-    <value>Variable must be locked.</value>
-  </data>
-  <data name="Rule0019LockedVariableLablesFormat" xml:space="preserve">
-    <value>Variable with suffix Tok must be locked.</value>
-  </data>
-  <data name="Rule0019LockedVariableLablesTitle" xml:space="preserve">
-    <value>Variable must be locked.</value>
-  </data>
-  <data name="Rule0019LockedVariableTokLablesDescription" xml:space="preserve">
-    <value>Variable must have a suffix Tok.</value>
-  </data>
-  <data name="Rule0019LockedVariableTokLablesFormat" xml:space="preserve">
-    <value>Locked variable with name '{0}' must have a suffix Tok.</value>
-  </data>
-  <data name="Rule0019LockedVariableTokLablesTitle" xml:space="preserve">
-    <value>Variable must have a suffix Tok.</value>
   </data>
 </root>

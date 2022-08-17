@@ -223,14 +223,25 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
-        public static readonly DiagnosticDescriptor Rule0018ObjectAccessAndExtensibleProperty = new DiagnosticDescriptor(
+        public static readonly DiagnosticDescriptor Rule0018ObjectExtensibleProperty = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0018",
-            BCCodeCopAnalyzer.Rule0018ObjectAccessAndExtensiblePropertyTitle,
-            BCCodeCopAnalyzer.Rule0018ObjectAccessAndExtensiblePropertyFormat,
+            BCCodeCopAnalyzer.Rule0018ObjectExtensiblePropertyTitle,
+            BCCodeCopAnalyzer.Rule0018ObjectExtensiblePropertyFormat,
             "Readability",
             DiagnosticSeverity.Warning,
             true,
-            BCCodeCopAnalyzer.Rule0018ObjectAccessAndExtensiblePropertyDescription,
+            BCCodeCopAnalyzer.Rule0018ObjectExtensiblePropertyDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0018ObjectAccessProperty = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0018",
+            BCCodeCopAnalyzer.Rule0018ObjectAccessPropertyTitle,
+            BCCodeCopAnalyzer.Rule0018ObjectAccessPropertyFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0018ObjectAccessPropertyDescription,
             (string)null,
             Array.Empty<string>()
         );

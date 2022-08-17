@@ -291,14 +291,23 @@
   <data name="Rule0017EmptyObjectSectionsTitle" xml:space="preserve">
     <value>Object should not have empty sections.</value>
   </data>
-  <data name="Rule0018ObjectAccessAndExtensiblePropertyDescription" xml:space="preserve">
-    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  <data name="Rule0018ObjectAccessPropertyDescription" xml:space="preserve">
+    <value>Objects need to have the Access properties defined.</value>
   </data>
-  <data name="Rule0018ObjectAccessAndExtensiblePropertyFormat" xml:space="preserve">
-    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  <data name="Rule0018ObjectAccessPropertyFormat" xml:space="preserve">
+    <value>Objects need to have the Access properties defined.</value>
   </data>
-  <data name="Rule0018ObjectAccessAndExtensiblePropertyTitle" xml:space="preserve">
-    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  <data name="Rule0018ObjectAccessPropertyTitle" xml:space="preserve">
+    <value>Objects need to have the Access properties defined.</value>
+  </data>
+  <data name="Rule0018ObjectExtensiblePropertyDescription" xml:space="preserve">
+    <value>Objects need to have the Extensible properties defined.</value>
+  </data>
+  <data name="Rule0018ObjectExtensiblePropertyFormat" xml:space="preserve">
+    <value>Objects need to have the Extensible properties defined.</value>
+  </data>
+  <data name="Rule0018ObjectExtensiblePropertyTitle" xml:space="preserve">
+    <value>Objects need to have the Extensible properties defined.</value>
   </data>
   <data name="Rule0019KeyNamingDescription" xml:space="preserve">
     <value>The key has an incorrect name. The valid name is PK.</value>

@@ -583,29 +583,56 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Objects need to have the Access and/or Extensible properties defined..
+        ///   Looks up a localized string similar to Objects need to have the Access properties defined..
         /// </summary>
-        internal static string Rule0018ObjectAccessAndExtensiblePropertyDescription {
+        internal static string Rule0018ObjectAccessPropertyDescription {
             get {
-                return ResourceManager.GetString("Rule0018ObjectAccessAndExtensiblePropertyDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0018ObjectAccessPropertyDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Objects need to have the Access and/or Extensible properties defined..
+        ///   Looks up a localized string similar to Objects need to have the Access properties defined..
         /// </summary>
-        internal static string Rule0018ObjectAccessAndExtensiblePropertyFormat {
+        internal static string Rule0018ObjectAccessPropertyFormat {
             get {
-                return ResourceManager.GetString("Rule0018ObjectAccessAndExtensiblePropertyFormat", resourceCulture);
+                return ResourceManager.GetString("Rule0018ObjectAccessPropertyFormat", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Objects need to have the Access and/or Extensible properties defined..
+        ///   Looks up a localized string similar to Objects need to have the Access properties defined..
         /// </summary>
-        internal static string Rule0018ObjectAccessAndExtensiblePropertyTitle {
+        internal static string Rule0018ObjectAccessPropertyTitle {
             get {
-                return ResourceManager.GetString("Rule0018ObjectAccessAndExtensiblePropertyTitle", resourceCulture);
+                return ResourceManager.GetString("Rule0018ObjectAccessPropertyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects need to have the Extensible properties defined..
+        /// </summary>
+        internal static string Rule0018ObjectExtensiblePropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0018ObjectExtensiblePropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects need to have the Extensible properties defined..
+        /// </summary>
+        internal static string Rule0018ObjectExtensiblePropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0018ObjectExtensiblePropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Objects need to have the Extensible properties defined..
+        /// </summary>
+        internal static string Rule0018ObjectExtensiblePropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0018ObjectExtensiblePropertyTitle", resourceCulture);
             }
         }
         

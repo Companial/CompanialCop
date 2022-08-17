@@ -234,5 +234,16 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0019KeyNaming = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0019",
+            BCCodeCopAnalyzer.Rule0019KeyNamingTitle,
+            BCCodeCopAnalyzer.Rule0019KeyNamingFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0019KeyNamingDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
     }
 }

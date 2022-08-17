@@ -300,4 +300,13 @@
   <data name="Rule0018ObjectAccessAndExtensiblePropertyTitle" xml:space="preserve">
     <value>Objects need to have the Access and/or Extensible properties defined.</value>
   </data>
+  <data name="Rule0019KeyNamingDescription" xml:space="preserve">
+    <value>The key has an incorrect name. The valid name is PK.</value>
+  </data>
+  <data name="Rule0019KeyNamingFormat" xml:space="preserve">
+    <value>The key '{0}' has an incorrect name. The valid name is PK.</value>
+  </data>
+  <data name="Rule0019KeyNamingTitle" xml:space="preserve">
+    <value>The key has an incorrect name. The valid name is PK.</value>
+  </data>
 </root>

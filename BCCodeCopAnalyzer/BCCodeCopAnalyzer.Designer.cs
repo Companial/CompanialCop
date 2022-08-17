@@ -608,5 +608,32 @@ namespace BCCodeCopAnalyzer {
                 return ResourceManager.GetString("Rule0018ObjectAccessAndExtensiblePropertyTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The key has an incorrect name. The valid name is PK..
+        /// </summary>
+        internal static string Rule0019KeyNamingDescription {
+            get {
+                return ResourceManager.GetString("Rule0019KeyNamingDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The key &apos;{0}&apos; has an incorrect name. The valid name is PK..
+        /// </summary>
+        internal static string Rule0019KeyNamingFormat {
+            get {
+                return ResourceManager.GetString("Rule0019KeyNamingFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The key has an incorrect name. The valid name is PK..
+        /// </summary>
+        internal static string Rule0019KeyNamingTitle {
+            get {
+                return ResourceManager.GetString("Rule0019KeyNamingTitle", resourceCulture);
+            }
+        }
     }
 }

@@ -9,27 +9,15 @@ namespace BCCodeCopAnalyzer
 {
     internal class DiagnosticDescriptors
     {
-        public static readonly DiagnosticDescriptor Rule001VariableNameShouldNotContainWhiteSpace = new DiagnosticDescriptor(
+        public static readonly DiagnosticDescriptor Rule0001KeyNaming = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0001",
-            BCCodeCopAnalyzer.Rule0001VariableNameShouldNotContainWhiteSpaceTitle,
-            BCCodeCopAnalyzer.Rule0001VariableNameShouldNotContainWhiteSpaceFormat,
-            "Naming",
+            BCCodeCopAnalyzer.Rule0001KeyNamingTitle,
+            BCCodeCopAnalyzer.Rule0001KeyNamingFormat,
+            "Readability",
             DiagnosticSeverity.Warning,
             true,
-            BCCodeCopAnalyzer.Rule0001VariableNameShouldNotContainWhiteSpaceDescription,
-            null,
-            Array.Empty<string>()
-        );
-
-        public static readonly DiagnosticDescriptor Rule0001VariableShouldNotContainWildcardSymbols = new DiagnosticDescriptor(
-            BCCodeCopAnalyzer.AnalyzerPrefix + "0001",
-            BCCodeCopAnalyzer.Rule0001VariableShouldNotContainWildcardSymbolsTitle,
-            BCCodeCopAnalyzer.Rule0001VariableShouldNotContainWildcardSymbolsFormat,
-            "Naming",
-            DiagnosticSeverity.Warning,
-            true,
-            BCCodeCopAnalyzer.Rule0001VariableShouldNotContainWildcardSymbolsDescription,
-            null,
+            BCCodeCopAnalyzer.Rule0001KeyNamingDescription,
+            (string)null,
             Array.Empty<string>()
         );
 
@@ -245,15 +233,70 @@ namespace BCCodeCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
-        public static readonly DiagnosticDescriptor Rule0019KeyNaming = new DiagnosticDescriptor(
+        public static readonly DiagnosticDescriptor Rule0019LocalVariableNameShouldNotContainWhiteSpace = new DiagnosticDescriptor(
             BCCodeCopAnalyzer.AnalyzerPrefix + "0019",
-            BCCodeCopAnalyzer.Rule0019KeyNamingTitle,
-            BCCodeCopAnalyzer.Rule0019KeyNamingFormat,
+            BCCodeCopAnalyzer.Rule0019LocalVariableNameShouldNotContainWhiteSpaceTitle,
+            BCCodeCopAnalyzer.Rule0019LocalVariableNameShouldNotContainWhiteSpaceFormat,
             "Readability",
             DiagnosticSeverity.Warning,
             true,
-            BCCodeCopAnalyzer.Rule0019KeyNamingDescription,
+            BCCodeCopAnalyzer.Rule0019LocalVariableNameShouldNotContainWhiteSpaceDescription,
             (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0019LocalVariableNameShouldNotContainWildcardSymbols = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0019",
+            BCCodeCopAnalyzer.Rule0019LocalVariableNameShouldNotContainWildcardSymbolsTitle,
+            BCCodeCopAnalyzer.Rule0019LocalVariableNameShouldNotContainWildcardSymbolsFormat,
+            "Naming",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0019LocalVariableNameShouldNotContainWildcardSymbolsDescription,
+            null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0020GlobalVariableNameShouldNotContainWhiteSpace = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0020",
+            BCCodeCopAnalyzer.Rule0020GlobalVariableNameShouldNotContainWhiteSpaceTitle,
+            BCCodeCopAnalyzer.Rule0020GlobalVariableNameShouldNotContainWhiteSpaceFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0020GlobalVariableNameShouldNotContainWhiteSpaceDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0020GlobalVariableNameShouldNotContainWildcardSymbols = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0020",
+            BCCodeCopAnalyzer.Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsTitle,
+            BCCodeCopAnalyzer.Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsFormat,
+            "Naming",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsDescription,
+            null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0021ParameterNameShouldNotContainWhiteSpace = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0021",
+            BCCodeCopAnalyzer.Rule0021ParameterNameShouldNotContainWhiteSpaceTitle,
+            BCCodeCopAnalyzer.Rule0021ParameterNameShouldNotContainWhiteSpaceFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0021ParameterNameShouldNotContainWhiteSpaceDescription,
+            (string)null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0021ParameterNameShouldNotContainWildcardSymbols = new DiagnosticDescriptor(
+            BCCodeCopAnalyzer.AnalyzerPrefix + "0021",
+            BCCodeCopAnalyzer.Rule0021ParameterNameShouldNotContainWildcardSymbolsTitle,
+            BCCodeCopAnalyzer.Rule0021ParameterNameShouldNotContainWildcardSymbolsFormat,
+            "Naming",
+            DiagnosticSeverity.Warning,
+            true,
+            BCCodeCopAnalyzer.Rule0021ParameterNameShouldNotContainWildcardSymbolsDescription,
+            null,
             Array.Empty<string>()
         );
     }

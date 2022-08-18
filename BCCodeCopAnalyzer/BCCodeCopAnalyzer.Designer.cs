@@ -70,56 +70,29 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Variable name should not contain whitespace.
+        ///   Looks up a localized string similar to The key has an incorrect name. The valid name is PK..
         /// </summary>
-        internal static string Rule0001VariableNameShouldNotContainWhiteSpaceDescription {
+        internal static string Rule0001KeyNamingDescription {
             get {
-                return ResourceManager.GetString("Rule0001VariableNameShouldNotContainWhiteSpaceDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0001KeyNamingDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Variable with name &apos;{0}&apos; must not contain whitespaces..
+        ///   Looks up a localized string similar to The key &apos;{0}&apos; has an incorrect name. The valid name is PK..
         /// </summary>
-        internal static string Rule0001VariableNameShouldNotContainWhiteSpaceFormat {
+        internal static string Rule0001KeyNamingFormat {
             get {
-                return ResourceManager.GetString("Rule0001VariableNameShouldNotContainWhiteSpaceFormat", resourceCulture);
+                return ResourceManager.GetString("Rule0001KeyNamingFormat", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Variable name should not contain whitespace.
+        ///   Looks up a localized string similar to The key has an incorrect name. The valid name is PK..
         /// </summary>
-        internal static string Rule0001VariableNameShouldNotContainWhiteSpaceTitle {
+        internal static string Rule0001KeyNamingTitle {
             get {
-                return ResourceManager.GetString("Rule0001VariableNameShouldNotContainWhiteSpaceTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Variable name should not contain wildcard symbols such as % or &amp;.
-        /// </summary>
-        internal static string Rule0001VariableShouldNotContainWildcardSymbolsDescription {
-            get {
-                return ResourceManager.GetString("Rule0001VariableShouldNotContainWildcardSymbolsDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Variable with name &apos;{0}&apos; must not contain wildcard symbols..
-        /// </summary>
-        internal static string Rule0001VariableShouldNotContainWildcardSymbolsFormat {
-            get {
-                return ResourceManager.GetString("Rule0001VariableShouldNotContainWildcardSymbolsFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Variable name should not contain wildcard symbols such as % or &amp;.
-        /// </summary>
-        internal static string Rule0001VariableShouldNotContainWildcardSymbolsTitle {
-            get {
-                return ResourceManager.GetString("Rule0001VariableShouldNotContainWildcardSymbolsTitle", resourceCulture);
+                return ResourceManager.GetString("Rule0001KeyNamingTitle", resourceCulture);
             }
         }
         
@@ -637,29 +610,164 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The key has an incorrect name. The valid name is PK..
+        ///   Looks up a localized string similar to Local variable name should not contain whitespace.
         /// </summary>
-        internal static string Rule0019KeyNamingDescription {
+        internal static string Rule0019LocalVariableNameShouldNotContainWhiteSpaceDescription {
             get {
-                return ResourceManager.GetString("Rule0019KeyNamingDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0019LocalVariableNameShouldNotContainWhiteSpaceDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The key &apos;{0}&apos; has an incorrect name. The valid name is PK..
+        ///   Looks up a localized string similar to Local variable with name &apos;{0}&apos; must not contain whitespaces..
         /// </summary>
-        internal static string Rule0019KeyNamingFormat {
+        internal static string Rule0019LocalVariableNameShouldNotContainWhiteSpaceFormat {
             get {
-                return ResourceManager.GetString("Rule0019KeyNamingFormat", resourceCulture);
+                return ResourceManager.GetString("Rule0019LocalVariableNameShouldNotContainWhiteSpaceFormat", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The key has an incorrect name. The valid name is PK..
+        ///   Looks up a localized string similar to Local variable name should not contain whitespace.
         /// </summary>
-        internal static string Rule0019KeyNamingTitle {
+        internal static string Rule0019LocalVariableNameShouldNotContainWhiteSpaceTitle {
             get {
-                return ResourceManager.GetString("Rule0019KeyNamingTitle", resourceCulture);
+                return ResourceManager.GetString("Rule0019LocalVariableNameShouldNotContainWhiteSpaceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local variable name should not contain wildcard symbols such as % or &amp;.
+        /// </summary>
+        internal static string Rule0019LocalVariableNameShouldNotContainWildcardSymbolsDescription {
+            get {
+                return ResourceManager.GetString("Rule0019LocalVariableNameShouldNotContainWildcardSymbolsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local variable with name &apos;{0}&apos; must not contain wildcard symbols..
+        /// </summary>
+        internal static string Rule0019LocalVariableNameShouldNotContainWildcardSymbolsFormat {
+            get {
+                return ResourceManager.GetString("Rule0019LocalVariableNameShouldNotContainWildcardSymbolsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local variable name should not contain wildcard symbols such as % or &amp;.
+        /// </summary>
+        internal static string Rule0019LocalVariableNameShouldNotContainWildcardSymbolsTitle {
+            get {
+                return ResourceManager.GetString("Rule0019LocalVariableNameShouldNotContainWildcardSymbolsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Global variable name should not contain whitespace.
+        /// </summary>
+        internal static string Rule0020GlobalVariableNameShouldNotContainWhiteSpaceDescription {
+            get {
+                return ResourceManager.GetString("Rule0020GlobalVariableNameShouldNotContainWhiteSpaceDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Global variable with name &apos;{0}&apos; must not contain whitespaces..
+        /// </summary>
+        internal static string Rule0020GlobalVariableNameShouldNotContainWhiteSpaceFormat {
+            get {
+                return ResourceManager.GetString("Rule0020GlobalVariableNameShouldNotContainWhiteSpaceFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Global variable name should not contain whitespace.
+        /// </summary>
+        internal static string Rule0020GlobalVariableNameShouldNotContainWhiteSpaceTitle {
+            get {
+                return ResourceManager.GetString("Rule0020GlobalVariableNameShouldNotContainWhiteSpaceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Global variable name should not contain wildcard symbols such as % or &amp;.
+        /// </summary>
+        internal static string Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsDescription {
+            get {
+                return ResourceManager.GetString("Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Global variable with name &apos;{0}&apos; must not contain wildcard symbols..
+        /// </summary>
+        internal static string Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsFormat {
+            get {
+                return ResourceManager.GetString("Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Global variable name should not contain wildcard symbols such as % or &amp;.
+        /// </summary>
+        internal static string Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsTitle {
+            get {
+                return ResourceManager.GetString("Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter with name &apos;{0}&apos; must not contain whitespaces..
+        /// </summary>
+        internal static string Rule0021ParameterNameShouldNotContainWhiteSpaceDescription {
+            get {
+                return ResourceManager.GetString("Rule0021ParameterNameShouldNotContainWhiteSpaceDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter with name &apos;{0}&apos; must not contain whitespaces..
+        /// </summary>
+        internal static string Rule0021ParameterNameShouldNotContainWhiteSpaceFormat {
+            get {
+                return ResourceManager.GetString("Rule0021ParameterNameShouldNotContainWhiteSpaceFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter with name &apos;{0}&apos; must not contain whitespaces..
+        /// </summary>
+        internal static string Rule0021ParameterNameShouldNotContainWhiteSpaceTitle {
+            get {
+                return ResourceManager.GetString("Rule0021ParameterNameShouldNotContainWhiteSpaceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter name should not contain wildcard symbols such as % or &amp;.
+        /// </summary>
+        internal static string Rule0021ParameterNameShouldNotContainWildcardSymbolsDescription {
+            get {
+                return ResourceManager.GetString("Rule0021ParameterNameShouldNotContainWildcardSymbolsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter with name &apos;{0}&apos; must not contain wildcard symbols..
+        /// </summary>
+        internal static string Rule0021ParameterNameShouldNotContainWildcardSymbolsFormat {
+            get {
+                return ResourceManager.GetString("Rule0021ParameterNameShouldNotContainWildcardSymbolsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter name should not contain wildcard symbols such as % or &amp;.
+        /// </summary>
+        internal static string Rule0021ParameterNameShouldNotContainWildcardSymbolsTitle {
+            get {
+                return ResourceManager.GetString("Rule0021ParameterNameShouldNotContainWildcardSymbolsTitle", resourceCulture);
             }
         }
     }

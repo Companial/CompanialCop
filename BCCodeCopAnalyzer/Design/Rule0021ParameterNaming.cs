@@ -28,9 +28,9 @@ namespace BCCodeCopAnalyzer.Design
             {
                 string parameterName = syntax.GetNameStringValue();
 
-                foreach (SyntaxNodeOrToken Token in syntax.Parent.Parent.GetAnnotatedNodesAndTokens(AnnotationKind.AttributeType))
+                foreach (SyntaxNodeOrToken token in syntax.Parent.Parent.GetAnnotatedNodesAndTokens(AnnotationKind.AttributeType))
                 {
-                    if (Token.ToString().Contains("EventSubscriber")) return;
+                    if (token.ToString().Contains("EventSubscriber")) return;
                 }
                 if (Extensions.ContainsWhiteSpace(parameterName))
                     ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0021ParameterNameShouldNotContainWhiteSpace, syntax.Name.GetLocation(), syntax.Name));

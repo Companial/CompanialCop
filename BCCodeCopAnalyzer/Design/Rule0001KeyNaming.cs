@@ -8,9 +8,9 @@ using System.Collections.Immutable;
 namespace BCCodeCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
-    public class Rule0010KeyNaming : DiagnosticAnalyzer
+    public class Rule0001KeyNaming : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0019KeyNaming);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0001KeyNaming);
 
         public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeKeyNaming), SyntaxKind.TableObject);
 
@@ -26,7 +26,7 @@ namespace BCCodeCopAnalyzer.Design
 
             KeySyntax key = keyList.Keys[0];
             if (key.GetNameStringValue() != "PK")
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0019KeyNaming, key.Name.GetLocation(), key.Name));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0001KeyNaming, key.Name.GetLocation(), key.Name));
         }
     }
 }

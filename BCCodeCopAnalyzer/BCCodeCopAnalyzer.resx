@@ -120,23 +120,14 @@
   <data name="AnalyzerPrefix" xml:space="preserve">
     <value>CM</value>
   </data>
-  <data name="Rule0001VariableNameShouldNotContainWhiteSpaceDescription" xml:space="preserve">
-    <value>Variable name should not contain whitespace</value>
+  <data name="Rule0001KeyNamingDescription" xml:space="preserve">
+    <value>The key has an incorrect name. The valid name is PK.</value>
   </data>
-  <data name="Rule0001VariableNameShouldNotContainWhiteSpaceFormat" xml:space="preserve">
-    <value>Variable with name '{0}' must not contain whitespaces.</value>
+  <data name="Rule0001KeyNamingFormat" xml:space="preserve">
+    <value>The key '{0}' has an incorrect name. The valid name is PK.</value>
   </data>
-  <data name="Rule0001VariableNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
-    <value>Variable name should not contain whitespace</value>
-  </data>
-  <data name="Rule0001VariableShouldNotContainWildcardSymbolsDescription" xml:space="preserve">
-    <value>Variable name should not contain wildcard symbols such as % or &amp;</value>
-  </data>
-  <data name="Rule0001VariableShouldNotContainWildcardSymbolsFormat" xml:space="preserve">
-    <value>Variable with name '{0}' must not contain wildcard symbols.</value>
-  </data>
-  <data name="Rule0001VariableShouldNotContainWildcardSymbolsTitle" xml:space="preserve">
-    <value>Variable name should not contain wildcard symbols such as % or &amp;</value>
+  <data name="Rule0001KeyNamingTitle" xml:space="preserve">
+    <value>The key has an incorrect name. The valid name is PK.</value>
   </data>
   <data name="Rule0002LockedVariableLablesDescription" xml:space="preserve">
     <value>Variable must be locked.</value>
@@ -291,22 +282,76 @@
   <data name="Rule0017EmptyObjectSectionsTitle" xml:space="preserve">
     <value>Object should not have empty sections.</value>
   </data>
-  <data name="Rule0018ObjectAccessAndExtensiblePropertyDescription" xml:space="preserve">
-    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  <data name="Rule0018ObjectAccessPropertyDescription" xml:space="preserve">
+    <value>Objects need to have the Access properties defined.</value>
   </data>
-  <data name="Rule0018ObjectAccessAndExtensiblePropertyFormat" xml:space="preserve">
-    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  <data name="Rule0018ObjectAccessPropertyFormat" xml:space="preserve">
+    <value>Objects need to have the Access properties defined.</value>
   </data>
-  <data name="Rule0018ObjectAccessAndExtensiblePropertyTitle" xml:space="preserve">
-    <value>Objects need to have the Access and/or Extensible properties defined.</value>
+  <data name="Rule0018ObjectAccessPropertyTitle" xml:space="preserve">
+    <value>Objects need to have the Access properties defined.</value>
   </data>
-  <data name="Rule0019KeyNamingDescription" xml:space="preserve">
-    <value>The key has an incorrect name. The valid name is PK.</value>
+  <data name="Rule0018ObjectExtensiblePropertyDescription" xml:space="preserve">
+    <value>Objects need to have the Extensible properties defined.</value>
   </data>
-  <data name="Rule0019KeyNamingFormat" xml:space="preserve">
-    <value>The key '{0}' has an incorrect name. The valid name is PK.</value>
+  <data name="Rule0018ObjectExtensiblePropertyFormat" xml:space="preserve">
+    <value>Objects need to have the Extensible properties defined.</value>
   </data>
-  <data name="Rule0019KeyNamingTitle" xml:space="preserve">
-    <value>The key has an incorrect name. The valid name is PK.</value>
+  <data name="Rule0018ObjectExtensiblePropertyTitle" xml:space="preserve">
+    <value>Objects need to have the Extensible properties defined.</value>
+  </data>
+  <data name="Rule0019LocalVariableNameShouldNotContainWhiteSpaceDescription" xml:space="preserve">
+    <value>Local variable name should not contain whitespace</value>
+  </data>
+  <data name="Rule0019LocalVariableNameShouldNotContainWhiteSpaceFormat" xml:space="preserve">
+    <value>Local variable with name '{0}' must not contain whitespaces.</value>
+  </data>
+  <data name="Rule0019LocalVariableNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
+    <value>Local variable name should not contain whitespace</value>
+  </data>
+  <data name="Rule0019LocalVariableNameShouldNotContainWildcardSymbolsDescription" xml:space="preserve">
+    <value>Local variable name should not contain wildcard symbols such as % or &amp;</value>
+  </data>
+  <data name="Rule0019LocalVariableNameShouldNotContainWildcardSymbolsFormat" xml:space="preserve">
+    <value>Local variable with name '{0}' must not contain wildcard symbols.</value>
+  </data>
+  <data name="Rule0019LocalVariableNameShouldNotContainWildcardSymbolsTitle" xml:space="preserve">
+    <value>Local variable name should not contain wildcard symbols such as % or &amp;</value>
+  </data>
+  <data name="Rule0020GlobalVariableNameShouldNotContainWhiteSpaceDescription" xml:space="preserve">
+    <value>Global variable name should not contain whitespace</value>
+  </data>
+  <data name="Rule0020GlobalVariableNameShouldNotContainWhiteSpaceFormat" xml:space="preserve">
+    <value>Global variable with name '{0}' must not contain whitespaces.</value>
+  </data>
+  <data name="Rule0020GlobalVariableNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
+    <value>Global variable name should not contain whitespace</value>
+  </data>
+  <data name="Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsDescription" xml:space="preserve">
+    <value>Global variable name should not contain wildcard symbols such as % or &amp;</value>
+  </data>
+  <data name="Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsFormat" xml:space="preserve">
+    <value>Global variable with name '{0}' must not contain wildcard symbols.</value>
+  </data>
+  <data name="Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsTitle" xml:space="preserve">
+    <value>Global variable name should not contain wildcard symbols such as % or &amp;</value>
+  </data>
+  <data name="Rule0021ParameterNameShouldNotContainWhiteSpaceDescription" xml:space="preserve">
+    <value>Parameter with name '{0}' must not contain whitespaces.</value>
+  </data>
+  <data name="Rule0021ParameterNameShouldNotContainWhiteSpaceFormat" xml:space="preserve">
+    <value>Parameter with name '{0}' must not contain whitespaces.</value>
+  </data>
+  <data name="Rule0021ParameterNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
+    <value>Parameter with name '{0}' must not contain whitespaces.</value>
+  </data>
+  <data name="Rule0021ParameterNameShouldNotContainWildcardSymbolsDescription" xml:space="preserve">
+    <value>Parameter name should not contain wildcard symbols such as % or &amp;</value>
+  </data>
+  <data name="Rule0021ParameterNameShouldNotContainWildcardSymbolsFormat" xml:space="preserve">
+    <value>Parameter with name '{0}' must not contain wildcard symbols.</value>
+  </data>
+  <data name="Rule0021ParameterNameShouldNotContainWildcardSymbolsTitle" xml:space="preserve">
+    <value>Parameter name should not contain wildcard symbols such as % or &amp;</value>
   </data>
 </root>

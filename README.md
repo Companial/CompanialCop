@@ -32,21 +32,27 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 
 |Id| Title|Default Severity|
 |---|---|---|
-|BC0001|Variable name should not contain whitespace|Warning|
-|BC0002|Variable name should not contain wildcard symbols such as % or &|Warning|
-|BC0003|Procedure name should not contain whitespace|Warning|
-|BC0004|Global variables section should be above triggers and procedures|Warning|
-|BC0005|Objects which type is: Table, Page, XmlPort, Report, Query must have caption property|Warning|
-|BC0006|Table Fields must have caption property|Warning|
-|BC0007|Enum Value must have caption property|Warning|
-|BC0008|Page parts: Request Page, Page Group, Page Part, Page Action, Page Action Group must have caption property|Warning|
-|BC0009|First 19 Field IDs are reserved to primary key fields|Warning|
-|BC0010|All fields in table extensions should be numbered in the dedicated extension or PTE range|Warning|
-|BC0011|All values in enum extensions should be numbered in the dedicated extension or PTE range|Warning|
-|BC0012|Empty Actions sections should be removed|Warning|
-|BC0013|Empty OnRun triggers should be removed|Warning|
-|BC0014|Hardcoding IP addresses is security-sensitive|Warning|
-|BC0015|Email and Phone No must not be present in any part of the source code|Warning|
+|CM0001|Name for primary key must be PK.|Warning|
+|CM0002|Variable with suffix Tok must be locked and locked variables must have suffix Tok.|Warning|
+|CM0003|Procedure name must not contain whitespaces.|Warning|
+|CM0004|First 19 field IDs are reserved for primary key fields.|Warning|
+|CM0005|The Enum identifier must be within the allowed range.|Warning|
+|CM0006|IP address must not be present in any part of the source code.|Warning|
+|CM0007|FlowFields must not be editable.|Warning|
+|CM0008|Commit() must have a comment to justify its existence.|Warning|
+|CM0009|Use of hardcoded object IDs in functions is not allowed.|Warning|
+|CM0010|Caption must be specified.|Warning|
+|CM0011|Procedure prototype must not end with semicolon.|Warning|
+|CM0012|Procedure must be either local or internal.|Warning|
+|CM0013|ToolTip must end with a dot.|Warning|
+|CM0014|Position for global variables, triggers and methods must be correct.|Warning|
+|CM0015|Msg and Err labels should end with a dot, Qst should end with a question mark.|Warning|
+|CM0016|Internal Methods must be invoked with explicit parameters.|Warning|
+|CM0017|Object should not have empty sections.|Warning|
+|CM0018|Objects need to have the Access/Extensible properties defined.|Warning|
+|CM0019|Local variable name should not contain whitespace/wildcard symbols.|Warning|
+|CM0020|Global variable name should not contain whitespace/wildcard symbols.|Warning|
+|CM0021|Parameter name should not contain whitespace/wildcard symbols.|Warning|
 
 ## How to disable certain rules?
 

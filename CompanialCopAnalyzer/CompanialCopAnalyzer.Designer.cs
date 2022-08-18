@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BCCodeCopAnalyzer {
+namespace CompanialCopAnalyzer {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace BCCodeCopAnalyzer {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class BCCodeCopAnalyzer {
+    internal class CompanialCopAnalyzer {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal BCCodeCopAnalyzer() {
+        internal CompanialCopAnalyzer() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace BCCodeCopAnalyzer {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BCCodeCopAnalyzer.BCCodeCopAnalyzer", typeof(BCCodeCopAnalyzer).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CompanialCopAnalyzer.CompanialCopAnalyzer", typeof(CompanialCopAnalyzer).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -70,7 +70,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The key has an incorrect name. The valid name is PK..
+        ///   Looks up a localized string similar to Name for primary key must be PK..
         /// </summary>
         internal static string Rule0001KeyNamingDescription {
             get {
@@ -88,7 +88,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The key has an incorrect name. The valid name is PK..
+        ///   Looks up a localized string similar to Name for primary key must be PK..
         /// </summary>
         internal static string Rule0001KeyNamingTitle {
             get {
@@ -97,7 +97,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Variable must be locked..
+        ///   Looks up a localized string similar to Variable with suffix Tok must be locked..
         /// </summary>
         internal static string Rule0002LockedVariableLablesDescription {
             get {
@@ -115,7 +115,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Variable must be locked..
+        ///   Looks up a localized string similar to Variable with suffix Tok must be locked..
         /// </summary>
         internal static string Rule0002LockedVariableLablesTitle {
             get {
@@ -124,7 +124,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Variable must have a suffix Tok..
+        ///   Looks up a localized string similar to Locked variables must have suffix Tok..
         /// </summary>
         internal static string Rule0002LockedVariableTokLablesDescription {
             get {
@@ -142,7 +142,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Variable must have a suffix Tok..
+        ///   Looks up a localized string similar to Locked variables must have suffix Tok..
         /// </summary>
         internal static string Rule0002LockedVariableTokLablesTitle {
             get {
@@ -151,7 +151,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure name should not contain whitespace.
+        ///   Looks up a localized string similar to Procedure name must not contain whitespaces..
         /// </summary>
         internal static string Rule0003MethodsNameShouldNotContainWhiteSpaceDescription {
             get {
@@ -169,7 +169,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure name should not contain whitespace.
+        ///   Looks up a localized string similar to Procedure name must not contain whitespaces..
         /// </summary>
         internal static string Rule0003MethodsNameShouldNotContainWhiteSpaceTitle {
             get {
@@ -178,7 +178,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to First 19 Field IDs are reserved to primary key fields.
+        ///   Looks up a localized string similar to First 19 field IDs are reserved for primary key fields..
         /// </summary>
         internal static string Rule0004First19TableFieldsIDReservedToPrimaryKeyDescription {
             get {
@@ -187,7 +187,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The field identifier &apos;{0}&apos; is not valid. First 19 Field IDs are reserved to primary key fields..
+        ///   Looks up a localized string similar to The field identifier &apos;{0}&apos; is not valid. First 19 Field IDs are reserved for primary key fields..
         /// </summary>
         internal static string Rule0004First19TableFieldsIDReservedToPrimaryKeyFormat {
             get {
@@ -196,7 +196,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to First 19 Field IDs are reserved to primary key fields.
+        ///   Looks up a localized string similar to First 19 field IDs are reserved for primary key fields..
         /// </summary>
         internal static string Rule0004First19TableFieldsIDReservedToPrimaryKeyTitle {
             get {
@@ -205,7 +205,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All values in enum extensions should be numbered in the dedicated extension or PTE range.
+        ///   Looks up a localized string similar to The enum identifier must be within the allowed range..
         /// </summary>
         internal static string Rule0005EnumExtensionsValuesNumberedInDedicatedRangeDescription {
             get {
@@ -223,7 +223,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All values in enum extensions should be numbered in the dedicated extension or PTE range.
+        ///   Looks up a localized string similar to The enum identifier must be within the allowed range..
         /// </summary>
         internal static string Rule0005EnumExtensionsValuesNumberedInDedicatedRangeTitle {
             get {
@@ -232,7 +232,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hardcoding IP addresses is security-sensitive.
+        ///   Looks up a localized string similar to IP address must not be present in any part of the source code..
         /// </summary>
         internal static string Rule0006HardcodedIpAddressDescription {
             get {
@@ -250,7 +250,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hardcoding IP addresses is security-sensitive.
+        ///   Looks up a localized string similar to IP address must not be present in any part of the source code..
         /// </summary>
         internal static string Rule0006HardcodedIpAddressTitle {
             get {
@@ -259,7 +259,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FlowFields should not be editable..
+        ///   Looks up a localized string similar to FlowFields must not be editable..
         /// </summary>
         internal static string Rule0007FlowFieldsShouldNotBeEditableDescription {
             get {
@@ -277,7 +277,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FlowFields should not be editable..
+        ///   Looks up a localized string similar to FlowFields must not be editable..
         /// </summary>
         internal static string Rule0007FlowFieldsShouldNotBeEditableTitle {
             get {
@@ -286,7 +286,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commit() must have a comment to justify its existance. Either a leading or a trailing comment..
+        ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
         /// </summary>
         internal static string Rule0008CommitMustBeExplainedByCommentDescription {
             get {
@@ -295,7 +295,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commit() must have a comment to justify its existance. Either a leading or a trailing comment..
+        ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
         /// </summary>
         internal static string Rule0008CommitMustBeExplainedByCommentFormat {
             get {
@@ -304,7 +304,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commit() must have a comment to justify its existance. Either a leading or a trailing comment..
+        ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
         /// </summary>
         internal static string Rule0008CommitMustBeExplainedByCommentTitle {
             get {
@@ -394,7 +394,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedures must be either local or internal..
+        ///   Looks up a localized string similar to Procedure must be either local or internal..
         /// </summary>
         internal static string Rule0012InternalProceduresDescription {
             get {
@@ -403,7 +403,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedures must be either local or internal..
+        ///   Looks up a localized string similar to Procedure must be either local or internal..
         /// </summary>
         internal static string Rule0012InternalProceduresFormat {
             get {
@@ -412,7 +412,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedures must be either local or internal..
+        ///   Looks up a localized string similar to Procedure must be either local or internal..
         /// </summary>
         internal static string Rule0012InternalProceduresTitle {
             get {
@@ -421,7 +421,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ToolTips must end with a dot..
+        ///   Looks up a localized string similar to ToolTip must end with a dot..
         /// </summary>
         internal static string Rule0013ToolTipPunctuationDescription {
             get {
@@ -430,7 +430,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ToolTips must end with a dot..
+        ///   Looks up a localized string similar to ToolTip must end with a dot..
         /// </summary>
         internal static string Rule0013ToolTipPunctuationFormat {
             get {
@@ -439,7 +439,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ToolTips must end with a dot..
+        ///   Looks up a localized string similar to ToolTip must end with a dot..
         /// </summary>
         internal static string Rule0013ToolTipPunctuationTitle {
             get {
@@ -448,7 +448,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods..
+        ///   Looks up a localized string similar to Position for global variables, triggers and methods..
         /// </summary>
         internal static string Rule0014GlobalVarTriggerAndMethodPositionDescription {
             get {
@@ -466,7 +466,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods..
+        ///   Looks up a localized string similar to Position for global variables, triggers and methods..
         /// </summary>
         internal static string Rule0014GlobalVarTriggerAndMethodPositionTitle {
             get {
@@ -475,7 +475,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Msg and Err Labels should end with a dot, Qst should end with a question mark..
+        ///   Looks up a localized string similar to Msg and Err labels should end with a dot, Qst should end with a question mark..
         /// </summary>
         internal static string Rule0015LabelPunctuationDescription {
             get {
@@ -484,7 +484,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Msg and Err Labels should end with a dot, Qst should end with a question mark..
+        ///   Looks up a localized string similar to Msg and Err labels should end with a dot, Qst should end with a question mark..
         /// </summary>
         internal static string Rule0015LabelPunctuationFormat {
             get {
@@ -493,7 +493,7 @@ namespace BCCodeCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Msg and Err Labels should end with a dot, Qst should end with a question mark..
+        ///   Looks up a localized string similar to Msg and Err labels should end with a dot, Qst should end with a question mark..
         /// </summary>
         internal static string Rule0015LabelPunctuationTitle {
             get {

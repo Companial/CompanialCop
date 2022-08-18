@@ -32,17 +32,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="BCCodeCopAnalyzer.Designer.cs">
+    <Compile Update="CompanialCopAnalyzer.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>BCCodeCopAnalyzer.resx</DependentUpon>
+      <DependentUpon>CompanialCopAnalyzer.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="BCCodeCopAnalyzer.resx">
+    <EmbeddedResource Update="CompanialCopAnalyzer.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>BCCodeCopAnalyzer.Designer.cs</LastGenOutput>
+      <LastGenOutput>CompanialCopAnalyzer.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BCCodeCopAnalyzer.Design
+namespace CompanialCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
     internal class Rule0003MethodNameShouldNotContainWhiteSpace : DiagnosticAnalyzer

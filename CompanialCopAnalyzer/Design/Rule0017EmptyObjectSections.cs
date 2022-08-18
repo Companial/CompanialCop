@@ -1,4 +1,4 @@
-﻿using BCCodeCopAnalyzer;
+﻿using CompanialCopAnalyzer;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
@@ -6,7 +6,7 @@ using Microsoft.Dynamics.Nav.CodeAnalysis.Text;
 using System;
 using System.Collections.Immutable;
 
-namespace BCCodeCopAnalyzer.Design
+namespace CompanialCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
     internal class Rule0017EmptyObjectSections : DiagnosticAnalyzer

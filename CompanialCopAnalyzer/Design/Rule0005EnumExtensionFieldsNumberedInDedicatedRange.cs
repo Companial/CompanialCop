@@ -10,7 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace BCCodeCopAnalyzer.Design
+namespace CompanialCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
     internal class Rule0005EnumExtensionFieldsNumberedInDedicatedRange : DiagnosticAnalyzer

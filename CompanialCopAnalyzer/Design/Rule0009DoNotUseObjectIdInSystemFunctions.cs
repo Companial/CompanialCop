@@ -1,4 +1,4 @@
-﻿using BCCodeCopAnalyzer;
+﻿using CompanialCopAnalyzer;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 
-namespace BCCodeCopAnalyzer.Design
+namespace CompanialCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
     public class Rule0009DoNotUseObjectIdInSystemFunctions : DiagnosticAnalyzer

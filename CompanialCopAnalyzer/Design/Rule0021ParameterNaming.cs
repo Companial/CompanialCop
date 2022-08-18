@@ -1,4 +1,4 @@
-﻿using BCCodeCopAnalyzer;
+﻿using CompanialCopAnalyzer;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
@@ -7,7 +7,7 @@ using System.Collections.Immutable;
 using System.Runtime.Remoting.Contexts;
 using System.Xml.Linq;
 
-namespace BCCodeCopAnalyzer.Design
+namespace CompanialCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
     public class Rule0021ParameterNaming : DiagnosticAnalyzer

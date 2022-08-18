@@ -121,85 +121,85 @@
     <value>CM</value>
   </data>
   <data name="Rule0001KeyNamingDescription" xml:space="preserve">
-    <value>The key has an incorrect name. The valid name is PK.</value>
+    <value>Name for primary key must be PK.</value>
   </data>
   <data name="Rule0001KeyNamingFormat" xml:space="preserve">
     <value>The key '{0}' has an incorrect name. The valid name is PK.</value>
   </data>
   <data name="Rule0001KeyNamingTitle" xml:space="preserve">
-    <value>The key has an incorrect name. The valid name is PK.</value>
+    <value>Name for primary key must be PK.</value>
   </data>
   <data name="Rule0002LockedVariableLablesDescription" xml:space="preserve">
-    <value>Variable must be locked.</value>
+    <value>Variable with suffix Tok must be locked.</value>
   </data>
   <data name="Rule0002LockedVariableLablesFormat" xml:space="preserve">
     <value>Variable with suffix Tok must be locked.</value>
   </data>
   <data name="Rule0002LockedVariableLablesTitle" xml:space="preserve">
-    <value>Variable must be locked.</value>
+    <value>Variable with suffix Tok must be locked.</value>
   </data>
   <data name="Rule0002LockedVariableTokLablesDescription" xml:space="preserve">
-    <value>Variable must have a suffix Tok.</value>
+    <value>Locked variables must have suffix Tok.</value>
   </data>
   <data name="Rule0002LockedVariableTokLablesFormat" xml:space="preserve">
     <value>Locked variable with name '{0}' must have a suffix Tok.</value>
   </data>
   <data name="Rule0002LockedVariableTokLablesTitle" xml:space="preserve">
-    <value>Variable must have a suffix Tok.</value>
+    <value>Locked variables must have suffix Tok.</value>
   </data>
   <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceDescription" xml:space="preserve">
-    <value>Procedure name should not contain whitespace</value>
+    <value>Procedure name must not contain whitespaces.</value>
   </data>
   <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceFormat" xml:space="preserve">
     <value>Procedure with name '{0}' must not contain whitespaces.</value>
   </data>
   <data name="Rule0003MethodsNameShouldNotContainWhiteSpaceTitle" xml:space="preserve">
-    <value>Procedure name should not contain whitespace</value>
+    <value>Procedure name must not contain whitespaces.</value>
   </data>
   <data name="Rule0004First19TableFieldsIDReservedToPrimaryKeyDescription" xml:space="preserve">
-    <value>First 19 Field IDs are reserved to primary key fields</value>
+    <value>First 19 field IDs are reserved for primary key fields.</value>
   </data>
   <data name="Rule0004First19TableFieldsIDReservedToPrimaryKeyFormat" xml:space="preserve">
-    <value>The field identifier '{0}' is not valid. First 19 Field IDs are reserved to primary key fields.</value>
+    <value>The field identifier '{0}' is not valid. First 19 Field IDs are reserved for primary key fields.</value>
   </data>
   <data name="Rule0004First19TableFieldsIDReservedToPrimaryKeyTitle" xml:space="preserve">
-    <value>First 19 Field IDs are reserved to primary key fields</value>
+    <value>First 19 field IDs are reserved for primary key fields.</value>
   </data>
   <data name="Rule0005EnumExtensionsValuesNumberedInDedicatedRangeDescription" xml:space="preserve">
-    <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
+    <value>The enum identifier must be within the allowed range.</value>
   </data>
   <data name="Rule0005EnumExtensionsValuesNumberedInDedicatedRangeFormat" xml:space="preserve">
     <value>Then enum identifier '{0}' is not valid. It must be withing the range '{1}.</value>
   </data>
   <data name="Rule0005EnumExtensionsValuesNumberedInDedicatedRangeTitle" xml:space="preserve">
-    <value>All values in enum extensions should be numbered in the dedicated extension or PTE range</value>
+    <value>The enum identifier must be within the allowed range.</value>
   </data>
   <data name="Rule0006HardcodedIpAddressDescription" xml:space="preserve">
-    <value>Hardcoding IP addresses is security-sensitive</value>
+    <value>IP address must not be present in any part of the source code.</value>
   </data>
   <data name="Rule0006HardcodedIpAddressFormat" xml:space="preserve">
     <value>The Label {0} must not contain IP addresses.</value>
   </data>
   <data name="Rule0006HardcodedIpAddressTitle" xml:space="preserve">
-    <value>Hardcoding IP addresses is security-sensitive</value>
+    <value>IP address must not be present in any part of the source code.</value>
   </data>
   <data name="Rule0007FlowFieldsShouldNotBeEditableDescription" xml:space="preserve">
-    <value>FlowFields should not be editable.</value>
+    <value>FlowFields must not be editable.</value>
   </data>
   <data name="Rule0007FlowFieldsShouldNotBeEditableFormat" xml:space="preserve">
     <value>Field with name '{0}' must have the Editable property equals false.</value>
   </data>
   <data name="Rule0007FlowFieldsShouldNotBeEditableTitle" xml:space="preserve">
-    <value>FlowFields should not be editable.</value>
+    <value>FlowFields must not be editable.</value>
   </data>
   <data name="Rule0008CommitMustBeExplainedByCommentDescription" xml:space="preserve">
-    <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
+    <value>Commit() must have a comment to justify its existence. Either a leading or a trailing comment.</value>
   </data>
   <data name="Rule0008CommitMustBeExplainedByCommentFormat" xml:space="preserve">
-    <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
+    <value>Commit() must have a comment to justify its existence. Either a leading or a trailing comment.</value>
   </data>
   <data name="Rule0008CommitMustBeExplainedByCommentTitle" xml:space="preserve">
-    <value>Commit() must have a comment to justify its existance. Either a leading or a trailing comment.</value>
+    <value>Commit() must have a comment to justify its existence. Either a leading or a trailing comment.</value>
   </data>
   <data name="Rule0009DoNotUseObjectIdInSystemFunctionsDescription" xml:space="preserve">
     <value>Using hardcoded IDs in functions is not allowed.</value>
@@ -229,40 +229,40 @@
     <value>Procedure must not end with semicolon.</value>
   </data>
   <data name="Rule0012InternalProceduresDescription" xml:space="preserve">
-    <value>Procedures must be either local or internal.</value>
+    <value>Procedure must be either local or internal.</value>
   </data>
   <data name="Rule0012InternalProceduresFormat" xml:space="preserve">
-    <value>Procedures must be either local or internal.</value>
+    <value>Procedure must be either local or internal.</value>
   </data>
   <data name="Rule0012InternalProceduresTitle" xml:space="preserve">
-    <value>Procedures must be either local or internal.</value>
+    <value>Procedure must be either local or internal.</value>
   </data>
   <data name="Rule0013ToolTipPunctuationDescription" xml:space="preserve">
-    <value>ToolTips must end with a dot.</value>
+    <value>ToolTip must end with a dot.</value>
   </data>
   <data name="Rule0013ToolTipPunctuationFormat" xml:space="preserve">
-    <value>ToolTips must end with a dot.</value>
+    <value>ToolTip must end with a dot.</value>
   </data>
   <data name="Rule0013ToolTipPunctuationTitle" xml:space="preserve">
-    <value>ToolTips must end with a dot.</value>
+    <value>ToolTip must end with a dot.</value>
   </data>
   <data name="Rule0014GlobalVarTriggerAndMethodPositionDescription" xml:space="preserve">
-    <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
+    <value>Position for global variables, triggers and methods.</value>
   </data>
   <data name="Rule0014GlobalVarTriggerAndMethodPositionFormat" xml:space="preserve">
     <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
   </data>
   <data name="Rule0014GlobalVarTriggerAndMethodPositionTitle" xml:space="preserve">
-    <value>The ordering should be like this: Global Variables -&gt; Triggers -&gt; Methods.</value>
+    <value>Position for global variables, triggers and methods.</value>
   </data>
   <data name="Rule0015LabelPunctuationDescription" xml:space="preserve">
-    <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
+    <value>Msg and Err labels should end with a dot, Qst should end with a question mark.</value>
   </data>
   <data name="Rule0015LabelPunctuationFormat" xml:space="preserve">
-    <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
+    <value>Msg and Err labels should end with a dot, Qst should end with a question mark.</value>
   </data>
   <data name="Rule0015LabelPunctuationTitle" xml:space="preserve">
-    <value>Msg and Err Labels should end with a dot, Qst should end with a question mark.</value>
+    <value>Msg and Err labels should end with a dot, Qst should end with a question mark.</value>
   </data>
   <data name="Rule0016InternalMethodsMustHaveExplicitParametersDescription" xml:space="preserve">
     <value>Internal Methods must be invoked with explicit parameters.</value>

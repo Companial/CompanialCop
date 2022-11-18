@@ -169,7 +169,7 @@
     <value>The enum identifier must be within the allowed range.</value>
   </data>
   <data name="Rule0005EnumExtensionsValuesNumberedInDedicatedRangeFormat" xml:space="preserve">
-    <value>Then enum identifier '{0}' is not valid. It must be withing the range '{1}.</value>
+    <value>Then enum identifier '{0}' is not valid. It must be within the range '{1}.</value>
   </data>
   <data name="Rule0005EnumExtensionsValuesNumberedInDedicatedRangeTitle" xml:space="preserve">
     <value>The enum identifier must be within the allowed range.</value>

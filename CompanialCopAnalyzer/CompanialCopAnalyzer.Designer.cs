@@ -214,7 +214,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Then enum identifier &apos;{0}&apos; is not valid. It must be withing the range &apos;{1}..
+        ///   Looks up a localized string similar to Then enum identifier &apos;{0}&apos; is not valid. It must be within the range &apos;{1}..
         /// </summary>
         internal static string Rule0005EnumExtensionsValuesNumberedInDedicatedRangeFormat {
             get {

@@ -299,5 +299,28 @@ namespace CompanialCopAnalyzer
             null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0022GridLayoutMustNotBeRows = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0022",
+            CompanialCopAnalyzer.Rule0022GridLayoutMustNotBeRowsTitle,
+            CompanialCopAnalyzer.Rule0022GridLayoutMustNotBeRowsFormat,
+            "UI",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0022GridLayoutMustNotBeRowsDescription,
+            null,
+            Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0023MandatoryAffixes = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0023",
+            CompanialCopAnalyzer.Rule0023MandatoryAffixesTitle,
+            CompanialCopAnalyzer.Rule0023MandatoryAffixesFormat,
+            "Naming",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0023MandatoryAffixesDescription,
+            null,
+            Array.Empty<string>()
+        );
+
     }
 }

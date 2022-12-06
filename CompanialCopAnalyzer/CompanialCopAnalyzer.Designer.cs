@@ -770,5 +770,59 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0021ParameterNameShouldNotContainWildcardSymbolsTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GridLayout property must not have value Rows.
+        /// </summary>
+        internal static string Rule0022GridLayoutMustNotBeRowsDescription {
+            get {
+                return ResourceManager.GetString("Rule0022GridLayoutMustNotBeRowsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} property must not have value Rows..
+        /// </summary>
+        internal static string Rule0022GridLayoutMustNotBeRowsFormat {
+            get {
+                return ResourceManager.GetString("Rule0022GridLayoutMustNotBeRowsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GridLayout property must not have value Rows.
+        /// </summary>
+        internal static string Rule0022GridLayoutMustNotBeRowsTitle {
+            get {
+                return ResourceManager.GetString("Rule0022GridLayoutMustNotBeRowsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
+        /// </summary>
+        internal static string Rule0023MandatoryAffixesDescription {
+            get {
+                return ResourceManager.GetString("Rule0023MandatoryAffixesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The identifier &apos;{0}&apos; must have at least one of the mandatory affixes &apos;{1}&apos;..
+        /// </summary>
+        internal static string Rule0023MandatoryAffixesFormat {
+            get {
+                return ResourceManager.GetString("Rule0023MandatoryAffixesFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
+        /// </summary>
+        internal static string Rule0023MandatoryAffixesTitle {
+            get {
+                return ResourceManager.GetString("Rule0023MandatoryAffixesTitle", resourceCulture);
+            }
+        }
     }
 }

@@ -3,12 +3,9 @@ using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Text;
 using System;
-using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace CompanialCopAnalyzer.Design
 {
@@ -18,7 +15,7 @@ namespace CompanialCopAnalyzer.Design
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0005EnumExtensionsValuesNumberedInDedicatedRange);
 
         public override void Initialize(AnalysisContext context)
-        {           
+        {
             context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(AnalyzeEnumExtValuesID), SyntaxKind.EnumExtensionType);
         }
 

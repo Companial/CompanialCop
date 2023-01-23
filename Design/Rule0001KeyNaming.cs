@@ -1,5 +1,4 @@
-﻿using CompanialCopAnalyzer;
-using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
 using System;
@@ -21,7 +20,7 @@ namespace CompanialCopAnalyzer.Design
 
             TableSyntax syntax = ctx.Node as TableSyntax;
             KeyListSyntax keyList = syntax.Keys;
-            
+
             if (keyList == null) return;
 
             KeySyntax key = keyList.Keys[0];

@@ -45,8 +45,6 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 |CM0005|The Enum identifier must be within the allowed range.|Warning|
 |CM0006|IP address must not be present in any part of the source code.|Warning|
 |CM0007|FlowFields must not be editable.|Warning|
-|CM0008|Commit() must have a comment to justify its existence.|Warning|
-|CM0009|Use of hardcoded object IDs in functions is not allowed.|Warning|
 |CM0010|Caption must be specified.|Warning|
 |CM0011|Procedure prototype must not end with semicolon.|Warning|
 |CM0012|Procedure must be either local or internal.|Warning|
@@ -59,6 +57,8 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 |CM0019|Local variable name should not contain whitespace/wildcard symbols.|Warning|
 |CM0020|Global variable name should not contain whitespace/wildcard symbols.|Warning|
 |CM0021|Parameter name should not contain whitespace/wildcard symbols.|Warning|
+|CM0022|GridLayout property must not have value Rows|Warning|
+|CM0023|The identifier must have at least one of the mandatory affixes.|Warning|
 
 ## How to disable certain rules?
 

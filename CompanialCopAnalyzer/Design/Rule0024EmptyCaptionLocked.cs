@@ -1,6 +1,7 @@
 ﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
+using System;
 using System.Collections.Immutable;
 
 namespace CompanialCopAnalyzer.Design
@@ -8,9 +9,9 @@ namespace CompanialCopAnalyzer.Design
     [DiagnosticAnalyzer]
     public class Rule0024EmptyCaptionLocked : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0024EmptyCaptionLocked);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0024EmptyCaptionLocked);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeCaptionProperty), SyntaxKind.EnumValue);
+        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(AnalyzeCaptionProperty), SyntaxKind.EnumValue);
 
         private void AnalyzeCaptionProperty(SyntaxNodeAnalysisContext ctx)
         {
@@ -34,9 +35,7 @@ namespace CompanialCopAnalyzer.Design
                 }
 
             if (!labelLocked)
-            {
                 ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0024EmptyCaptionLocked, captionProperty.GetLocation()));
-            }
         }
     }
 }

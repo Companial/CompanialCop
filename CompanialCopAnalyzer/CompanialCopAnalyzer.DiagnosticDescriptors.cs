@@ -321,6 +321,16 @@ namespace CompanialCopAnalyzer
             null,
             Array.Empty<string>()
         );
-
+        public static readonly DiagnosticDescriptor Rule0024EmptyCaptionLocked = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0024",
+            CompanialCopAnalyzer.Rule0024EmptyCaptionLockedTitle,
+            CompanialCopAnalyzer.Rule0024EmptyCaptionLockedFormat,
+            "Naming",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0024EmptyCaptionLockedDescription,
+            null,
+            Array.Empty<string>()
+        );
     }
 }

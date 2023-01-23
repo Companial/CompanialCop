@@ -372,4 +372,13 @@
   <data name="Rule0023MandatoryAffixesTitle" xml:space="preserve">
     <value>The identifier must have at least one of the mandatory affixes.</value>
   </data>
+  <data name="Rule0024EmptyCaptionLockedDescription" xml:space="preserve">
+    <value>Empty captions should be locked.</value>
+  </data>
+  <data name="Rule0024EmptyCaptionLockedFormat" xml:space="preserve">
+    <value>Empty captions should be locked.</value>
+  </data>
+  <data name="Rule0024EmptyCaptionLockedTitle" xml:space="preserve">
+    <value>Empty captions should be locked.</value>
+  </data>  
 </root>

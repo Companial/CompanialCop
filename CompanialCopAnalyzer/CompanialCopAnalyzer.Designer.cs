@@ -824,5 +824,32 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0023MandatoryAffixesTitle", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
+        /// </summary>
+        internal static string Rule0024EmptyCaptionLockedDescription {
+            get {
+                return ResourceManager.GetString("Rule0024EmptyCaptionLockedDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The identifier &apos;{0}&apos; must have at least one of the mandatory affixes &apos;{1}&apos;..
+        /// </summary>
+        internal static string Rule0024EmptyCaptionLockedFormat {
+            get {
+                return ResourceManager.GetString("Rule0024EmptyCaptionLockedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
+        /// </summary>
+        internal static string Rule0024EmptyCaptionLockedTitle {
+            get {
+                return ResourceManager.GetString("Rule0024EmptyCaptionLockedTitle", resourceCulture);
+            }
+        }        
     }
 }

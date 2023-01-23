@@ -283,32 +283,6 @@ namespace CompanialCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0007FlowFieldsShouldNotBeEditableTitle", resourceCulture);
             }
-        }        
-        /// <summary>
-        ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
-        /// </summary>
-        internal static string Rule0009DoNotUseObjectIdInSystemFunctionsDescription {
-            get {
-                return ResourceManager.GetString("Rule0009DoNotUseObjectIdInSystemFunctionsDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
-        /// </summary>
-        internal static string Rule0009DoNotUseObjectIdInSystemFunctionsFormat {
-            get {
-                return ResourceManager.GetString("Rule0009DoNotUseObjectIdInSystemFunctionsFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
-        /// </summary>
-        internal static string Rule0009DoNotUseObjectIdInSystemFunctionsTitle {
-            get {
-                return ResourceManager.GetString("Rule0009DoNotUseObjectIdInSystemFunctionsTitle", resourceCulture);
-            }
         }
         
         /// <summary>

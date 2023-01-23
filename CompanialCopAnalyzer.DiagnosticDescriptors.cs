@@ -101,17 +101,6 @@ namespace CompanialCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
-        public static readonly DiagnosticDescriptor Rule0009DoNotUseObjectIdInSystemFunctions = new DiagnosticDescriptor(
-            CompanialCopAnalyzer.AnalyzerPrefix + "0009",
-            CompanialCopAnalyzer.Rule0009DoNotUseObjectIdInSystemFunctionsTitle,
-            CompanialCopAnalyzer.Rule0009DoNotUseObjectIdInSystemFunctionsFormat,
-            "Readability",
-            DiagnosticSeverity.Warning,
-            true,
-            CompanialCopAnalyzer.Rule0009DoNotUseObjectIdInSystemFunctionsDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
         public static readonly DiagnosticDescriptor Rule0010CheckForMissingCaptions = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0010",
             CompanialCopAnalyzer.Rule0010CheckForMissingCaptionsTitle,

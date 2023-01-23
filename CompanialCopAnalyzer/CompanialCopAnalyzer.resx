@@ -381,13 +381,22 @@
   <data name="Rule0024EmptyCaptionLockedTitle" xml:space="preserve">
     <value>Empty captions should be locked.</value>
   </data>  
-  <data name="Rule0025CalcFieldsOnNormalFIeldsDescription" xml:space="preserve">
+  <data name="Rule0025CalcFieldsOnNormalFieldsDescription" xml:space="preserve">
     <value>SetAutoCalcFields must not be invoked on Normal fields.</value>
   </data>
-  <data name="Rule0025CalcFieldsOnNormalFIeldsFormat" xml:space="preserve">
+  <data name="Rule0025CalcFieldsOnNormalFieldsFormat" xml:space="preserve">
     <value>SetAutoCalcFields must not be invoked on Normal fields.</value>
   </data>
-  <data name="Rule0025CalcFieldsOnNormalFIeldsTitle" xml:space="preserve">
+  <data name="Rule0025CalcFieldsOnNormalFieldsTitle" xml:space="preserve">
     <value>SetAutoCalcFields must not be invoked on Normal fields.</value>
+  </data>    
+  <data name="Rule0026ZeroEnumValueReservedForEmptyDescription" xml:space="preserve">
+    <value>Zero (0) Enum value should be reserved for Empty Value.</value>
+  </data>
+  <data name="Rule0026ZeroEnumValueReservedForEmptyFormat" xml:space="preserve">
+    <value>Zero (0) Enum value should be reserved for Empty Value.</value>
+  </data>
+  <data name="Rule0026ZeroEnumValueReservedForEmptyTitle" xml:space="preserve">
+    <value>Zero (0) Enum value should be reserved for Empty Value.</value>
   </data>    
 </root>

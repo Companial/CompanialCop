@@ -57,6 +57,7 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 |CM0023|The identifier must have at least one of the mandatory affixes.|Warning|
 |CM0024|Empty captions should be locked.|Warning|
 |CM0025|SetAutoCalcFields must not be invoked on Normal fields.|Warning|
+|CM0026|Zero (0) Enum Value should be reserved for Empty Value.|Hidden|
 
 ## How to disable certain rules?
 

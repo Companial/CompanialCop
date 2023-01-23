@@ -333,7 +333,7 @@ namespace CompanialCopAnalyzer
             Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0025CalcFieldsOnNormalFields = new DiagnosticDescriptor(
-            CompanialCopAnalyzer.AnalyzerPrefix + "0024",
+            CompanialCopAnalyzer.AnalyzerPrefix + "0025",
             CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsTitle,
             CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsFormat,
             "Naming",
@@ -343,5 +343,16 @@ namespace CompanialCopAnalyzer
             null,
             Array.Empty<string>()
         );        
+        public static readonly DiagnosticDescriptor Rule0026ZeroEnumValueReservedForEmpty = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0026",
+            CompanialCopAnalyzer.Rule0026ZeroEnumValueReservedForEmptyTitle,
+            CompanialCopAnalyzer.Rule0026ZeroEnumValueReservedForEmptyFormat,
+            "Naming",
+            DiagnosticSeverity.Hidden,
+            true,
+            CompanialCopAnalyzer.Rule0026ZeroEnumValueReservedForEmptyDescription,
+            null,
+            Array.Empty<string>()
+        );         
     }
 }

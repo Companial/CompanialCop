@@ -877,6 +877,33 @@ namespace CompanialCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0025CalcFieldsOnNormalFieldsTitle", resourceCulture);
             }
-        }                        
+        }  
+
+        /// <summary>
+        ///   Looks up a localized string similar to Zero (0) Enum value should be reserved for Empty Value..
+        /// </summary>
+        internal static string Rule0026ZeroEnumValueReservedForEmptyDescription {
+            get {
+                return ResourceManager.GetString("Rule0026ZeroEnumValueReservedForEmptyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zero (0) Enum value should be reserved for Empty Value..
+        /// </summary>
+        internal static string Rule0026ZeroEnumValueReservedForEmptyFormat {
+            get {
+                return ResourceManager.GetString("Rule0026ZeroEnumValueReservedForEmptyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zero (0) Enum value should be reserved for Empty Value..
+        /// </summary>
+        internal static string Rule0026ZeroEnumValueReservedForEmptyTitle {
+            get {
+                return ResourceManager.GetString("Rule0026ZeroEnumValueReservedForEmptyTitle", resourceCulture);
+            }
+        }                                 
     }
 }

@@ -23,8 +23,8 @@ namespace CompanialCopAnalyzer.Design
 
             if (gridLayoutProperty != null)
             {
-                string tooltipValue = gridLayoutProperty.Value.GetText().ToString();
-                if (tooltipValue.Equals("Rows"))
+                string propertyValue = gridLayoutProperty.Value.GetText().ToString();
+                if (propertyValue.Equals("Rows"))
                     ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0022GridLayoutMustNotBeRows, gridLayoutProperty.GetLocation(), gridLayoutProperty.Name));
             }
         }

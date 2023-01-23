@@ -283,35 +283,7 @@ namespace CompanialCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0007FlowFieldsShouldNotBeEditableTitle", resourceCulture);
             }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
-        /// </summary>
-        internal static string Rule0008CommitMustBeExplainedByCommentDescription {
-            get {
-                return ResourceManager.GetString("Rule0008CommitMustBeExplainedByCommentDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
-        /// </summary>
-        internal static string Rule0008CommitMustBeExplainedByCommentFormat {
-            get {
-                return ResourceManager.GetString("Rule0008CommitMustBeExplainedByCommentFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
-        /// </summary>
-        internal static string Rule0008CommitMustBeExplainedByCommentTitle {
-            get {
-                return ResourceManager.GetString("Rule0008CommitMustBeExplainedByCommentTitle", resourceCulture);
-            }
-        }
-        
+        }        
         /// <summary>
         ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
         /// </summary>

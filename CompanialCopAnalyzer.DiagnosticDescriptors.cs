@@ -101,17 +101,6 @@ namespace CompanialCopAnalyzer
             (string)null,
             Array.Empty<string>()
         );
-        public static readonly DiagnosticDescriptor Rule0008CommitMustBeExplainedByComment = new DiagnosticDescriptor(
-            CompanialCopAnalyzer.AnalyzerPrefix + "0008",
-            CompanialCopAnalyzer.Rule0008CommitMustBeExplainedByCommentTitle,
-            CompanialCopAnalyzer.Rule0008CommitMustBeExplainedByCommentFormat,
-            "Readability",
-            DiagnosticSeverity.Warning,
-            true,
-            CompanialCopAnalyzer.Rule0008CommitMustBeExplainedByCommentDescription,
-            (string)null,
-            Array.Empty<string>()
-        );
         public static readonly DiagnosticDescriptor Rule0009DoNotUseObjectIdInSystemFunctions = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0009",
             CompanialCopAnalyzer.Rule0009DoNotUseObjectIdInSystemFunctionsTitle,

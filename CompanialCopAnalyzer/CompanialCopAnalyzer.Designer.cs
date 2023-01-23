@@ -826,7 +826,7 @@ namespace CompanialCopAnalyzer {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
+        ///   Looks up a localized string similar to Empty Captions should be Locked..
         /// </summary>
         internal static string Rule0024EmptyCaptionLockedDescription {
             get {
@@ -835,7 +835,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The identifier &apos;{0}&apos; must have at least one of the mandatory affixes &apos;{1}&apos;..
+        ///   Looks up a localized string similar to The Empty Captions should be Locked..
         /// </summary>
         internal static string Rule0024EmptyCaptionLockedFormat {
             get {
@@ -844,7 +844,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
+        ///   Looks up a localized string similar to Empty Captions should be Locked..
         /// </summary>
         internal static string Rule0024EmptyCaptionLockedTitle {
             get {

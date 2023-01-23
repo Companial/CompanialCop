@@ -332,5 +332,16 @@ namespace CompanialCopAnalyzer
             null,
             Array.Empty<string>()
         );
+        public static readonly DiagnosticDescriptor Rule0025CalcFieldsOnNormalFields = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0024",
+            CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsTitle,
+            CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsFormat,
+            "Naming",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsDescription,
+            null,
+            Array.Empty<string>()
+        );        
     }
 }

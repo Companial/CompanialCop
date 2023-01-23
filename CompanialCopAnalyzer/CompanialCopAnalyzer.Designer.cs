@@ -850,6 +850,33 @@ namespace CompanialCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0024EmptyCaptionLockedTitle", resourceCulture);
             }
-        }        
+        } 
+
+        /// <summary>
+        ///   Looks up a localized string similar to SetAutoCalcFields must not be invoked on Normal fields..
+        /// </summary>
+        internal static string Rule0025CalcFieldsOnNormalFieldsDescription {
+            get {
+                return ResourceManager.GetString("Rule0025CalcFieldsOnNormalFieldsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetAutoCalcFields must not be invoked on Normal fields..
+        /// </summary>
+        internal static string Rule0025CalcFieldsOnNormalFieldsFormat {
+            get {
+                return ResourceManager.GetString("Rule0025CalcFieldsOnNormalFieldsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetAutoCalcFields must not be invoked on Normal fields..
+        /// </summary>
+        internal static string Rule0025CalcFieldsOnNormalFieldsTitle {
+            get {
+                return ResourceManager.GetString("Rule0025CalcFieldsOnNormalFieldsTitle", resourceCulture);
+            }
+        }                        
     }
 }

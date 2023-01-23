@@ -55,6 +55,8 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 |CM0021|Parameter name should not contain whitespace/wildcard symbols.|Warning|
 |CM0022|GridLayout property must not have value Rows|Warning|
 |CM0023|The identifier must have at least one of the mandatory affixes.|Warning|
+|CM0024|Empty captions should be locked.|Warning|
+|CM0025|SetAutoCalcFields must not be invoked on Normal fields.|Warning|
 
 ## How to disable certain rules?
 

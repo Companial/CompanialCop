@@ -1,8 +1,8 @@
-﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using System;
+using System.Collections.Immutable;
+using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
-using System;
-using System.Collections.Immutable;
 
 
 namespace CompanialCopAnalyzer.Design

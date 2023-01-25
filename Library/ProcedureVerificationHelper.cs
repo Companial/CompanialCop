@@ -1,9 +1,11 @@
-﻿using CompanialCopAnalyzer;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Globalization;
+using System.Linq;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.InternalSyntax;
 using Microsoft.Dynamics.Nav.CodeAnalysis.SymbolReference;
-using System.Collections.Immutable;
-using System.Globalization;
 
 
 #nullable enable
@@ -208,7 +210,7 @@ namespace CompanialCopAnalyzer.Design.Helper
                     goto label_9;
             }
             return false;
-        label_9:
+            label_9:
             return true;
         }
     }

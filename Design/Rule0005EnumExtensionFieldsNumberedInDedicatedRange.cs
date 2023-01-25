@@ -1,11 +1,11 @@
-﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
-using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
-using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
-using Microsoft.Dynamics.Nav.CodeAnalysis.Text;
-using System;
+﻿using System;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Microsoft.Dynamics.Nav.CodeAnalysis;
+using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
+using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
+using Microsoft.Dynamics.Nav.CodeAnalysis.Text;
 
 namespace CompanialCopAnalyzer.Design
 {

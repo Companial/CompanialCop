@@ -1,6 +1,6 @@
-﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using System.Collections.Immutable;
+using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
-using System.Collections.Immutable;
 
 
 #nullable enable

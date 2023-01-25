@@ -1,8 +1,8 @@
-﻿using Microsoft.Dynamics.Nav.Analyzers.Common.AppSourceCopConfiguration;
+﻿using System;
+using System.Collections.Concurrent;
+using Microsoft.Dynamics.Nav.Analyzers.Common.AppSourceCopConfiguration;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.SymbolReference;
-using System;
-using System.Collections.Concurrent;
 
 
 #nullable enable
@@ -10,7 +10,6 @@ namespace CompanialCopAnalyzer.Design.Helper
 {
     internal class UpgradeReferenceLoaderSimpleCache
     {
-        private const int maxCacheSize = 30;
         private readonly ConcurrentDictionary<Compilation, ISymbolReferenceLoader> cache;
 
         public static UpgradeReferenceLoaderSimpleCache Instance { get; } = new UpgradeReferenceLoaderSimpleCache();
@@ -21,15 +20,15 @@ namespace CompanialCopAnalyzer.Design.Helper
           Compilation compilation,
           AppSourceCopPreviousModuleSpecifications specification)
         {
-            this.ScavengeIfNeeded();
-            return this.cache.GetOrAdd(compilation, (Func<Compilation, ISymbolReferenceLoader>)(_ => UpgradeReferenceLoaderSimpleCache.CreateReferenceLoader(specification, compilation)));
+            ScavengeIfNeeded();
+            return cache.GetOrAdd(compilation, (Func<Compilation, ISymbolReferenceLoader>)(_ => UpgradeReferenceLoaderSimpleCache.CreateReferenceLoader(specification, compilation)));
         }
 
         public void Remove(Compilation compilation)
         {
-            if (this.ScavengeIfNeeded())
+            if (ScavengeIfNeeded())
                 return;
-            this.cache.TryRemove(compilation, out ISymbolReferenceLoader _);
+            cache.TryRemove(compilation, out ISymbolReferenceLoader _);
         }
 
         private static ISymbolReferenceLoader CreateReferenceLoader(
@@ -45,9 +44,9 @@ namespace CompanialCopAnalyzer.Design.Helper
 
         private bool ScavengeIfNeeded()
         {
-            if (this.cache.Count < 30)
+            if (cache.Count < 30)
                 return false;
-            this.cache.Clear();
+            cache.Clear();
             return true;
         }
     }

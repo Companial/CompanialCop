@@ -1,7 +1,7 @@
-﻿using Microsoft.Dynamics.Nav.Analyzers.Common.AppSourceCopConfiguration;
-using Microsoft.Dynamics.Nav.CodeAnalysis;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
+using Microsoft.Dynamics.Nav.Analyzers.Common.AppSourceCopConfiguration;
+using Microsoft.Dynamics.Nav.CodeAnalysis;
 
 
 #nullable enable

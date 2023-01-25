@@ -49,6 +49,10 @@
     </Compile>
   </ItemGroup>
 
+  <PropertyGroup>
+   <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup> 
+
   <ItemGroup>
     <EmbeddedResource Update="CompanialCopAnalyzer.resx">
       <Generator>ResXFileCodeGenerator</Generator>

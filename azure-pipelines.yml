@@ -1,0 +1,38 @@
+pool:
+  vmImage: 'windows-2022'
+  demands:
+  - msbuild
+  - visualstudio
+trigger:
+  branches:
+    include:
+      - master
+steps:
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 4.4.1'
+  inputs:
+    versionSpec: 4.4.1
+
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  inputs:
+    restoreSolution: 'CompanialCopAnalyzer\*.sln'
+
+- task: VSBuild@1
+  displayName: 'Build solution **\*.sln'
+  inputs:
+    solution: 'CompanialCopAnalyzer\*.sln'
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: $(Build.SourcesDirectory)/CompanialCopAnalyzer/bin
+    Contents: '**\CompanialCopAnalyzer.dll'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish pipeline artifacts'
+  inputs:
+    targetPath: $(Build.ArtifactStagingDirectory)
+    artifactName: Companial Cop Analyzer    

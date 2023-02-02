@@ -337,7 +337,7 @@ namespace CompanialCopAnalyzer
             CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsTitle,
             CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsFormat,
             "Naming",
-            DiagnosticSeverity.Error,
+            DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsDescription,
             null,

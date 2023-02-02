@@ -18,7 +18,7 @@ namespace CompanialCopAnalyzer.Design
             if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
             if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
 
-            LabelPropertyValueSyntax captionProperty = ctx.Node.GetProperty("Caption").Value as LabelPropertyValueSyntax;
+            LabelPropertyValueSyntax? captionProperty = ctx.Node?.GetProperty("Caption")?.Value as LabelPropertyValueSyntax;
 
             if (captionProperty == null || captionProperty.Value.LabelText.Value.Value.ToString().Trim() != "" || ctx.ContainingSymbol.Kind != SymbolKind.Enum) return;
 

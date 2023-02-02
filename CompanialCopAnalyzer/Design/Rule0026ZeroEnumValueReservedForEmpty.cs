@@ -18,8 +18,10 @@ namespace CompanialCopAnalyzer.Design
             if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
             if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
 
-            LabelPropertyValueSyntax captionProperty = ctx.Node.GetProperty("Caption").Value as LabelPropertyValueSyntax;
-            EnumValueSyntax enumValue = ctx.Node as EnumValueSyntax;
+            LabelPropertyValueSyntax? captionProperty = ctx.Node?.GetProperty("Caption")?.Value as LabelPropertyValueSyntax;
+            EnumValueSyntax? enumValue = ctx.Node as EnumValueSyntax;
+
+            if (enumValue == null) return;
 
             if (enumValue.Id.ValueText != "0" || ctx.ContainingSymbol.Kind != SymbolKind.Enum) return;
 

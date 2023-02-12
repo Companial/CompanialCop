@@ -363,13 +363,4 @@
   <data name="Rule0022GridLayoutMustNotBeRowsTitle" xml:space="preserve">
     <value>GridLayout property must not have value Rows</value>
   </data>
-  <data name="Rule0023MandatoryAffixesDescription" xml:space="preserve">
-    <value>The identifier must have at least one of the mandatory affixes.</value>
-  </data>
-  <data name="Rule0023MandatoryAffixesFormat" xml:space="preserve">
-    <value>The identifier '{0}' must have at least one of the mandatory affixes '{1}'.</value>
-  </data>
-  <data name="Rule0023MandatoryAffixesTitle" xml:space="preserve">
-    <value>The identifier must have at least one of the mandatory affixes.</value>
-  </data>
 </root>

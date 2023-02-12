@@ -286,6 +286,60 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
+        /// </summary>
+        internal static string Rule0008CommitMustBeExplainedByCommentDescription {
+            get {
+                return ResourceManager.GetString("Rule0008CommitMustBeExplainedByCommentDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
+        /// </summary>
+        internal static string Rule0008CommitMustBeExplainedByCommentFormat {
+            get {
+                return ResourceManager.GetString("Rule0008CommitMustBeExplainedByCommentFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
+        /// </summary>
+        internal static string Rule0008CommitMustBeExplainedByCommentTitle {
+            get {
+                return ResourceManager.GetString("Rule0008CommitMustBeExplainedByCommentTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
+        /// </summary>
+        internal static string Rule0009DoNotUseObjectIdInSystemFunctionsDescription {
+            get {
+                return ResourceManager.GetString("Rule0009DoNotUseObjectIdInSystemFunctionsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
+        /// </summary>
+        internal static string Rule0009DoNotUseObjectIdInSystemFunctionsFormat {
+            get {
+                return ResourceManager.GetString("Rule0009DoNotUseObjectIdInSystemFunctionsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
+        /// </summary>
+        internal static string Rule0009DoNotUseObjectIdInSystemFunctionsTitle {
+            get {
+                return ResourceManager.GetString("Rule0009DoNotUseObjectIdInSystemFunctionsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Caption is missing.
         /// </summary>
         internal static string Rule0010CheckForMissingCaptionsDescription {
@@ -741,33 +795,6 @@ namespace CompanialCopAnalyzer {
         internal static string Rule0022GridLayoutMustNotBeRowsTitle {
             get {
                 return ResourceManager.GetString("Rule0022GridLayoutMustNotBeRowsTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
-        /// </summary>
-        internal static string Rule0023MandatoryAffixesDescription {
-            get {
-                return ResourceManager.GetString("Rule0023MandatoryAffixesDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The identifier &apos;{0}&apos; must have at least one of the mandatory affixes &apos;{1}&apos;..
-        /// </summary>
-        internal static string Rule0023MandatoryAffixesFormat {
-            get {
-                return ResourceManager.GetString("Rule0023MandatoryAffixesFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
-        /// </summary>
-        internal static string Rule0023MandatoryAffixesTitle {
-            get {
-                return ResourceManager.GetString("Rule0023MandatoryAffixesTitle", resourceCulture);
             }
         }
     }

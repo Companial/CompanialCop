@@ -101,7 +101,7 @@ namespace CompanialCopAnalyzer.Design
         {
             try
             {
-                if (Symbol.ContainingType.Kind == SymbolKind.Table)
+                if (Symbol.ContainingType?.Kind == SymbolKind.Table)
                 {
                     if (((ITableTypeSymbol)Symbol.ContainingType).Id >= 2000000000)
                         return false;

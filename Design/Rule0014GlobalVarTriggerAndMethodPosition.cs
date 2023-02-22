@@ -10,7 +10,7 @@ namespace CompanialCopAnalyzer.Design
     [DiagnosticAnalyzer]
     public class Rule0014GlobalVarTriggerAndMethodPosition : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0014GlobalVarTriggerAndMethodPosition);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0014GlobalVarTriggerAndMethodPosition);
 
         public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(AnalyzeGlobalVariablesPlacement), SyntaxKind.TableObject, SyntaxKind.PageObject,
                                                                                                                                                                              SyntaxKind.CodeunitObject, SyntaxKind.ReportObject, SyntaxKind.QueryObject);

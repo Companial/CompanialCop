@@ -9,9 +9,9 @@ namespace CompanialCopAnalyzer.Design
     [DiagnosticAnalyzer]
     public class Rule0013ToolTipPunctuation : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0013ToolTipPunctuation);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0013ToolTipPunctuation);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeToolTipPunctuation), SyntaxKind.PageField, SyntaxKind.PageAction);
+        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(AnalyzeToolTipPunctuation), SyntaxKind.PageField, SyntaxKind.PageAction);
 
         private void AnalyzeToolTipPunctuation(SyntaxNodeAnalysisContext ctx)
         {

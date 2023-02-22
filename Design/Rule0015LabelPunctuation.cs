@@ -11,14 +11,14 @@ namespace CompanialCopAnalyzer.Design
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0015LabelPunctuation);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeLabelPunctuation), SyntaxKind.VariableDeclaration);
+        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(AnalyzeLabelPunctuation), SyntaxKind.VariableDeclaration);
 
         private void AnalyzeLabelPunctuation(SyntaxNodeAnalysisContext ctx)
         {
             if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
             if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
 
-            VariableDeclarationSyntax syntax = ctx.Node as VariableDeclarationSyntax;
+            VariableDeclarationSyntax syntax = (VariableDeclarationSyntax)ctx.Node;
             if (syntax != null)
             {
                 string variableName = syntax.GetNameStringValue();

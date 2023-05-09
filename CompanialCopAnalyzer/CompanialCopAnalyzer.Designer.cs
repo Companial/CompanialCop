@@ -824,9 +824,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0023MandatoryAffixesTitle", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to Empty Captions should be Locked..
+        ///   Looks up a localized string similar to Empty captions should be locked..
         /// </summary>
         internal static string Rule0024EmptyCaptionLockedDescription {
             get {
@@ -835,7 +835,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Empty Captions should be Locked..
+        ///   Looks up a localized string similar to Empty captions should be locked..
         /// </summary>
         internal static string Rule0024EmptyCaptionLockedFormat {
             get {
@@ -844,14 +844,14 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Empty Captions should be Locked..
+        ///   Looks up a localized string similar to Empty captions should be locked..
         /// </summary>
         internal static string Rule0024EmptyCaptionLockedTitle {
             get {
                 return ResourceManager.GetString("Rule0024EmptyCaptionLockedTitle", resourceCulture);
             }
-        } 
-
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to SetAutoCalcFields must not be invoked on Normal fields..
         /// </summary>
@@ -877,8 +877,8 @@ namespace CompanialCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0025CalcFieldsOnNormalFieldsTitle", resourceCulture);
             }
-        }  
-
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Zero (0) Enum value should be reserved for Empty Value..
         /// </summary>
@@ -904,6 +904,24 @@ namespace CompanialCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0026ZeroEnumValueReservedForEmptyTitle", resourceCulture);
             }
-        }                                 
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conflicting ID, Name or Type with Table &apos;{0}&apos;.
+        /// </summary>
+        internal static string Rule0027AnalyzeTableExtensionText {
+            get {
+                return ResourceManager.GetString("Rule0027AnalyzeTableExtensionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Records &apos;{0}&apos; and &apos;{1}&apos; have conflicting fields with the same ID.
+        /// </summary>
+        internal static string Rule0027AnalyzeTransferFieldText {
+            get {
+                return ResourceManager.GetString("Rule0027AnalyzeTransferFieldText", resourceCulture);
+            }
+        }
     }
 }

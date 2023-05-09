@@ -58,6 +58,7 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 |CM0024|Empty captions should be locked.|Warning|
 |CM0025|SetAutoCalcFields must not be invoked on Normal fields.|Error|
 |CM0026|Zero (0) Enum Value should be reserved for Empty Value.|Warning|
+|CM0027|When using transferfields record 1 and record 2 must not have conflicting fields on the same ID.|Warning|
 
 ## How to disable certain rules?
 

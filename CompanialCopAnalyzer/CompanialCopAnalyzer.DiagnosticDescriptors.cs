@@ -17,8 +17,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0001KeyNamingDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
 
         public static readonly DiagnosticDescriptor Rule0002LockedVariableLables = new DiagnosticDescriptor(
@@ -29,8 +28,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0002LockedVariableLablesDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0002LockedVariableTokLables = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0002",
@@ -40,8 +38,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0002LockedVariableTokLablesDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
 
         public static readonly DiagnosticDescriptor Rule0003MethodsNameShouldNotContainWhiteSpace = new DiagnosticDescriptor(
@@ -52,8 +49,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0003MethodsNameShouldNotContainWhiteSpaceDescription,
-            null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
 
         public static readonly DiagnosticDescriptor Rule0004First19TableFieldsIDReservedToPrimaryKey = new DiagnosticDescriptor(
@@ -64,8 +60,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0004First19TableFieldsIDReservedToPrimaryKeyDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
 
         public static readonly DiagnosticDescriptor Rule0005EnumExtensionsValuesNumberedInDedicatedRange = new DiagnosticDescriptor(
@@ -76,8 +71,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0005EnumExtensionsValuesNumberedInDedicatedRangeDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0006HardcodedIpAddress = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0006",
@@ -87,8 +81,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0006HardcodedIpAddressDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0007FlowFieldsShouldNotBeEditable = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0007",
@@ -98,8 +91,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0007FlowFieldsShouldNotBeEditableDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0008CommitMustBeExplainedByComment = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0008",
@@ -109,8 +101,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0008CommitMustBeExplainedByCommentDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0009DoNotUseObjectIdInSystemFunctions = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0009",
@@ -120,8 +111,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0009DoNotUseObjectIdInSystemFunctionsDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0010CheckForMissingCaptions = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0010",
@@ -131,8 +121,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0010CheckForMissingCaptionsDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0011SemicolonAfterProcedureDeclaration = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0011",
@@ -142,8 +131,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0011SemicolonAfterProcedureDeclarationDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0012InternalProcedures = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0012",
@@ -153,8 +141,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0012InternalProceduresDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0013ToolTipPunctuation = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0013",
@@ -164,8 +151,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0013ToolTipPunctuationDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0014GlobalVarTriggerAndMethodPosition = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0014",
@@ -175,8 +161,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0014GlobalVarTriggerAndMethodPositionDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0015LabelPunctuation = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0015",
@@ -186,8 +171,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0015LabelPunctuationDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0016InternalMethodsMustHaveExplicitParameters = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0016",
@@ -197,8 +181,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0016InternalMethodsMustHaveExplicitParametersDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0017EmptyObjectSections = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0017",
@@ -208,8 +191,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0017EmptyObjectSectionsDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0018ObjectExtensibleProperty = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0018",
@@ -219,8 +201,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0018ObjectExtensiblePropertyDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0018ObjectAccessProperty = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0018",
@@ -230,8 +211,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0018ObjectAccessPropertyDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0019LocalVariableNameShouldNotContainWhiteSpace = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0019",
@@ -241,8 +221,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0019LocalVariableNameShouldNotContainWhiteSpaceDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0019LocalVariableNameShouldNotContainWildcardSymbols = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0019",
@@ -252,8 +231,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0019LocalVariableNameShouldNotContainWildcardSymbolsDescription,
-            null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0020GlobalVariableNameShouldNotContainWhiteSpace = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0020",
@@ -263,8 +241,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0020GlobalVariableNameShouldNotContainWhiteSpaceDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0020GlobalVariableNameShouldNotContainWildcardSymbols = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0020",
@@ -274,8 +251,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsDescription,
-            null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0021ParameterNameShouldNotContainWhiteSpace = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0021",
@@ -285,8 +261,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0021ParameterNameShouldNotContainWhiteSpaceDescription,
-            (string)null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0021ParameterNameShouldNotContainWildcardSymbols = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0021",
@@ -296,8 +271,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0021ParameterNameShouldNotContainWildcardSymbolsDescription,
-            null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0022GridLayoutMustNotBeRows = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0022",
@@ -307,8 +281,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0022GridLayoutMustNotBeRowsDescription,
-            null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0023MandatoryAffixes = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0023",
@@ -318,8 +291,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0023MandatoryAffixesDescription,
-            null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0024EmptyCaptionLocked = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0024",
@@ -329,8 +301,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0024EmptyCaptionLockedDescription,
-            null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );
         public static readonly DiagnosticDescriptor Rule0025CalcFieldsOnNormalFields = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0025",
@@ -340,8 +311,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsDescription,
-            null,
-            Array.Empty<string>()
+            customTags: Array.Empty<string>()
         );        
         public static readonly DiagnosticDescriptor Rule0026ZeroEnumValueReservedForEmpty = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0026",
@@ -351,8 +321,27 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0026ZeroEnumValueReservedForEmptyDescription,
-            null,
-            Array.Empty<string>()
-        );         
+            customTags: Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0027AnalyzeTableExtension = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0027",
+            CompanialCopAnalyzer.Rule0027AnalyzeTableExtensionText,
+            CompanialCopAnalyzer.Rule0027AnalyzeTableExtensionText,
+            "Analysis",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0027AnalyzeTableExtensionText,
+            customTags: Array.Empty<string>()
+        );
+        public static readonly DiagnosticDescriptor Rule0027AnalyzeTransferField = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0027",
+            CompanialCopAnalyzer.Rule0027AnalyzeTransferFieldText,
+            CompanialCopAnalyzer.Rule0027AnalyzeTransferFieldText,
+            "Analysis",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0027AnalyzeTransferFieldText,
+            customTags: Array.Empty<string>()
+        );
     }
 }

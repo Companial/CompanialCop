@@ -380,7 +380,7 @@
   </data>
   <data name="Rule0024EmptyCaptionLockedTitle" xml:space="preserve">
     <value>Empty captions should be locked.</value>
-  </data>  
+  </data>
   <data name="Rule0025CalcFieldsOnNormalFieldsDescription" xml:space="preserve">
     <value>SetAutoCalcFields must not be invoked on Normal fields.</value>
   </data>
@@ -389,7 +389,7 @@
   </data>
   <data name="Rule0025CalcFieldsOnNormalFieldsTitle" xml:space="preserve">
     <value>SetAutoCalcFields must not be invoked on Normal fields.</value>
-  </data>    
+  </data>
   <data name="Rule0026ZeroEnumValueReservedForEmptyDescription" xml:space="preserve">
     <value>Zero (0) Enum value should be reserved for Empty Value.</value>
   </data>
@@ -398,5 +398,11 @@
   </data>
   <data name="Rule0026ZeroEnumValueReservedForEmptyTitle" xml:space="preserve">
     <value>Zero (0) Enum value should be reserved for Empty Value.</value>
-  </data>    
+  </data>
+  <data name="Rule0027AnalyzeTableExtensionText" xml:space="preserve">
+    <value>Conflicting ID, Name or Type with Table '{0}'</value>
+  </data>
+  <data name="Rule0027AnalyzeTransferFieldText" xml:space="preserve">
+    <value>Records '{0}' and '{1}' have conflicting fields with the same ID</value>
+  </data>
 </root>

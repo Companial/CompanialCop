@@ -1,4 +1,5 @@
 ﻿using CompanialCopAnalyzer;
+using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using System;
@@ -40,8 +41,9 @@ namespace CompanialCopAnalyzer.Design
 
         private void CheckForObjectIdsInFunctionInvocations(OperationAnalysisContext context)
         {
-            if (context.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || context.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
-            if (context.ContainingSymbol.IsObsoletePending || context.ContainingSymbol.IsObsoleteRemoved) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.ContainingSymbol)) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
+
             IInvocationExpression operation = (IInvocationExpression)context.Operation;
             RelevantFuntion CurrentFunction = null;
             try

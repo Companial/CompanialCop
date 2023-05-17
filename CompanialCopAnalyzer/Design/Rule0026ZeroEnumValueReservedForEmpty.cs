@@ -1,8 +1,10 @@
-﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using CompanialCopAnalyzer.Design.Helper;
+using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
 using System;
 using System.Collections.Immutable;
+using System.Runtime.Remoting.Contexts;
 
 namespace CompanialCopAnalyzer.Design
 {
@@ -15,8 +17,8 @@ namespace CompanialCopAnalyzer.Design
 
         private void AnalyzeReservedEnum(SyntaxNodeAnalysisContext ctx)
         {
-            if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
-            if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 
             LabelPropertyValueSyntax? captionProperty = ctx.Node?.GetProperty("Caption")?.Value as LabelPropertyValueSyntax;
             EnumValueSyntax? enumValue = ctx.Node as EnumValueSyntax;

@@ -1,4 +1,5 @@
 ﻿using CompanialCopAnalyzer;
+using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using System;
@@ -24,8 +25,8 @@ namespace CompanialCopAnalyzer.Design
 
         private void CheckForMissingCaptions(SymbolAnalysisContext context)
         {
-            if (context.Symbol.IsObsoletePending || context.Symbol.IsObsoleteRemoved) return;
-            if (context.Symbol.GetContainingObjectTypeSymbol().IsObsoletePending || context.Symbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.Symbol)) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.Symbol.GetContainingObjectTypeSymbol())) return;
 
             if (context.Symbol.Kind == SymbolKind.Control)
             {

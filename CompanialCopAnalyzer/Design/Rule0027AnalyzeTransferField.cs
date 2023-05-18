@@ -84,10 +84,27 @@ namespace CompanialCopAnalyzer.Design
             SyntaxNode globalVariables = await globalVariablesTask;
             variables.AddRange(FindGlobalVariables(globalVariables));
 
-            string? tableName1 = GetObjectName(variables.FirstOrDefault(x => x.GetNameStringValue().Equals(records.Item1)));
-            string? tableName2 = GetObjectName(variables.FirstOrDefault(x => x.GetNameStringValue().Equals(records.Item2)));
+            string? tableName1 = GetObjectName(variables.FirstOrDefault(x => 
+            {
+                string? name = x.GetNameStringValue();
 
-            if(tableName1 == null && (records.Item1.ToLower().Equals("rec") || records.Item1.ToLower().Equals("xrec")))
+                if (name == null)
+                    return false;
+                
+                return name.Equals(records.Item1);
+            }));
+
+            string? tableName2 = GetObjectName(variables.FirstOrDefault(x =>
+            {
+                string? name = x.GetNameStringValue();
+
+                if (name == null)
+                    return false;
+
+                return name.Equals(records.Item2);
+            }));
+
+            if (tableName1 == null && (records.Item1.ToLower().Equals("rec") || records.Item1.ToLower().Equals("xrec")))
                 tableName1 = GetObjectSourceTable(globalVariables, ctx.Compilation);
 
             if (tableName2 == null && (records.Item2.ToLower().Equals("rec") || records.Item2.ToLower().Equals("xrec")))

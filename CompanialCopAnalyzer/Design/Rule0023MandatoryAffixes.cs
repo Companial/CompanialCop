@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
+using System.Reflection;
 
 namespace CompanialCopAnalyzer.Design
 {

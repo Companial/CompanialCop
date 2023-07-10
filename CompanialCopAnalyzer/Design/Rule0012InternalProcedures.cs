@@ -17,6 +17,7 @@ namespace CompanialCopAnalyzer.Design
 
         private void AnalyzeInternalProcedures(SyntaxNodeAnalysisContext ctx)
         {
+            if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().NavTypeKind == NavTypeKind.Interface) return;
             if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
             if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 

@@ -405,4 +405,13 @@
   <data name="Rule0027AnalyzeTransferFieldText" xml:space="preserve">
     <value>Records '{0}' and '{1}' have conflicting fields with the same ID</value>
   </data>
+  <data name="Rule0029OptionDataTypeNotAllowedDescription" xml:space="preserve">
+    <value>This rule throws a warning when an Option data type is used, as it is not allowed.</value>
+  </data>
+  <data name="Rule0029OptionDataTypeNotAllowedFormat" xml:space="preserve">
+    <value>Option data type is not allowed in the code.</value>
+  </data>
+  <data name="Rule0029OptionDataTypeNotAllowedTitle" xml:space="preserve">
+    <value>Option data type Not Allowed</value>
+  </data>
 </root>

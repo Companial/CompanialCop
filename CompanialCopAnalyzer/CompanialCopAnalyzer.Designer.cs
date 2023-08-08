@@ -923,5 +923,32 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0027AnalyzeTransferFieldText", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This rule throws a warning when an Option data type is used, as it is not allowed..
+        /// </summary>
+        internal static string Rule0029OptionDataTypeNotAllowedDescription {
+            get {
+                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option data type is not allowed in the code..
+        /// </summary>
+        internal static string Rule0029OptionDataTypeNotAllowedFormat {
+            get {
+                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option data type Not Allowed.
+        /// </summary>
+        internal static string Rule0029OptionDataTypeNotAllowedTitle {
+            get {
+                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedTitle", resourceCulture);
+            }
+        }
     }
 }

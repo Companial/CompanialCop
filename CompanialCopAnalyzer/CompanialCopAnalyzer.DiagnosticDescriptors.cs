@@ -310,6 +310,36 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0027AnalyzeTransferFieldText
         );
+        public static readonly DiagnosticDescriptor Rule0028_1IncorrectArgumentCount = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0028_1",
+            CompanialCopAnalyzer.Rule0028_1IncorrectArgumentCountTitle,
+            CompanialCopAnalyzer.Rule0028_1IncorrectArgumentCountFormat,
+            "Analysis",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0028_1IncorrectArgumentCountDescription
+        );
+
+        public static readonly DiagnosticDescriptor Rule0028_2InvalidArgumentTypeInGetCall = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0028_2",
+            CompanialCopAnalyzer.Rule0028_2InvalidArgumentTypeInGetCallTitle,
+            CompanialCopAnalyzer.Rule0028_2InvalidArgumentTypeInGetCallFormat,
+            "Analysis",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0028_2InvalidArgumentTypeInGetCallDescription
+        );
+
+        public static readonly DiagnosticDescriptor Rule0028_3ArgumentLengthExceedsMaxLength = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0028_3",
+            CompanialCopAnalyzer.Rule0028_3ArgumentLengthExceedsMaxLengthTitle,
+            CompanialCopAnalyzer.Rule0028_3ArgumentLengthExceedsMaxLengthFormat,
+            "Analysis",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0028_3ArgumentLengthExceedsMaxLengthDescription
+        );
+
         public static DiagnosticDescriptor Rule0029OptionDataTypeNotAllowed = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0029",
             CompanialCopAnalyzer.Rule0029OptionDataTypeNotAllowedTitle,

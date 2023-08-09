@@ -405,6 +405,33 @@
   <data name="Rule0027AnalyzeTransferFieldText" xml:space="preserve">
     <value>Records '{0}' and '{1}' have conflicting fields with the same ID</value>
   </data>
+  <data name="Rule0028_1IncorrectArgumentCountDescription" xml:space="preserve">
+    <value>Analyze 'Get' function call arguments.</value>
+  </data>
+  <data name="Rule0028_1IncorrectArgumentCountFormat" xml:space="preserve">
+    <value>The 'Get' function call on table '{0}' should have {1} argument(s).</value>
+  </data>
+  <data name="Rule0028_1IncorrectArgumentCountTitle" xml:space="preserve">
+    <value>Incorrect number of arguments in 'Get' function call</value>
+  </data>
+  <data name="Rule0028_2InvalidArgumentTypeInGetCallDescription" xml:space="preserve">
+    <value>Analyze 'Get' function call argument types.</value>
+  </data>
+  <data name="Rule0028_2InvalidArgumentTypeInGetCallFormat" xml:space="preserve">
+    <value>The argument in 'Get' function call on table '{0}' has incorrect type.</value>
+  </data>
+  <data name="Rule0028_2InvalidArgumentTypeInGetCallTitle" xml:space="preserve">
+    <value>Invalid argument type in 'Get' function call</value>
+  </data>
+  <data name="Rule0028_3ArgumentLengthExceedsMaxLengthDescription" xml:space="preserve">
+    <value>Analyze 'Get' function call argument lengths.</value>
+  </data>
+  <data name="Rule0028_3ArgumentLengthExceedsMaxLengthFormat" xml:space="preserve">
+    <value>The argument length in 'Get' function call on table '{0}' should not exceed the maximum length of '{1}'.</value>
+  </data>
+  <data name="Rule0028_3ArgumentLengthExceedsMaxLengthTitle" xml:space="preserve">
+    <value>Argument length exceeds field maximum length in 'Get' function call</value>
+  </data>
   <data name="Rule0029OptionDataTypeNotAllowedDescription" xml:space="preserve">
     <value>This rule throws a warning when an Option data type is used, as it is not allowed.</value>
   </data>

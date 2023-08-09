@@ -925,6 +925,15 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call arguments..
+        /// </summary>
+        internal static string Rule0028_1IncorrectArgumentCountDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountDescription", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to This rule throws a warning when an Option data type is used, as it is not allowed..
         /// </summary>
         internal static string Rule0029OptionDataTypeNotAllowedDescription {
@@ -934,6 +943,15 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The &apos;Get&apos; function call on table &apos;{0}&apos; should have {1} argument(s)..
+        /// </summary>
+        internal static string Rule0028_1IncorrectArgumentCountFormat
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountFormat", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Option data type is not allowed in the code..
         /// </summary>
         internal static string Rule0029OptionDataTypeNotAllowedFormat {
@@ -943,6 +961,69 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect number of arguments in &apos;Get&apos; function call.
+        /// </summary>
+        internal static string Rule0028_1IncorrectArgumentCountTitle {
+            get {
+                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call argument types..
+        /// </summary>
+        internal static string Rule0028_2InvalidArgumentTypeInGetCallDescription {
+            get {
+                return ResourceManager.GetString("Rule0028_2InvalidArgumentTypeInGetCallDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The argument in &apos;Get&apos; function call on table &apos;{0}&apos; has incorrect type..
+        /// </summary>
+        internal static string Rule0028_2InvalidArgumentTypeInGetCallFormat {
+            get {
+                return ResourceManager.GetString("Rule0028_2InvalidArgumentTypeInGetCallFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid argument type in &apos;Get&apos; function call.
+        /// </summary>
+        internal static string Rule0028_2InvalidArgumentTypeInGetCallTitle {
+            get {
+                return ResourceManager.GetString("Rule0028_2InvalidArgumentTypeInGetCallTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call argument lengths..
+        /// </summary>
+        internal static string Rule0028_3ArgumentLengthExceedsMaxLengthDescription {
+            get {
+                return ResourceManager.GetString("Rule0028_3ArgumentLengthExceedsMaxLengthDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The argument length in &apos;Get&apos; function call on table &apos;{0}&apos; should not exceed the maximum length of &apos;{1}&apos;..
+        /// </summary>
+        internal static string Rule0028_3ArgumentLengthExceedsMaxLengthFormat {
+            get {
+                return ResourceManager.GetString("Rule0028_3ArgumentLengthExceedsMaxLengthFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Argument length exceeds field maximum length in &apos;Get&apos; function call.
+        /// </summary>
+        internal static string Rule0028_3ArgumentLengthExceedsMaxLengthTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0028_3ArgumentLengthExceedsMaxLengthTitle", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Option data type Not Allowed.
         /// </summary>
         internal static string Rule0029OptionDataTypeNotAllowedTitle {

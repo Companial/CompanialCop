@@ -927,36 +927,18 @@ namespace CompanialCopAnalyzer {
         /// <summary>
         ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call arguments..
         /// </summary>
-        internal static string Rule0028_1IncorrectArgumentCountDescription
-        {
-            get
-            {
-                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountDescription", resourceCulture);
-            }
-        }
-        ///   Looks up a localized string similar to This rule throws a warning when an Option data type is used, as it is not allowed..
-        /// </summary>
-        internal static string Rule0029OptionDataTypeNotAllowedDescription {
+        internal static string Rule0028_1IncorrectArgumentCountDescription {
             get {
-                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountDescription", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The &apos;Get&apos; function call on table &apos;{0}&apos; should have {1} argument(s)..
         /// </summary>
-        internal static string Rule0028_1IncorrectArgumentCountFormat
-        {
-            get
-            {
-                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountFormat", resourceCulture);
-            }
-        }
-        ///   Looks up a localized string similar to Option data type is not allowed in the code..
-        /// </summary>
-        internal static string Rule0029OptionDataTypeNotAllowedFormat {
+        internal static string Rule0028_1IncorrectArgumentCountFormat {
             get {
-                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedFormat", resourceCulture);
+                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountFormat", resourceCulture);
             }
         }
         
@@ -1017,18 +999,63 @@ namespace CompanialCopAnalyzer {
         /// <summary>
         ///   Looks up a localized string similar to Argument length exceeds field maximum length in &apos;Get&apos; function call.
         /// </summary>
-        internal static string Rule0028_3ArgumentLengthExceedsMaxLengthTitle
-        {
-            get
-            {
+        internal static string Rule0028_3ArgumentLengthExceedsMaxLengthTitle {
+            get {
                 return ResourceManager.GetString("Rule0028_3ArgumentLengthExceedsMaxLengthTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This rule throws a warning when an Option data type is used, as it is not allowed..
+        /// </summary>
+        internal static string Rule0029OptionDataTypeNotAllowedDescription {
+            get {
+                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option data type is not allowed in the code..
+        /// </summary>
+        internal static string Rule0029OptionDataTypeNotAllowedFormat {
+            get {
+                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Option data type Not Allowed.
         /// </summary>
         internal static string Rule0029OptionDataTypeNotAllowedTitle {
             get {
                 return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused method parameters can clutter code and make it harder to understand..
+        /// </summary>
+        internal static string Rule0030UnusedMethodParametersDescription {
+            get {
+                return ResourceManager.GetString("Rule0030UnusedMethodParametersDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The parameter &apos;{0}&apos; is unused in &apos;{1}&apos;.
+        /// </summary>
+        internal static string Rule0030UnusedMethodParametersFormat {
+            get {
+                return ResourceManager.GetString("Rule0030UnusedMethodParametersFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused Method Parameters.
+        /// </summary>
+        internal static string Rule0030UnusedMethodParametersTitle {
+            get {
+                return ResourceManager.GetString("Rule0030UnusedMethodParametersTitle", resourceCulture);
             }
         }
     }

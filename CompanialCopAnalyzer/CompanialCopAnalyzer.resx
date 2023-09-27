@@ -441,4 +441,13 @@
   <data name="Rule0029OptionDataTypeNotAllowedTitle" xml:space="preserve">
     <value>Option data type Not Allowed</value>
   </data>
+  <data name="Rule0030UnusedMethodParametersDescription" xml:space="preserve">
+    <value>Unused method parameters can clutter code and make it harder to understand.</value>
+  </data>
+  <data name="Rule0030UnusedMethodParametersFormat" xml:space="preserve">
+    <value>The parameter '{0}' is unused in '{1}'</value>
+  </data>
+  <data name="Rule0030UnusedMethodParametersTitle" xml:space="preserve">
+    <value>Unused Method Parameters</value>
+  </data>
 </root>

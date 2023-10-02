@@ -2,9 +2,11 @@
 using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
+using Microsoft.Dynamics.Nav.CodeAnalysis.SymbolUsage;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
 using System;
 using System.Collections.Immutable;
+using System.Data.Common;
 
 namespace CompanialCopAnalyzer.Design
 {
@@ -13,33 +15,23 @@ namespace CompanialCopAnalyzer.Design
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0008CommitMustBeExplainedByComment);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterOperationAction(new Action<OperationAnalysisContext>(this.CheckCommitForExplainingComment), OperationKind.InvocationExpression);
+        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(AnalyzeCommitExpression, SyntaxKind.InvocationExpression);
 
-        private void CheckCommitForExplainingComment(OperationAnalysisContext ctx)
+        public void AnalyzeCommitExpression(SyntaxNodeAnalysisContext context)
         {
-            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
-            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.ContainingSymbol)) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 
-            IInvocationExpression operation = (IInvocationExpression)ctx.Operation;
-            if (operation.TargetMethod.Name.ToUpper() == "COMMIT" && operation.TargetMethod.MethodKind == MethodKind.BuiltInMethod)
+            IBuiltInMethodTypeSymbol? builtInMethodTypeSymbol = context.SemanticModel.GetSymbolInfo(context.Node).Symbol as IBuiltInMethodTypeSymbol;
+            if(builtInMethodTypeSymbol?.Name != "Commit" && builtInMethodTypeSymbol?.ContainingSymbol?.Name != "Database")
             {
-                foreach (SyntaxTrivia trivia in operation.Syntax.Parent.GetLeadingTrivia())
-                {
-                    if (trivia.IsKind(SyntaxKind.LineCommentTrivia))
-                    {
-                        return;
-                    }
-                }
-                foreach (SyntaxTrivia trivia in operation.Syntax.Parent.GetTrailingTrivia())
-                {
-                    if (trivia.IsKind(SyntaxKind.LineCommentTrivia))
-                    {
-                        return;
-                    }
-                }
-
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0008CommitMustBeExplainedByComment, ctx.Operation.Syntax.GetLocation()));
+                return;
             }
+
+            if (context.Node.Parent.GetLeadingTrivia().Any(x => x.IsKind(SyntaxKind.LineCommentTrivia))) return;
+            if (context.Node.Parent.GetTrailingTrivia().Any(x => x.IsKind(SyntaxKind.LineCommentTrivia))) return;
+
+            context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0008CommitMustBeExplainedByComment, context.Node.GetLocation()));
         }
     }
 }

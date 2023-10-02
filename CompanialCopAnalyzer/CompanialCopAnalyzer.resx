@@ -459,6 +459,15 @@
   <data name="Rule0031ObjectIsUnusedTitle" xml:space="preserve">
     <value>Unused Object</value>
   </data>
+  <data name="Rule0033RedundantEditablePropertyDescription" xml:space="preserve">
+    <value>Redundant editable properties can clutter code and lead to confusion.</value>
+  </data>
+  <data name="Rule0033RedundantEditablePropertyFormat" xml:space="preserve">
+    <value>The 'Editable' Property is Redundant Due to the Presence of Object-Level Editable Property Being Defined as False.</value>
+  </data>
+  <data name="Rule0033RedundantEditablePropertyTitle" xml:space="preserve">
+    <value>Redundant Editable Property</value>
+  </data>
   <data name="Rule0034PageExtensionEditableFieldDescription" xml:space="preserve">
     <value>Changing 'Editable' property of a field when the base object field is set to a global variable throws an error while publishing.</value>
   </data>

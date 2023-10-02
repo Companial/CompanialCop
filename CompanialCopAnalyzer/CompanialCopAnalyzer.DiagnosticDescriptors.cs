@@ -370,14 +370,14 @@ namespace CompanialCopAnalyzer
             CompanialCopAnalyzer.Rule0031ObjectIsUnusedDescription
         );
 
-        public static DiagnosticDescriptor Rule0035UnusedGlobalProcedure = new DiagnosticDescriptor(
-            CompanialCopAnalyzer.AnalyzerPrefix + "0035",
-            CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureTitle,
-            CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureFormat,
+        public static DiagnosticDescriptor Rule0033RedundantEditableProperty = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0033",
+            CompanialCopAnalyzer.Rule0033RedundantEditablePropertyTitle,
+            CompanialCopAnalyzer.Rule0033RedundantEditablePropertyFormat,
             "Usage",
             DiagnosticSeverity.Warning,
-            false,
-            CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureDescription
+            true,
+            CompanialCopAnalyzer.Rule0033RedundantEditablePropertyDescription
         );
 
         public static DiagnosticDescriptor Rule0034PageExtensionEditableField = new DiagnosticDescriptor(
@@ -388,6 +388,16 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0034PageExtensionEditableFieldDescription
+        );
+
+        public static DiagnosticDescriptor Rule0035UnusedGlobalProcedure = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0035",
+            CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureTitle,
+            CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            false,
+            CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureDescription
         );
     }
 }

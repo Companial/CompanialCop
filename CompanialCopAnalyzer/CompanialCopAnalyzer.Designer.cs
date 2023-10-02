@@ -1033,6 +1033,13 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Redundant editable properties can clutter code and lead to confusion..
+        /// </summary>
+        internal static string Rule0033RedundantEditablePropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0033RedundantEditablePropertyDescription", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Changing &apos;Editable&apos; property of a field when the base object field is set to a global variable throws an error while publishing..
         /// </summary>
         internal static string Rule0034PageExtensionEditableFieldDescription
@@ -1065,6 +1072,13 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The &apos;Editable&apos; Property is Redundant Due to the Presence of Object-Level Editable Property Being Defined as False..
+        /// </summary>
+        internal static string Rule0033RedundantEditablePropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0033RedundantEditablePropertyFormat", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to The &apos;Editable&apos; property of the base object field &apos;{0}&apos; is set to a global variable. This will throw an error when publishing..
         /// </summary>
         internal static string Rule0034PageExtensionEditableFieldFormat
@@ -1097,6 +1111,13 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Redundant Editable Property.
+        /// </summary>
+        internal static string Rule0033RedundantEditablePropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0033RedundantEditablePropertyTitle", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Invalid Page Extension Editable Field Property.
         /// </summary>
         internal static string Rule0034PageExtensionEditableFieldTitle

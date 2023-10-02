@@ -1033,6 +1033,13 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unused global procedures can contribute to unnecessary code clutter..
+        /// </summary>
+        internal static string Rule0035UnusedGlobalProcedureDescription {
+            get {
+                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureDescription", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Unused objects can lead to unnecessary clutter in the codebase..
         /// </summary>
         internal static string Rule0031ObjectIsUnusedDescription {
@@ -1049,6 +1056,13 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The global procedure &apos;{0}&apos; is defined but not used..
+        /// </summary>
+        internal static string Rule0035UnusedGlobalProcedureFormat {
+            get {
+                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureFormat", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to The {0} &apos;{1}&apos; is declared but not used..
         /// </summary>
         internal static string Rule0031ObjectIsUnusedFormat {
@@ -1065,6 +1079,13 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unused Global Procedure.
+        /// </summary>
+        internal static string Rule0035UnusedGlobalProcedureTitle {
+            get {
+                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureTitle", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Unused Object.
         /// </summary>
         internal static string Rule0031ObjectIsUnusedTitle {

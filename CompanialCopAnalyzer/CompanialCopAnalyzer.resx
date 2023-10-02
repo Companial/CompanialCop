@@ -459,4 +459,13 @@
   <data name="Rule0031ObjectIsUnusedTitle" xml:space="preserve">
     <value>Unused Object</value>
   </data>
+  <data name="Rule0035UnusedGlobalProcedureDescription" xml:space="preserve">
+    <value>Unused global procedures can contribute to unnecessary code clutter.</value>
+  </data>
+  <data name="Rule0035UnusedGlobalProcedureFormat" xml:space="preserve">
+    <value>The global procedure '{0}' is defined but not used.</value>
+  </data>
+  <data name="Rule0035UnusedGlobalProcedureTitle" xml:space="preserve">
+    <value>Unused Global Procedure</value>
+  </data>
 </root>

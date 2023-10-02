@@ -282,7 +282,7 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             true,
             CompanialCopAnalyzer.Rule0025CalcFieldsOnNormalFieldsDescription
-        );        
+        );
         public static readonly DiagnosticDescriptor Rule0026ZeroEnumValueReservedForEmpty = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0026",
             CompanialCopAnalyzer.Rule0026ZeroEnumValueReservedForEmptyTitle,
@@ -368,6 +368,16 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             false,
             CompanialCopAnalyzer.Rule0031ObjectIsUnusedDescription
+        );
+
+        public static DiagnosticDescriptor Rule0035UnusedGlobalProcedure = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0035",
+            CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureTitle,
+            CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            false,
+            CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureDescription
         );
     }
 }

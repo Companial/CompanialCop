@@ -1033,6 +1033,15 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Changing &apos;Editable&apos; property of a field when the base object field is set to a global variable throws an error while publishing..
+        /// </summary>
+        internal static string Rule0034PageExtensionEditableFieldDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0034PageExtensionEditableFieldDescription", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Unused global procedures can contribute to unnecessary code clutter..
         /// </summary>
         internal static string Rule0035UnusedGlobalProcedureDescription {
@@ -1056,6 +1065,15 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The &apos;Editable&apos; property of the base object field &apos;{0}&apos; is set to a global variable. This will throw an error when publishing..
+        /// </summary>
+        internal static string Rule0034PageExtensionEditableFieldFormat
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0034PageExtensionEditableFieldFormat", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to The global procedure &apos;{0}&apos; is defined but not used..
         /// </summary>
         internal static string Rule0035UnusedGlobalProcedureFormat {
@@ -1079,6 +1097,15 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid Page Extension Editable Field Property.
+        /// </summary>
+        internal static string Rule0034PageExtensionEditableFieldTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0034PageExtensionEditableFieldTitle", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Unused Global Procedure.
         /// </summary>
         internal static string Rule0035UnusedGlobalProcedureTitle {

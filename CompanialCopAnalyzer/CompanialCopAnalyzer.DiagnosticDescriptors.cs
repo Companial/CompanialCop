@@ -379,5 +379,15 @@ namespace CompanialCopAnalyzer
             false,
             CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureDescription
         );
+
+        public static DiagnosticDescriptor Rule0034PageExtensionEditableField = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0034",
+            CompanialCopAnalyzer.Rule0034PageExtensionEditableFieldTitle,
+            CompanialCopAnalyzer.Rule0034PageExtensionEditableFieldFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0034PageExtensionEditableFieldDescription
+        );
     }
 }

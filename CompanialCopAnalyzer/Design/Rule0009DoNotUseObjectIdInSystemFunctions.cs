@@ -2,6 +2,7 @@
 using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
+using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -18,7 +19,22 @@ namespace CompanialCopAnalyzer.Design
         {
             context.RegisterOperationAction(new Action<OperationAnalysisContext>(this.CheckForObjectIdsInFunctionInvocations), OperationKind.InvocationExpression);
             context.RegisterSymbolAction(new Action<SymbolAnalysisContext>(this.CheckForObjectIdsEventSubscribers), SymbolKind.Method);
+            context.RegisterSyntaxNodeAction(AnalyseSubtypedVariables, SyntaxKind.ObjectReference);
         }
+
+        public void AnalyseSubtypedVariables(SyntaxNodeAnalysisContext context)
+        {
+            if(context.ContainingSymbol.IsObsoleteRemoved || context.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved)
+            {
+                return;
+            }
+
+            if((context.Node as ObjectNameOrIdSyntax)?.Identifier.Kind == SyntaxKind.ObjectId)
+            {
+                context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0009DoNotUseObjectIdInSystemFunctions, context.Node.Parent.GetLocation()));
+            }
+        }
+
         private void CheckForObjectIdsEventSubscribers(SymbolAnalysisContext context)
         {
             IMethodSymbol method = (IMethodSymbol)context.Symbol;

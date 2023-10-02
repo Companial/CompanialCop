@@ -459,6 +459,15 @@
   <data name="Rule0031ObjectIsUnusedTitle" xml:space="preserve">
     <value>Unused Object</value>
   </data>
+  <data name="Rule0032DuplicatePropertyDescription" xml:space="preserve">
+    <value>Duplicate properties with the same value can lead to redundancy and confusion.</value>
+  </data>
+  <data name="Rule0032DuplicatePropertyFormat" xml:space="preserve">
+    <value>The property '{0}' has a duplicate with the same value.</value>
+  </data>
+  <data name="Rule0032DuplicatePropertyTitle" xml:space="preserve">
+    <value>Duplicate Property</value>
+  </data>
   <data name="Rule0033RedundantEditablePropertyDescription" xml:space="preserve">
     <value>Redundant editable properties can clutter code and lead to confusion.</value>
   </data>

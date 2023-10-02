@@ -1033,6 +1033,13 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Duplicate properties with the same value can lead to redundancy and confusion..
+        /// </summary>
+        internal static string Rule0032DuplicatePropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0032DuplicatePropertyDescription", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Redundant editable properties can clutter code and lead to confusion..
         /// </summary>
         internal static string Rule0033RedundantEditablePropertyDescription {
@@ -1072,6 +1079,13 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The property &apos;{0}&apos; has a duplicate with the same value..
+        /// </summary>
+        internal static string Rule0032DuplicatePropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0032DuplicatePropertyFormat", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to The &apos;Editable&apos; Property is Redundant Due to the Presence of Object-Level Editable Property Being Defined as False..
         /// </summary>
         internal static string Rule0033RedundantEditablePropertyFormat {
@@ -1111,6 +1125,13 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Duplicate Property.
+        /// </summary>
+        internal static string Rule0032DuplicatePropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0032DuplicatePropertyTitle", resourceCulture);
+            }
+        }
         ///   Looks up a localized string similar to Redundant Editable Property.
         /// </summary>
         internal static string Rule0033RedundantEditablePropertyTitle {

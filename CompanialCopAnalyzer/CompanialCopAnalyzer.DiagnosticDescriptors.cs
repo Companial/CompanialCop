@@ -370,6 +370,16 @@ namespace CompanialCopAnalyzer
             CompanialCopAnalyzer.Rule0031ObjectIsUnusedDescription
         );
 
+        public static DiagnosticDescriptor Rule0032DuplicateProperty = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0032",
+            CompanialCopAnalyzer.Rule0032DuplicatePropertyTitle,
+            CompanialCopAnalyzer.Rule0032DuplicatePropertyFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0032DuplicatePropertyDescription
+        );
+
         public static DiagnosticDescriptor Rule0033RedundantEditableProperty = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0033",
             CompanialCopAnalyzer.Rule0033RedundantEditablePropertyTitle,

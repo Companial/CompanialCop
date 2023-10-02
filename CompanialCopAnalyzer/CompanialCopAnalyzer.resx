@@ -450,4 +450,13 @@
   <data name="Rule0030UnusedMethodParametersTitle" xml:space="preserve">
     <value>Unused Method Parameters</value>
   </data>
+  <data name="Rule0031ObjectIsUnusedDescription" xml:space="preserve">
+    <value>Unused objects can lead to unnecessary clutter in the codebase.</value>
+  </data>
+  <data name="Rule0031ObjectIsUnusedFormat" xml:space="preserve">
+    <value>The {0} '{1}' is declared but not used.</value>
+  </data>
+  <data name="Rule0031ObjectIsUnusedTitle" xml:space="preserve">
+    <value>Unused Object</value>
+  </data>
 </root>

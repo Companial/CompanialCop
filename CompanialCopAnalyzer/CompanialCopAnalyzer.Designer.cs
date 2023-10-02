@@ -1033,8 +1033,15 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unused objects can lead to unnecessary clutter in the codebase..
+        /// </summary>
+        internal static string Rule0031ObjectIsUnusedDescription {
+            get {
+                return ResourceManager.GetString("Rule0031ObjectIsUnusedDescription", resourceCulture);
         ///   Looks up a localized string similar to Unused method parameters can clutter code and make it harder to understand..
         /// </summary>
+            }
+        }
         internal static string Rule0030UnusedMethodParametersDescription {
             get {
                 return ResourceManager.GetString("Rule0030UnusedMethodParametersDescription", resourceCulture);
@@ -1042,8 +1049,15 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The {0} &apos;{1}&apos; is declared but not used..
+        /// </summary>
+        internal static string Rule0031ObjectIsUnusedFormat {
+            get {
+                return ResourceManager.GetString("Rule0031ObjectIsUnusedFormat", resourceCulture);
         ///   Looks up a localized string similar to The parameter &apos;{0}&apos; is unused in &apos;{1}&apos;.
         /// </summary>
+            }
+        }
         internal static string Rule0030UnusedMethodParametersFormat {
             get {
                 return ResourceManager.GetString("Rule0030UnusedMethodParametersFormat", resourceCulture);
@@ -1051,8 +1065,15 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unused Object.
+        /// </summary>
+        internal static string Rule0031ObjectIsUnusedTitle {
+            get {
+                return ResourceManager.GetString("Rule0031ObjectIsUnusedTitle", resourceCulture);
         ///   Looks up a localized string similar to Unused Method Parameters.
         /// </summary>
+            }
+        }
         internal static string Rule0030UnusedMethodParametersTitle {
             get {
                 return ResourceManager.GetString("Rule0030UnusedMethodParametersTitle", resourceCulture);

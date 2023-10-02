@@ -359,5 +359,15 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0030UnusedMethodParametersDescription
         );
+
+        public static DiagnosticDescriptor Rule0031ObjectIsUnused = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0031",
+            CompanialCopAnalyzer.Rule0031ObjectIsUnusedTitle,
+            CompanialCopAnalyzer.Rule0031ObjectIsUnusedFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            false,
+            CompanialCopAnalyzer.Rule0031ObjectIsUnusedDescription
+        );
     }
 }

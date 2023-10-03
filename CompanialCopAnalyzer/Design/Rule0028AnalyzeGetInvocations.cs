@@ -17,26 +17,13 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Remoting.Contexts;
 using System.Xml;
-using static CompanialCopAnalyzer.Design.Rule0027AnalyzeTransferField;
-using static CompanialCopAnalyzer.Design.Rule28AnalyzeGetInvocations;
 
 namespace CompanialCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
     public class Rule28AnalyzeGetInvocations : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
-        {
-            get
-            {
-                return ImmutableArray.CreateRange(new[]
-                {
-                    DiagnosticDescriptors.Rule0028_1IncorrectArgumentCount,
-                    DiagnosticDescriptors.Rule0028_2InvalidArgumentTypeInGetCall,
-                    DiagnosticDescriptors.Rule0028_3ArgumentLengthExceedsMaxLength
-                });
-            }
-        }
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0028_1IncorrectArgumentCount, DiagnosticDescriptors.Rule0028_2InvalidArgumentTypeInGetCall,DiagnosticDescriptors.Rule0028_3ArgumentLengthExceedsMaxLength);
 
         public override void Initialize(AnalysisContext context)
         {

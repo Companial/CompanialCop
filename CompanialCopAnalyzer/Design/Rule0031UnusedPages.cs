@@ -256,7 +256,7 @@ namespace CompanialCopAnalyzer.Design
                 };
             }
 
-            private IObjectTypeSymbol? GetObjectTypeSymbol(IdentifierNameSyntax? identifier, SymbolKind kind, Compilation compilation)
+            private IObjectTypeSymbol? GetObjectTypeSymbol(NameSyntax? identifier, SymbolKind kind, Compilation compilation)
             {
                 if(identifier == null) return null;
 

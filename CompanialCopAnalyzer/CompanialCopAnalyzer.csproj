@@ -21,15 +21,12 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<Reference Include="Microsoft.CodeAnalysis">
-			<HintPath>References\Microsoft.CodeAnalysis.dll</HintPath>
-		</Reference>
 		<Reference Include="Microsoft.CSharp" />
 		<Reference Include="Microsoft.Dynamics.Nav.Analyzers.Common">
-			<HintPath>References\Microsoft.Dynamics.Nav.Analyzers.Common.dll</HintPath>
+		  <HintPath>References\Microsoft.Dynamics.Nav.Analyzers.Common.dll</HintPath>
 		</Reference>
 		<Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis">
-			<HintPath>References\Microsoft.Dynamics.Nav.CodeAnalysis.dll</HintPath>
+		  <HintPath>References\Microsoft.Dynamics.Nav.CodeAnalysis.dll</HintPath>
 		</Reference>
 		<Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis.Workspaces">
 			<HintPath>References\Microsoft.Dynamics.Nav.CodeAnalysis.Workspaces.dll</HintPath>
@@ -39,10 +36,6 @@
 		</Reference>
 		<Reference Include="System" />
 		<Reference Include="netstandard" />
-		<Reference Include="System.Collections.Immutable, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>References\System.Collections.Immutable.dll</HintPath>
-		</Reference>
 	</ItemGroup>
 
   <ItemGroup>
@@ -79,12 +72,7 @@
 			<InputAssemblies Include="Microsoft.Dynamics.Nav.Analyzers.Common.dll" />
 		</ItemGroup>
 
-		<ILRepack
-            OutputType="$(OutputType)"
-            MainAssembly="$(AssemblyName).dll"
-            OutputAssembly="$(AssemblyName).dll"
-            InputAssemblies="@(InputAssemblies)"
-            WorkingDirectory="$(WorkingDirectory)" />
+		<ILRepack OutputType="$(OutputType)" MainAssembly="$(AssemblyName).dll" OutputAssembly="$(AssemblyName).dll" InputAssemblies="@(InputAssemblies)" WorkingDirectory="$(WorkingDirectory)" />
 
 	</Target>
 </Project>

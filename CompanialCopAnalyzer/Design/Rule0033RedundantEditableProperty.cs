@@ -34,8 +34,9 @@ namespace CompanialCopAnalyzer.Design
 
             IObjectTypeSymbol objectTypeSymbol = context.Symbol.GetContainingObjectTypeSymbol();
             IPageTypeSymbol? pageTypeSymbol = null;
+            IPageExtensionTypeSymbol? pageExtensionTypeSymbol = objectTypeSymbol as IPageExtensionTypeSymbol;
 
-            if(objectTypeSymbol is IPageExtensionTypeSymbol pageExtensionTypeSymbol)
+            if(pageExtensionTypeSymbol != null)
             {
                 PageExtensionSyntax? pageExtensionSyntax = pageExtensionTypeSymbol.DeclaringSyntaxReference?.GetSyntax() as PageExtensionSyntax;
 
@@ -56,9 +57,10 @@ namespace CompanialCopAnalyzer.Design
                 return;
             }
 
-            bool? value = pageTypeSymbol.GetSimplePropertyValue<bool>(PropertyKind.Editable);
+            bool? pageExtensionValue = pageExtensionValue = pageExtensionTypeSymbol.GetSimplePropertyValue<bool>(PropertyKind.Editable);
+            bool? pageValue = pageTypeSymbol.GetSimplePropertyValue<bool>(PropertyKind.Editable);
 
-            if(value.HasValue && !value.Value)
+            if ((pageValue.HasValue && !pageValue.Value) || (pageExtensionValue != null && pageExtensionValue.HasValue && !pageExtensionValue.Value))
             {
                 context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0033RedundantEditableProperty, propertySymbol.GetLocation()));
             }

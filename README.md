@@ -64,7 +64,6 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 |CM0031|Object is unused in project.|Warning|No|
 |CM0032|Property already exists in object level with the same value.|Warning|Yes|
 |CM0033|Editable property already exists in object level.|Warning|Yes|
-|CM0034|Page extension editable property can only be changed if that property was set to TRUE/FALSE.|Warning|Yes|
 |CM0035|Global procedure is unused in project.|Warning|No|
 
 ## How to disable certain rules?

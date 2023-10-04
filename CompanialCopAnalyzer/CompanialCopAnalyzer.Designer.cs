@@ -1033,48 +1033,65 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Duplicate properties with the same value can lead to redundancy and confusion..
+        ///   Looks up a localized string similar to Unused method parameters can clutter code and make it harder to understand..
         /// </summary>
-        internal static string Rule0032DuplicatePropertyDescription {
+        internal static string Rule0030UnusedMethodParametersDescription {
             get {
-                return ResourceManager.GetString("Rule0032DuplicatePropertyDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0030UnusedMethodParametersDescription", resourceCulture);
             }
         }
-        ///   Looks up a localized string similar to Redundant editable properties can clutter code and lead to confusion..
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The parameter &apos;{0}&apos; is unused in &apos;{1}&apos;.
         /// </summary>
-        internal static string Rule0033RedundantEditablePropertyDescription {
+        internal static string Rule0030UnusedMethodParametersFormat {
             get {
-                return ResourceManager.GetString("Rule0033RedundantEditablePropertyDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0030UnusedMethodParametersFormat", resourceCulture);
             }
         }
-        ///   Looks up a localized string similar to Changing &apos;Editable&apos; property of a field when the base object field is set to a global variable throws an error while publishing..
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused Method Parameters.
         /// </summary>
-        internal static string Rule0034PageExtensionEditableFieldDescription
-        {
-            get
-            {
-                return ResourceManager.GetString("Rule0034PageExtensionEditableFieldDescription", resourceCulture);
-            }
-        }
-        ///   Looks up a localized string similar to Unused global procedures can contribute to unnecessary code clutter..
-        /// </summary>
-        internal static string Rule0035UnusedGlobalProcedureDescription {
+        internal static string Rule0030UnusedMethodParametersTitle {
             get {
-                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0030UnusedMethodParametersTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unused objects can lead to unnecessary clutter in the codebase..
         /// </summary>
         internal static string Rule0031ObjectIsUnusedDescription {
             get {
                 return ResourceManager.GetString("Rule0031ObjectIsUnusedDescription", resourceCulture);
-        ///   Looks up a localized string similar to Unused method parameters can clutter code and make it harder to understand..
-        /// </summary>
             }
         }
-        internal static string Rule0030UnusedMethodParametersDescription {
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} &apos;{1}&apos; is declared but not used..
+        /// </summary>
+        internal static string Rule0031ObjectIsUnusedFormat {
             get {
-                return ResourceManager.GetString("Rule0030UnusedMethodParametersDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0031ObjectIsUnusedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused Object.
+        /// </summary>
+        internal static string Rule0031ObjectIsUnusedTitle {
+            get {
+                return ResourceManager.GetString("Rule0031ObjectIsUnusedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate properties with the same value can lead to redundancy and confusion..
+        /// </summary>
+        internal static string Rule0032DuplicatePropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0032DuplicatePropertyDescription", resourceCulture);
             }
         }
         
@@ -1086,43 +1103,6 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0032DuplicatePropertyFormat", resourceCulture);
             }
         }
-        ///   Looks up a localized string similar to The &apos;Editable&apos; Property is Redundant Due to the Presence of Object-Level Editable Property Being Defined as False..
-        /// </summary>
-        internal static string Rule0033RedundantEditablePropertyFormat {
-            get {
-                return ResourceManager.GetString("Rule0033RedundantEditablePropertyFormat", resourceCulture);
-            }
-        }
-        ///   Looks up a localized string similar to The &apos;Editable&apos; property of the base object field &apos;{0}&apos; is set to a global variable. This will throw an error when publishing..
-        /// </summary>
-        internal static string Rule0034PageExtensionEditableFieldFormat
-        {
-            get
-            {
-                return ResourceManager.GetString("Rule0034PageExtensionEditableFieldFormat", resourceCulture);
-            }
-        }
-        ///   Looks up a localized string similar to The global procedure &apos;{0}&apos; is defined but not used..
-        /// </summary>
-        internal static string Rule0035UnusedGlobalProcedureFormat {
-            get {
-                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureFormat", resourceCulture);
-            }
-        }
-        ///   Looks up a localized string similar to The {0} &apos;{1}&apos; is declared but not used..
-        /// </summary>
-        internal static string Rule0031ObjectIsUnusedFormat {
-            get {
-                return ResourceManager.GetString("Rule0031ObjectIsUnusedFormat", resourceCulture);
-        ///   Looks up a localized string similar to The parameter &apos;{0}&apos; is unused in &apos;{1}&apos;.
-        /// </summary>
-            }
-        }
-        internal static string Rule0030UnusedMethodParametersFormat {
-            get {
-                return ResourceManager.GetString("Rule0030UnusedMethodParametersFormat", resourceCulture);
-            }
-        }
         
         /// <summary>
         ///   Looks up a localized string similar to Duplicate Property.
@@ -1132,6 +1112,26 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0032DuplicatePropertyTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Redundant editable properties can clutter code and lead to confusion..
+        /// </summary>
+        internal static string Rule0033RedundantEditablePropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0033RedundantEditablePropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The &apos;Editable&apos; Property is Redundant Due to the Presence of Object-Level Editable Property Being Defined as False..
+        /// </summary>
+        internal static string Rule0033RedundantEditablePropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0033RedundantEditablePropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Redundant Editable Property.
         /// </summary>
         internal static string Rule0033RedundantEditablePropertyTitle {
@@ -1139,34 +1139,31 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0033RedundantEditablePropertyTitle", resourceCulture);
             }
         }
-        ///   Looks up a localized string similar to Invalid Page Extension Editable Field Property.
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused global procedures can contribute to unnecessary code clutter..
         /// </summary>
-        internal static string Rule0034PageExtensionEditableFieldTitle
-        {
-            get
-            {
-                return ResourceManager.GetString("Rule0034PageExtensionEditableFieldTitle", resourceCulture);
+        internal static string Rule0035UnusedGlobalProcedureDescription {
+            get {
+                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureDescription", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The global procedure &apos;{0}&apos; is defined but not used..
+        /// </summary>
+        internal static string Rule0035UnusedGlobalProcedureFormat {
+            get {
+                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unused Global Procedure.
         /// </summary>
         internal static string Rule0035UnusedGlobalProcedureTitle {
             get {
                 return ResourceManager.GetString("Rule0035UnusedGlobalProcedureTitle", resourceCulture);
-            }
-        }
-        ///   Looks up a localized string similar to Unused Object.
-        /// </summary>
-        internal static string Rule0031ObjectIsUnusedTitle {
-            get {
-                return ResourceManager.GetString("Rule0031ObjectIsUnusedTitle", resourceCulture);
-        ///   Looks up a localized string similar to Unused Method Parameters.
-        /// </summary>
-            }
-        }
-        internal static string Rule0030UnusedMethodParametersTitle {
-            get {
-                return ResourceManager.GetString("Rule0030UnusedMethodParametersTitle", resourceCulture);
             }
         }
     }

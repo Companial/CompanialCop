@@ -390,16 +390,6 @@ namespace CompanialCopAnalyzer
             CompanialCopAnalyzer.Rule0033RedundantEditablePropertyDescription
         );
 
-        public static DiagnosticDescriptor Rule0034PageExtensionEditableField = new DiagnosticDescriptor(
-            CompanialCopAnalyzer.AnalyzerPrefix + "0034",
-            CompanialCopAnalyzer.Rule0034PageExtensionEditableFieldTitle,
-            CompanialCopAnalyzer.Rule0034PageExtensionEditableFieldFormat,
-            "Usage",
-            DiagnosticSeverity.Warning,
-            true,
-            CompanialCopAnalyzer.Rule0034PageExtensionEditableFieldDescription
-        );
-
         public static DiagnosticDescriptor Rule0035UnusedGlobalProcedure = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0035",
             CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureTitle,

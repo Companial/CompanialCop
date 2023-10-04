@@ -477,15 +477,6 @@
   <data name="Rule0033RedundantEditablePropertyTitle" xml:space="preserve">
     <value>Redundant Editable Property</value>
   </data>
-  <data name="Rule0034PageExtensionEditableFieldDescription" xml:space="preserve">
-    <value>Changing 'Editable' property of a field when the base object field is set to a global variable throws an error while publishing.</value>
-  </data>
-  <data name="Rule0034PageExtensionEditableFieldFormat" xml:space="preserve">
-    <value>The 'Editable' property of the base object field '{0}' is set to a global variable. This will throw an error when publishing.</value>
-  </data>
-  <data name="Rule0034PageExtensionEditableFieldTitle" xml:space="preserve">
-    <value>Invalid Page Extension Editable Field Property</value>
-  </data>
   <data name="Rule0035UnusedGlobalProcedureDescription" xml:space="preserve">
     <value>Unused global procedures can contribute to unnecessary code clutter.</value>
   </data>

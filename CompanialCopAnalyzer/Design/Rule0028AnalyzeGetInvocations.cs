@@ -52,7 +52,7 @@ namespace CompanialCopAnalyzer.Design
             }
 
             if (invocationExpression.ArgumentList.Arguments.Count == 1
-                && context.SemanticModel.GetSymbolInfo(invocationExpression.ArgumentList.Arguments[0]).Symbol.GetTypeSymbol().NavTypeKind == NavTypeKind.RecordId)
+                && context.SemanticModel.GetSymbolInfo(invocationExpression.ArgumentList.Arguments[0]).Symbol?.GetTypeSymbol().NavTypeKind == NavTypeKind.RecordId)
             {
                 return;
             }

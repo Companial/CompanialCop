@@ -12,6 +12,7 @@ using System.Collections.Immutable;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Remoting.Contexts;
 using static CompanialCopAnalyzer.Design.Rule0027AnalyzeTransferField;
 
 namespace CompanialCopAnalyzer.Design
@@ -34,7 +35,7 @@ namespace CompanialCopAnalyzer.Design
 
         private void AnalyzeTableExtension(SyntaxNodeAnalysisContext ctx)
         {
-            TableExtensionSyntax tableExtensionSyntax = (TableExtensionSyntax) ctx.Node;
+            TableExtensionSyntax tableExtensionSyntax = (TableExtensionSyntax)ctx.Node;
             string? baseObject = GetIdentifierName(tableExtensionSyntax.BaseObject.Identifier);
 
             if (baseObject == null)
@@ -55,7 +56,7 @@ namespace CompanialCopAnalyzer.Design
                 string tableName = baseObject.Equals(tablePair.Item1) ? tablePair.Item2 : tablePair.Item1;
 
                 Table table2 = GetTableWithFieldsByTableName(ctx.SemanticModel.Compilation, tableName, tableExtensions);
-                
+
                 List<IGrouping<int, Field>> fieldGroups = GetFieldsWithSameIDAndApplyFilter(table1.Fields, table2.Fields, DifferentNameAndTypeFilter);
 
                 ReportFieldDiagnostics(ctx, table1, fieldGroups);
@@ -71,7 +72,7 @@ namespace CompanialCopAnalyzer.Design
 
             Tuple<string, string>? records = GetInvokingRecordNames(invocationExpression);
 
-            if(records == null) 
+            if (records == null)
                 return;
 
             Task<SyntaxNode> localVariablesTask = ctx.ContainingSymbol.DeclaringSyntaxReference.GetSyntaxAsync();
@@ -84,13 +85,13 @@ namespace CompanialCopAnalyzer.Design
             SyntaxNode globalVariables = await globalVariablesTask;
             variables.AddRange(FindGlobalVariables(globalVariables));
 
-            string? tableName1 = GetObjectName(variables.FirstOrDefault(x => 
+            string? tableName1 = GetObjectName(variables.FirstOrDefault(x =>
             {
                 string? name = x.GetNameStringValue();
 
                 if (name == null)
                     return false;
-                
+
                 return name.Equals(records.Item1);
             }));
 
@@ -120,12 +121,12 @@ namespace CompanialCopAnalyzer.Design
 
             List<IGrouping<int, Field>> fieldGroups = GetFieldsWithSameIDAndApplyFilter(table1.Fields, table2.Fields, DifferentNameAndTypeFilter);
 
-            if(fieldGroups.Any())
+            if (fieldGroups.Any())
             {
                 ReportFieldDiagnostics(ctx, table1, fieldGroups);
                 ReportFieldDiagnostics(ctx, table2, fieldGroups);
 
-                if(table1.Fields.Any(x => x.Location != null) || table2.Fields.Any(x => x.Location != null))
+                if (table1.Fields.Any(x => x.Location != null) || table2.Fields.Any(x => x.Location != null))
                     ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0027AnalyzeTransferField, invocationExpression.GetLocation(), table1.Name, table2.Name));
             }
         }
@@ -425,9 +426,9 @@ namespace CompanialCopAnalyzer.Design
 
         private List<VariableDeclarationBaseSyntax> FindGlobalVariables(SyntaxNode node)
         {
-            GlobalVarSectionSyntax varSection = (GlobalVarSectionSyntax) node.DescendantNodes().FirstOrDefault(x => x.Kind == SyntaxKind.GlobalVarSection);
+            GlobalVarSectionSyntax varSection = (GlobalVarSectionSyntax)node.DescendantNodes().FirstOrDefault(x => x.Kind == SyntaxKind.GlobalVarSection);
 
-            if(varSection == null)
+            if (varSection == null)
                 return new List<VariableDeclarationBaseSyntax>();
 
             return varSection.Variables.ToList();

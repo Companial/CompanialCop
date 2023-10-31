@@ -22,12 +22,12 @@ namespace CompanialCopAnalyzer.Design
             if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.ContainingSymbol)) return;
             if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 
-            ExpressionStatementSyntax? expression = context.Node as ExpressionStatementSyntax;
+            ExpressionStatementSyntax? expressionStatementSyntax = context.Node as ExpressionStatementSyntax;
 
-            if(expression == null) return;
+            if(expressionStatementSyntax == null) return;
 
-            IBuiltInMethodTypeSymbol? builtInMethodTypeSymbol = context.SemanticModel.GetSymbolInfo(expression.Expression).Symbol as IBuiltInMethodTypeSymbol;
-            if(builtInMethodTypeSymbol?.Name != "Commit" && builtInMethodTypeSymbol?.ContainingSymbol?.Name != "Database")
+            IBuiltInMethodTypeSymbol? builtInMethodTypeSymbol = context.SemanticModel.GetSymbolInfo(expressionStatementSyntax.Expression).Symbol as IBuiltInMethodTypeSymbol;
+            if(builtInMethodTypeSymbol?.Name != "Commit" || builtInMethodTypeSymbol?.ContainingSymbol?.Name != "Database")
             {
                 return;
             }

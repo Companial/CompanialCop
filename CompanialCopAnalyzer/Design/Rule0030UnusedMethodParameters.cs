@@ -23,7 +23,20 @@ namespace CompanialCopAnalyzer.Design
                 if (startCodeBlockContext.OwningSymbol.Kind == SymbolKind.Method)
                 {
                     IMethodSymbol methodSymbol = (IMethodSymbol)startCodeBlockContext.OwningSymbol;
-                    if (!methodSymbol.IsEvent && !methodSymbol.IsObsoleteRemoved && !methodSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved && !methodSymbol.Parameters.IsEmpty)
+                    if (methodSymbol.GetContainingObjectTypeSymbol() is ICodeunitTypeSymbol codeunitTypeSymbol)
+                    {
+                        IEnumerable<ImmutableArray<ISymbol>> members = codeunitTypeSymbol.ImplementedInterfaces.Select(x => x.GetMembers());
+
+                        if (members.Any(x => x.Any(z => ((IMethodSymbol)z).Id == methodSymbol.Id)))
+                        {
+                            return;
+                        }
+                    }
+
+                    if (!methodSymbol.IsEvent && 
+                        !methodSymbol.IsObsoleteRemoved && 
+                        !methodSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved && 
+                        !methodSymbol.Parameters.IsEmpty)
                     {
                         UnusedVariableAnalyzer @object = new UnusedVariableAnalyzer(methodSymbol, startCodeBlockContext.CancellationToken);
                         startCodeBlockContext.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(@object.AnalyzeSyntaxNode), SyntaxKind.IdentifierName, SyntaxKind.IdentifierNameOrEmpty);

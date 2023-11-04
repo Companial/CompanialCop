@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Immutable;
+﻿using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
+using System.Collections.Immutable;
 
 namespace CompanialCopAnalyzer.Design
 {
@@ -15,12 +15,12 @@ namespace CompanialCopAnalyzer.Design
 
         private void AnalyzeKeyNaming(SyntaxNodeAnalysisContext ctx)
         {
-            if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
-            if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 
             TableSyntax syntax = ctx.Node as TableSyntax;
             KeyListSyntax keyList = syntax.Keys;
-
+            
             if (keyList == null) return;
 
             KeySyntax key = keyList.Keys[0];

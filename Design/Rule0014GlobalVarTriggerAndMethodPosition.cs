@@ -1,24 +1,24 @@
-﻿using System;
-using System.Collections.Immutable;
+﻿using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Text;
+using System.Collections.Immutable;
 
 namespace CompanialCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
     public class Rule0014GlobalVarTriggerAndMethodPosition : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0014GlobalVarTriggerAndMethodPosition);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0014GlobalVarTriggerAndMethodPosition);
 
         public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(AnalyzeGlobalVariablesPlacement), SyntaxKind.TableObject, SyntaxKind.PageObject,
                                                                                                                                                                              SyntaxKind.CodeunitObject, SyntaxKind.ReportObject, SyntaxKind.QueryObject);
 
         private void AnalyzeGlobalVariablesPlacement(SyntaxNodeAnalysisContext ctx)
         {
-            if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
-            if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 
             dynamic parentSyntax = ctx.Node;
             int globalVarSectionPosition = 0;

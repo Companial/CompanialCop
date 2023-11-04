@@ -797,5 +797,374 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0022GridLayoutMustNotBeRowsTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
+        /// </summary>
+        internal static string Rule0023MandatoryAffixesDescription {
+            get {
+                return ResourceManager.GetString("Rule0023MandatoryAffixesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The identifier &apos;{0}&apos; must have at least one of the mandatory affixes &apos;{1}&apos;..
+        /// </summary>
+        internal static string Rule0023MandatoryAffixesFormat {
+            get {
+                return ResourceManager.GetString("Rule0023MandatoryAffixesFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
+        /// </summary>
+        internal static string Rule0023MandatoryAffixesTitle {
+            get {
+                return ResourceManager.GetString("Rule0023MandatoryAffixesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Empty captions should be locked..
+        /// </summary>
+        internal static string Rule0024EmptyCaptionLockedDescription {
+            get {
+                return ResourceManager.GetString("Rule0024EmptyCaptionLockedDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Empty captions should be locked..
+        /// </summary>
+        internal static string Rule0024EmptyCaptionLockedFormat {
+            get {
+                return ResourceManager.GetString("Rule0024EmptyCaptionLockedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Empty captions should be locked..
+        /// </summary>
+        internal static string Rule0024EmptyCaptionLockedTitle {
+            get {
+                return ResourceManager.GetString("Rule0024EmptyCaptionLockedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetAutoCalcFields must not be invoked on Normal fields..
+        /// </summary>
+        internal static string Rule0025CalcFieldsOnNormalFieldsDescription {
+            get {
+                return ResourceManager.GetString("Rule0025CalcFieldsOnNormalFieldsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetAutoCalcFields must not be invoked on Normal fields..
+        /// </summary>
+        internal static string Rule0025CalcFieldsOnNormalFieldsFormat {
+            get {
+                return ResourceManager.GetString("Rule0025CalcFieldsOnNormalFieldsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetAutoCalcFields must not be invoked on Normal fields..
+        /// </summary>
+        internal static string Rule0025CalcFieldsOnNormalFieldsTitle {
+            get {
+                return ResourceManager.GetString("Rule0025CalcFieldsOnNormalFieldsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zero (0) Enum value should be reserved for Empty Value..
+        /// </summary>
+        internal static string Rule0026ZeroEnumValueReservedForEmptyDescription {
+            get {
+                return ResourceManager.GetString("Rule0026ZeroEnumValueReservedForEmptyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zero (0) Enum value should be reserved for Empty Value..
+        /// </summary>
+        internal static string Rule0026ZeroEnumValueReservedForEmptyFormat {
+            get {
+                return ResourceManager.GetString("Rule0026ZeroEnumValueReservedForEmptyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zero (0) Enum value should be reserved for Empty Value..
+        /// </summary>
+        internal static string Rule0026ZeroEnumValueReservedForEmptyTitle {
+            get {
+                return ResourceManager.GetString("Rule0026ZeroEnumValueReservedForEmptyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conflicting ID, Name or Type with Table &apos;{0}&apos;.
+        /// </summary>
+        internal static string Rule0027AnalyzeTableExtensionText {
+            get {
+                return ResourceManager.GetString("Rule0027AnalyzeTableExtensionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Records &apos;{0}&apos; and &apos;{1}&apos; have conflicting fields with the same ID.
+        /// </summary>
+        internal static string Rule0027AnalyzeTransferFieldText {
+            get {
+                return ResourceManager.GetString("Rule0027AnalyzeTransferFieldText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call arguments..
+        /// </summary>
+        internal static string Rule0028_1IncorrectArgumentCountDescription {
+            get {
+                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The &apos;Get&apos; function call on table &apos;{0}&apos; should have {1} argument(s)..
+        /// </summary>
+        internal static string Rule0028_1IncorrectArgumentCountFormat {
+            get {
+                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incorrect number of arguments in &apos;Get&apos; function call.
+        /// </summary>
+        internal static string Rule0028_1IncorrectArgumentCountTitle {
+            get {
+                return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call argument types..
+        /// </summary>
+        internal static string Rule0028_2InvalidArgumentTypeInGetCallDescription {
+            get {
+                return ResourceManager.GetString("Rule0028_2InvalidArgumentTypeInGetCallDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The argument in &apos;Get&apos; function call on table &apos;{0}&apos; has incorrect type..
+        /// </summary>
+        internal static string Rule0028_2InvalidArgumentTypeInGetCallFormat {
+            get {
+                return ResourceManager.GetString("Rule0028_2InvalidArgumentTypeInGetCallFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid argument type in &apos;Get&apos; function call.
+        /// </summary>
+        internal static string Rule0028_2InvalidArgumentTypeInGetCallTitle {
+            get {
+                return ResourceManager.GetString("Rule0028_2InvalidArgumentTypeInGetCallTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call argument lengths..
+        /// </summary>
+        internal static string Rule0028_3ArgumentLengthExceedsMaxLengthDescription {
+            get {
+                return ResourceManager.GetString("Rule0028_3ArgumentLengthExceedsMaxLengthDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The argument length in &apos;Get&apos; function call on table &apos;{0}&apos; should not exceed the maximum length of &apos;{1}&apos;..
+        /// </summary>
+        internal static string Rule0028_3ArgumentLengthExceedsMaxLengthFormat {
+            get {
+                return ResourceManager.GetString("Rule0028_3ArgumentLengthExceedsMaxLengthFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Argument length exceeds field maximum length in &apos;Get&apos; function call.
+        /// </summary>
+        internal static string Rule0028_3ArgumentLengthExceedsMaxLengthTitle {
+            get {
+                return ResourceManager.GetString("Rule0028_3ArgumentLengthExceedsMaxLengthTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This rule throws a warning when an Option data type is used, as it is not allowed..
+        /// </summary>
+        internal static string Rule0029OptionDataTypeNotAllowedDescription {
+            get {
+                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option data type is not allowed in the code..
+        /// </summary>
+        internal static string Rule0029OptionDataTypeNotAllowedFormat {
+            get {
+                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option data type Not Allowed.
+        /// </summary>
+        internal static string Rule0029OptionDataTypeNotAllowedTitle {
+            get {
+                return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused method parameters can clutter code and make it harder to understand..
+        /// </summary>
+        internal static string Rule0030UnusedMethodParametersDescription {
+            get {
+                return ResourceManager.GetString("Rule0030UnusedMethodParametersDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The parameter &apos;{0}&apos; is unused in &apos;{1}&apos;.
+        /// </summary>
+        internal static string Rule0030UnusedMethodParametersFormat {
+            get {
+                return ResourceManager.GetString("Rule0030UnusedMethodParametersFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused Method Parameters.
+        /// </summary>
+        internal static string Rule0030UnusedMethodParametersTitle {
+            get {
+                return ResourceManager.GetString("Rule0030UnusedMethodParametersTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused objects can lead to unnecessary clutter in the codebase..
+        /// </summary>
+        internal static string Rule0031ObjectIsUnusedDescription {
+            get {
+                return ResourceManager.GetString("Rule0031ObjectIsUnusedDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} &apos;{1}&apos; is declared but not used..
+        /// </summary>
+        internal static string Rule0031ObjectIsUnusedFormat {
+            get {
+                return ResourceManager.GetString("Rule0031ObjectIsUnusedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused Object.
+        /// </summary>
+        internal static string Rule0031ObjectIsUnusedTitle {
+            get {
+                return ResourceManager.GetString("Rule0031ObjectIsUnusedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate properties with the same value can lead to redundancy and confusion..
+        /// </summary>
+        internal static string Rule0032DuplicatePropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0032DuplicatePropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The property &apos;{0}&apos; has a duplicate with the same value..
+        /// </summary>
+        internal static string Rule0032DuplicatePropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0032DuplicatePropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate Property.
+        /// </summary>
+        internal static string Rule0032DuplicatePropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0032DuplicatePropertyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Redundant editable properties can clutter code and lead to confusion..
+        /// </summary>
+        internal static string Rule0033RedundantEditablePropertyDescription {
+            get {
+                return ResourceManager.GetString("Rule0033RedundantEditablePropertyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The &apos;Editable&apos; Property is Redundant Due to the Presence of Object-Level Editable Property Being Defined as False..
+        /// </summary>
+        internal static string Rule0033RedundantEditablePropertyFormat {
+            get {
+                return ResourceManager.GetString("Rule0033RedundantEditablePropertyFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Redundant Editable Property.
+        /// </summary>
+        internal static string Rule0033RedundantEditablePropertyTitle {
+            get {
+                return ResourceManager.GetString("Rule0033RedundantEditablePropertyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused global procedures can contribute to unnecessary code clutter..
+        /// </summary>
+        internal static string Rule0035UnusedGlobalProcedureDescription {
+            get {
+                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The global procedure &apos;{0}&apos; is defined but not used..
+        /// </summary>
+        internal static string Rule0035UnusedGlobalProcedureFormat {
+            get {
+                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unused Global Procedure.
+        /// </summary>
+        internal static string Rule0035UnusedGlobalProcedureTitle {
+            get {
+                return ResourceManager.GetString("Rule0035UnusedGlobalProcedureTitle", resourceCulture);
+            }
+        }
     }
 }

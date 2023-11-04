@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Immutable;
+﻿using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
+using System.Collections.Immutable;
 
 namespace CompanialCopAnalyzer.Design
 {
@@ -11,14 +11,14 @@ namespace CompanialCopAnalyzer.Design
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0015LabelPunctuation);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(AnalyzeLabelPunctuation), SyntaxKind.VariableDeclaration);
+        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeLabelPunctuation), SyntaxKind.VariableDeclaration);
 
         private void AnalyzeLabelPunctuation(SyntaxNodeAnalysisContext ctx)
         {
-            if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
-            if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 
-            VariableDeclarationSyntax syntax = (VariableDeclarationSyntax)ctx.Node;
+            VariableDeclarationSyntax syntax = ctx.Node as VariableDeclarationSyntax;
             if (syntax != null)
             {
                 string variableName = syntax.GetNameStringValue();

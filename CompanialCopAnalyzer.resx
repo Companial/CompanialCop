@@ -363,4 +363,127 @@
   <data name="Rule0022GridLayoutMustNotBeRowsTitle" xml:space="preserve">
     <value>GridLayout property must not have value Rows</value>
   </data>
+  <data name="Rule0023MandatoryAffixesDescription" xml:space="preserve">
+    <value>The identifier must have at least one of the mandatory affixes.</value>
+  </data>
+  <data name="Rule0023MandatoryAffixesFormat" xml:space="preserve">
+    <value>The identifier '{0}' must have at least one of the mandatory affixes '{1}'.</value>
+  </data>
+  <data name="Rule0023MandatoryAffixesTitle" xml:space="preserve">
+    <value>The identifier must have at least one of the mandatory affixes.</value>
+  </data>
+  <data name="Rule0024EmptyCaptionLockedDescription" xml:space="preserve">
+    <value>Empty captions should be locked.</value>
+  </data>
+  <data name="Rule0024EmptyCaptionLockedFormat" xml:space="preserve">
+    <value>Empty captions should be locked.</value>
+  </data>
+  <data name="Rule0024EmptyCaptionLockedTitle" xml:space="preserve">
+    <value>Empty captions should be locked.</value>
+  </data>
+  <data name="Rule0025CalcFieldsOnNormalFieldsDescription" xml:space="preserve">
+    <value>SetAutoCalcFields must not be invoked on Normal fields.</value>
+  </data>
+  <data name="Rule0025CalcFieldsOnNormalFieldsFormat" xml:space="preserve">
+    <value>SetAutoCalcFields must not be invoked on Normal fields.</value>
+  </data>
+  <data name="Rule0025CalcFieldsOnNormalFieldsTitle" xml:space="preserve">
+    <value>SetAutoCalcFields must not be invoked on Normal fields.</value>
+  </data>
+  <data name="Rule0026ZeroEnumValueReservedForEmptyDescription" xml:space="preserve">
+    <value>Zero (0) Enum value should be reserved for Empty Value.</value>
+  </data>
+  <data name="Rule0026ZeroEnumValueReservedForEmptyFormat" xml:space="preserve">
+    <value>Zero (0) Enum value should be reserved for Empty Value.</value>
+  </data>
+  <data name="Rule0026ZeroEnumValueReservedForEmptyTitle" xml:space="preserve">
+    <value>Zero (0) Enum value should be reserved for Empty Value.</value>
+  </data>
+  <data name="Rule0027AnalyzeTableExtensionText" xml:space="preserve">
+    <value>Conflicting ID, Name or Type with Table '{0}'</value>
+  </data>
+  <data name="Rule0027AnalyzeTransferFieldText" xml:space="preserve">
+    <value>Records '{0}' and '{1}' have conflicting fields with the same ID</value>
+  </data>
+  <data name="Rule0028_1IncorrectArgumentCountDescription" xml:space="preserve">
+    <value>Analyze 'Get' function call arguments.</value>
+  </data>
+  <data name="Rule0028_1IncorrectArgumentCountFormat" xml:space="preserve">
+    <value>The 'Get' function call on table '{0}' should have {1} argument(s).</value>
+  </data>
+  <data name="Rule0028_1IncorrectArgumentCountTitle" xml:space="preserve">
+    <value>Incorrect number of arguments in 'Get' function call</value>
+  </data>
+  <data name="Rule0028_2InvalidArgumentTypeInGetCallDescription" xml:space="preserve">
+    <value>Analyze 'Get' function call argument types.</value>
+  </data>
+  <data name="Rule0028_2InvalidArgumentTypeInGetCallFormat" xml:space="preserve">
+    <value>The argument in 'Get' function call on table '{0}' has incorrect type.</value>
+  </data>
+  <data name="Rule0028_2InvalidArgumentTypeInGetCallTitle" xml:space="preserve">
+    <value>Invalid argument type in 'Get' function call</value>
+  </data>
+  <data name="Rule0028_3ArgumentLengthExceedsMaxLengthDescription" xml:space="preserve">
+    <value>Analyze 'Get' function call argument lengths.</value>
+  </data>
+  <data name="Rule0028_3ArgumentLengthExceedsMaxLengthFormat" xml:space="preserve">
+    <value>The argument length in 'Get' function call on table '{0}' should not exceed the maximum length of '{1}'.</value>
+  </data>
+  <data name="Rule0028_3ArgumentLengthExceedsMaxLengthTitle" xml:space="preserve">
+    <value>Argument length exceeds field maximum length in 'Get' function call</value>
+  </data>
+  <data name="Rule0029OptionDataTypeNotAllowedDescription" xml:space="preserve">
+    <value>This rule throws a warning when an Option data type is used, as it is not allowed.</value>
+  </data>
+  <data name="Rule0029OptionDataTypeNotAllowedFormat" xml:space="preserve">
+    <value>Option data type is not allowed in the code.</value>
+  </data>
+  <data name="Rule0029OptionDataTypeNotAllowedTitle" xml:space="preserve">
+    <value>Option data type Not Allowed</value>
+  </data>
+  <data name="Rule0030UnusedMethodParametersDescription" xml:space="preserve">
+    <value>Unused method parameters can clutter code and make it harder to understand.</value>
+  </data>
+  <data name="Rule0030UnusedMethodParametersFormat" xml:space="preserve">
+    <value>The parameter '{0}' is unused in '{1}'</value>
+  </data>
+  <data name="Rule0030UnusedMethodParametersTitle" xml:space="preserve">
+    <value>Unused Method Parameters</value>
+  </data>
+  <data name="Rule0031ObjectIsUnusedDescription" xml:space="preserve">
+    <value>Unused objects can lead to unnecessary clutter in the codebase.</value>
+  </data>
+  <data name="Rule0031ObjectIsUnusedFormat" xml:space="preserve">
+    <value>The {0} '{1}' is declared but not used.</value>
+  </data>
+  <data name="Rule0031ObjectIsUnusedTitle" xml:space="preserve">
+    <value>Unused Object</value>
+  </data>
+  <data name="Rule0032DuplicatePropertyDescription" xml:space="preserve">
+    <value>Duplicate properties with the same value can lead to redundancy and confusion.</value>
+  </data>
+  <data name="Rule0032DuplicatePropertyFormat" xml:space="preserve">
+    <value>The property '{0}' has a duplicate with the same value.</value>
+  </data>
+  <data name="Rule0032DuplicatePropertyTitle" xml:space="preserve">
+    <value>Duplicate Property</value>
+  </data>
+  <data name="Rule0033RedundantEditablePropertyDescription" xml:space="preserve">
+    <value>Redundant editable properties can clutter code and lead to confusion.</value>
+  </data>
+  <data name="Rule0033RedundantEditablePropertyFormat" xml:space="preserve">
+    <value>The 'Editable' Property is Redundant Due to the Presence of Object-Level Editable Property Being Defined as False.</value>
+  </data>
+  <data name="Rule0033RedundantEditablePropertyTitle" xml:space="preserve">
+    <value>Redundant Editable Property</value>
+  </data>
+  <data name="Rule0035UnusedGlobalProcedureDescription" xml:space="preserve">
+    <value>Unused global procedures can contribute to unnecessary code clutter.</value>
+  </data>
+  <data name="Rule0035UnusedGlobalProcedureFormat" xml:space="preserve">
+    <value>The global procedure '{0}' is defined but not used.</value>
+  </data>
+  <data name="Rule0035UnusedGlobalProcedureTitle" xml:space="preserve">
+    <value>Unused Global Procedure</value>
+  </data>
 </root>

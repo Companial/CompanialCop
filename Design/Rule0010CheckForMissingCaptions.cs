@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Immutable;
+﻿using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
+using System.Collections.Immutable;
 
 namespace CompanialCopAnalyzer.Design
 {
@@ -23,8 +23,8 @@ namespace CompanialCopAnalyzer.Design
 
         private void CheckForMissingCaptions(SymbolAnalysisContext context)
         {
-            if (context.Symbol.IsObsoletePending || context.Symbol.IsObsoleteRemoved) return;
-            if (context.Symbol.GetContainingObjectTypeSymbol().IsObsoletePending || context.Symbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.Symbol)) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(context.Symbol.GetContainingObjectTypeSymbol())) return;
 
             if (context.Symbol.Kind == SymbolKind.Control)
             {
@@ -101,7 +101,7 @@ namespace CompanialCopAnalyzer.Design
         {
             try
             {
-                if (Symbol.ContainingType?.Kind == SymbolKind.Table)
+                if (Symbol.ContainingType.Kind == SymbolKind.Table)
                 {
                     if (((ITableTypeSymbol)Symbol.ContainingType).Id >= 2000000000)
                         return false;

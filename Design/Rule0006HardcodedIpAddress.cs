@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Immutable;
-using System.Linq;
-using System.Net;
-using System.Net.Sockets;
+﻿using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
+using System.Collections.Immutable;
+using System.Net;
+using System.Net.Sockets;
 
 namespace CompanialCopAnalyzer.Design
 {
@@ -21,8 +20,8 @@ namespace CompanialCopAnalyzer.Design
 
         private void CheckForHardcodedIpAddresses(SyntaxNodeAnalysisContext ctx)
         {
-            if (ctx.ContainingSymbol.IsObsoletePending || ctx.ContainingSymbol.IsObsoleteRemoved) return;
-            if (ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoletePending || ctx.ContainingSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 
             VariableDeclarationSyntax syntax = ctx.Node as VariableDeclarationSyntax;
             if (syntax != null)

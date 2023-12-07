@@ -490,7 +490,7 @@ namespace CompanialCopAnalyzer.Design
                 new Tuple<string, string>("Sales Line", "Sales Shipment Line"),
                 new Tuple<string, string>("Sales Line", "Sales Invoice Line"),
                 new Tuple<string, string>("Sales Line", "Sales Cr.Memo Line"),
-                new Tuple<string, string>("Sales Line", "Sales Cr.Memo Line"),
+                new Tuple<string, string>("Sales Line", "Return Receipt Line"),
                 new Tuple<string, string>("Sales Line", "Sales Line Archive"),
 
                 new Tuple<string, string>("Purchase Line", "Purch. Rcpt. Line"),

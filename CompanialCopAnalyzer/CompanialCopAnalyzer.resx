@@ -477,6 +477,15 @@
   <data name="Rule0033RedundantEditablePropertyTitle" xml:space="preserve">
     <value>Redundant Editable Property</value>
   </data>
+  <data name="Rule0034TableRelationTooLongDescription" xml:space="preserve">
+    <value>The value being assigned is a bigger value than the value that is being assigned to</value>
+  </data>
+  <data name="Rule0034TableRelationTooLongFormat" xml:space="preserve">
+    <value>Attempting to assign a bigger value to a smaller one</value>
+  </data>
+  <data name="Rule0034TableRelationTooLongTitle" xml:space="preserve">
+    <value>Table Relation Value Too Long</value>
+  </data>
   <data name="Rule0035UnusedGlobalProcedureDescription" xml:space="preserve">
     <value>Unused global procedures can contribute to unnecessary code clutter.</value>
   </data>

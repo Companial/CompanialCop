@@ -113,10 +113,10 @@ namespace CompanialCopAnalyzer.Design
         {
             for (int i = 0; i < arguments.Count; i++)
             {
-                var argumentType = context.SemanticModel.GetSymbolInfo(arguments[i]).Symbol.GetTypeSymbol();
+                var argumentType = context.SemanticModel.GetSymbolInfo(arguments[i]).Symbol?.GetTypeSymbol();
                 var fieldType = fields[i].GetTypeSymbol();
 
-                if (fieldType.IsTextType() && argumentType.IsTextType())
+                if (fieldType.IsTextType() && argumentType != null && argumentType.IsTextType())
                 {
                     int argumentLength = argumentType.Length;
 

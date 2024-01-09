@@ -390,6 +390,16 @@ namespace CompanialCopAnalyzer
             CompanialCopAnalyzer.Rule0033RedundantEditablePropertyDescription
         );
 
+        public static DiagnosticDescriptor Rule0034TableRelationTooLong = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0034",
+            CompanialCopAnalyzer.Rule0034TableRelationTooLongTitle,
+            CompanialCopAnalyzer.Rule0034TableRelationTooLongFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0034TableRelationTooLongDescription
+        );
+
         public static DiagnosticDescriptor Rule0035UnusedGlobalProcedure = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0035",
             CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureTitle,

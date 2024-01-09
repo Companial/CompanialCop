@@ -1141,6 +1141,33 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The value being assigned is a bigger value than the value that is being assigned to.
+        /// </summary>
+        internal static string Rule0034TableRelationTooLongDescription {
+            get {
+                return ResourceManager.GetString("Rule0034TableRelationTooLongDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attempting to assign a bigger value to a smaller one.
+        /// </summary>
+        internal static string Rule0034TableRelationTooLongFormat {
+            get {
+                return ResourceManager.GetString("Rule0034TableRelationTooLongFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table Relation Value Too Long.
+        /// </summary>
+        internal static string Rule0034TableRelationTooLongTitle {
+            get {
+                return ResourceManager.GetString("Rule0034TableRelationTooLongTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unused global procedures can contribute to unnecessary code clutter..
         /// </summary>
         internal static string Rule0035UnusedGlobalProcedureDescription {

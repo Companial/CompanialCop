@@ -95,7 +95,7 @@ namespace CompanialCopAnalyzer.Design
                 var identifier = context.Node as IdentifierNameSyntax;
                 if (identifier != null && unusedVariableNames.Contains(identifier.Unquoted()))
                 {
-                    ISymbol variable = context.SemanticModel.GetSymbolInfo(identifier, context.CancellationToken).Symbol;
+                    ISymbol? variable = context.SemanticModel.GetSymbolInfo(identifier, context.CancellationToken).Symbol;
                     if (variable != null && unusedVariables.Contains(variable))
                     {
                         unusedVariables.Remove(variable);

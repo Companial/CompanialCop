@@ -118,9 +118,11 @@ namespace CompanialCopAnalyzer.Design
                     return false;
                 }
 
-                List<SyntaxTrivia> syntaxTrivias = new List<SyntaxTrivia>();
-                syntaxTrivias.AddRange(methodDeclarationSyntax.GetLeadingTrivia());
-                syntaxTrivias.AddRange(methodDeclarationSyntax.GetTrailingTrivia());
+                List<SyntaxTrivia> syntaxTrivias =
+                [
+                    .. methodDeclarationSyntax.GetLeadingTrivia(),
+                    .. methodDeclarationSyntax.GetTrailingTrivia(),
+                ];
 
                 if (syntaxTrivias.Any(x => x.IsKind(SyntaxKind.LineCommentTrivia))) return false;
 

@@ -197,6 +197,9 @@ namespace CompanialCopAnalyzer.Design
                     case EnumExtensionTypeSyntax:
                         kind = SymbolKind.Enum;
                         break;
+                    case PagePartSyntax:
+                        kind = SymbolKind.Page;
+                        break;
                     case PageExtensionSyntax:
                         kind = SymbolKind.PageExtension;
                         break;

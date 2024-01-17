@@ -69,6 +69,8 @@ namespace CompanialCopAnalyzer.Design
             }
 
             string applicationObjectIdentifier = table.GetIdentifierOrLiteralValue() ?? string.Empty;
+            string fieldName = field.GetIdentifierOrLiteralValue() ?? string.Empty;
+
             IEnumerable<ISymbol> applicationObjects = compilation.GetApplicationObjectTypeSymbolsByNameAcrossModules(SymbolKind.Table, applicationObjectIdentifier);
             ITableTypeSymbol? tableTypeSymbol = null;
             if (applicationObjects.Count() <= 1)
@@ -76,7 +78,7 @@ namespace CompanialCopAnalyzer.Design
                 tableTypeSymbol = applicationObjects.FirstOrDefault() as ITableTypeSymbol;
             }
 
-            IFieldSymbol? fieldSymbol = tableTypeSymbol?.Fields.Where(x => x.Name == field.Identifier.ValueText).FirstOrDefault();
+            IFieldSymbol? fieldSymbol = tableTypeSymbol?.Fields.Where(x => x.Name == fieldName).FirstOrDefault();
 
             if(fieldSymbol != null)
             {

@@ -1141,7 +1141,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The value being assigned is a bigger value than the value that is being assigned to.
+        ///   Looks up a localized string similar to The value being assigned is a bigger value than the value that is being assigned to. .
         /// </summary>
         internal static string Rule0034TableRelationTooLongDescription {
             get {
@@ -1150,7 +1150,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attempting to assign a bigger value to a smaller one.
+        ///   Looks up a localized string similar to The length &apos;{0}&apos; of the table relation&apos;s target field &apos;{1}&apos; is greater than the length &apos;{2}&apos; of the source field &apos;{3}&apos;. This could result in a runtime error. Please make sure that the target field&apos;s length is less than equal to the source field length..
         /// </summary>
         internal static string Rule0034TableRelationTooLongFormat {
             get {

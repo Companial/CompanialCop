@@ -16,17 +16,18 @@ namespace CompanialCopAnalyzer.Design
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0034TableRelationTooLong);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.Field);
+        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(AnalyzeSyntaxNode, SyntaxKind.Field);
 
-        public void AnalyzeSymbol(SymbolAnalysisContext context)
+        public void AnalyzeSyntaxNode(SyntaxNodeAnalysisContext context)
         {
-            if (context.Symbol.IsObsoleteRemoved || context.Symbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved)
+            IFieldSymbol? currentFieldSymbol = context.SemanticModel.GetDeclaredSymbol(context.Node) as IFieldSymbol;
+            
+            if (currentFieldSymbol == null || currentFieldSymbol.IsObsoleteRemoved || currentFieldSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved)
             {
                 return;
             }
 
-            IFieldSymbol currentFieldSymbol = (IFieldSymbol)context.Symbol;
-            IPropertySymbol? tableRelation = context.Symbol.GetProperty(PropertyKind.TableRelation);
+            IPropertySymbol? tableRelation = currentFieldSymbol.GetProperty(PropertyKind.TableRelation);
 
             if (tableRelation == null)
             {
@@ -35,7 +36,7 @@ namespace CompanialCopAnalyzer.Design
 
             TableRelationPropertyValueSyntax? tableRelationValueSyntax = tableRelation.GetPropertyValueSyntax<TableRelationPropertyValueSyntax>();
 
-            while(tableRelationValueSyntax != null)
+            while (tableRelationValueSyntax != null)
             {
                 QualifiedNameSyntax? relatedTableField = tableRelationValueSyntax.RelatedTableField as QualifiedNameSyntax;
 
@@ -44,7 +45,7 @@ namespace CompanialCopAnalyzer.Design
                     goto proceed;
                 }
 
-                IFieldSymbol? fieldSymbol = GetRelatedFieldSymbol(relatedTableField.Left as IdentifierNameSyntax, relatedTableField.Right as IdentifierNameSyntax, context.Compilation);
+                IFieldSymbol? fieldSymbol = GetRelatedFieldSymbol(relatedTableField.Left as IdentifierNameSyntax, relatedTableField.Right as IdentifierNameSyntax, context.SemanticModel.Compilation);
 
                 if (fieldSymbol == null || !fieldSymbol.HasLength || !currentFieldSymbol.HasLength)
                 {
@@ -53,11 +54,11 @@ namespace CompanialCopAnalyzer.Design
 
                 if (currentFieldSymbol.Length < fieldSymbol.Length)
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0034TableRelationTooLong, relatedTableField.GetLocation()));
+                    context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0034TableRelationTooLong, ((FieldSyntax)context.Node).Type.GetLocation(), fieldSymbol.Length, relatedTableField.ToString(), currentFieldSymbol.Length, currentFieldSymbol.Name));
                 }
 
-                proceed:
-                    tableRelationValueSyntax = tableRelationValueSyntax.ElseExpression?.ElseTableRelationCondition;
+            proceed:
+                tableRelationValueSyntax = tableRelationValueSyntax.ElseExpression?.ElseTableRelationCondition;
             }
         }
 

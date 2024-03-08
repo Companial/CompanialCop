@@ -1193,5 +1193,32 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0035UnusedGlobalProcedureTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event Publishers should be local to allow for future parameter extension
+        /// </summary>
+        internal static string Rule0036LocalEventPublisherDescription {
+            get {
+                return ResourceManager.GetString("Rule0036LocalEventPublisherDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event Publishers should be local to allow for future parameter extension
+        /// </summary>
+        internal static string Rule0036LocalEventPublisherFormat {
+            get {
+                return ResourceManager.GetString("Rule0036LocalEventPublisherFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event Publishers should be local to allow for future parameter extension
+        /// </summary>
+        internal static string Rule0036LocalEventPublisherTitle {
+            get {
+                return ResourceManager.GetString("Rule0036LocalEventPublisherTitle", resourceCulture);
+            }
+        }        
     }
 }

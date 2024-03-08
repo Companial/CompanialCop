@@ -409,5 +409,14 @@ namespace CompanialCopAnalyzer
             false,
             CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureDescription
         );
+        public static DiagnosticDescriptor Rule0036LocalEventPublisher = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0036",
+            CompanialCopAnalyzer.Rule0036LocalEventPublisherTitle,
+            CompanialCopAnalyzer.Rule0036LocalEventPublisherFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0036LocalEventPublisherDescription
+        );
     }
 }

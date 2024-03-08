@@ -495,4 +495,13 @@
   <data name="Rule0035UnusedGlobalProcedureTitle" xml:space="preserve">
     <value>Unused Global Procedure</value>
   </data>
+  <data name="Rule0036LocalEventPublisherDescription" xml:space="preserve">
+    <value>Event Publishers should be local to allow for future parameter extensions.</value>
+  </data>
+  <data name="Rule0036LocalEventPublisherFormat" xml:space="preserve">
+    <value>Event Publishers should be local to allow for future parameter extensions.</value>
+  </data>
+  <data name="Rule0036LocalEventPublisherTitle" xml:space="preserve">
+    <value>Event Publishers should be local to allow for future parameter extensions.</value>
+  </data>  
 </root>

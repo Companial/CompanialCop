@@ -66,6 +66,7 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 |CM0033|Editable property already exists in object level.|Warning|Yes|
 |CM0034|Field assigned in TableRelation is longer than the field being assigned to.|Warning|Yes|
 |CM0035|Global procedure is unused in project.|Warning|No|
+|CM0036|Event Publishers must be local.|Warning|Yes|
 
 ## How to disable certain rules?
 

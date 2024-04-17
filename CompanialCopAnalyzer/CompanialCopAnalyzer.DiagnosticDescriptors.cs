@@ -418,5 +418,14 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0036LocalEventPublisherDescription
         );
+        public static DiagnosticDescriptor Rule0037GlobalVariablePrefix = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0037",
+            CompanialCopAnalyzer.Rule0037GlobalVariablePrefixTitle,
+            CompanialCopAnalyzer.Rule0037GlobalVariablePrefixFormat,
+            "Naming",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0037GlobalVariablePrefixDescription
+        );
     }
 }

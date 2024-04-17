@@ -1220,5 +1220,32 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0036LocalEventPublisherTitle", resourceCulture);
             }
         }        
+
+        /// <summary>
+        ///   Verifies if global variables are prefixed to make it easier to track.
+        /// </summary>
+        internal static string Rule0037GlobalVariablePrefixDescription {
+            get {
+                return ResourceManager.GetString("Rule0037GlobalVariablePrefixDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Verifies if global variables are prefixed to make it easier to track.
+        /// </summary>
+        internal static string Rule0037GlobalVariablePrefixFormat {
+            get {
+                return ResourceManager.GetString("Rule0037GlobalVariablePrefixFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Verifies if global variables are prefixed to make it easier to track.
+        /// </summary>
+        internal static string Rule0037GlobalVariablePrefixTitle {
+            get {
+                return ResourceManager.GetString("Rule0037GlobalVariablePrefixTitle", resourceCulture);
+            }
+        }
     }
 }

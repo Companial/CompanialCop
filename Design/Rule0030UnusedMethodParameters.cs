@@ -1,7 +1,12 @@
-﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using CompanialCopAnalyzer.Design.Helper;
+using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
+using System;
 using System.Collections.Immutable;
+using System.Collections.Generic;
+using Microsoft.Dynamics.Nav.CodeAnalysis.SymbolReference;
+using Microsoft.Dynamics.Nav.CodeAnalysis.Symbols;
 using System.Collections;
 
 namespace CompanialCopAnalyzer.Design
@@ -90,7 +95,7 @@ namespace CompanialCopAnalyzer.Design
                 var identifier = context.Node as IdentifierNameSyntax;
                 if (identifier != null && unusedVariableNames.Contains(identifier.Unquoted()))
                 {
-                    ISymbol variable = context.SemanticModel.GetSymbolInfo(identifier, context.CancellationToken).Symbol;
+                    ISymbol? variable = context.SemanticModel.GetSymbolInfo(identifier, context.CancellationToken).Symbol;
                     if (variable != null && unusedVariables.Contains(variable))
                     {
                         unusedVariables.Remove(variable);

@@ -1141,6 +1141,33 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The value being assigned is a bigger value than the value that is being assigned to. .
+        /// </summary>
+        internal static string Rule0034TableRelationTooLongDescription {
+            get {
+                return ResourceManager.GetString("Rule0034TableRelationTooLongDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The length &apos;{0}&apos; of the table relation&apos;s target field &apos;{1}&apos; is greater than the length &apos;{2}&apos; of the source field &apos;{3}&apos;. This could result in a runtime error. Please make sure that the target field&apos;s length is less than equal to the source field length..
+        /// </summary>
+        internal static string Rule0034TableRelationTooLongFormat {
+            get {
+                return ResourceManager.GetString("Rule0034TableRelationTooLongFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table Relation Value Too Long.
+        /// </summary>
+        internal static string Rule0034TableRelationTooLongTitle {
+            get {
+                return ResourceManager.GetString("Rule0034TableRelationTooLongTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unused global procedures can contribute to unnecessary code clutter..
         /// </summary>
         internal static string Rule0035UnusedGlobalProcedureDescription {
@@ -1164,6 +1191,60 @@ namespace CompanialCopAnalyzer {
         internal static string Rule0035UnusedGlobalProcedureTitle {
             get {
                 return ResourceManager.GetString("Rule0035UnusedGlobalProcedureTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event Publishers should be local to allow for future parameter extension
+        /// </summary>
+        internal static string Rule0036LocalEventPublisherDescription {
+            get {
+                return ResourceManager.GetString("Rule0036LocalEventPublisherDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event Publishers should be local to allow for future parameter extension
+        /// </summary>
+        internal static string Rule0036LocalEventPublisherFormat {
+            get {
+                return ResourceManager.GetString("Rule0036LocalEventPublisherFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event Publishers should be local to allow for future parameter extension
+        /// </summary>
+        internal static string Rule0036LocalEventPublisherTitle {
+            get {
+                return ResourceManager.GetString("Rule0036LocalEventPublisherTitle", resourceCulture);
+            }
+        }        
+
+        /// <summary>
+        ///   Verifies if global variables are prefixed to make it easier to track.
+        /// </summary>
+        internal static string Rule0037GlobalVariablePrefixDescription {
+            get {
+                return ResourceManager.GetString("Rule0037GlobalVariablePrefixDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Verifies if global variables are prefixed to make it easier to track.
+        /// </summary>
+        internal static string Rule0037GlobalVariablePrefixFormat {
+            get {
+                return ResourceManager.GetString("Rule0037GlobalVariablePrefixFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Verifies if global variables are prefixed to make it easier to track.
+        /// </summary>
+        internal static string Rule0037GlobalVariablePrefixTitle {
+            get {
+                return ResourceManager.GetString("Rule0037GlobalVariablePrefixTitle", resourceCulture);
             }
         }
     }

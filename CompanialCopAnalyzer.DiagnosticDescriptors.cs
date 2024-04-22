@@ -385,6 +385,16 @@ namespace CompanialCopAnalyzer
             CompanialCopAnalyzer.Rule0033RedundantEditablePropertyDescription
         );
 
+        public static DiagnosticDescriptor Rule0034TableRelationTooLong = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0034",
+            CompanialCopAnalyzer.Rule0034TableRelationTooLongTitle,
+            CompanialCopAnalyzer.Rule0034TableRelationTooLongFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0034TableRelationTooLongDescription
+        );
+
         public static DiagnosticDescriptor Rule0035UnusedGlobalProcedure = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0035",
             CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureTitle,
@@ -393,6 +403,24 @@ namespace CompanialCopAnalyzer
             DiagnosticSeverity.Warning,
             false,
             CompanialCopAnalyzer.Rule0035UnusedGlobalProcedureDescription
+        );
+        public static DiagnosticDescriptor Rule0036LocalEventPublisher = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0036",
+            CompanialCopAnalyzer.Rule0036LocalEventPublisherTitle,
+            CompanialCopAnalyzer.Rule0036LocalEventPublisherFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0036LocalEventPublisherDescription
+        );
+        public static DiagnosticDescriptor Rule0037GlobalVariablePrefix = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0037",
+            CompanialCopAnalyzer.Rule0037GlobalVariablePrefixTitle,
+            CompanialCopAnalyzer.Rule0037GlobalVariablePrefixFormat,
+            "Naming",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0037GlobalVariablePrefixDescription
         );
     }
 }

@@ -20,15 +20,30 @@ namespace CompanialCopAnalyzer.Design
             if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
             if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 
-            PropertySyntax tooltipProperty = ctx.Node.GetProperty("ToolTip");
+            LabelPropertyValueSyntax? toolTipProperty = ctx.Node?.GetProperty("ToolTip")?.Value as LabelPropertyValueSyntax;
 
-            if (tooltipProperty != null)
+            bool showWarning = false;
+
+            if (toolTipProperty != null)
             {
-                string tooltipValue = tooltipProperty.Value.GetText().ToString();
+                string tooltipValue = toolTipProperty.Value.GetText().ToString();
                 if (!tooltipValue.EndsWith(".'") && !tooltipValue.EndsWith(".)'"))
-                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0013ToolTipPunctuation, tooltipProperty.GetLocation()));
+                {
+                    showWarning = true;
+                    if (toolTipProperty.Value.Properties != null)
+                        foreach (IdentifierEqualsLiteralSyntax property in toolTipProperty.Value.Properties.Values)
+                        {
+                            if (property.Identifier.Text.ToLower() == "locked")
+                            {
+                                showWarning = false;
+                                break;
+                            }
+                        }
+                }
+                    
+                if (showWarning)
+                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0013ToolTipPunctuation, toolTipProperty.GetLocation()));
             }
-
         }
     }
 }

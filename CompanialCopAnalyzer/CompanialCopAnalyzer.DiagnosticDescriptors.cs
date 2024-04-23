@@ -427,5 +427,14 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0037GlobalVariablePrefixDescription
         );
+        public static DiagnosticDescriptor Rule0038MissingParenthesis = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0038",
+            CompanialCopAnalyzer.Rule0038MissingParenthesisTitle,
+            CompanialCopAnalyzer.Rule0038MissingParenthesisFormat,
+            "Naming",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0038MissingParenthesisDescription
+        );
     }
 }

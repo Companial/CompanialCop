@@ -113,20 +113,18 @@ namespace CompanialCopAnalyzer.Design
 
                 MethodDeclarationSyntax? methodDeclarationSyntax = methodSymbol.DeclaringSyntaxReference?.GetSyntax() as MethodDeclarationSyntax;
 
-                if(methodDeclarationSyntax == null)
+                if (methodDeclarationSyntax == null)
                 {
                     return false;
                 }
 
-                List<SyntaxTrivia> syntaxTrivias =
-                [
-                    .. methodDeclarationSyntax.GetLeadingTrivia(),
-                    .. methodDeclarationSyntax.GetTrailingTrivia(),
-                ];
+                List<SyntaxTrivia> syntaxTrivias = new List<SyntaxTrivia>();
+                syntaxTrivias.AddRange(methodDeclarationSyntax.GetLeadingTrivia());
+                syntaxTrivias.AddRange(methodDeclarationSyntax.GetTrailingTrivia());
 
                 if (syntaxTrivias.Any(x => x.IsKind(SyntaxKind.LineCommentTrivia))) return false;
 
-                if(methodSymbol.Attributes.Any(x => attributes.Contains(x.Name)))
+                if (methodSymbol.Attributes.Any(x => attributes.Contains(x.Name)))
                 {
                     return false;
                 }

@@ -1219,8 +1219,8 @@ namespace CompanialCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0036LocalEventPublisherTitle", resourceCulture);
             }
-        }        
-
+        }
+        
         /// <summary>
         ///   Verifies if global variables are prefixed to make it easier to track.
         /// </summary>
@@ -1245,6 +1245,33 @@ namespace CompanialCopAnalyzer {
         internal static string Rule0037GlobalVariablePrefixTitle {
             get {
                 return ResourceManager.GetString("Rule0037GlobalVariablePrefixTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must specify open and close parenthesis after &apos;{0}&apos;.
+        /// </summary>
+        internal static string Rule0038MissingParenthesisDescription {
+            get {
+                return ResourceManager.GetString("Rule0038MissingParenthesisDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must specify open and close parenthesis after &apos;{0}&apos;.
+        /// </summary>
+        internal static string Rule0038MissingParenthesisFormat {
+            get {
+                return ResourceManager.GetString("Rule0038MissingParenthesisFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Function calls should have parenthesis even if they do not have any parameters..
+        /// </summary>
+        internal static string Rule0038MissingParenthesisTitle {
+            get {
+                return ResourceManager.GetString("Rule0038MissingParenthesisTitle", resourceCulture);
             }
         }
     }

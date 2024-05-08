@@ -1274,5 +1274,32 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0038MissingParenthesisTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temporary records should not trigger the table triggers..
+        /// </summary>
+        internal static string Rule0039TemporaryRecordsDescription {
+            get {
+                return ResourceManager.GetString("Rule0039TemporaryRecordsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temporary records should not trigger the table triggers..
+        /// </summary>
+        internal static string Rule0039TemporaryRecordsFormat {
+            get {
+                return ResourceManager.GetString("Rule0039TemporaryRecordsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temporary records should not trigger the table triggers..
+        /// </summary>
+        internal static string Rule0039TemporaryRecordsTitle {
+            get {
+                return ResourceManager.GetString("Rule0039TemporaryRecordsTitle", resourceCulture);
+            }
+        }
     }
 }

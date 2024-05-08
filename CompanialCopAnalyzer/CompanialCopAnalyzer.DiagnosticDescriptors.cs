@@ -436,5 +436,14 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0038MissingParenthesisDescription
         );
+        public static readonly DiagnosticDescriptor Rule0039TemporaryRecordsShouldNotTriggerTableTriggers = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0039",
+            CompanialCopAnalyzer.Rule0039TemporaryRecordsTitle,
+            CompanialCopAnalyzer.Rule0039TemporaryRecordsFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0039TemporaryRecordsDescription
+        );
     }
 }

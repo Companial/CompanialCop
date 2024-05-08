@@ -522,4 +522,13 @@
   <data name="Rule0038MissingParenthesisTitle" xml:space="preserve">
     <value>Function calls should have parenthesis even if they do not have any parameters.</value>
   </data>
+  <data name="Rule0039TemporaryRecordsDescription" xml:space="preserve">
+    <value>Temporary records should not trigger the table triggers.</value>
+  </data>
+  <data name="Rule0039TemporaryRecordsFormat" xml:space="preserve">
+    <value>Temporary records should not trigger the table triggers.</value>
+  </data>
+  <data name="Rule0039TemporaryRecordsTitle" xml:space="preserve">
+    <value>Temporary records should not trigger the table triggers.</value>
+  </data>
 </root>

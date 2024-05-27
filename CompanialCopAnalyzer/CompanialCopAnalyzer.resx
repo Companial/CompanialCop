@@ -229,13 +229,13 @@
     <value>Procedure must not end with semicolon.</value>
   </data>
   <data name="Rule0012InternalProceduresDescription" xml:space="preserve">
-    <value>Procedure must be either local or internal.</value>
+    <value>Procedure must be either local or internal. Public procedures must be documented.</value>
   </data>
   <data name="Rule0012InternalProceduresFormat" xml:space="preserve">
-    <value>Procedure must be either local or internal.</value>
+    <value>Procedure must be either local or internal. Public procedures must be documented.</value>
   </data>
   <data name="Rule0012InternalProceduresTitle" xml:space="preserve">
-    <value>Procedure must be either local or internal.</value>
+    <value>Procedure must be either local or internal. Public procedures must be documented.</value>
   </data>
   <data name="Rule0013ToolTipPunctuationDescription" xml:space="preserve">
     <value>ToolTip must end with a dot.</value>

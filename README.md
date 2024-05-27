@@ -43,7 +43,7 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 |CM0009|Use of hardcoded object IDs in functions is not allowed.|Warning|Yes|
 |CM0010|Caption must be specified.|Warning|Yes|
 |CM0011|Procedure prototype must not end with semicolon.|Warning|Yes|
-|CM0012|Procedure must be either local or internal.|Warning|Yes|
+|CM0012|Procedure must be either local or internal. Public procedures must be documented.|Warning|Yes|
 |CM0013|ToolTip must end with a dot.|Warning|Yes|
 |CM0014|Position for global variables, triggers and methods must be correct.|Warning|Yes|
 |CM0015|Msg and Err labels should end with a dot, Qst should end with a question mark.|Warning|Yes|

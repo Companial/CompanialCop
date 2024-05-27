@@ -25,8 +25,17 @@ namespace CompanialCopAnalyzer.Design
             SyntaxNodeOrToken firstToken = syntax.ProcedureKeyword.GetPreviousToken();
 
             if (firstToken.Kind != SyntaxKind.LocalKeyword && firstToken.Kind != SyntaxKind.InternalKeyword)
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0012InternalProcedures, syntax.ProcedureKeyword.GetLocation()));
+            {
+                var leadingTrivia = syntax.GetLeadingTrivia();
+                var documentationComments = leadingTrivia.Where(x => x.Kind == SyntaxKind.SingleLineDocumentationCommentTrivia);
 
+                if (documentationComments.Any())
+                {
+                    return;
+                }
+
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0012InternalProcedures, syntax.ProcedureKeyword.GetLocation()));
+            }
         }
     }
 }

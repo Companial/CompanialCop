@@ -8,7 +8,7 @@ namespace CompanialCopAnalyzer.Design
     [DiagnosticAnalyzer]
     public class Rule0039TemporaryRecordsShouldNotTriggerTableTriggers : DiagnosticAnalyzer
     {
-        private static readonly HashSet<string> methodsToCheck = new HashSet<string> { "Insert", "Modify", "Delete", "DeleteAll", "Validate" , "ModifyAll" };
+        private static readonly HashSet<string> methodsToCheck = new HashSet<string> { "Insert", "Modify", "Delete", "DeleteAll", "Validate", "ModifyAll" };
         private static readonly string validateMethod = "Validate";
         private static readonly string modifyAllMethod = "ModifyAll";
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0039TemporaryRecordsShouldNotTriggerTableTriggers);
@@ -24,6 +24,18 @@ namespace CompanialCopAnalyzer.Design
 
             if (!methodsToCheck.Contains(invocationExpression.TargetMethod.Name))
                 return;
+
+            if (invocationExpression.TargetMethod.Name != validateMethod && invocationExpression.TargetMethod.Name != modifyAllMethod)
+            {
+                if (invocationExpression.Arguments.Length != 1 || !invocationExpression.Arguments[0].Value.ConstantValue.HasValue)
+                    return;
+            }
+
+            if (invocationExpression.TargetMethod.Name == modifyAllMethod)
+            {
+                if (invocationExpression.Arguments.Length != 3 || !invocationExpression.Arguments[2].Value.ConstantValue.HasValue)
+                    return;
+            }
 
             IOperation? invokingRecord = invocationExpression.Instance;
 

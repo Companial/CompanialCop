@@ -394,7 +394,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure must be either local or internal..
+        ///   Looks up a localized string similar to Procedure must be either local or internal. Public procedures must be documented..
         /// </summary>
         internal static string Rule0012InternalProceduresDescription {
             get {
@@ -403,7 +403,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure must be either local or internal..
+        ///   Looks up a localized string similar to Procedure must be either local or internal. Public procedures must be documented..
         /// </summary>
         internal static string Rule0012InternalProceduresFormat {
             get {
@@ -412,7 +412,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure must be either local or internal..
+        ///   Looks up a localized string similar to Procedure must be either local or internal. Public procedures must be documented..
         /// </summary>
         internal static string Rule0012InternalProceduresTitle {
             get {

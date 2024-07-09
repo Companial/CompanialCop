@@ -504,15 +504,6 @@
   <data name="Rule0036LocalEventPublisherTitle" xml:space="preserve">
     <value>Event Publishers should be local to allow for future parameter extensions.</value>
   </data>
-  <data name="Rule0037GlobalVariablePrefixDescription" xml:space="preserve">
-    <value>Using a consistent variable prefix makes it easier to identify them.</value>
-  </data>
-  <data name="Rule0037GlobalVariablePrefixFormat" xml:space="preserve">
-    <value>Global variables must be prefixed by a 'g'.</value>
-  </data>
-  <data name="Rule0037GlobalVariablePrefixTitle" xml:space="preserve">
-    <value>Global Variable Prefix</value>
-  </data>
   <data name="Rule0038MissingParenthesisDescription" xml:space="preserve">
     <value>You must specify open and close parenthesis after '{0}'</value>
   </data>

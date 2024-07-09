@@ -1222,33 +1222,6 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Verifies if global variables are prefixed to make it easier to track.
-        /// </summary>
-        internal static string Rule0037GlobalVariablePrefixDescription {
-            get {
-                return ResourceManager.GetString("Rule0037GlobalVariablePrefixDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Verifies if global variables are prefixed to make it easier to track.
-        /// </summary>
-        internal static string Rule0037GlobalVariablePrefixFormat {
-            get {
-                return ResourceManager.GetString("Rule0037GlobalVariablePrefixFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Verifies if global variables are prefixed to make it easier to track.
-        /// </summary>
-        internal static string Rule0037GlobalVariablePrefixTitle {
-            get {
-                return ResourceManager.GetString("Rule0037GlobalVariablePrefixTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to You must specify open and close parenthesis after &apos;{0}&apos;.
         /// </summary>
         internal static string Rule0038MissingParenthesisDescription {

@@ -28,6 +28,10 @@
           <HintPath>../ALLanguage/extension/bin/Analyzers/Newtonsoft.Json.dll</HintPath>
           <Private>False</Private>
       </Reference>
-      <Reference Include="Microsoft.CSharp" />
+      <Reference Include="Microsoft.CSharp">
+        <SpecificVersion>False</SpecificVersion>
+        <HintPath>../ALLanguage/extension/bin/win32/Newtonsoft.CSharp.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
   </ItemGroup>
 </Project>

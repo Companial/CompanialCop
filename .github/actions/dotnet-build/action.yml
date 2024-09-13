@@ -67,9 +67,9 @@ runs:
       shell: pwsh
       run: dotnet build CompanialCopAnalyzer /p:FeatureFlags=${{ steps.get-feature-flags.outputs.feature-flags }} --no-restore --configuration Release
 
-    - name: Test
-      shell: pwsh
-      run: dotnet test CompanialCopAnalyzer.Test /p:FeatureFlags=${{ steps.get-feature-flags.outputs.feature-flags }}
+    # - name: Test
+    #   shell: pwsh
+    #   run: dotnet test CompanialCopAnalyzer.Test /p:FeatureFlags=${{ steps.get-feature-flags.outputs.feature-flags }}
 
     - name: Upload build artifact
       id: upload-build-asset

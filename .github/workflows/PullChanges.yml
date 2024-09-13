@@ -34,5 +34,5 @@ jobs:
       # Step 4: Create a Pull Request using GitHub CLI
       - name: Create a Pull Request
         run: |
-          gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
+          gh auth login --with-token <<< "${{ secrets.GH_TOKEN }}"
           gh pr create --base main --head sync-branch --title "Sync from internal repo" --body "This PR syncs changes from the internal repository."

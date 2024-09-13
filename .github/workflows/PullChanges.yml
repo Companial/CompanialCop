@@ -1,0 +1,32 @@
+name: Publish Changes from Internal Repo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync_internal_repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the public repository (this repo)
+      - name: Checkout public repository
+        uses: actions/checkout@v3
+
+      # Step 2: Pull changes from the internal repository
+      - name: Sync with internal repo
+        run: |
+          git remote add internal https://tine.staric%40companial.com:${{ secrets.AZURE_DEVOPS_PAT }}@dev.azure.com/your_project/your_repo/_git/your_repo
+          git fetch internal
+          git checkout -b sync-branch
+          git merge internal/main --no-ff --commit -m "Sync from internal repo"
+      
+      # Step 3: Push the changes to a new branch in GitHub
+      - name: Push changes to GitHub
+        run: |
+          git push origin sync-branch
+
+      # Step 4: Create a Pull Request using GitHub CLI
+      - name: Create a Pull Request
+        run: |
+          gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
+          gh pr create --base main --head sync-branch --title "Sync from internal repo" --body "This PR syncs changes from the internal repository."

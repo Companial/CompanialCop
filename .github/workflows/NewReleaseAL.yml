@@ -21,7 +21,7 @@ jobs:
         id: marketplace
         uses: ./.github/actions/marketplace
 
-      - name: Get LinterCop Release Assets
+      - name: Get CompanialCop Release Assets
         id: release-assets
         uses: ./.github/actions/release-assets
         with:
@@ -32,7 +32,7 @@ jobs:
         id: new-sources
         shell: pwsh
         run: |
-          Write-Host "Compare differences between the AL versions of the Marketplace and the current latest Release of the LinterCop"
+          Write-Host "Compare differences between the AL versions of the Marketplace and the current latest Release of the CompanialCop"
           $marketplace = '${{ steps.marketplace.outputs.sources }}' | ConvertFrom-Json
           $assets = '${{ steps.release-assets.outputs.al-versions }}' | ConvertFrom-Json
 

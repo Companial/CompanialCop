@@ -1,9 +1,6 @@
-﻿using CompanialCopAnalyzer;
-using CompanialCopAnalyzer.Design.Helper;
+﻿using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
-using System;
-using System.Collections.Generic;
 using System.Collections.Immutable;
 
 namespace CompanialCopAnalyzer.Design

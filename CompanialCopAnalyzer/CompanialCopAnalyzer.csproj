@@ -1,82 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	<LangVersion>latest</LangVersion>
-	<SignAssembly>True</SignAssembly>
-  </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Optimize>False</Optimize>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Optimize>True</Optimize>
+      <TargetFramework>netstandard2.1</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <LangVersion>Latest</LangVersion>
+      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+      <DefineConstants>$(DefineConstants)$(FeatureFlags.Replace("#",";"))</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ILRepack.MSBuild.Task" Version="2.0.13" />
-    <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
-
-	<ItemGroup>
-		<Reference Include="Microsoft.CSharp" />
-		<Reference Include="Microsoft.Dynamics.Nav.Analyzers.Common">
-		  <HintPath>References\Microsoft.Dynamics.Nav.Analyzers.Common.dll</HintPath>
-		</Reference>
-		<Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis">
-		  <HintPath>References\Microsoft.Dynamics.Nav.CodeAnalysis.dll</HintPath>
-		</Reference>
-		<Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis.Workspaces">
-			<HintPath>References\Microsoft.Dynamics.Nav.CodeAnalysis.Workspaces.dll</HintPath>
-		</Reference>
-		<Reference Include="Newtonsoft.Json">
-			<HintPath>References\Newtonsoft.Json.dll</HintPath>
-		</Reference>
-		<Reference Include="System" />
-		<Reference Include="netstandard" />
-		<Reference Include="System.Collections.Immutable">
-		  <HintPath>References\System.Collections.Immutable.dll</HintPath>
-		</Reference>
-	</ItemGroup>
-
   <ItemGroup>
-    <Compile Update="CompanialCopAnalyzer.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>CompanialCopAnalyzer.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+      <Reference Include="System.Collections.Immutable, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>../ALLanguage/extension/bin/Analyzers/System.Collections.Immutable.dll</HintPath>
+          <Private>False</Private>
+      </Reference>
+      <Reference Include="Microsoft.Dynamics.Nav.CodeAnalysis">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>../ALLanguage/extension/bin/Analyzers/Microsoft.Dynamics.Nav.CodeAnalysis.dll</HintPath>
+          <Private>False</Private>
+      </Reference>
+      <Reference Include="Microsoft.Dynamics.Nav.Analyzers.Common">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>../ALLanguage/extension/bin/Analyzers/Microsoft.Dynamics.Nav.Analyzers.Common.dll</HintPath>
+          <Private>False</Private>
+      </Reference>
+      <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+          <SpecificVersion>False</SpecificVersion>
+          <HintPath>../ALLanguage/extension/bin/Analyzers/Newtonsoft.Json.dll</HintPath>
+          <Private>False</Private>
+      </Reference>
   </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="CompanialCopAnalyzer.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CompanialCopAnalyzer.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-
-	<Target Name="ILRepack" AfterTargets="Build">
-
-		<PropertyGroup>
-			<WorkingDirectory>$(MSBuildThisFileDirectory)bin\$(Configuration)\$(TargetFramework)</WorkingDirectory>
-		</PropertyGroup>
-
-		<ItemGroup>
-			<InputAssemblies Include="Microsoft.Dynamics.Nav.Analyzers.Common.dll" />
-		</ItemGroup>
-
-		<ILRepack OutputType="$(OutputType)" MainAssembly="$(AssemblyName).dll" OutputAssembly="$(AssemblyName).dll" InputAssemblies="@(InputAssemblies)" WorkingDirectory="$(WorkingDirectory)" />
-
-	</Target>
 </Project>

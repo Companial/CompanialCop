@@ -1,14 +1,7 @@
-﻿using CompanialCopAnalyzer.Design.Helper;
-using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
-using System;
 using System.Collections.Immutable;
-using System.Collections.Generic;
-using Microsoft.Dynamics.Nav.CodeAnalysis.SymbolReference;
-using Microsoft.Dynamics.Nav.CodeAnalysis.Symbols;
-using System.Drawing;
-using System.Runtime.Remoting.Contexts;
 namespace CompanialCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]

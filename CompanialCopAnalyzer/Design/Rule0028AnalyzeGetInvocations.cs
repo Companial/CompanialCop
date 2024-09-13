@@ -1,22 +1,8 @@
-﻿using CompanialCopAnalyzer;
-using CompanialCopAnalyzer.Design.Helper;
-using Microsoft.Build.Framework.XamlTypes;
-using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
-using Microsoft.Dynamics.Nav.CodeAnalysis.SymbolReference;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Symbols;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
-using System;
-using System.CodeDom;
-using System.CodeDom.Compiler;
-using System.Collections;
 using System.Collections.Immutable;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Runtime.InteropServices.ComTypes;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Runtime.Remoting.Contexts;
-using System.Xml;
 
 namespace CompanialCopAnalyzer.Design
 {

@@ -77,7 +77,7 @@ runs:
       if: ${{ inputs.asset-publish == 'true' }}
       with:
         name: ${{ inputs.asset-name }}
-        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCop.dll
+        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCopAnalyzer.dll
         compression-level: 0 # no compression
 
     ### Upload Asset as Latest
@@ -87,7 +87,7 @@ runs:
       if: ${{ inputs.asset-publish == 'true' && inputs.al-latest == 'true' }}
       with:
         name: CompanialCop.dll
-        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCop.dll
+        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCopAnalyzer.dll
         compression-level: 0 # no compression
 
     ### Upload Asset as Pre-Release
@@ -97,7 +97,7 @@ runs:
       if: ${{ inputs.asset-publish == 'true' && inputs.al-prerelease == 'true' }}
       with:
         name: CompanialCop.AL-PreRelease.dll
-        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCop.dll
+        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCopAnalyzer.dll
         compression-level: 0 # no compression
 
     ### Compatibility with previous naming of files
@@ -108,7 +108,7 @@ runs:
       if: ${{ inputs.asset-publish == 'true' && inputs.al-latest == 'true' }}
       with:
         name: CompanialCop.current.dll
-        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCop.dll
+        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCopAnalyzer.dll
         compression-level: 0 # no compression
 
     ### Release Asset as Next
@@ -118,5 +118,5 @@ runs:
       if: ${{ inputs.asset-publish == 'true' && inputs.al-prerelease == 'true' }}
       with:
         name: CompanialCop.next.dll
-        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCop.dll
+        path: CompanialCopAnalyzer/bin/Release/netstandard2.1/CompanialCopAnalyzer.dll
         compression-level: 0 # no compression

@@ -1,5 +1,5 @@
-name: LinterCop (Pre)Release Assets
-description: Get LinterCop (Pre)Release Assets
+name: CompanialCop (Pre)Release Assets
+description: Get CompanialCop (Pre)Release Assets
 
 inputs:
   release:

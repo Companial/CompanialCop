@@ -21,6 +21,6 @@ $listing = Invoke-WebRequest -Method POST -UseBasicParsing `
 
 $listingFiltered = $listing.results | Select-Object -First 1 -ExpandProperty extensions `
 | Select-Object -ExpandProperty versions `
-| Where-Object { $(ConvertTo-Version($_.version)) -gt [System.Version]::Parse("12.0.0") }
+| Where-Object { $(ConvertTo-Version($_.version)) -gt [System.Version]::Parse("13.0.0") }
 
 Write-Output $listingFiltered | ConvertTo-Json -Compress -Depth 3

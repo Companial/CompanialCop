@@ -18,7 +18,7 @@ jobs:
           git remote add internal https://tine.staric%40companial.com:${{ secrets.AZURE_DEVOPS_PAT }}@dev.azure.com/1cfnav/BC%20Research%20and%20Development/_git/BCCodeCopAnalyzer
           git fetch internal
           git checkout -b sync-branch
-      git merge internal/master --allow-unrelated-histories --no-ff --commit -m "Sync from internal repo"
+          git merge internal/master --allow-unrelated-histories --no-ff --commit -m "Sync from internal repo"
       
       # Step 3: Push the changes to a new branch in GitHub
       - name: Push changes to GitHub

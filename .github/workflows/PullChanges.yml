@@ -23,7 +23,6 @@ jobs:
         run: |
           git remote add internal https://tine.staric%40companial.com:${{ secrets.AZURE_DEVOPS_PAT }}@dev.azure.com/1cfnav/BC%20Research%20and%20Development/_git/BCCodeCopAnalyzer
           git fetch internal
-          git checkout -b sync-branch
           git merge internal/HackSMB-allignWithGitHub --allow-unrelated-histories --strategy-option theirs --no-ff --commit -m "Sync from internal repo"
       
       # Step 3: Push the changes to a new branch in GitHub
@@ -31,8 +30,8 @@ jobs:
         run: |
           git push -f origin sync-branch
 
-      # Step 4: Create a Pull Request using GitHub CLI
-      - name: Create a Pull Request
-        run: |
-          gh auth login --with-token <<< "${{ secrets.GH_TOKEN }}"
-          gh pr create --base main --head sync-branch --title "Sync from internal repo" --body "This PR syncs changes from the internal repository."
+      # # Step 4: Create a Pull Request using GitHub CLI
+      # - name: Create a Pull Request
+      #   run: |
+      #     gh auth login --with-token <<< "${{ secrets.GH_TOKEN }}"
+      #     gh pr create --base main --head sync-branch --title "Sync from internal repo" --body "This PR syncs changes from the internal repository."

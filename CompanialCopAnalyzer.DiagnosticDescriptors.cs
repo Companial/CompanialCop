@@ -1,4 +1,9 @@
 ﻿using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CompanialCopAnalyzer
 {
@@ -413,14 +418,23 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0036LocalEventPublisherDescription
         );
-        public static DiagnosticDescriptor Rule0037GlobalVariablePrefix = new DiagnosticDescriptor(
-            CompanialCopAnalyzer.AnalyzerPrefix + "0037",
-            CompanialCopAnalyzer.Rule0037GlobalVariablePrefixTitle,
-            CompanialCopAnalyzer.Rule0037GlobalVariablePrefixFormat,
+        public static DiagnosticDescriptor Rule0038MissingParenthesis = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0038",
+            CompanialCopAnalyzer.Rule0038MissingParenthesisTitle,
+            CompanialCopAnalyzer.Rule0038MissingParenthesisFormat,
             "Naming",
             DiagnosticSeverity.Warning,
             true,
-            CompanialCopAnalyzer.Rule0037GlobalVariablePrefixDescription
+            CompanialCopAnalyzer.Rule0038MissingParenthesisDescription
+        );
+        public static readonly DiagnosticDescriptor Rule0039TemporaryRecordsShouldNotTriggerTableTriggers = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0039",
+            CompanialCopAnalyzer.Rule0039TemporaryRecordsTitle,
+            CompanialCopAnalyzer.Rule0039TemporaryRecordsFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0039TemporaryRecordsDescription
         );
     }
 }

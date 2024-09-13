@@ -394,7 +394,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure must be either local or internal..
+        ///   Looks up a localized string similar to Procedure must be either local or internal. Public procedures must be documented..
         /// </summary>
         internal static string Rule0012InternalProceduresDescription {
             get {
@@ -403,7 +403,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure must be either local or internal..
+        ///   Looks up a localized string similar to Procedure must be either local or internal. Public procedures must be documented..
         /// </summary>
         internal static string Rule0012InternalProceduresFormat {
             get {
@@ -412,7 +412,7 @@ namespace CompanialCopAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedure must be either local or internal..
+        ///   Looks up a localized string similar to Procedure must be either local or internal. Public procedures must be documented..
         /// </summary>
         internal static string Rule0012InternalProceduresTitle {
             get {
@@ -1219,32 +1219,59 @@ namespace CompanialCopAnalyzer {
             get {
                 return ResourceManager.GetString("Rule0036LocalEventPublisherTitle", resourceCulture);
             }
-        }        
-
+        }
+        
         /// <summary>
-        ///   Verifies if global variables are prefixed to make it easier to track.
+        ///   Looks up a localized string similar to You must specify open and close parenthesis after &apos;{0}&apos;.
         /// </summary>
-        internal static string Rule0037GlobalVariablePrefixDescription {
+        internal static string Rule0038MissingParenthesisDescription {
             get {
-                return ResourceManager.GetString("Rule0037GlobalVariablePrefixDescription", resourceCulture);
+                return ResourceManager.GetString("Rule0038MissingParenthesisDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Verifies if global variables are prefixed to make it easier to track.
+        ///   Looks up a localized string similar to You must specify open and close parenthesis after &apos;{0}&apos;.
         /// </summary>
-        internal static string Rule0037GlobalVariablePrefixFormat {
+        internal static string Rule0038MissingParenthesisFormat {
             get {
-                return ResourceManager.GetString("Rule0037GlobalVariablePrefixFormat", resourceCulture);
+                return ResourceManager.GetString("Rule0038MissingParenthesisFormat", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Verifies if global variables are prefixed to make it easier to track.
+        ///   Looks up a localized string similar to Function calls should have parenthesis even if they do not have any parameters..
         /// </summary>
-        internal static string Rule0037GlobalVariablePrefixTitle {
+        internal static string Rule0038MissingParenthesisTitle {
             get {
-                return ResourceManager.GetString("Rule0037GlobalVariablePrefixTitle", resourceCulture);
+                return ResourceManager.GetString("Rule0038MissingParenthesisTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temporary records should not trigger the table triggers..
+        /// </summary>
+        internal static string Rule0039TemporaryRecordsDescription {
+            get {
+                return ResourceManager.GetString("Rule0039TemporaryRecordsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temporary records should not trigger the table triggers..
+        /// </summary>
+        internal static string Rule0039TemporaryRecordsFormat {
+            get {
+                return ResourceManager.GetString("Rule0039TemporaryRecordsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temporary records should not trigger the table triggers..
+        /// </summary>
+        internal static string Rule0039TemporaryRecordsTitle {
+            get {
+                return ResourceManager.GetString("Rule0039TemporaryRecordsTitle", resourceCulture);
             }
         }
     }

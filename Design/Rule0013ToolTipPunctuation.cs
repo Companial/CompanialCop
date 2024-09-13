@@ -1,7 +1,9 @@
-﻿using CompanialCopAnalyzer.Design.Helper;
+﻿using CompanialCopAnalyzer;
+using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
+using System;
 using System.Collections.Immutable;
 
 namespace CompanialCopAnalyzer.Design
@@ -11,22 +13,37 @@ namespace CompanialCopAnalyzer.Design
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0013ToolTipPunctuation);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeToolTipPunctuation), SyntaxKind.PageField, SyntaxKind.PageAction);
+        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(this.AnalyzeToolTipPunctuation), SyntaxKind.PageField, SyntaxKind.PageAction, SyntaxKind.Field);
 
         private void AnalyzeToolTipPunctuation(SyntaxNodeAnalysisContext ctx)
         {
             if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
             if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
 
-            PropertySyntax tooltipProperty = ctx.Node.GetProperty("ToolTip");
+            LabelPropertyValueSyntax? toolTipProperty = ctx.Node?.GetProperty("ToolTip")?.Value as LabelPropertyValueSyntax;
 
-            if (tooltipProperty != null)
+            bool showWarning = false;
+
+            if (toolTipProperty != null)
             {
-                string tooltipValue = tooltipProperty.Value.GetText().ToString();
+                string tooltipValue = toolTipProperty.Value.GetText().ToString();
                 if (!tooltipValue.EndsWith(".'") && !tooltipValue.EndsWith(".)'"))
-                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0013ToolTipPunctuation, tooltipProperty.GetLocation()));
+                {
+                    showWarning = true;
+                    if (toolTipProperty.Value.Properties != null)
+                        foreach (IdentifierEqualsLiteralSyntax property in toolTipProperty.Value.Properties.Values)
+                        {
+                            if (property.Identifier.Text.ToLower() == "locked")
+                            {
+                                showWarning = false;
+                                break;
+                            }
+                        }
+                }
+                    
+                if (showWarning)
+                    ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0013ToolTipPunctuation, toolTipProperty.GetLocation()));
             }
-
         }
     }
 }

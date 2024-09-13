@@ -1,5 +1,12 @@
-﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using CompanialCopAnalyzer;
+using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.InternalSyntax;
+using Microsoft.Dynamics.Nav.CodeAnalysis.SymbolReference;
+using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Globalization;
+using System.Linq;
 
 
 #nullable enable

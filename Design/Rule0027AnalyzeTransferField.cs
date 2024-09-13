@@ -3,7 +3,6 @@ using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Utilities;
 using System.Collections.Immutable;
-using System.Net.Security;
 using System.Reflection;
 
 #nullable enable
@@ -16,7 +15,7 @@ namespace CompanialCopAnalyzer.Design
     {
         private List<Tuple<string, string>> tablePairs = new List<Tuple<string, string>>();
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0027AnalyzeTransferField);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0027AnalyzeTransferField);
 
         public override void Initialize(AnalysisContext context)
         {
@@ -748,25 +747,10 @@ namespace CompanialCopAnalyzer.Design
                 if (fieldList == null) return;
 
                 foreach (FieldSyntax field in fieldList.Fields.Where(fld => fld.IsKind(SyntaxKind.Field)))
-                {                    
-                    if (!IsRuleDisabledWithPragma(field) && !FieldIsObsolete(field))
+                {
+                    if (!FieldIsObsolete(field))
                         Fields.Add(new Field((int)field.No.Value, field.Name.Identifier.ValueText.UnquoteIdentifier(), field.Type.ToString(), field.GetLocation(), this, GetFieldClass(field)));
                 }
-            }
-
-            private static bool IsRuleDisabledWithPragma(FieldSyntax field)
-            {
-                IList<DirectiveTriviaSyntax> directives = field.GetDirectives();
-                foreach (PragmaWarningDirectiveTriviaSyntax directive in directives.Where(directive => directive.IsKind(SyntaxKind.PragmaWarningDirectiveTrivia)))
-                {
-                    foreach (IdentifierNameSyntax errorCode in directive.ErrorCodes)
-                    {
-                        if (errorCode.Identifier.Text.Contains(DiagnosticDescriptors.Rule0027AnalyzeTransferField.Id)) 
-                            return true;
-                    }
-                }
-
-                return false;
             }
 
             public void PopulateFields(FieldListSyntax fieldList)
@@ -775,7 +759,7 @@ namespace CompanialCopAnalyzer.Design
 
                 foreach (FieldSyntax field in fieldList.Fields)
                 {
-                    if (!IsRuleDisabledWithPragma(field) && !FieldIsObsolete(field))
+                    if (!FieldIsObsolete(field))
                         Fields.Add(new Field((int)field.No.Value, field.Name.Identifier.ValueText.UnquoteIdentifier(), field.Type.ToString(), field.GetLocation(), this, GetFieldClass(field)));
                 }
             }

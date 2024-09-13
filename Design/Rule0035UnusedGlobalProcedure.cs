@@ -1,8 +1,15 @@
-﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using CompanialCopAnalyzer.Design.Helper;
+using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
+using System;
 using System.Collections.Immutable;
+using System.Collections.Generic;
+using Microsoft.Dynamics.Nav.CodeAnalysis.SymbolReference;
+using Microsoft.Dynamics.Nav.CodeAnalysis.Symbols;
+using System.Diagnostics.Tracing;
 using System.Collections;
+using System.Runtime.Remoting.Contexts;
 
 namespace CompanialCopAnalyzer.Design
 {
@@ -106,7 +113,7 @@ namespace CompanialCopAnalyzer.Design
 
                 MethodDeclarationSyntax? methodDeclarationSyntax = methodSymbol.DeclaringSyntaxReference?.GetSyntax() as MethodDeclarationSyntax;
 
-                if(methodDeclarationSyntax == null)
+                if (methodDeclarationSyntax == null)
                 {
                     return false;
                 }
@@ -117,7 +124,7 @@ namespace CompanialCopAnalyzer.Design
 
                 if (syntaxTrivias.Any(x => x.IsKind(SyntaxKind.LineCommentTrivia))) return false;
 
-                if(methodSymbol.Attributes.Any(x => attributes.Contains(x.Name)))
+                if (methodSymbol.Attributes.Any(x => attributes.Contains(x.Name)))
                 {
                     return false;
                 }

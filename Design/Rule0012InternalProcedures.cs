@@ -1,7 +1,9 @@
-﻿using CompanialCopAnalyzer.Design.Helper;
+﻿using CompanialCopAnalyzer;
+using CompanialCopAnalyzer.Design.Helper;
 using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
+using System;
 using System.Collections.Immutable;
 
 namespace CompanialCopAnalyzer.Design
@@ -23,8 +25,17 @@ namespace CompanialCopAnalyzer.Design
             SyntaxNodeOrToken firstToken = syntax.ProcedureKeyword.GetPreviousToken();
 
             if (firstToken.Kind != SyntaxKind.LocalKeyword && firstToken.Kind != SyntaxKind.InternalKeyword)
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0012InternalProcedures, syntax.ProcedureKeyword.GetLocation()));
+            {
+                var leadingTrivia = syntax.GetLeadingTrivia();
+                var documentationComments = leadingTrivia.Where(x => x.Kind == SyntaxKind.SingleLineDocumentationCommentTrivia);
 
+                if (documentationComments.Any())
+                {
+                    return;
+                }
+
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0012InternalProcedures, syntax.ProcedureKeyword.GetLocation()));
+            }
         }
     }
 }

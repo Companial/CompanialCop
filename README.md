@@ -58,6 +58,7 @@ Be aware though, the `BCCodeCopAnalyzer.dll` needs to be placed in a folder shar
 |CM0024|Empty captions should be locked.|Warning|Yes|
 |CM0025|SetAutoCalcFields must not be invoked on Normal fields.|Warning|Yes|
 |CM0026|Zero (0) Enum Value should be reserved for Empty Value.|Warning|Yes|
+|CM0027|Tables coupled with TransferFields must have matching fields.|Warning|Yes|
 |CM0028|When using get the values provided must match the values required by table key.|Warning|Yes|
 |CM0029|Option data type is not allowed.|Warning|Yes|
 |CM0030|Method parameters are not used.|Warning|Yes|

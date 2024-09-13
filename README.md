@@ -84,6 +84,3 @@ https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/develope
 
 Of course you can also use pragmas for disabling a rule just for a certain place in code.
 https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/directives/devenv-directive-pragma-warning
-
-## Warning
-The released version of CompanialCop is always built against the latest major version of AL. If you try to use the last release with earlier versions of AL compiler, you will receive errors. If you need the analyzer to be compatible with an earlier version, clone the repository, override the references with references from the version you want to build against and build the project. As time goes on, you might have issues that earlier versions of references do not include the symbols that are required in some rules.

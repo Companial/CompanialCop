@@ -1,7 +1,9 @@
 name: Publish Changes from Internal Repo
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch: null
 
 jobs:
   sync_internal_repo:

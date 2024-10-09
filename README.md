@@ -1,18 +1,12 @@
 # BC CodeCop Analyzer
 
-This code analyzer is meant to check AL code for all sorts of coding conventions, the analyzer allows you to write more reliable, secure and reusable code. 
-
-The analyzer is meant to be an extension to the publicly available [BusinessCentral.LinterCop](https://github.com/StefanMaron/BusinessCentral.LinterCop). 
-
-As rules are developed in this repository, discussions for moving the rules to the LinterCop are also opened and if there is enough interests, pull requests will be made to that repository.
+This code analyzer is meant to check AL code for all sorts of problems, the analyzer allows you to write more reliable, secure and reusable code.
 
 ## Contribution
 
-If you have a rule on your mind that would be a good addition, **please start a new [discussion](https://github.com/StefanMaron/BusinessCentral.LinterCop/discussions) on the BusinessCentral.LinterCop repo.** The community is bigger there, and it's our goal to grow that repository instead of maintaining two repositories.
+If you have any rule on mind that would be nice to be covered or you found a bug in existing rule, **please create new Backlog Item or Bug in the [Backlog](https://dev.azure.com/1cfnav/BC%20Research%20and%20Development/_backlogs/backlog/RnD/Features/)** and link it with BC CodeCop Analyzer feature.
 
-If you found a bug in one of the existing rules, open a new issue and try to give as many details how to reproduce the bug.
-
-Pull requests are always welcome, but again, new rules should be added to the BusinessCentral.LinterCop instead.
+Of course you want to create the rule yourself you can also submit a pull request ;)
 
 ## How to use
 

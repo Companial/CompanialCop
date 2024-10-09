@@ -98,19 +98,18 @@ namespace CompanialCopAnalyzer.Design
         }
 
         private bool CaptionIsMissing(ISymbol Symbol, SymbolAnalysisContext context)
-        {
-            try
-            {
-                if (Symbol.ContainingType.Kind == SymbolKind.Table)
-                {
-                    if (((ITableTypeSymbol)Symbol.ContainingType).Id >= 2000000000)
-                        return false;
-                    if (((IFieldSymbol)Symbol).Id >= 2000000000)
-                        return false;
-                }
+        {            
+            if (Symbol.ContainingType.Kind == SymbolKind.Table)  
+            {  
+                if (Symbol.ContainingType is ITableTypeSymbol tableTypeSymbol && tableTypeSymbol.Id >= 2000000000)  
+                {  
+                    return false;  
+                }  
+                if (Symbol is IFieldSymbol fieldSymbol && fieldSymbol.Id >= 2000000000)  
+                {  
+                    return false;  
+                }  
             }
-            catch (NullReferenceException)
-            { }
 
             if (Symbol.GetBooleanPropertyValue(PropertyKind.ShowCaption) != false)
                 if (Symbol.GetProperty(PropertyKind.Caption) == null && Symbol.GetProperty(PropertyKind.CaptionClass) == null)

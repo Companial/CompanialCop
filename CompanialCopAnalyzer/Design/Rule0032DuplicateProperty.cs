@@ -29,7 +29,7 @@ namespace CompanialCopAnalyzer.Design
                 return;
             }
 
-            IPropertySymbol? propertySymbol = (context.Symbol as IPropertySymbol);
+            IPropertySymbol? propertySymbol = context.Symbol as IPropertySymbol;
 
             if(propertySymbol == null || !SupportedPropertyKinds.Contains(propertySymbol.PropertyKind))
             {

@@ -19,7 +19,7 @@ jobs:
         uses: release-drafter/release-drafter@v6
         if: github.event_name != 'pull_request'
         with:
-          prerelease: ${{ github.ref != 'refs/heads/master' }}
+          prerelease: ${{ github.ref != 'refs/heads/main' }}
           commitish: ${{ github.ref }}
           disable-autolabeler: true
         env:

@@ -68,4 +68,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh workflow run NewReleaseAL.yml --ref master -f update-release=true
+          gh workflow run NewReleaseAL.yml --ref main -f update-release=true

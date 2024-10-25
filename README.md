@@ -8,6 +8,10 @@ If you have any rule on mind that would be nice to be covered or you found a bug
 
 Of course you want to create the rule yourself you can also submit a pull request ;)
 
+To compile the project, run the LoadALLanguage.ps1 script in the CompanialCop project directory. This will download the latest AL Language extension and extract the necessary files to compile the project. After the script has finished, you can load the the project (in Visual Studio or Visual Studio Code) and compile it.
+
+Some of the dependencies come from the official nuget source. If you're getting an error for "Unable to find package.." then you're likely missing the official nuget source. Here's a help link on how to add it to Visual Studio: https://stackoverflow.com/questions/69045231/nuget-package-sources-missing
+
 ## How to use
 
 ### Manual Compile

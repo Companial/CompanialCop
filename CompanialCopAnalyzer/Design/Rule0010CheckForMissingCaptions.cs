@@ -99,7 +99,7 @@ namespace CompanialCopAnalyzer.Design
 
         private bool CaptionIsMissing(ISymbol Symbol, SymbolAnalysisContext context)
         {            
-            if (Symbol.ContainingType.Kind == SymbolKind.Table)  
+            if (Symbol.ContainingType?.Kind == SymbolKind.Table)  
             {  
                 if (Symbol.ContainingType is ITableTypeSymbol tableTypeSymbol && tableTypeSymbol.Id >= 2000000000)  
                 {  

@@ -50,7 +50,7 @@ namespace CompanialCopAnalyzer.Design
 
                     foreach(var method in globalMethods)
                     {
-                        if (IsUnused((IMethodSymbol) method))
+                        if (IsUnused(applicationObject, (IMethodSymbol) method))
                         {
                             unusedMethods.Add(method);
                         }
@@ -84,7 +84,7 @@ namespace CompanialCopAnalyzer.Design
                 }
             }
 
-            private bool IsUnused(IMethodSymbol methodSymbol)
+            private bool IsUnused(IApplicationObjectTypeSymbol applicationObject, IMethodSymbol methodSymbol)
             {
                 string[] attributes =
                 {
@@ -122,7 +122,12 @@ namespace CompanialCopAnalyzer.Design
                     return false;
                 }
 
-                return true;
+                return IsUsedByInterface((ICodeunitTypeSymbol)applicationObject, methodSymbol);
+            }
+            private bool IsUsedByInterface(ICodeunitTypeSymbol applicationObject, IMethodSymbol methodSymbol)
+            {
+                IEnumerable<ImmutableArray<ISymbol>> members = applicationObject.ImplementedInterfaces.Select(x => x.GetMembers()).ToList();
+                return !members.Any(x => x.Any(z => ((IMethodSymbol)z).Id == methodSymbol.Id));
             }
 
             public void CompilationEndAction(CompilationAnalysisContext context)

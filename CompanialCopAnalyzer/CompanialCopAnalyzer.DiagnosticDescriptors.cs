@@ -260,6 +260,15 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0023MandatoryAffixesDescription
         );
+        public static readonly DiagnosticDescriptor Rule0023MissingConfiguration = new (
+            CompanialCopAnalyzer.AnalyzerPrefix + "0023",
+            CompanialCopAnalyzer.Rule0023MissingConfigurationTitle,
+            CompanialCopAnalyzer.Rule0023MissingConfigurationFormat,
+            "Naming",
+            DiagnosticSeverity.Error,
+            true,
+            CompanialCopAnalyzer.Rule0023MissingConfigurationDescription
+        );
         public static readonly DiagnosticDescriptor Rule0024EmptyCaptionLocked = new DiagnosticDescriptor(
             CompanialCopAnalyzer.AnalyzerPrefix + "0024",
             CompanialCopAnalyzer.Rule0024EmptyCaptionLockedTitle,

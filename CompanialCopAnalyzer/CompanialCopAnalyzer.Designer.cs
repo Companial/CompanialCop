@@ -68,7 +68,8 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("AnalyzerPrefix", resourceCulture);
             }
         }
-        
+
+        #region Rule0001KeyNaming
         /// <summary>
         ///   Looks up a localized string similar to Name for primary key must be PK..
         /// </summary>
@@ -95,7 +96,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0001KeyNamingTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0002LockedVariableLables
         /// <summary>
         ///   Looks up a localized string similar to Variable with suffix Tok must be locked..
         /// </summary>
@@ -122,7 +125,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0002LockedVariableLablesTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0002LockedVariableTokLables
         /// <summary>
         ///   Looks up a localized string similar to Locked variables must have suffix Tok..
         /// </summary>
@@ -149,7 +154,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0002LockedVariableTokLablesTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0003MethodsNameShouldNotContainWhiteSpace
         /// <summary>
         ///   Looks up a localized string similar to Procedure name must not contain whitespaces..
         /// </summary>
@@ -176,7 +183,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0003MethodsNameShouldNotContainWhiteSpaceTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0004First19TableFieldsIDReservedToPrimaryKey
         /// <summary>
         ///   Looks up a localized string similar to First 19 field IDs are reserved for primary key fields..
         /// </summary>
@@ -203,7 +212,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0004First19TableFieldsIDReservedToPrimaryKeyTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0005EnumExtensionsValuesNumberedInDedicatedRange
         /// <summary>
         ///   Looks up a localized string similar to The enum identifier must be within the allowed range..
         /// </summary>
@@ -230,7 +241,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0005EnumExtensionsValuesNumberedInDedicatedRangeTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0006HardcodedIpAddress
         /// <summary>
         ///   Looks up a localized string similar to IP address must not be present in any part of the source code..
         /// </summary>
@@ -257,7 +270,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0006HardcodedIpAddressTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0007FlowFieldsShouldNotBeEditable
         /// <summary>
         ///   Looks up a localized string similar to FlowFields must not be editable..
         /// </summary>
@@ -284,7 +299,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0007FlowFieldsShouldNotBeEditableTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0008CommitMustBeExplainedByComment
         /// <summary>
         ///   Looks up a localized string similar to Commit() must have a comment to justify its existence. Either a leading or a trailing comment..
         /// </summary>
@@ -311,7 +328,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0008CommitMustBeExplainedByCommentTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0009DoNotUseObjectIdInSystemFunctions
         /// <summary>
         ///   Looks up a localized string similar to Using hardcoded IDs in functions is not allowed..
         /// </summary>
@@ -338,7 +357,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0009DoNotUseObjectIdInSystemFunctionsTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0010CheckForMissingCaptions
         /// <summary>
         ///   Looks up a localized string similar to Caption is missing.
         /// </summary>
@@ -365,7 +386,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0010CheckForMissingCaptionsTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0011SemicolonAfterProcedureDeclaration
         /// <summary>
         ///   Looks up a localized string similar to Procedure must not end with semicolon..
         /// </summary>
@@ -392,7 +415,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0011SemicolonAfterProcedureDeclarationTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0012InternalProcedures
         /// <summary>
         ///   Looks up a localized string similar to Procedure must be either local or internal. Public procedures must be documented..
         /// </summary>
@@ -419,7 +444,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0012InternalProceduresTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0013ToolTipPunctuation
         /// <summary>
         ///   Looks up a localized string similar to ToolTip must end with a dot..
         /// </summary>
@@ -446,7 +473,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0013ToolTipPunctuationTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0014GlobalVarTriggerAndMethodPosition
         /// <summary>
         ///   Looks up a localized string similar to Position for global variables, triggers and methods..
         /// </summary>
@@ -473,7 +502,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0014GlobalVarTriggerAndMethodPositionTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0015LabelPunctuation
         /// <summary>
         ///   Looks up a localized string similar to Msg and Err labels should end with a dot, Qst should end with a question mark..
         /// </summary>
@@ -500,7 +531,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0015LabelPunctuationTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0016InternalMethodsMustHaveExplicitParameters
         /// <summary>
         ///   Looks up a localized string similar to Internal Methods must be invoked with explicit parameters..
         /// </summary>
@@ -527,7 +560,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0016InternalMethodsMustHaveExplicitParametersTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0017EmptyObjectSections
         /// <summary>
         ///   Looks up a localized string similar to Object should not have empty sections..
         /// </summary>
@@ -554,7 +589,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0017EmptyObjectSectionsTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0018ObjectAccessProperty
         /// <summary>
         ///   Looks up a localized string similar to Objects need to have the Access properties defined..
         /// </summary>
@@ -581,7 +618,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0018ObjectAccessPropertyTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0018ObjectExtensibleProperty
         /// <summary>
         ///   Looks up a localized string similar to Objects need to have the Extensible properties defined..
         /// </summary>
@@ -608,7 +647,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0018ObjectExtensiblePropertyTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0019LocalVariableNameShouldNotContainWhiteSpace
         /// <summary>
         ///   Looks up a localized string similar to Local variable name should not contain whitespace.
         /// </summary>
@@ -635,7 +676,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0019LocalVariableNameShouldNotContainWhiteSpaceTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0019LocalVariableNameShouldNotContainWildcard
         /// <summary>
         ///   Looks up a localized string similar to Local variable name should not contain wildcard symbols such as % or &amp;.
         /// </summary>
@@ -662,7 +705,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0019LocalVariableNameShouldNotContainWildcardSymbolsTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0020GlobalVariableNameShouldNotContainWhiteSpace
         /// <summary>
         ///   Looks up a localized string similar to Global variable name should not contain whitespace.
         /// </summary>
@@ -689,7 +734,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0020GlobalVariableNameShouldNotContainWhiteSpaceTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0020GlobalVariableNameShouldNotContainWildcardSymbols
         /// <summary>
         ///   Looks up a localized string similar to Global variable name should not contain wildcard symbols such as % or &amp;.
         /// </summary>
@@ -716,7 +763,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0020GlobalVariableNameShouldNotContainWildcardSymbolsTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0021ParameterNameShouldNotContainWhiteSpace
         /// <summary>
         ///   Looks up a localized string similar to Parameter with name &apos;{0}&apos; must not contain whitespaces..
         /// </summary>
@@ -743,7 +792,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0021ParameterNameShouldNotContainWhiteSpaceTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0021ParameterNameShouldNotContainWildcard
         /// <summary>
         ///   Looks up a localized string similar to Parameter name should not contain wildcard symbols such as % or &amp;.
         /// </summary>
@@ -770,7 +821,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0021ParameterNameShouldNotContainWildcardSymbolsTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0022GridLayoutMustNotBeRows
         /// <summary>
         ///   Looks up a localized string similar to GridLayout property must not have value Rows.
         /// </summary>
@@ -797,7 +850,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0022GridLayoutMustNotBeRowsTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0023MandatoryAffixes
         /// <summary>
         ///   Looks up a localized string similar to The identifier must have at least one of the mandatory affixes..
         /// </summary>
@@ -824,7 +879,42 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0023MandatoryAffixesTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0023MissingConfiguration
+        /// <summary>
+        ///   Looks up a localized string similar to The solutions is missing 'AppSourceCop.json' configuration..
+        /// </summary>
+        internal static string Rule0023MissingConfigurationTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0023MissingConfigurationTitle", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to The solutions is missing 'AppSourceCop.json' configuration..
+        /// </summary>
+        internal static string Rule0023MissingConfigurationFormat
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0023MissingConfigurationFormat", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to The solutions is missing 'AppSourceCop.json' configuration..
+        /// </summary>
+        internal static string Rule0023MissingConfigurationDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0023MissingConfigurationDescription", resourceCulture);
+            }
+        }
+        #endregion
+
+        # region Rule0024EmptyCaptionLocked
         /// <summary>
         ///   Looks up a localized string similar to Empty captions should be locked..
         /// </summary>
@@ -851,7 +941,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0024EmptyCaptionLockedTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0025CalcFieldsOnNormalFields
         /// <summary>
         ///   Looks up a localized string similar to SetAutoCalcFields must not be invoked on Normal fields..
         /// </summary>
@@ -878,7 +970,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0025CalcFieldsOnNormalFieldsTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0026ZeroEnumValueReservedForEmpty
         /// <summary>
         ///   Looks up a localized string similar to Zero (0) Enum value should be reserved for Empty Value..
         /// </summary>
@@ -905,7 +999,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0026ZeroEnumValueReservedForEmptyTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0027AnalyzeTable
         /// <summary>
         ///   Looks up a localized string similar to Conflicting ID, Name or Type with Table &apos;{0}&apos;.
         /// </summary>
@@ -923,7 +1019,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0027AnalyzeTransferFieldText", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0028_1IncorrectArgumentCount
         /// <summary>
         ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call arguments..
         /// </summary>
@@ -950,7 +1048,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0028_1IncorrectArgumentCountTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0028_2InvalidArgumentTypeInGetCall
         /// <summary>
         ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call argument types..
         /// </summary>
@@ -977,7 +1077,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0028_2InvalidArgumentTypeInGetCallTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0028_3ArgumentLengthExceedsMaxLength
         /// <summary>
         ///   Looks up a localized string similar to Analyze &apos;Get&apos; function call argument lengths..
         /// </summary>
@@ -1004,7 +1106,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0028_3ArgumentLengthExceedsMaxLengthTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0029OptionDataTypeNotAllowed
         /// <summary>
         ///   Looks up a localized string similar to This rule throws a warning when an Option data type is used, as it is not allowed..
         /// </summary>
@@ -1031,7 +1135,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0029OptionDataTypeNotAllowedTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        # region Rule0030UnusedMethodParameters
         /// <summary>
         ///   Looks up a localized string similar to Unused method parameters can clutter code and make it harder to understand..
         /// </summary>
@@ -1058,7 +1164,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0030UnusedMethodParametersTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0031ObjectIsUnused
         /// <summary>
         ///   Looks up a localized string similar to Unused objects can lead to unnecessary clutter in the codebase..
         /// </summary>
@@ -1085,7 +1193,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0031ObjectIsUnusedTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0032DuplicateProperty
         /// <summary>
         ///   Looks up a localized string similar to Duplicate properties with the same value can lead to redundancy and confusion..
         /// </summary>
@@ -1112,7 +1222,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0032DuplicatePropertyTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0033RedundantEditableProperty
         /// <summary>
         ///   Looks up a localized string similar to Redundant editable properties can clutter code and lead to confusion..
         /// </summary>
@@ -1139,7 +1251,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0033RedundantEditablePropertyTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0034TableRelationTooLong
         /// <summary>
         ///   Looks up a localized string similar to The value being assigned is a bigger value than the value that is being assigned to. .
         /// </summary>
@@ -1166,7 +1280,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0034TableRelationTooLongTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0035UnusedGlobalProcedure
         /// <summary>
         ///   Looks up a localized string similar to Unused global procedures can contribute to unnecessary code clutter..
         /// </summary>
@@ -1193,7 +1309,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0035UnusedGlobalProcedureTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0036LocalEventPublisher
         /// <summary>
         ///   Looks up a localized string similar to Event Publishers should be local to allow for future parameter extension
         /// </summary>
@@ -1220,7 +1338,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0036LocalEventPublisherTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0038MissingParenthesis
         /// <summary>
         ///   Looks up a localized string similar to You must specify open and close parenthesis after &apos;{0}&apos;.
         /// </summary>
@@ -1247,7 +1367,9 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0038MissingParenthesisTitle", resourceCulture);
             }
         }
-        
+        #endregion
+
+        #region Rule0039TemporaryRecords
         /// <summary>
         ///   Looks up a localized string similar to Temporary records should not trigger the table triggers..
         /// </summary>
@@ -1274,5 +1396,6 @@ namespace CompanialCopAnalyzer {
                 return ResourceManager.GetString("Rule0039TemporaryRecordsTitle", resourceCulture);
             }
         }
+        #endregion
     }
 }

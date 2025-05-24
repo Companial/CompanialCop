@@ -372,6 +372,15 @@
   <data name="Rule0023MandatoryAffixesTitle" xml:space="preserve">
     <value>The identifier must have at least one of the mandatory affixes.</value>
   </data>
+  <data name="Rule0023MissingConfigurationDescription" xml:space="preserve">
+    <value>Solution is missing "AppSourceCop.json" configuration file</value>
+  </data>
+  <data name="Rule0023MissingConfigurationFormat" xml:space="preserve">
+    <value>Solution is missing "AppSourceCop.json" configuration file</value>
+  </data>
+  <data name="Rule0023MissingConfigurationTitle" xml:space="preserve">
+    <value>Solution is missing "AppSourceCop.json" configuration file</value>
+  </data>
   <data name="Rule0024EmptyCaptionLockedDescription" xml:space="preserve">
     <value>Empty captions should be locked.</value>
   </data>

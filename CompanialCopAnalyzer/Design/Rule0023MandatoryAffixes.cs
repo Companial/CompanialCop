@@ -17,24 +17,29 @@ namespace CompanialCopAnalyzer.Design
         private static readonly ImmutableArray<SymbolKind> ObjectSymbolKindsToAnalyzeForWarnings = ImmutableArray.Create<SymbolKind>(SymbolKind.ReportExtension);
         private static readonly ImmutableArray<SymbolKind> SymbolKindsThatShouldReportWarning = ImmutableArray.Create<SymbolKind>(SymbolKind.ReportDataItem, SymbolKind.ReportColumn, SymbolKind.ReportLabel);
         private static readonly Dictionary<SymbolKind, char> UnsupportedNameCharacterPerSymbolKind = new Dictionary<SymbolKind, char>()
-    {
-      {
-        SymbolKind.ReportColumn,
-        ' '
-      }
-    };
+        {
+          { SymbolKind.ReportColumn, ' ' }
+        };
         private static readonly ImmutableArray<SymbolKind> TopMostObjectSymbolKinds = RuleIdentifiersMustHaveValidAffixes.ObjectSymbolKindsToAnalyze.Where<SymbolKind>((Func<SymbolKind, bool>)(x => !x.IsExtensionOrCustomizationObject())).ToImmutableArray<SymbolKind>();
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0023MandatoryAffixes);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0023MandatoryAffixes, DiagnosticDescriptors.Rule0023MissingConfiguration);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterCompilationStartAction(new Action<CompilationStartAnalysisContext>(this.CompilationStart));
+        public override void Initialize(AnalysisContext context) 
+            => context.RegisterCompilationStartAction(new Action<CompilationStartAnalysisContext>(this.CompilationStart));
 
         private void CompilationStart(CompilationStartAnalysisContext context)
         {
-            List<string> affixes = new List<string>();
-            affixes.AddRange(AppSourceCopConfigurationProvider.GetMandatoryNameAffixes(AppSourceCopConfigurationProvider.GetConfiguration(context.Compilation)));
-            affixes.AddRange(AppSourceCopConfigurationProvider.GetMandatoryNameAffixes(AppSourceCopConfigurationProvider.GetAppSourceCopConfiguration(context.Compilation)));
-            
+            AppSourceCopConfiguration configuration = AppSourceCopConfigurationProvider.GetConfiguration(context.Compilation);
+            AppSourceCopConfiguration appSourceCopConfiguration = AppSourceCopConfigurationProvider.GetAppSourceCopConfiguration(context.Compilation);
+            if (configuration == null && appSourceCopConfiguration == null)
+            {
+                context.RegisterCompilationEndAction(new Action<CompilationAnalysisContext>(this.ReportConfigurationMissing));
+                return;
+            }
+            List<string> affixes = new ();
+            affixes.AddRange(AppSourceCopConfigurationProvider.GetMandatoryNameAffixes(configuration));
+            affixes.AddRange(AppSourceCopConfigurationProvider.GetMandatoryNameAffixes(appSourceCopConfiguration));
+
             this.affixes = affixes.Distinct().ToArray();
             this.affixesDisplayString = string.Join(", ", this.affixes);
             if (this.affixes.Length == 0)
@@ -43,6 +48,11 @@ namespace CompanialCopAnalyzer.Design
                 context.RegisterSymbolAction(new Action<SymbolAnalysisContext>(this.AnalyzeObjectSymbolsInModule), RuleIdentifiersMustHaveValidAffixes.ObjectSymbolKindsToAnalyze);
         }
 
+        private void ReportConfigurationMissing(CompilationAnalysisContext context)
+        {
+            Location propertyLocation = AppSourceCopConfigurationProvider.GetAppSourceCopConfigurationPropertyLocation(context.Compilation, "MandatoryAffixes");
+            context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0023MissingConfiguration, propertyLocation));
+        }
         private void ReportMissingAffixes(CompilationAnalysisContext context)
         {
             Location propertyLocation = AppSourceCopConfigurationProvider.GetAppSourceCopConfigurationPropertyLocation(context.Compilation, "MandatoryAffixes");

@@ -15,7 +15,8 @@ namespace CompanialCopAnalyzer.Design
         {
             context.RegisterCodeBlockStartAction(delegate (CodeBlockStartAnalysisContext startCodeBlockContext)
             {
-                if (startCodeBlockContext.OwningSymbol.Kind == SymbolKind.Method)
+                if (startCodeBlockContext.OwningSymbol.Kind == SymbolKind.Method 
+                && startCodeBlockContext.OwningSymbol.ContainingType.NavTypeKind != NavTypeKind.Interface)
                 {
                     IMethodSymbol methodSymbol = (IMethodSymbol)startCodeBlockContext.OwningSymbol;
                     if (methodSymbol.GetContainingObjectTypeSymbol() is ICodeunitTypeSymbol codeunitTypeSymbol)

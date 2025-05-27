@@ -15,31 +15,16 @@ namespace CompanialCopAnalyzer.Design
 
         private void AnalyzeToolTipPunctuation(SyntaxNodeAnalysisContext ctx)
         {
-            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol)) return;
-            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol())) return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol))
+                return;
+            if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.ContainingSymbol.GetContainingObjectTypeSymbol()))
+                return;
 
-            LabelPropertyValueSyntax? toolTipProperty = ctx.Node?.GetProperty("ToolTip")?.Value as LabelPropertyValueSyntax;
-
-            bool showWarning = false;
-
-            if (toolTipProperty != null)
+            if (ctx.Node?.GetProperty("ToolTip")?.Value is LabelPropertyValueSyntax toolTipProperty)
             {
                 string tooltipValue = toolTipProperty.Value.GetText().ToString();
+
                 if (!tooltipValue.EndsWith(".'") && !tooltipValue.EndsWith(".)'"))
-                {
-                    showWarning = true;
-                    if (toolTipProperty.Value.Properties != null)
-                        foreach (IdentifierEqualsLiteralSyntax property in toolTipProperty.Value.Properties.Values)
-                        {
-                            if (property.Identifier.Text.ToLower() == "locked")
-                            {
-                                showWarning = false;
-                                break;
-                            }
-                        }
-                }
-                    
-                if (showWarning)
                     ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0013ToolTipPunctuation, toolTipProperty.GetLocation()));
             }
         }

@@ -9,7 +9,8 @@ namespace CompanialCopAnalyzer.Design
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0034TableRelationTooLong);
 
-        public override void Initialize(AnalysisContext context) => context.RegisterSyntaxNodeAction(AnalyzeSyntaxNode, SyntaxKind.Field);
+        public override void Initialize(AnalysisContext context) 
+            => context.RegisterSyntaxNodeAction(AnalyzeSyntaxNode, SyntaxKind.Field);
 
         public void AnalyzeSyntaxNode(SyntaxNodeAnalysisContext context)
         {
@@ -29,16 +30,26 @@ namespace CompanialCopAnalyzer.Design
 
             TableRelationPropertyValueSyntax? tableRelationValueSyntax = tableRelation.GetPropertyValueSyntax<TableRelationPropertyValueSyntax>();
 
+            IFieldSymbol? fieldSymbol;
             while (tableRelationValueSyntax != null)
             {
-                QualifiedNameSyntax? relatedTableField = tableRelationValueSyntax.RelatedTableField as QualifiedNameSyntax;
+                string tableRelationsTargetFieldName;
 
-                if (relatedTableField == null)
+                if (tableRelationValueSyntax.RelatedTableField is QualifiedNameSyntax relatedTableField)
+                {
+                    fieldSymbol = GetRelatedFieldSymbol(relatedTableField.Left as IdentifierNameSyntax, relatedTableField.Right as IdentifierNameSyntax, context.SemanticModel.Compilation);
+                    tableRelationsTargetFieldName = relatedTableField.ToString();
+                }
+                // for a case where table field is not mentioned, use table's primary key
+                else if (tableRelationValueSyntax.RelatedTableField is IdentifierNameSyntax identifierTableField)
+                {
+                    fieldSymbol = GetRelatedFieldSymbol(identifierTableField, null, context.SemanticModel.Compilation);
+                    tableRelationsTargetFieldName = $"{identifierTableField.GetText()} {fieldSymbol}";
+                }
+                else
                 {
                     goto proceed;
                 }
-
-                IFieldSymbol? fieldSymbol = GetRelatedFieldSymbol(relatedTableField.Left as IdentifierNameSyntax, relatedTableField.Right as IdentifierNameSyntax, context.SemanticModel.Compilation);
 
                 if (fieldSymbol == null || !fieldSymbol.HasLength || !currentFieldSymbol.HasLength)
                 {
@@ -47,7 +58,14 @@ namespace CompanialCopAnalyzer.Design
 
                 if (currentFieldSymbol.Length < fieldSymbol.Length)
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0034TableRelationTooLong, ((FieldSyntax)context.Node).Type.GetLocation(), fieldSymbol.Length, relatedTableField.ToString(), currentFieldSymbol.Length, currentFieldSymbol.Name));
+                    context.ReportDiagnostic(Diagnostic.Create(
+                        DiagnosticDescriptors.Rule0034TableRelationTooLong, 
+                        ((FieldSyntax)context.Node).Type.GetLocation(), 
+                        fieldSymbol.Length,
+                        tableRelationsTargetFieldName, 
+                        currentFieldSymbol.Length, 
+                        currentFieldSymbol.Name
+                    ));
                 }
 
             proceed:
@@ -57,13 +75,12 @@ namespace CompanialCopAnalyzer.Design
 
         private IFieldSymbol? GetRelatedFieldSymbol(IdentifierNameSyntax? table, IdentifierNameSyntax? field, Compilation compilation)
         {
-            if (table == null || field == null)
+            if (table == null)
             {
                 return null;
             }
 
             string applicationObjectIdentifier = table.GetIdentifierOrLiteralValue() ?? string.Empty;
-            string fieldName = field.GetIdentifierOrLiteralValue() ?? string.Empty;
 
             IEnumerable<ISymbol> applicationObjects = compilation.GetApplicationObjectTypeSymbolsByNameAcrossModules(SymbolKind.Table, applicationObjectIdentifier);
             ITableTypeSymbol? tableTypeSymbol = null;
@@ -72,9 +89,18 @@ namespace CompanialCopAnalyzer.Design
                 tableTypeSymbol = applicationObjects.FirstOrDefault() as ITableTypeSymbol;
             }
 
-            IFieldSymbol? fieldSymbol = tableTypeSymbol?.Fields.Where(x => x.Name == fieldName).FirstOrDefault();
+            IFieldSymbol? fieldSymbol;
+            if (field != null)
+            {
+                string fieldName = field.GetIdentifierOrLiteralValue() ?? string.Empty;
+                fieldSymbol = tableTypeSymbol?.Fields.Where(x => x.Name == fieldName).FirstOrDefault();
+            }
+            else
+            {
+                fieldSymbol = tableTypeSymbol.PrimaryKey.Fields.FirstOrDefault();
+            }
 
-            if(fieldSymbol != null)
+            if (fieldSymbol != null)
             {
                 return fieldSymbol;
             }

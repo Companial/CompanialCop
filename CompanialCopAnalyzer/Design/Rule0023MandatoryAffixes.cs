@@ -11,18 +11,16 @@ namespace CompanialCopAnalyzer.Design
     [DiagnosticAnalyzer]
     public class RuleIdentifiersMustHaveValidAffixes : DiagnosticAnalyzer
     {
-        private string[] affixes;
-        private string affixesDisplayString;
-        private static readonly ImmutableArray<SymbolKind> ObjectSymbolKindsToAnalyze = SymbolKindExtensions.AllRootObjectSymbolKinds.Where<SymbolKind>((Func<SymbolKind, bool>)(x => x != SymbolKind.DotNetPackage)).ToImmutableArray<SymbolKind>();
-        private static readonly ImmutableArray<SymbolKind> ObjectSymbolKindsToAnalyzeForWarnings = ImmutableArray.Create<SymbolKind>(SymbolKind.ReportExtension);
-        private static readonly ImmutableArray<SymbolKind> SymbolKindsThatShouldReportWarning = ImmutableArray.Create<SymbolKind>(SymbolKind.ReportDataItem, SymbolKind.ReportColumn, SymbolKind.ReportLabel);
-        private static readonly Dictionary<SymbolKind, char> UnsupportedNameCharacterPerSymbolKind = new Dictionary<SymbolKind, char>()
-        {
-          { SymbolKind.ReportColumn, ' ' }
-        };
-        private static readonly ImmutableArray<SymbolKind> TopMostObjectSymbolKinds = RuleIdentifiersMustHaveValidAffixes.ObjectSymbolKindsToAnalyze.Where<SymbolKind>((Func<SymbolKind, bool>)(x => !x.IsExtensionOrCustomizationObject())).ToImmutableArray<SymbolKind>();
+        private string[] _affixes;
+        private string _affixesDisplayString;
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create<DiagnosticDescriptor>(DiagnosticDescriptors.Rule0023MandatoryAffixes, DiagnosticDescriptors.Rule0023MissingConfiguration);
+        private static readonly ImmutableArray<SymbolKind> ObjectSymbolKindsToAnalyze = SymbolKindExtensions.AllRootObjectSymbolKinds.Where(x => x != SymbolKind.DotNetPackage).ToImmutableArray();
+        private static readonly ImmutableArray<SymbolKind> ObjectSymbolKindsToAnalyzeForWarnings = ImmutableArray.Create(SymbolKind.ReportExtension);
+        private static readonly ImmutableArray<SymbolKind> SymbolKindsThatShouldReportWarning = ImmutableArray.Create(SymbolKind.ReportDataItem, SymbolKind.ReportColumn, SymbolKind.ReportLabel);
+        private static readonly Dictionary<SymbolKind, char> UnsupportedNameCharacterPerSymbolKind = new(){ { SymbolKind.ReportColumn, ' ' } };
+        private static readonly ImmutableArray<SymbolKind> TopMostObjectSymbolKinds = ObjectSymbolKindsToAnalyze.Where(x => !x.IsExtensionOrCustomizationObject()).ToImmutableArray();
+
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0023MandatoryAffixes, DiagnosticDescriptors.Rule0023MissingConfiguration);
 
         public override void Initialize(AnalysisContext context) 
             => context.RegisterCompilationStartAction(new Action<CompilationStartAnalysisContext>(this.CompilationStart));
@@ -33,19 +31,19 @@ namespace CompanialCopAnalyzer.Design
             AppSourceCopConfiguration appSourceCopConfiguration = AppSourceCopConfigurationProvider.GetAppSourceCopConfiguration(context.Compilation);
             if (configuration == null && appSourceCopConfiguration == null)
             {
-                context.RegisterCompilationEndAction(new Action<CompilationAnalysisContext>(this.ReportConfigurationMissing));
+                context.RegisterCompilationEndAction(new Action<CompilationAnalysisContext>(ReportConfigurationMissing));
                 return;
             }
-            List<string> affixes = new ();
+            List<string> affixes = new();
             affixes.AddRange(AppSourceCopConfigurationProvider.GetMandatoryNameAffixes(configuration));
             affixes.AddRange(AppSourceCopConfigurationProvider.GetMandatoryNameAffixes(appSourceCopConfiguration));
 
-            this.affixes = affixes.Distinct().ToArray();
-            this.affixesDisplayString = string.Join(", ", this.affixes);
-            if (this.affixes.Length == 0)
-                context.RegisterCompilationEndAction(new Action<CompilationAnalysisContext>(this.ReportMissingAffixes));
+            _affixes = affixes.Distinct().ToArray();
+            _affixesDisplayString = string.Join(", ", _affixes);
+            if (_affixes.Length == 0)
+                context.RegisterCompilationEndAction(new Action<CompilationAnalysisContext>(ReportMissingAffixes));
             else
-                context.RegisterSymbolAction(new Action<SymbolAnalysisContext>(this.AnalyzeObjectSymbolsInModule), RuleIdentifiersMustHaveValidAffixes.ObjectSymbolKindsToAnalyze);
+                context.RegisterSymbolAction(new Action<SymbolAnalysisContext>(AnalyzeObjectSymbolsInModule), ObjectSymbolKindsToAnalyze);
         }
 
         private void ReportConfigurationMissing(CompilationAnalysisContext context)
@@ -63,56 +61,43 @@ namespace CompanialCopAnalyzer.Design
         {
             if (UpgradeVerificationHelper.IsObsoleteOrDeprecated(ctx.Symbol))
                 return;
-            this.AnalyzeObjectSymbols(ctx.Symbol, ctx.Symbol, ctx);
+            AnalyzeObjectSymbols(ctx.Symbol, ctx.Symbol, ctx);
         }
 
-        private void AnalyzeObjectSymbols(
-          ISymbol symbol,
-          ISymbol topMostSymbol,
-          SymbolAnalysisContext ctx)
+        private void AnalyzeObjectSymbols(ISymbol symbol, ISymbol topMostSymbol, SymbolAnalysisContext ctx)
         {
-            if (RuleIdentifiersMustHaveValidAffixes.ShouldSymbolBePrefixed(symbol, topMostSymbol))
-                this.VerifyAffixesOfSymbol(symbol, ctx);
-            if (!RuleIdentifiersMustHaveValidAffixes.IsSymbolTraversable(symbol))
+            if (ShouldSymbolBePrefixed(symbol, topMostSymbol))
+                VerifyAffixesOfSymbol(symbol, ctx);
+            if (!IsSymbolTraversable(symbol))
                 return;
             foreach (ISymbol member in ((IContainerSymbol)symbol).GetMembers())
-                this.AnalyzeObjectSymbols(member, topMostSymbol, ctx);
+                AnalyzeObjectSymbols(member, topMostSymbol, ctx);
         }
 
         private static bool IsSymbolTraversable(ISymbol symbol)
         {
-            if (!(symbol is IContainerSymbol))
+            if (symbol is not IContainerSymbol)
                 return false;
-            return symbol.Kind == SymbolKind.Change ? ((IChangeSymbol)symbol).ChangeKind.IsAdd() : !RuleIdentifiersMustHaveValidAffixes.TopMostObjectSymbolKinds.Contains(symbol.Kind);
+            return symbol.Kind == SymbolKind.Change ? 
+                ((IChangeSymbol)symbol).ChangeKind.IsAdd() 
+                : !TopMostObjectSymbolKinds.Contains(symbol.Kind);
         }
 
         private static bool ShouldSymbolBePrefixed(ISymbol symbol, ISymbol topMostSymbol)
         {
             if (symbol.IsSynthesized)
                 return false;
-            switch (symbol.Kind)
+            return symbol.Kind switch
             {
-                case SymbolKind.Method:
-                    return ProcedureVerificationHelper.IsMethodExposedInTheCloud((IMethodSymbol)symbol);
-                case SymbolKind.Field:
-                    return true;
-                case SymbolKind.Key:
-                    return RuleIdentifiersMustHaveValidAffixes.ShouldKeyBePrefixed((IKeySymbol)symbol, topMostSymbol);
-                case SymbolKind.Control:
-                    return ((IControlSymbol)symbol).ControlKind != 0;
-                case SymbolKind.Action:
-                    return ((IActionSymbol)symbol).ActionKind != 0;
-                case SymbolKind.EnumValue:
-                    return true;
-                case SymbolKind.ReportDataItem:
-                case SymbolKind.ReportColumn:
-                case SymbolKind.ReportLabel:
-                    return true;
-                case SymbolKind.ReportLayout:
-                    return true;
-                default:
-                    return RuleIdentifiersMustHaveValidAffixes.ObjectSymbolKindsToAnalyze.Contains(symbol.Kind);
-            }
+                SymbolKind.Method => ProcedureVerificationHelper.IsMethodExposedInTheCloud((IMethodSymbol)symbol),
+                SymbolKind.Field => true,
+                SymbolKind.Key => ShouldKeyBePrefixed((IKeySymbol)symbol, topMostSymbol),
+                SymbolKind.Control => ((IControlSymbol)symbol).ControlKind != 0,
+                SymbolKind.Action => ((IActionSymbol)symbol).ActionKind != 0,
+                SymbolKind.EnumValue or SymbolKind.ReportDataItem or SymbolKind.ReportColumn or SymbolKind.ReportLabel or SymbolKind.ReportLayout => true,
+                SymbolKind.GlobalVariable => symbol.DeclaredAccessibility == Accessibility.Protected,
+                _ => ObjectSymbolKindsToAnalyze.Contains(symbol.Kind),
+            };
         }
 
         private static bool ShouldKeyBePrefixed(IKeySymbol keySymbol, ISymbol topMostSymbol)
@@ -129,53 +114,46 @@ namespace CompanialCopAnalyzer.Design
 
         private void VerifyAffixesOfSymbol(ISymbol symbol, SymbolAnalysisContext ctx)
         {
-            if (RuleIdentifiersMustHaveValidAffixes.VerifyAffixIsUsed(symbol, this.affixes) || UpgradeVerificationHelper.IsObsoleteOrDeprecated(symbol))
+            if (VerifyAffixIsUsed(symbol, _affixes) || UpgradeVerificationHelper.IsObsoleteOrDeprecated(symbol))
                 return;
             if (symbol.Kind == SymbolKind.Method)
             {
                 IApplicationObjectTypeSymbol objectTypeSymbol = symbol.GetContainingApplicationObjectTypeSymbol();
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0023MandatoryAffixes, symbol.GetLocation(), (object)symbol.Name, (object)objectTypeSymbol.Kind, (object)objectTypeSymbol.Name, (object)this.affixesDisplayString));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0023MandatoryAffixes, symbol.GetLocation(), symbol.Name, objectTypeSymbol.Kind, objectTypeSymbol.Name, _affixesDisplayString));
             }
-            else if (RuleIdentifiersMustHaveValidAffixes.ShouldItReportWarning(symbol))
-                RuleIdentifiersMustHaveValidAffixes.ReportMissingAffixesWarningDiagnostic(ctx, symbol, this.affixesDisplayString);
+            else if (ShouldItReportWarning(symbol))
+                ReportMissingAffixesWarningDiagnostic(ctx, symbol, _affixesDisplayString);
             else
-                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0023MandatoryAffixes, symbol.GetLocation(), (object)symbol.Name, (object)this.affixesDisplayString));
+                ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0023MandatoryAffixes, symbol.GetLocation(), symbol.Name, _affixesDisplayString));
         }
 
-        internal static void ReportMissingAffixesWarningDiagnostic(
-          SymbolAnalysisContext ctx,
-          ISymbol symbol,
-          string affixesDisplayString)
+        internal static void ReportMissingAffixesWarningDiagnostic(SymbolAnalysisContext ctx, ISymbol symbol, string affixesDisplayString)
         {
             ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0023MandatoryAffixes, symbol.GetLocation(), (object)symbol.Name, (object)affixesDisplayString));
         }
 
         internal static bool VerifyAffixIsUsed(ISymbol symbol, string[] affixes)
         {
-            if (RuleIdentifiersMustHaveValidAffixes.VerifyAffixIsUsed(symbol.Kind, symbol.Name, affixes))
+            if (VerifyAffixIsUsed(symbol.Kind, symbol.Name, affixes))
                 return true;
             if (symbol.Kind == SymbolKind.Action)
             {
                 IActionSymbol actionSymbol = (IActionSymbol)symbol;
-                if (actionSymbol.ActionKind == Microsoft.Dynamics.Nav.CodeAnalysis.ActionKind.ActionRef && actionSymbol.Name.EndsWith("_Promoted"))
-                    return RuleIdentifiersMustHaveValidAffixes.VerifyAffixIsUsed(SymbolKind.Action, actionSymbol.Name.Substring(0, actionSymbol.Name.Length - "_Promoted".Length), affixes);
+                if (actionSymbol.ActionKind == ActionKind.ActionRef && actionSymbol.Name.EndsWith("_Promoted"))
+                    return VerifyAffixIsUsed(SymbolKind.Action, actionSymbol.Name.Substring(0, actionSymbol.Name.Length - "_Promoted".Length), affixes);
             }
             return false;
         }
 
-        private static bool VerifyAffixIsUsed(
-          SymbolKind symbolKind,
-          string symbolName,
-          string[] affixes)
+        private static bool VerifyAffixIsUsed(SymbolKind symbolKind, string symbolName, string[] affixes)
         {
             if (string.IsNullOrEmpty(symbolName))
                 return false;
             foreach (string affix in affixes)
             {
-                char joker;
-                if (RuleIdentifiersMustHaveValidAffixes.UnsupportedNameCharacterPerSymbolKind.TryGetValue(symbolKind, out joker) && affix.Contains<char>(joker))
+                if (UnsupportedNameCharacterPerSymbolKind.TryGetValue(symbolKind, out char joker) && affix.Contains<char>(joker))
                 {
-                    if (RuleIdentifiersMustHaveValidAffixes.ValidateAffixWithWhitespace(symbolName, affix, joker))
+                    if (ValidateAffixWithWhitespace(symbolName, affix, joker))
                         return true;
                 }
                 else if (symbolName.StartsWith(affix, StringComparison.OrdinalIgnoreCase) || symbolName.EndsWith(affix, StringComparison.OrdinalIgnoreCase))
@@ -184,9 +162,13 @@ namespace CompanialCopAnalyzer.Design
             return false;
         }
 
-        private static bool ShouldItReportWarning(ISymbol symbol) => RuleIdentifiersMustHaveValidAffixes.SymbolKindsThatShouldReportWarning.Contains(symbol.Kind) && RuleIdentifiersMustHaveValidAffixes.ObjectSymbolKindsToAnalyzeForWarnings.Contains(symbol.ContainingType.Kind);
+        private static bool ShouldItReportWarning(ISymbol symbol) 
+            => SymbolKindsThatShouldReportWarning.Contains(symbol.Kind) 
+            && ObjectSymbolKindsToAnalyzeForWarnings.Contains(symbol.ContainingType.Kind);
 
-        private static bool ValidateAffixWithWhitespace(string symbolName, string affix, char joker) => RuleIdentifiersMustHaveValidAffixes.ValidatePrefixWithWhitespace(symbolName, affix, joker) || RuleIdentifiersMustHaveValidAffixes.ValidateSuffixWithWhitespace(symbolName, affix, joker);
+        #region Validation
+        private static bool ValidateAffixWithWhitespace(string symbolName, string affix, char joker) 
+            => ValidatePrefixWithWhitespace(symbolName, affix, joker) || ValidateSuffixWithWhitespace(symbolName, affix, joker);
 
         private static bool ValidatePrefixWithWhitespace(string symbolName, string affix, char joker)
         {
@@ -211,5 +193,6 @@ namespace CompanialCopAnalyzer.Design
             }
             return true;
         }
+        #endregion
     }
 }

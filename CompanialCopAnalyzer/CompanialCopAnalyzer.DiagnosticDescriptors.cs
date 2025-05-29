@@ -440,5 +440,15 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0039TemporaryRecordsDescription
         );
+
+        public static readonly DiagnosticDescriptor Rule0040AddThisQualificationToImproveReadability = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0040",
+            CompanialCopAnalyzer.Rule0040AddThisQualificationToImproveReadabilityTitle,
+            CompanialCopAnalyzer.Rule0040AddThisQualificationToImproveReadabilityFormat,
+            "Readability",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0040AddThisQualificationToImproveReadabilityDescription
+        );
     }
 }

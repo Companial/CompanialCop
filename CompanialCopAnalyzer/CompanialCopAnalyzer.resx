@@ -531,4 +531,13 @@
   <data name="Rule0039TemporaryRecordsTitle" xml:space="preserve">
     <value>Temporary records should not trigger the table triggers.</value>
   </data>
+  <data name="Rule0040AddThisQualificationToImproveReadabilityDescription" xml:space="preserve">
+    <value>Add 'this' qualification to improve readability.</value>
+  </data>
+  <data name="Rule0040AddThisQualificationToImproveReadabilityFormat" xml:space="preserve">
+    <value>Add 'this' qualification to improve readability.</value>
+  </data>
+  <data name="Rule0040AddThisQualificationToImproveReadabilityTitle" xml:space="preserve">
+    <value>Add 'this' qualification to improve readability.</value>
+  </data>
 </root>

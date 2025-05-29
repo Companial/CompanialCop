@@ -1397,5 +1397,40 @@ namespace CompanialCopAnalyzer {
             }
         }
         #endregion
+
+        #region Rule0040AddThisQualificationToImproveReadability
+        /// <summary>
+        ///   Looks up a localized string similar to Add 'this' qualification to improve readability.
+        /// </summary>
+        internal static string Rule0040AddThisQualificationToImproveReadabilityDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0040AddThisQualificationToImproveReadabilityDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Add 'this' qualification to improve readability.
+        /// </summary>
+        internal static string Rule0040AddThisQualificationToImproveReadabilityFormat
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0040AddThisQualificationToImproveReadabilityFormat", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Add 'this' qualification to improve readability.
+        /// </summary>
+        internal static string Rule0040AddThisQualificationToImproveReadabilityTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0040AddThisQualificationToImproveReadabilityTitle", resourceCulture);
+            }
+        }
+        #endregion
     }
 }

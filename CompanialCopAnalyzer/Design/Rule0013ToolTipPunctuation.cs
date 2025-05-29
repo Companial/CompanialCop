@@ -22,7 +22,7 @@ namespace CompanialCopAnalyzer.Design
 
             if (ctx.Node?.GetProperty("ToolTip")?.Value is LabelPropertyValueSyntax toolTipProperty)
             {
-                string tooltipValue = toolTipProperty.Value.GetText().ToString();
+                string tooltipValue = toolTipProperty.Value.LabelText.ToString();
 
                 if (!tooltipValue.EndsWith(".'") && !tooltipValue.EndsWith(".)'"))
                     ctx.ReportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.Rule0013ToolTipPunctuation, toolTipProperty.GetLocation()));

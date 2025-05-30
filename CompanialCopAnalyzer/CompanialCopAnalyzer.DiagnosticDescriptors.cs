@@ -460,5 +460,15 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0040AddThisQualificationToImproveReadabilityDescription
         );
+
+        public static readonly DiagnosticDescriptor Rule0042EnumsNeedToHaveInitValue = new (
+            CompanialCopAnalyzer.AnalyzerPrefix + "0042",
+            CompanialCopAnalyzer.Rule0042EnumsNeedToHaveInitValue,
+            CompanialCopAnalyzer.Rule0042EnumsNeedToHaveInitValue,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0042EnumsNeedToHaveInitValue
+        );
     }
 }

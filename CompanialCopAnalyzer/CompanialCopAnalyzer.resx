@@ -549,4 +549,7 @@
   <data name="Rule0041DuplicateKeyFoundTitle" xml:space="preserve">
     <value>Duplicate Key</value>
   </data>
+  <data name="Rule0042EnumsNeedToHaveInitValue" xml:space="preserve">
+    <value>Enums without 0 value need to have InitValue on fields</value>
+  </data>
 </root>

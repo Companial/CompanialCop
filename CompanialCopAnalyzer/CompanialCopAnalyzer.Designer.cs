@@ -1467,5 +1467,15 @@ namespace CompanialCopAnalyzer {
             }
         }
         #endregion
+        /// <summary>
+        ///   Looks up a localized string similar to Add 'this' qualification to improve readability.
+        /// </summary>
+        internal static string Rule0042EnumsNeedToHaveInitValue
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0042EnumsNeedToHaveInitValue", resourceCulture);
+            }
+        }
     }
 }

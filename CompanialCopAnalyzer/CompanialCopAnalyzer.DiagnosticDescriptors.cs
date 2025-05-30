@@ -450,5 +450,15 @@ namespace CompanialCopAnalyzer
             true,
             CompanialCopAnalyzer.Rule0040AddThisQualificationToImproveReadabilityDescription
         );
+
+        public static readonly DiagnosticDescriptor Rule0041DuplicateKeyFound = new DiagnosticDescriptor(
+            CompanialCopAnalyzer.AnalyzerPrefix + "0041",
+            CompanialCopAnalyzer.Rule0041DuplicateKeyFoundTitle,
+            CompanialCopAnalyzer.Rule0041DuplicateKeyFoundFormat,
+            "Usage",
+            DiagnosticSeverity.Warning,
+            true,
+            CompanialCopAnalyzer.Rule0040AddThisQualificationToImproveReadabilityDescription
+        );
     }
 }

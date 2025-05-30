@@ -540,4 +540,13 @@
   <data name="Rule0040AddThisQualificationToImproveReadabilityTitle" xml:space="preserve">
     <value>Add 'this' qualification to improve readability.</value>
   </data>
+  <data name="Rule0041DuplicateKeyFoundDescription" xml:space="preserve">
+    <value>The keys '{0}' and '{1}' have an identical list of fields.</value>
+  </data>
+  <data name="Rule0041DuplicateKeyFoundFormat" xml:space="preserve">
+    <value>The keys '{0}' and '{1}' have an identical list of fields.</value>
+  </data>
+  <data name="Rule0041DuplicateKeyFoundTitle" xml:space="preserve">
+    <value>Duplicate Key</value>
+  </data>
 </root>

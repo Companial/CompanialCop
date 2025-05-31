@@ -1432,5 +1432,50 @@ namespace CompanialCopAnalyzer {
             }
         }
         #endregion
+
+        #region Rule0041DuplicateKeyFound
+        /// <summary>
+        ///   Looks up a localized string similar to Add 'this' qualification to improve readability.
+        /// </summary>
+        internal static string Rule0041DuplicateKeyFoundDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0041DuplicateKeyFoundDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Add 'this' qualification to improve readability.
+        /// </summary>
+        internal static string Rule0041DuplicateKeyFoundFormat
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0041DuplicateKeyFoundFormat", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Add 'this' qualification to improve readability.
+        /// </summary>
+        internal static string Rule0041DuplicateKeyFoundTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0041DuplicateKeyFoundTitle", resourceCulture);
+            }
+        }
+        #endregion
+        /// <summary>
+        ///   Looks up a localized string similar to Add 'this' qualification to improve readability.
+        /// </summary>
+        internal static string Rule0042EnumsNeedToHaveInitValue
+        {
+            get
+            {
+                return ResourceManager.GetString("Rule0042EnumsNeedToHaveInitValue", resourceCulture);
+            }
+        }
     }
 }

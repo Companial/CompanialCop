@@ -12,7 +12,6 @@ public class Rule0040CheckForThis : DiagnosticAnalyzer
     public override void Initialize(AnalysisContext context) 
         => context.RegisterSyntaxNodeAction(new Action<SyntaxNodeAnalysisContext>(AnalyzeNode), SyntaxKind.IdentifierName);
 
-
     private void AnalyzeNode(SyntaxNodeAnalysisContext context)
     {
         var identifierNode = (IdentifierNameSyntax)context.Node;

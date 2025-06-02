@@ -41,7 +41,10 @@ public class Rule0041FindDuplicateKeys : DiagnosticAnalyzer
         foreach (var tableExtension in tableExtensions)
         {
             var extension = tableExtension.Value;
-            AnalyzeKeys(context, extension.Keys.Keys, baseTableKeys);
+            if(extension.Keys != null && extension.Keys.Keys != null)
+            {
+                AnalyzeKeys(context, extension.Keys.Keys, baseTableKeys);
+            }
         }
     }
     #region HelperMethods

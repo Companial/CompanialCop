@@ -36,12 +36,16 @@ public class Rule0041FindDuplicateKeys : DiagnosticAnalyzer
         IApplicationObjectTypeSymbol baseTableSymbol = context.SemanticModel.Compilation.GetApplicationObjectTypeSymbolsByNameAcrossModules(SymbolKind.Table, baseObject).FirstOrDefault();
         var baseTableKeys = GetBaseTableKeys(baseTableSymbol);
 
-        Dictionary<string, TableExtensionSyntax> tableExtensions = RulesTablesHelper.GetTableExtensions(context.SemanticModel.Compilation);
-        //compare each of extension's keys with baseTable
-        foreach (var tableExtension in tableExtensions)
+        var tableExtension = RulesTablesHelper.GetTableExtensions(context.SemanticModel.Compilation)
+            .Where(x => x.Key == baseObject).FirstOrDefault().Value;
+
+        if (tableExtension != null)
         {
-            var extension = tableExtension.Value;
-            AnalyzeKeys(context, extension.Keys.Keys, baseTableKeys);
+            if (tableExtension.Keys != null && tableExtension.Keys.Keys != null)
+            {
+                //compare each of extension's keys with baseTable
+                AnalyzeKeys(context, tableExtension.Keys.Keys, baseTableKeys);
+            }
         }
     }
     #region HelperMethods

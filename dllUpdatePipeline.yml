@@ -5,7 +5,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  feedName: 'BC%20Research%20and%20Development/CompanialCop'
+  feedName: 'BC Research and Development/CompanialCop'
   dllList: |
     Microsoft.Dynamics.Nav.CodeAnalysis.dll
     Microsoft.CodeAnalysis.dll

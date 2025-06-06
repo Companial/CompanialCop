@@ -1,0 +1,167 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  feedName: 'Demo/TestBcRndDemo'
+  dllList: |
+    Microsoft.Dynamics.Nav.CodeAnalysis.dll
+    Microsoft.CodeAnalysis.dll
+    System.Collections.Immutable.dll
+    Microsoft.Dynamics.Nav.Analyzers.Common.dll
+
+steps:
+- task: PowerShell@2
+  displayName: 'Download AL extension and extract selected DLLs'
+  inputs:
+    targetType: 'inline'
+    script: |
+      $artifactDir = Join-Path $env:BUILD_SOURCESDIRECTORY "Analyzers"
+      New-Item -ItemType Directory -Path $artifactDir -Force | Out-Null
+
+      # Clean up old files/folders
+      Remove-Item -Path ALLanguage.zip, ALLanguage/ -Recurse -Force -ErrorAction SilentlyContinue
+
+      # Query VS Marketplace for AL Language extension
+      $listing = Invoke-WebRequest -Method POST -UseBasicParsing -Uri "https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery?api-version=3.0-preview.1" `
+          -Body '{"filters":[{"criteria":[{"filterType":8,"value":"Microsoft.VisualStudio.Code"},{"filterType":12,"value":"4096"},{"filterType":7,"value":"ms-dynamics-smb.al"}],"pageNumber":1,"pageSize":50,"sortBy":0,"sortOrder":0}],"assetTypes":[],"flags":147}' `
+          -ContentType "application/json" | ConvertFrom-Json
+
+      # Get the VSIX download URL
+      $vsixUrl = $listing.results.extensions.versions |
+          Where-Object properties -ne $null |
+          Where-Object { $_.properties.key -notcontains 'Microsoft.VisualStudio.Code.PreRelease' } |
+          Select-Object -First 1 -ExpandProperty files |
+          Where-Object { $_.assetType -eq 'Microsoft.VisualStudio.Services.VSIXPackage' } |
+          Select-Object -ExpandProperty source
+
+      # Download the VSIX file
+      Write-Host "Downloading AL extension from: $vsixUrl"
+      Invoke-WebRequest $vsixUrl -OutFile ALLanguage.zip
+
+      # Read DLL list from environment variable
+      $dllListRaw = $env:dllList
+      $dlls = $dllListRaw -split "`n" | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne "" }
+
+      # Define the base relative path
+      $analyzersPath = "extension/bin/Analyzers"
+
+      # Compose full relative paths
+      $targetDlls = $dlls | ForEach-Object { Join-Path $analyzersPath $_ }
+
+      # Open zip archive and extract only specific DLLs
+      Add-Type -AssemblyName System.IO.Compression.FileSystem
+      $zip = [System.IO.Compression.ZipFile]::OpenRead("ALLanguage.zip")
+
+      Write-Host "Zip entries:"
+      $zip.Entries | ForEach-Object { Write-Host $_.FullName }
+      
+      foreach ($entry in $zip.Entries) {
+        $normalizedEntry = $entry.FullName.Replace('\', '/').ToLowerInvariant()
+
+        foreach ($target in $targetDlls) {
+          $normalizedTarget = $target.Replace('\', '/').ToLowerInvariant()
+
+          if ($normalizedEntry -eq $normalizedTarget) {
+              $fileName = [System.IO.Path]::GetFileName($entry.FullName)
+              if ([string]::IsNullOrEmpty($fileName)) {
+                  Write-Warning "Skipping entry with null or empty filename: $($entry.FullName)"
+                  continue
+              }
+
+              $destinationPath = Join-Path -Path $artifactDir -ChildPath $fileName
+              Write-Host "Extracting $fileName to $destinationPath"
+              [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destinationPath, $true)
+          }
+        }
+      }
+
+      $zip.Dispose()
+
+      # Clean up zip file
+      Remove-Item -Path ALLanguage.zip -Force -ErrorAction SilentlyContinue
+
+- task: PowerShell@2
+  displayName: 'List contents of Analyzers folder'
+  inputs:
+    targetType: inline
+    script: |
+      $path = "$(Build.SourcesDirectory)/Analyzers"
+      Write-Host "Verifying files in: $path"
+      Get-ChildItem -Recurse -Path $path
+
+- task: NuGetToolInstaller@1
+  displayName: 'Install NuGet'
+
+- task: PowerShell@2
+  displayName: 'Extract versions, create nuspecs, and pack all DLLs'
+  inputs:
+    targetType: inline
+    script: |
+      $dlls = $env:dllList -split "`n" | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne "" }
+
+      $basePath = "$env:BUILD_SOURCESDIRECTORY\Analyzers"
+      $outDir = "$env:BUILD_ARTIFACTSTAGINGDIRECTORY"
+      $nuspecDir = "$env:BUILD_SOURCESDIRECTORY"
+      $feed = "$env:feedName"
+      $project = "$env:azureProject"
+      $org = "$env:azureDevOpsOrg"
+      $token = $env:SYSTEM_ACCESSTOKEN
+      $headers = @{ Authorization = "Bearer $token" }
+
+      foreach ($dll in $dlls) {
+        if ([string]::IsNullOrWhiteSpace($dll)) {
+          Write-Error "Empty DLL name detected."
+          continue
+        }
+
+        $dllPath = Join-Path $basePath $dll
+        if (-Not (Test-Path $dllPath)) {
+          Write-Error "DLL not found: $dllPath"
+          continue
+        }
+
+        try {
+          $version = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($dllPath).FileVersion
+        } catch {
+          Write-Error "Unable to get version info for $dllPath"
+          continue
+        }
+
+        $id = $dll -replace '\.dll$', ''
+        if ([string]::IsNullOrWhiteSpace($id)) {
+          Write-Error "Failed to generate package ID for $dll"
+          continue
+        }
+
+        $nuspecPath = Join-Path $nuspecDir "$id.nuspec"
+
+        Write-Host "Packing $dll → ID: $id, Version: $version"
+        Write-Host "Writing .nuspec to $nuspecPath"
+
+        $nuspecContent = "<?xml version=`"1.0`"?>
+      <package>
+        <metadata>
+          <id>$id</id>
+          <version>$version</version>
+          <authors>DevOps</authors>
+          <description>Wrapped DLL $dll</description>
+        </metadata>
+        <files>
+          <file src=`"$dllPath`" target=`"lib\netstandard2.0\`" />
+        </files>
+      </package>"
+
+        [System.IO.File]::WriteAllText($nuspecPath, $nuspecContent)
+        & nuget pack $nuspecPath -OutputDirectory $outDir
+      }
+
+- task: NuGetCommand@2
+  displayName: 'Push all NuGet packages to feed'
+  inputs:
+    command: push
+    packagesToPush: '$(Build.ArtifactStagingDirectory)\*.nupkg'
+    publishVstsFeed: '$(feedName)'
+    allowPackageConflicts: true  # Enables -SkipDuplicate

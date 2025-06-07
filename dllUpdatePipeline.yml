@@ -105,11 +105,6 @@ steps:
       $basePath = "$env:BUILD_SOURCESDIRECTORY\Analyzers"
       $outDir = "$env:BUILD_ARTIFACTSTAGINGDIRECTORY"
       $nuspecDir = "$env:BUILD_SOURCESDIRECTORY"
-      $feed = "$env:feedName"
-      $project = "$env:azureProject"
-      $org = "$env:azureDevOpsOrg"
-      $token = $env:SYSTEM_ACCESSTOKEN
-      $headers = @{ Authorization = "Bearer $token" }
 
       foreach ($dll in $dlls) {
         if ([string]::IsNullOrWhiteSpace($dll)) {

@@ -1,43 +1,54 @@
-﻿using Microsoft.Dynamics.Nav.CodeAnalysis;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
+using Microsoft.Dynamics.Nav.CodeAnalysis;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Diagnostics;
 using Microsoft.Dynamics.Nav.CodeAnalysis.Syntax;
-using System.Collections.Immutable;
+
 namespace CompanialCopAnalyzer.Design
 {
     [DiagnosticAnalyzer]
     public class Rule0034RedudantEditableProperty : DiagnosticAnalyzer
     {
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(DiagnosticDescriptors.Rule0034TableRelationTooLong);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
+            => ImmutableArray.Create(DiagnosticDescriptors.Rule0034TableRelationTooLong);
 
-        public override void Initialize(AnalysisContext context) 
+        public override void Initialize(AnalysisContext context)
             => context.RegisterSyntaxNodeAction(AnalyzeSyntaxNode, SyntaxKind.Field);
 
         public void AnalyzeSyntaxNode(SyntaxNodeAnalysisContext context)
         {
-            IFieldSymbol? currentFieldSymbol = context.SemanticModel.GetDeclaredSymbol(context.Node) as IFieldSymbol;
-            
-            if (currentFieldSymbol == null || currentFieldSymbol.IsObsoleteRemoved || currentFieldSymbol.GetContainingObjectTypeSymbol().IsObsoleteRemoved)
+            if (context.SemanticModel.GetDeclaredSymbol(context.Node) is not IFieldSymbol currentFieldSymbol)
             {
                 return;
             }
 
-            IPropertySymbol? tableRelation = currentFieldSymbol.GetProperty(PropertyKind.TableRelation);
+            var containing = currentFieldSymbol.GetContainingObjectTypeSymbol();
+            if (currentFieldSymbol.IsObsoleteRemoved || (containing != null && containing.IsObsoleteRemoved))
+            {
+                return;
+            }
 
+            var tableRelation = currentFieldSymbol.GetProperty(PropertyKind.TableRelation);
             if (tableRelation == null)
             {
                 return;
             }
 
-            TableRelationPropertyValueSyntax? tableRelationValueSyntax = tableRelation.GetPropertyValueSyntax<TableRelationPropertyValueSyntax>();
+            var tableRelationValueSyntax = tableRelation.GetPropertyValueSyntax<TableRelationPropertyValueSyntax>();
 
-            IFieldSymbol? fieldSymbol;
+            IFieldSymbol fieldSymbol;
             while (tableRelationValueSyntax != null)
             {
                 string tableRelationsTargetFieldName;
 
                 if (tableRelationValueSyntax.RelatedTableField is QualifiedNameSyntax relatedTableField)
                 {
-                    fieldSymbol = GetRelatedFieldSymbol(relatedTableField.Left as IdentifierNameSyntax, relatedTableField.Right as IdentifierNameSyntax, context.SemanticModel.Compilation);
+                    var left = relatedTableField.Left as IdentifierNameSyntax;
+                    var right = relatedTableField.Right as IdentifierNameSyntax;
+
+                    fieldSymbol = GetRelatedFieldSymbol(left, right, context.SemanticModel.Compilation);
                     tableRelationsTargetFieldName = relatedTableField.ToString();
                 }
                 // for a case where table field is not mentioned, use table's primary key
@@ -51,21 +62,22 @@ namespace CompanialCopAnalyzer.Design
                     goto proceed;
                 }
 
-                if (fieldSymbol == null || !fieldSymbol.HasLength || !currentFieldSymbol.HasLength)
+                if (fieldSymbol != null && currentFieldSymbol.HasLength && fieldSymbol.HasLength)
                 {
-                    goto proceed;
-                }
+                    if (currentFieldSymbol.Length < fieldSymbol.Length)
+                    {
+                        var loc = (context.Node is FieldSyntax fieldSyntax && fieldSyntax.Type != null)
+                            ? fieldSyntax.Type.GetLocation()
+                            : context.Node.GetLocation();
 
-                if (currentFieldSymbol.Length < fieldSymbol.Length)
-                {
-                    context.ReportDiagnostic(Diagnostic.Create(
-                        DiagnosticDescriptors.Rule0034TableRelationTooLong, 
-                        ((FieldSyntax)context.Node).Type.GetLocation(), 
-                        fieldSymbol.Length,
-                        tableRelationsTargetFieldName, 
-                        currentFieldSymbol.Length, 
-                        currentFieldSymbol.Name
-                    ));
+                        context.ReportDiagnostic(Diagnostic.Create(
+                            DiagnosticDescriptors.Rule0034TableRelationTooLong,
+                            loc,
+                            fieldSymbol.Length,
+                            tableRelationsTargetFieldName,
+                            currentFieldSymbol.Length,
+                            currentFieldSymbol.Name));
+                    }
                 }
 
             proceed:
@@ -73,51 +85,106 @@ namespace CompanialCopAnalyzer.Design
             }
         }
 
-        private IFieldSymbol? GetRelatedFieldSymbol(IdentifierNameSyntax? table, IdentifierNameSyntax? field, Compilation compilation)
+        private IFieldSymbol GetRelatedFieldSymbol(IdentifierNameSyntax table, IdentifierNameSyntax field, Compilation compilation)
         {
-            if (table == null)
+            if (table == null || compilation == null)
             {
                 return null;
             }
 
-            string applicationObjectIdentifier = table.GetIdentifierOrLiteralValue() ?? string.Empty;
-
-            IEnumerable<ISymbol> applicationObjects = compilation.GetApplicationObjectTypeSymbolsByNameAcrossModules(SymbolKind.Table, applicationObjectIdentifier);
-            ITableTypeSymbol? tableTypeSymbol = null;
-            if (applicationObjects.Count() <= 1)
+            var tableName = table.GetIdentifierOrLiteralValue();
+            if (string.IsNullOrEmpty(tableName))
             {
-                tableTypeSymbol = applicationObjects.FirstOrDefault() as ITableTypeSymbol;
+                return null;
             }
 
-            IFieldSymbol? fieldSymbol;
+            ITableTypeSymbol tableTypeSymbol = null;
+            var applicationObjects = compilation.GetApplicationObjectTypeSymbolsByNameAcrossModules(SymbolKind.Table, tableName);
+            if (applicationObjects != null)
+            {
+                int candidateCount = 0;
+                ITableTypeSymbol first = null;
+
+                foreach (var s in applicationObjects)
+                {
+                    if (s is ITableTypeSymbol t)
+                    {
+                        candidateCount++;
+                        first ??= t;
+                    }
+                }
+
+                if (candidateCount <= 1)
+                {
+                    tableTypeSymbol = first;
+                }
+            }
+
+
+            string fieldName = null;
             if (field != null)
             {
-                string fieldName = field.GetIdentifierOrLiteralValue() ?? string.Empty;
-                fieldSymbol = tableTypeSymbol?.Fields.Where(x => x.Name == fieldName).FirstOrDefault();
+                fieldName = field.GetIdentifierOrLiteralValue();
+            }
+
+            if (!string.IsNullOrEmpty(fieldName))
+            {
+                if (tableTypeSymbol != null && tableTypeSymbol.Fields != null)
+                {
+                    foreach (var f in tableTypeSymbol.Fields)
+                    {
+                        if (f != null && string.Equals(f.Name, fieldName, StringComparison.Ordinal))
+                        {
+                            return f;
+                        }
+                    }
+                }
             }
             else
             {
-                fieldSymbol = tableTypeSymbol.PrimaryKey.Fields.FirstOrDefault();
-            }
-
-            if (fieldSymbol != null)
-            {
-                return fieldSymbol;
-            }
-
-            applicationObjects = compilation.GetDeclaredApplicationObjectSymbols().Where(x => x.Kind == SymbolKind.TableExtension);
-
-            foreach(var applicationObject in applicationObjects)
-            {
-                ITableExtensionTypeSymbol tableExtension = (ITableExtensionTypeSymbol)applicationObject;
-
-                if(tableExtension.Target?.Name == applicationObjectIdentifier)
+                if (tableTypeSymbol != null &&
+                    tableTypeSymbol.PrimaryKey != null &&
+                    tableTypeSymbol.PrimaryKey.Fields != null)
                 {
-                    fieldSymbol = tableExtension.AddedFields.Where(x => x.Name == field.Identifier.ValueText).FirstOrDefault();
-
-                    if (fieldSymbol != null)
+                    foreach (var f in tableTypeSymbol.PrimaryKey.Fields)
                     {
-                        return fieldSymbol;
+                        return f;
+                    }
+                }
+            }
+
+            if (!string.IsNullOrEmpty(fieldName))
+            {
+                var declared = compilation.GetDeclaredApplicationObjectSymbols();
+                if (declared != null)
+                {
+                    foreach (var obj in declared)
+                    {
+                        if (obj == null || obj.Kind != SymbolKind.TableExtension)
+                        {
+                            continue;
+                        }
+
+                        if (obj is not ITableExtensionTypeSymbol tableExt)
+                        {
+                            continue;
+                        }
+
+                        if (tableExt.Target == null || !string.Equals(tableExt.Target.Name, tableName, StringComparison.Ordinal))
+                        {
+                            continue;
+                        }
+
+                        if (tableExt.AddedFields != null)
+                        {
+                            foreach (var added in tableExt.AddedFields)
+                            {
+                                if (added != null && string.Equals(added.Name, fieldName, StringComparison.Ordinal))
+                                {
+                                    return added;
+                                }
+                            }
+                        }
                     }
                 }
             }
